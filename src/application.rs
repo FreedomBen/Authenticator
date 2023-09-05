@@ -17,7 +17,7 @@ use crate::{
         SearchProviderAction, FAVICONS_PATH, RUNTIME, SECRET_SERVICE, SETTINGS,
     },
     utils::{spawn, spawn_tokio_blocking},
-    widgets::{PreferencesWindow, ProvidersDialog, Window},
+    widgets::{KeyringErrorDialog, PreferencesWindow, ProvidersDialog, Window},
 };
 
 mod imp {
@@ -39,6 +39,8 @@ mod imp {
         pub lock_timeout_id: RefCell<Option<glib::SourceId>>,
         #[property(get, set, construct)]
         pub can_be_locked: Cell<bool>,
+        #[property(get, set, construct_only)]
+        pub is_keyring_open: Cell<bool>,
     }
 
     // Sets up the basics for the GObject
@@ -174,6 +176,12 @@ mod imp {
 
         fn activate(&self) {
             let app = self.obj();
+
+            if !app.is_keyring_open() {
+                app.present_error_window();
+                return;
+            }
+
             if let Some(ref win) = *self.window.borrow() {
                 let window = win.upgrade().unwrap();
                 window.present();
@@ -261,28 +269,40 @@ impl Application {
             }
         }
 
-        RUNTIME.block_on(async {
-            let keyring = oo7::Keyring::new()
-                .await
-                .expect("Failed to start the keyring service");
-            keyring
-                .unlock()
-                .await
-                .expect("Failed to unlock the default collection");
-            SECRET_SERVICE.set(keyring).unwrap()
+        let is_keyring_open = spawn_tokio_blocking(async {
+            match oo7::Keyring::new().await {
+                Ok(keyring) => {
+                    if let Err(err) = keyring.unlock().await {
+                        tracing::error!("Could not unlock keyring: {err}");
+                        false
+                    } else {
+                        SECRET_SERVICE.set(keyring).unwrap();
+                        true
+                    }
+                }
+                Err(err) => {
+                    tracing::error!("Could not open keyring: {err}");
+                    false
+                }
+            }
         });
+        let is_keyring_open = false;
 
-        let has_set_password =
-            spawn_tokio_blocking(async { keyring::has_set_password().await.unwrap_or(false) });
+        let has_set_password = if is_keyring_open {
+            spawn_tokio_blocking(async { keyring::has_set_password().await.unwrap_or(false) })
+        } else {
+            false
+        };
         let app = glib::Object::builder::<Application>()
             .property("application-id", config::APP_ID)
             .property("flags", gio::ApplicationFlags::HANDLES_OPEN)
             .property("resource-base-path", "/com/belmoussaoui/Authenticator")
             .property("is-locked", has_set_password)
             .property("can-be-locked", has_set_password)
+            .property("is-keyring-open", is_keyring_open)
             .build();
         // Only load the model if the app is not locked
-        if !has_set_password {
+        if !has_set_password && is_keyring_open {
             app.imp().model.load();
         }
 
@@ -394,5 +414,10 @@ impl Application {
                 }
             }
         }
+    }
+
+    fn present_error_window(&self) {
+        let dialog = KeyringErrorDialog::new(self);
+        dialog.present();
     }
 }

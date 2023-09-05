@@ -3,6 +3,7 @@ mod camera;
 mod camera_paintable;
 mod camera_row;
 mod error_revealer;
+mod keyring_error_dialog;
 mod preferences;
 mod progress_icon;
 mod providers;
@@ -15,6 +16,7 @@ pub use self::{
     camera_paintable::CameraPaintable,
     camera_row::{CameraItem, CameraRow},
     error_revealer::ErrorRevealer,
+    keyring_error_dialog::KeyringErrorDialog,
     preferences::PreferencesWindow,
     progress_icon::ProgressIcon,
     providers::{ProviderImage, ProvidersDialog, ProvidersList},
