@@ -9,7 +9,6 @@ include:
     APP_ID: "com.belmoussaoui.Authenticator.Devel"
     RUNTIME_REPO: "https://nightly.gnome.org/gnome-nightly.flatpakrepo"
     BUNDLE: "authenticator-nightly.flatpak"
-  extends: '.flatpak'
 
 stages:
   - build
@@ -37,7 +36,7 @@ nightly@aarch64:
 pages:
   image: "quay.io/gnome_infrastructure/gnome-runtime-images:gnome-master"
   stage: build
-  extends: ['.vars-devel']
+  extends: ['.vars-devel', '.flatpak@x86_64']
   tags:
     - flatpak
   script:
