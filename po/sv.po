@@ -9,21 +9,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: authenticator\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2023-01-24 18:13+0000\n"
-"PO-Revision-Date: 2023-03-19 20:00+0100\n"
+"POT-Creation-Date: 2023-08-30 07:57+0000\n"
+"PO-Revision-Date: 2023-09-06 21:13+0200\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
-"Language-Team: Swedish <https://hosted.weblate.org/projects/authenticator/"
-"translation/sv/>\n"
+"Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
-#: data/resources/ui/window.ui:34 src/application.rs:117 src/main.rs:41
+#: data/resources/ui/window.ui:36 src/application.rs:86 src/main.rs:41
 msgid "Authenticator"
 msgstr "Authenticator"
 
@@ -33,7 +32,7 @@ msgstr "Tvåfaktorsautentisering"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:5
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:120
+#: src/application.rs:89
 msgid "Generate Two-Factor Codes"
 msgstr "Generera tvåfaktorskoder"
 
@@ -57,43 +56,35 @@ msgid "Default window maximized behaviour"
 msgstr "Standardfönstrets maximeringsbeteende"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:21
-msgid "Dark Mode"
-msgstr "Mörkt läge"
-
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:22
-msgid "Whether the application should use a dark mode."
-msgstr "Huruvida programmet ska använda ett mörkt läge."
-
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:26
 msgid "Auto lock"
 msgstr "Automatiskt lås"
 
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:27
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:22
 msgid "Whether to auto lock the application or not"
 msgstr "Oavsett om du ska låsa programmet automatiskt eller inte"
 
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:31
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:26
 msgid "Auto lock timeout"
 msgstr "Tidsgräns för automatiskt lås"
 
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:32
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:27
 msgid "Lock the application on idle after X minutes"
 msgstr "Lås programmet om det är orört under X minuter"
 
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:39
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:34
 msgid "Download Favicons"
 msgstr "Hämta adressikoner"
 
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:40
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:35
 msgid ""
 "Whether the application should attempt to find an icon for the providers."
 msgstr "Huruvida programmet ska försöka hitta en ikon för leverantörerna."
 
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:44
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:39
 msgid "Download Favicons over metered connections"
 msgstr "Hämta adressikoner över anslutningar med datakvot"
 
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:45
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:40
 msgid ""
 "Whether the application should download favicons over a metered connection."
 msgstr ""
@@ -144,7 +135,7 @@ msgid "Main Window"
 msgstr "Huvudfönster"
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:29
-#: data/resources/ui/account_add.ui:24
+#: data/resources/ui/account_add.ui:32 data/resources/ui/account_add.ui:49
 msgid "Add a New Account"
 msgstr "Lägg till ett nytt konto"
 
@@ -160,157 +151,171 @@ msgstr "Kontodetaljer"
 msgid "Backup/Restore formats support"
 msgstr "Formatstöd för säkerhetskopiering/återställning"
 
-#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:282
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:296
 msgid "Bilal Elmoussaoui"
 msgstr "Bilal Elmoussaoui"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:352
+#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:297
 msgid "_Camera"
 msgstr "_Kamera"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:358
+#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:301
 msgid "_Screenshot"
 msgstr "_Skärmbild"
 
-#: data/resources/ui/account_add.ui:45
-#: data/resources/ui/account_details_page.ui:25 data/resources/ui/camera.ui:13
-#: data/resources/ui/preferences_password_page.ui:13
-#: data/resources/ui/provider_page.ui:45
-#: data/resources/ui/providers_dialog.ui:194
-msgid "Go Back"
-msgstr "Gå tillbaka"
+#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:306
+msgid "_QR Code Image"
+msgstr "_QR-kodsbild"
 
-#: data/resources/ui/account_add.ui:50
+#: data/resources/ui/account_add.ui:58
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: data/resources/ui/account_add.ui:64
 msgid "_Add"
 msgstr "_Lägg till"
 
-#: data/resources/ui/account_add.ui:62 src/widgets/preferences/window.rs:346
+#: data/resources/ui/account_add.ui:76 src/widgets/preferences/window.rs:292
 msgid "Scan QR Code"
 msgstr "Läs av QR-kod"
 
-#: data/resources/ui/account_add.ui:101
-#: data/resources/ui/account_details_page.ui:126
+#: data/resources/ui/account_add.ui:114
+#: data/resources/ui/account_details_page.ui:95
+#: data/resources/ui/providers_dialog.ui:105
 msgid "Provider"
 msgstr "Leverantör"
 
-#: data/resources/ui/account_add.ui:102
+#: data/resources/ui/account_add.ui:115
 msgid "Token issuer"
 msgstr "Tokenutfärdare"
 
-#: data/resources/ui/account_add.ui:116
-#: data/resources/ui/account_details_page.ui:116
+#: data/resources/ui/account_add.ui:129
+#: data/resources/ui/account_details_page.ui:90
 msgid "Account"
 msgstr "Konto"
 
-#: data/resources/ui/account_add.ui:122
+#: data/resources/ui/account_add.ui:135
 msgid "Token"
 msgstr "Token"
 
-#: data/resources/ui/account_add.ui:129
-#: data/resources/ui/account_details_page.ui:188
-#: data/resources/ui/provider_page.ui:191
+#: data/resources/ui/account_add.ui:141
+#: data/resources/ui/account_details_page.ui:138
+#: data/resources/ui/provider_page.ui:157
 msgid "Counter"
 msgstr "Räknare"
 
-#: data/resources/ui/account_add.ui:154
-#: data/resources/ui/account_details_page.ui:168
-#: data/resources/ui/provider_page.ui:157
+#: data/resources/ui/account_add.ui:159
+#: data/resources/ui/account_details_page.ui:118
+#: data/resources/ui/provider_page.ui:132
 msgid "Algorithm"
 msgstr "Algoritm"
 
-#: data/resources/ui/account_add.ui:166
-#: data/resources/ui/account_details_page.ui:178
-#: data/resources/ui/provider_page.ui:142
+#: data/resources/ui/account_add.ui:171
+#: data/resources/ui/account_details_page.ui:128
+#: data/resources/ui/provider_page.ui:117
 msgid "Computing Method"
 msgstr "Beräkningsmetod"
 
-#: data/resources/ui/account_add.ui:178
-#: data/resources/ui/account_details_page.ui:198
-#: data/resources/ui/provider_page.ui:174
+#: data/resources/ui/account_add.ui:183
+#: data/resources/ui/account_details_page.ui:147
+#: data/resources/ui/provider_page.ui:148
 msgid "Period"
 msgstr "Period"
 
-#: data/resources/ui/account_add.ui:179 data/resources/ui/provider_page.ui:175
+#: data/resources/ui/account_add.ui:184 data/resources/ui/provider_page.ui:149
 msgid "Duration in seconds until the next password update"
 msgstr "Varaktighet i sekunder tills nästa lösenordsuppdatering"
 
-#: data/resources/ui/account_add.ui:191
-#: data/resources/ui/account_details_page.ui:208
-#: data/resources/ui/provider_page.ui:208
+#: data/resources/ui/account_add.ui:196
+#: data/resources/ui/account_details_page.ui:157
+#: data/resources/ui/provider_page.ui:166
 msgid "Digits"
 msgstr "Siffror"
 
-#: data/resources/ui/account_add.ui:192 data/resources/ui/provider_page.ui:209
+#: data/resources/ui/account_add.ui:197 data/resources/ui/provider_page.ui:167
 msgid "Length of the generated code"
 msgstr "Längd på den genererade koden"
 
-#: data/resources/ui/account_add.ui:204
-#: data/resources/ui/account_details_page.ui:218
-#: data/resources/ui/provider_page.ui:136
+#: data/resources/ui/account_add.ui:209
+#: data/resources/ui/account_details_page.ui:167
+#: data/resources/ui/provider_page.ui:111
 msgid "Website"
 msgstr "Webbplats"
 
-#: data/resources/ui/account_add.ui:209
+#: data/resources/ui/account_add.ui:214
 msgid "How to Set Up"
 msgstr "Hur man konfigurerar"
 
-#: data/resources/ui/account_details_page.ui:61
-msgid "_Edit"
-msgstr "_Redigera"
+#: data/resources/ui/account_add.ui:234
+#: data/resources/ui/preferences_camera_page.ui:4
+msgid "Camera"
+msgstr "Kamera"
 
-#: data/resources/ui/account_details_page.ui:76
-#: data/resources/ui/preferences_password_page.ui:21
-#: data/resources/ui/provider_page.ui:52
+#: data/resources/ui/account_add.ui:247
+msgid "Create Provider"
+msgstr "Skapa leverantör"
+
+#: data/resources/ui/account_details_page.ui:55
+#: data/resources/ui/preferences_password_page.ui:17
+#: data/resources/ui/provider_page.ui:28
 msgid "_Save"
 msgstr "_Spara"
 
-#: data/resources/ui/account_details_page.ui:91
-#: data/resources/ui/provider_page.ui:233
+#: data/resources/ui/account_details_page.ui:66
+#: data/resources/ui/provider_page.ui:184
 msgid "_Delete"
 msgstr "_Ta bort"
 
-#: data/resources/ui/account_details_page.ui:223
+#: data/resources/ui/account_details_page.ui:172
 msgid "Help"
 msgstr "Hjälp"
 
-#: data/resources/ui/account_row.ui:22
+#: data/resources/ui/account_row.ui:23
 msgid "Increment the counter"
 msgstr "Öka räknaren"
 
-#: data/resources/ui/account_row.ui:33
+#: data/resources/ui/account_row.ui:34
 msgid "Copy PIN to clipboard"
 msgstr "Kopiera PIN till urklipp"
 
-#: data/resources/ui/camera.ui:44
+#: data/resources/ui/account_row.ui:43
+msgid "Account details"
+msgstr "Kontodetaljer"
+
+#: data/resources/ui/camera.ui:36
 msgid "No Camera Found"
 msgstr "Ingen kamera hittades"
 
-#: data/resources/ui/camera.ui:47
+#: data/resources/ui/camera.ui:39
 msgid "_From a Screenshot"
 msgstr "_Från en skärmbild"
 
-#: data/resources/ui/preferences_password_page.ui:32
+#: data/resources/ui/preferences_password_page.ui:4
+msgid "Create Password"
+msgstr "Skapa lösenord"
+
+#: data/resources/ui/preferences_password_page.ui:28
 msgid "Set up a Passphrase"
 msgstr "Ställ in en lösenfras"
 
-#: data/resources/ui/preferences_password_page.ui:33
+#: data/resources/ui/preferences_password_page.ui:29
 msgid "Authenticator will start locked after a passphrase is set."
 msgstr "Authenticator startar låst efter att en lösenfras har ställts in."
 
-#: data/resources/ui/preferences_password_page.ui:52
+#: data/resources/ui/preferences_password_page.ui:50
 msgid "Current Passphrase"
 msgstr "Aktuell lösenfras"
 
-#: data/resources/ui/preferences_password_page.ui:58
+#: data/resources/ui/preferences_password_page.ui:56
 msgid "New Passphrase"
 msgstr "Ny lösenfras"
 
-#: data/resources/ui/preferences_password_page.ui:64
+#: data/resources/ui/preferences_password_page.ui:62
 msgid "Repeat Passphrase"
 msgstr "Upprepa lösenfras"
 
-#: data/resources/ui/preferences_password_page.ui:78
-#: data/resources/ui/provider_page.ui:97
+#: data/resources/ui/preferences_password_page.ui:76
+#: data/resources/ui/provider_page.ui:72
 msgid "_Reset"
 msgstr "_Återställ"
 
@@ -319,123 +324,111 @@ msgid "General"
 msgstr "Allmänt"
 
 #: data/resources/ui/preferences.ui:19
-msgid "Appearance"
-msgstr "Utseende"
-
-#: data/resources/ui/preferences.ui:22
-msgid "_Dark Mode"
-msgstr "_Mörkt läge"
-
-#: data/resources/ui/preferences.ui:25
-msgid "Whether the application should use a dark mode"
-msgstr "Huruvida programmet ska använda ett mörkt läge"
-
-#: data/resources/ui/preferences.ui:37
 msgid "Privacy"
 msgstr "Integritet"
 
-#: data/resources/ui/preferences.ui:40
+#: data/resources/ui/preferences.ui:22
 msgid "_Passphrase"
 msgstr "_Lösenfras"
 
-#: data/resources/ui/preferences.ui:42
+#: data/resources/ui/preferences.ui:24
 msgid "Set up a passphrase to lock the application with"
 msgstr "Ställ in en lösenfras för att låsa programmet med"
 
-#: data/resources/ui/preferences.ui:54
+#: data/resources/ui/preferences.ui:36
 msgid "_Auto Lock the Application"
 msgstr "Lås programmet _automatiskt"
 
-#: data/resources/ui/preferences.ui:57
+#: data/resources/ui/preferences.ui:38
 msgid "Whether to automatically lock the application"
 msgstr "Huruvida programmet ska låsas automatiskt eller inte"
 
-#: data/resources/ui/preferences.ui:68
+#: data/resources/ui/preferences.ui:44
 msgid "Auto Lock _Timeout"
 msgstr "_Tidsgräns för automatiskt lås"
 
-#: data/resources/ui/preferences.ui:69
+#: data/resources/ui/preferences.ui:45
 msgid "The time in minutes"
 msgstr "Tiden i minuter"
 
-#: data/resources/ui/preferences.ui:89
+#: data/resources/ui/preferences.ui:58
 msgid "Network"
 msgstr "Nätverk"
 
-#: data/resources/ui/preferences.ui:92
+#: data/resources/ui/preferences.ui:61
 msgid "_Download Favicons"
 msgstr "_Hämta adressikoner"
 
-#: data/resources/ui/preferences.ui:95
+#: data/resources/ui/preferences.ui:63
 msgid "Automatically attempt fetching a website icon"
 msgstr "Försök automatiskt hämta en webbplatsikon"
 
-#: data/resources/ui/preferences.ui:105
+#: data/resources/ui/preferences.ui:68
 msgid "_Metered Connection"
 msgstr "_Anslutning med datakvot"
 
-#: data/resources/ui/preferences.ui:108
+#: data/resources/ui/preferences.ui:70
 msgid "Fetch a website icon on a metered connection"
 msgstr "Hämta en webbplatsikon över anslutning med datakvot"
 
-#: data/resources/ui/preferences.ui:123
+#: data/resources/ui/preferences.ui:80
 msgid "Backup/Restore"
 msgstr "Säkerhetskopiering/Återställ"
 
-#: data/resources/ui/preferences.ui:126 src/widgets/preferences/window.rs:522
+#: data/resources/ui/preferences.ui:83 src/widgets/preferences/window.rs:481
 msgid "Backup"
 msgstr "Säkerhetskopiera"
 
-#: data/resources/ui/preferences.ui:131 src/widgets/preferences/window.rs:530
+#: data/resources/ui/preferences.ui:88 src/widgets/preferences/window.rs:489
 msgid "Restore"
 msgstr "Återställ"
 
-#: data/resources/ui/provider_page.ui:107
+#: data/resources/ui/provider_page.ui:82
 msgid "Select a _File"
 msgstr "Välj en _fil"
 
-#: data/resources/ui/provider_page.ui:130
+#: data/resources/ui/provider_page.ui:105
 msgid "Name"
 msgstr "Namn"
 
-#: data/resources/ui/provider_page.ui:192
+#: data/resources/ui/provider_page.ui:158
 msgid "The by default value for counter-based computing method"
 msgstr "Standardvärdet för räknarbaserad beräkningsmetod"
 
-#: data/resources/ui/provider_page.ui:225
+#: data/resources/ui/provider_page.ui:176
 msgid "Help URL"
 msgstr "Hjälp-URL"
 
-#: data/resources/ui/providers_dialog.ui:5
+#: data/resources/ui/providers_dialog.ui:20
 msgid "Providers"
 msgstr "Leverantörer"
 
-#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:225
+#: data/resources/ui/providers_dialog.ui:30 src/widgets/providers/page.rs:209
 msgid "New Provider"
 msgstr "Ny leverantör"
 
-#: data/resources/ui/providers_dialog.ui:64 data/resources/ui/window.ui:263
+#: data/resources/ui/providers_dialog.ui:37 data/resources/ui/window.ui:218
 msgid "Search"
 msgstr "Sök"
 
-#: data/resources/ui/providers_dialog.ui:108
-#: data/resources/ui/providers_list.ui:42
+#: data/resources/ui/providers_dialog.ui:90
+#: data/resources/ui/providers_list.ui:38
 msgid "No Results"
 msgstr "Inga resultat"
 
-#: data/resources/ui/providers_dialog.ui:109
+#: data/resources/ui/providers_dialog.ui:91
 msgid "No providers matching the query were found."
 msgstr "Inga leverantörer som matchar sökningen hittades."
 
-#: data/resources/ui/providers_dialog.ui:204
+#: data/resources/ui/providers_dialog.ui:136
 msgid "No Provider Selected"
 msgstr "Ingen leverantör vald"
 
-#: data/resources/ui/providers_dialog.ui:205
+#: data/resources/ui/providers_dialog.ui:137
 msgid "Select a provider or create a new one"
 msgstr "Välj en leverantör eller skapa en ny"
 
-#: data/resources/ui/providers_list.ui:43
+#: data/resources/ui/providers_list.ui:39
 msgid "No accounts or providers matching the query were found."
 msgstr "Inga konton eller leverantörer som matchar sökningen hittades."
 
@@ -504,77 +497,81 @@ msgstr "_Tangentbordsgenvägar"
 msgid "_About Authenticator"
 msgstr "_Om Authenticator"
 
-#: data/resources/ui/window.ui:101
+#: data/resources/ui/window.ui:66
 msgid "Authenticator is Locked"
 msgstr "Authenticator är låst"
 
-#: data/resources/ui/window.ui:129
+#: data/resources/ui/window.ui:89
 msgid "_Unlock"
 msgstr "Lås _upp"
 
-#: data/resources/ui/window.ui:177 data/resources/ui/window.ui:216
+#: data/resources/ui/window.ui:119
+msgid "Accounts"
+msgstr "Konton"
+
+#: data/resources/ui/window.ui:134 data/resources/ui/window.ui:170
 msgid "New Account"
 msgstr "Nytt konto"
 
-#: data/resources/ui/window.ui:184 data/resources/ui/window.ui:257
-msgid "Menu"
-msgstr "Meny"
+#: data/resources/ui/window.ui:142 data/resources/ui/window.ui:212
+msgid "Main Menu"
+msgstr "Huvudmeny"
 
-#: data/resources/ui/window.ui:195
+#: data/resources/ui/window.ui:150
 msgid "No Accounts"
 msgstr "Inga konton"
 
-#: data/resources/ui/window.ui:196
+#: data/resources/ui/window.ui:151
 msgid "Add an account or scan a QR code first."
 msgstr "Lägg till ett konto eller skanna en QR-kod först."
 
-#: src/application.rs:103
+#: src/application.rs:72
 msgid "Accounts restored successfully"
 msgstr "Konton återställdes"
 
-#: src/application.rs:132
+#: src/application.rs:98
 msgid "translator-credits"
 msgstr ""
 "Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Luna Jernberg <droidbittin@gmail.com>"
 
-#: src/application.rs:451 src/widgets/accounts/row.rs:45
+#: src/application.rs:362 src/widgets/accounts/row.rs:46
 msgid "One-Time password copied"
 msgstr "Engångslösenord kopierat"
 
-#: src/application.rs:452
+#: src/application.rs:363
 msgid "Password was copied successfully"
 msgstr "Lösenordet kopierades"
 
 #. Translators: This is for making a backup for the aegis Android app.
 #. Translators: This is for restoring a backup from the aegis Android app.
-#: src/backup/aegis.rs:393 src/backup/aegis.rs:445
+#: src/backup/aegis.rs:399 src/backup/aegis.rs:439
 msgid "Aegis"
 msgstr "Aegis"
 
-#: src/backup/aegis.rs:397
+#: src/backup/aegis.rs:403
 msgid "Into a JSON file containing plain-text or encrypted fields"
 msgstr "Till en JSON-fil som innehåller klartextfält eller krypterade fält"
 
-#: src/backup/aegis.rs:449
+#: src/backup/aegis.rs:443
 msgid "From a JSON file containing plain-text or encrypted fields"
 msgstr "Från en JSON-fil som innehåller klartextfält eller krypterade fält"
 
 #. Translators: This is for making a backup for the andOTP Android app.
-#: src/backup/andotp.rs:70
+#: src/backup/andotp.rs:79
 msgid "a_ndOTP"
 msgstr "a_ndOTP"
 
-#: src/backup/andotp.rs:74
+#: src/backup/andotp.rs:83
 msgid "Into a plain-text JSON file"
 msgstr "Till en JSON-fil i klartext"
 
 #. Translators: This is for restoring a backup from the andOTP Android app.
-#: src/backup/andotp.rs:131
+#: src/backup/andotp.rs:127
 msgid "an_dOTP"
 msgstr "an_dOTP"
 
-#: src/backup/andotp.rs:135 src/backup/bitwarden.rs:123 src/backup/legacy.rs:40
+#: src/backup/andotp.rs:131 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
 msgid "From a plain-text JSON file"
 msgstr "Från en JSON-fil i klartext"
 
@@ -587,129 +584,181 @@ msgid "Unknown issuer"
 msgstr "Okänd utfärdare"
 
 #. Translators: This is for restoring a backup from Bitwarden.
-#: src/backup/bitwarden.rs:119
+#: src/backup/bitwarden.rs:120
 msgid "_Bitwarden"
 msgstr "_Bitwarden"
 
-#: src/backup/freeotp.rs:23
+#: src/backup/freeotp.rs:18
 msgid "_Authenticator"
 msgstr "_Authenticator"
 
-#: src/backup/freeotp.rs:27
+#: src/backup/freeotp.rs:22
 msgid "Into a plain-text file, compatible with FreeOTP+"
 msgstr "Till en textfil, kompatibel med FreeOTP+"
 
-#: src/backup/freeotp.rs:69
+#: src/backup/freeotp.rs:51
 msgid "A_uthenticator"
 msgstr "A_uthenticator"
 
-#: src/backup/freeotp.rs:73
+#: src/backup/freeotp.rs:55
 msgid "From a plain-text file, compatible with FreeOTP+"
 msgstr "Från en textfil, kompatibel med FreeOTP+"
 
-#: src/backup/google.rs:26
+#: src/backup/freeotp_json.rs:87
+msgid "FreeOTP+"
+msgstr "FreeOTP+"
+
+#: src/backup/freeotp_json.rs:91
+msgid "From a plain-text JSON file, compatible with FreeOTP+"
+msgstr "Från en JSON-fil i klartext, kompatibel med FreeOTP+"
+
+#: src/backup/google.rs:19
 msgid "Google Authenticator"
 msgstr "Google Authenticator"
 
-#: src/backup/google.rs:30
+#: src/backup/google.rs:23
 msgid "From a QR code generated by Google Authenticator"
 msgstr "Från en QR-kod genererad av Google Authenticator"
 
 #. Translators: this is for restoring a backup from the old Authenticator
 #. release
-#: src/backup/legacy.rs:36
+#: src/backup/legacy.rs:41
 msgid "Au_thenticator (Legacy)"
 msgstr "Au_thenticator (Gammal)"
 
-#: src/models/algorithm.rs:56
+#: src/models/algorithm.rs:60
 msgid "Counter-based"
 msgstr "Räknarbaserad"
 
-#: src/models/algorithm.rs:57
+#: src/models/algorithm.rs:61
 msgid "Time-based"
 msgstr "Tidsbaserad"
 
 #. Translators: Steam refers to the gaming application by Valve.
-#: src/models/algorithm.rs:59
+#: src/models/algorithm.rs:63
 msgid "Steam"
 msgstr "Steam"
 
-#: src/models/algorithm.rs:122
+#: src/models/algorithm.rs:126
 msgid "SHA-1"
 msgstr "SHA-1"
 
-#: src/models/algorithm.rs:123
+#: src/models/algorithm.rs:127
 msgid "SHA-256"
 msgstr "SHA-256"
 
-#: src/models/algorithm.rs:124
+#: src/models/algorithm.rs:128
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:275
-msgid "Invalid Token"
-msgstr "Ogiltig token"
-
-#: src/widgets/window.rs:105
-msgid "Wrong Password"
-msgstr "Fel lösenord"
-
-#: src/widgets/preferences/password_page.rs:211
-#: src/widgets/preferences/password_page.rs:250
-msgid "Wrong Passphrase"
-msgstr "Fel lösenfras"
-
-#: src/widgets/preferences/window.rs:251 src/widgets/preferences/window.rs:318
-msgid "Key / Passphrase"
-msgstr "Nyckel/lösenfras"
-
-#: src/widgets/preferences/window.rs:252
-msgid "The key that will be used to decrypt the vault"
-msgstr "Nyckeln som kommer att användas för att dekryptera valvet"
-
-#: src/widgets/preferences/window.rs:268 src/widgets/preferences/window.rs:334
-msgid "Select File"
-msgstr "Välj fil"
-
-#: src/widgets/preferences/window.rs:319
-msgid "The key used to encrypt the vault"
-msgstr "Nyckeln som används för att kryptera valvet"
-
-#: src/widgets/preferences/window.rs:406 src/widgets/preferences/window.rs:439
-msgid "Unable to restore accounts"
-msgstr "Kunde inte återställa konton"
-
-#: src/widgets/preferences/window.rs:417
-msgid "Something went wrong"
-msgstr "Något gick fel"
-
-#: src/widgets/preferences/window.rs:445
-msgid "Couldn't find a QR code"
-msgstr "Kunde inte hitta någon QR-kod"
-
-#: src/widgets/providers/dialog.rs:244
-msgid "Provider created successfully"
-msgstr "Leverantören har skapats"
-
-#: src/widgets/providers/dialog.rs:254
-msgid "Provider updated successfully"
-msgstr "Leverantören har uppdaterats"
-
-#: src/widgets/providers/dialog.rs:271
-msgid "Provider removed successfully"
-msgstr "Leverantören har tagits bort"
-
-#: src/widgets/providers/page.rs:201
-msgid "Editing Provider: {}"
-msgstr "Redigerar leverantör: {}"
-
-#: src/widgets/providers/page.rs:308
+#: src/widgets/accounts/add.rs:274 src/widgets/preferences/window.rs:419
+#: src/widgets/providers/page.rs:292
 msgid "Image"
 msgstr "Bild"
 
-#: src/widgets/providers/page.rs:341
+#: src/widgets/accounts/add.rs:282 src/widgets/preferences/window.rs:427
+msgid "Select QR Code"
+msgstr "Välj QR-kod"
+
+#: src/widgets/accounts/add.rs:300
+msgid "Invalid Token"
+msgstr "Ogiltig token"
+
+#: src/widgets/window.rs:115
+msgid "Wrong Password"
+msgstr "Fel lösenord"
+
+#: src/widgets/preferences/password_page.rs:172
+#: src/widgets/preferences/password_page.rs:214
+msgid "Wrong Passphrase"
+msgstr "Fel lösenfras"
+
+#: src/widgets/preferences/window.rs:196 src/widgets/preferences/window.rs:268
+msgid "Key / Passphrase"
+msgstr "Nyckel/lösenfras"
+
+#: src/widgets/preferences/window.rs:207 src/widgets/preferences/window.rs:280
+msgid "Select File"
+msgstr "Välj fil"
+
+#: src/widgets/preferences/window.rs:231
+msgid "Failed to create a backup"
+msgstr "Misslyckades med att skapa en säkerhetskopia"
+
+#: src/widgets/preferences/window.rs:343
+msgid "Failed to restore from camera"
+msgstr "Misslyckades med att återställa från kamera"
+
+#: src/widgets/preferences/window.rs:354
+msgid "Failed to restore from a screenshot"
+msgstr "Misslyckades med att återställa från en skärmbild"
+
+#: src/widgets/preferences/window.rs:364
+msgid "Failed to restore from an image"
+msgstr "Misslyckades med att återställa från en bild"
+
+#: src/widgets/preferences/window.rs:377
+msgid "Failed to restore from a file"
+msgstr "Misslyckades med att återställa från en fil"
+
+#: src/widgets/providers/dialog.rs:235
+msgid "Provider created successfully"
+msgstr "Leverantören har skapats"
+
+#: src/widgets/providers/dialog.rs:245
+msgid "Provider updated successfully"
+msgstr "Leverantören har uppdaterats"
+
+#: src/widgets/providers/dialog.rs:261
+msgid "Provider removed successfully"
+msgstr "Leverantören har tagits bort"
+
+#: src/widgets/providers/page.rs:186
+msgid "Editing Provider: {}"
+msgstr "Redigerar leverantör: {}"
+
+#: src/widgets/providers/page.rs:325
 msgid "The provider has accounts assigned to it, please remove them first"
 msgstr "Leverantören har konton tilldelade. Ta bort dem först"
+
+#~ msgid "Back"
+#~ msgstr "Bakåt"
+
+#~ msgid "The key that will be used to decrypt the vault"
+#~ msgstr "Nyckeln som kommer att användas för att dekryptera valvet"
+
+#~ msgid "The key used to encrypt the vault"
+#~ msgstr "Nyckeln som används för att kryptera valvet"
+
+#~ msgid "Go Back"
+#~ msgstr "Gå tillbaka"
+
+#~ msgid "Dark Mode"
+#~ msgstr "Mörkt läge"
+
+#~ msgid "Whether the application should use a dark mode."
+#~ msgstr "Huruvida programmet ska använda ett mörkt läge."
+
+#~ msgid "_Edit"
+#~ msgstr "_Redigera"
+
+#~ msgid "Appearance"
+#~ msgstr "Utseende"
+
+#~ msgid "_Dark Mode"
+#~ msgstr "_Mörkt läge"
+
+#~ msgid "Whether the application should use a dark mode"
+#~ msgstr "Huruvida programmet ska använda ett mörkt läge"
+
+#~ msgid "Unable to restore accounts"
+#~ msgstr "Kunde inte återställa konton"
+
+#~ msgid "Something went wrong"
+#~ msgstr "Något gick fel"
+
+#~ msgid "Couldn't find a QR code"
+#~ msgstr "Kunde inte hitta någon QR-kod"
 
 #~ msgid "Used to fetch the provider icon"
 #~ msgstr "Används för att hämta leverantörsikon"
@@ -720,9 +769,6 @@ msgstr "Leverantören har konton tilldelade. Ta bort dem först"
 #~ msgid "Select"
 #~ msgstr "Välj"
 
-#~ msgid "Cancel"
-#~ msgstr "Avbryt"
-
 #~ msgid "D_etails"
 #~ msgstr "D_etaljer"
 
@@ -732,14 +778,8 @@ msgstr "Leverantören har konton tilldelade. Ta bort dem först"
 #~ msgid "More"
 #~ msgstr "Mer"
 
-#~ msgid "Capture from a screenshot"
-#~ msgstr "Fånga från en skärmbild"
-
 #~ msgid "_Password"
 #~ msgstr "_Lösenord"
-
-#~ msgid "QR code scanner"
-#~ msgstr "QR-kodläsare"
 
 #~ msgid "Huge database of more than 560 supported services"
 #~ msgstr "Stor databas om mer än 560 tjänster som stöds"
@@ -835,9 +875,6 @@ msgstr "Leverantören har konton tilldelade. Ta bort dem först"
 #~ msgid "Close the notification"
 #~ msgstr "Stäng aviseringen"
 
-#~ msgid "Save Password"
-#~ msgstr "Spara lösenord"
-
 #~ msgid "Do you want to remove the authentication password?"
 #~ msgstr "Vill du ta bort autentiseringslösenordet?"
 
@@ -881,7 +918,7 @@ msgstr "Leverantören har konton tilldelade. Ta bort dem först"
 #~ msgstr "Ta bort onödiga funktioner"
 
 #~ msgid "Switch to pyzbar instead of zbarlight"
-#~ msgstr "Växla till pyzbar istället för zbarlight"
+#~ msgstr "Växla till pyzbar i stället för zbarlight"
 
 #~ msgid "Flatpak package"
 #~ msgstr "Flatpak-paket"
