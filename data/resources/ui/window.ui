@@ -193,9 +193,13 @@
                                                     <property name="maximum-size">400</property>
                                                     <property name="child">
                                                       <object class="GtkSearchEntry" id="search_entry">
+                                                        <property name="placeholder-text" translatable="yes">Search…</property>
                                                         <signal name="search-started" handler="on_search_started" swapped="true" />
                                                         <signal name="search-changed" handler="on_search_changed" swapped="true" />
                                                         <signal name="stop-search" handler="on_search_stopped" swapped="true" />
+                                                        <accessibility>
+                                                          <property name="label" translatable="yes">Search</property>
+                                                        </accessibility>
                                                       </object>
                                                     </property>
                                                   </object>
