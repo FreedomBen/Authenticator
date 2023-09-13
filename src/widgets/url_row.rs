@@ -45,7 +45,6 @@ mod imp {
             }));
 
             let image_suffix = gtk::Image::from_icon_name("link-symbolic");
-            image_suffix.add_css_class("dim-label");
             image_suffix.set_accessible_role(gtk::AccessibleRole::Presentation);
             obj.add_suffix(&image_suffix);
         }
