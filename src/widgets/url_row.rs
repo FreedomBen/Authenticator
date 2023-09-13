@@ -31,8 +31,8 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
             let obj = self.obj();
-            let gesture = gtk::GestureClick::new();
-            gesture.connect_pressed(clone!(@weak obj as row => move |_,_,_,_| {
+            obj.set_activatable(true);
+            obj.connect_activated(clone!(@weak obj as row => move |_| {
                 if let Some(uri) = row.imp().uri.borrow().clone() {
                     spawn(async move {
                         let file = gio::File::for_uri(&uri);
@@ -43,8 +43,6 @@ mod imp {
                     });
                 };
             }));
-
-            obj.add_controller(gesture);
 
             let image_suffix = gtk::Image::from_icon_name("link-symbolic");
             image_suffix.add_css_class("dim-label");
