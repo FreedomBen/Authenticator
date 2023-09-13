@@ -39,6 +39,7 @@
                     <property name="width-request">200</property>
                     <property name="height-request">200</property>
                     <property name="overflow">hidden</property>
+                    <property name="accessible-role">presentation</property>
                     <style>
                       <class name="card"/>
                     </style>

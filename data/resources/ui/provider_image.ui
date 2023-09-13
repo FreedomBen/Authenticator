@@ -13,6 +13,7 @@
               <object class="GtkImage" id="image">
                 <property name="icon-name">provider-fallback</property>
                 <property name="pixel-size">96</property>
+                <property name="accessible-role">presentation</property>
               </object>
             </property>
           </object>
