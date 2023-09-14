@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: authenticator master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2023-08-30 07:57+0000\n"
-"PO-Revision-Date: 2023-08-30 17:43+0200\n"
+"POT-Creation-Date: 2023-09-14 05:02+0000\n"
+"PO-Revision-Date: 2023-09-14 09:16+0200\n"
 "Last-Translator: Martin Srebotnjak <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "Language: sl_SI\n"
@@ -183,8 +183,8 @@ msgid "Scan QR Code"
 msgstr "Preberi kodo QR"
 
 #: data/resources/ui/account_add.ui:114
-#: data/resources/ui/account_details_page.ui:95
-#: data/resources/ui/providers_dialog.ui:105
+#: data/resources/ui/account_details_page.ui:96
+#: data/resources/ui/providers_dialog.ui:110
 msgid "Provider"
 msgstr "Ponudnik"
 
@@ -193,7 +193,7 @@ msgid "Token issuer"
 msgstr "Izdajatelj žetona"
 
 #: data/resources/ui/account_add.ui:129
-#: data/resources/ui/account_details_page.ui:90
+#: data/resources/ui/account_details_page.ui:91
 msgid "Account"
 msgstr "Račun"
 
@@ -202,25 +202,25 @@ msgid "Token"
 msgstr "Žeton"
 
 #: data/resources/ui/account_add.ui:141
-#: data/resources/ui/account_details_page.ui:138
+#: data/resources/ui/account_details_page.ui:139
 #: data/resources/ui/provider_page.ui:157
 msgid "Counter"
 msgstr "Števec"
 
 #: data/resources/ui/account_add.ui:159
-#: data/resources/ui/account_details_page.ui:118
+#: data/resources/ui/account_details_page.ui:119
 #: data/resources/ui/provider_page.ui:132
 msgid "Algorithm"
 msgstr "Algoritem"
 
 #: data/resources/ui/account_add.ui:171
-#: data/resources/ui/account_details_page.ui:128
+#: data/resources/ui/account_details_page.ui:129
 #: data/resources/ui/provider_page.ui:117
 msgid "Computing Method"
 msgstr "Način računanja"
 
 #: data/resources/ui/account_add.ui:183
-#: data/resources/ui/account_details_page.ui:147
+#: data/resources/ui/account_details_page.ui:148
 #: data/resources/ui/provider_page.ui:148
 msgid "Period"
 msgstr "Obdobje"
@@ -230,7 +230,7 @@ msgid "Duration in seconds until the next password update"
 msgstr "Čas v sekundah do naslednje posodobitve gesla"
 
 #: data/resources/ui/account_add.ui:196
-#: data/resources/ui/account_details_page.ui:157
+#: data/resources/ui/account_details_page.ui:158
 #: data/resources/ui/provider_page.ui:166
 msgid "Digits"
 msgstr "Števke"
@@ -240,7 +240,7 @@ msgid "Length of the generated code"
 msgstr "Dolžina ustvarjene kode"
 
 #: data/resources/ui/account_add.ui:209
-#: data/resources/ui/account_details_page.ui:167
+#: data/resources/ui/account_details_page.ui:168
 #: data/resources/ui/provider_page.ui:111
 msgid "Website"
 msgstr "Spletna stran"
@@ -258,18 +258,18 @@ msgstr "Kamera"
 msgid "Create Provider"
 msgstr "Ustvari ponudnika"
 
-#: data/resources/ui/account_details_page.ui:55
+#: data/resources/ui/account_details_page.ui:56
 #: data/resources/ui/preferences_password_page.ui:17
 #: data/resources/ui/provider_page.ui:28
 msgid "_Save"
 msgstr "_Shrani"
 
-#: data/resources/ui/account_details_page.ui:66
+#: data/resources/ui/account_details_page.ui:67
 #: data/resources/ui/provider_page.ui:184
 msgid "_Delete"
 msgstr "_Izbriši"
 
-#: data/resources/ui/account_details_page.ui:172
+#: data/resources/ui/account_details_page.ui:173
 msgid "Help"
 msgstr "Pomoč"
 
@@ -292,6 +292,70 @@ msgstr "Ni zaznane kamere"
 #: data/resources/ui/camera.ui:39
 msgid "_From a Screenshot"
 msgstr "_Iz zaslonske slike"
+
+#: data/resources/ui/preferences.ui:16
+msgid "General"
+msgstr "Splošno"
+
+#: data/resources/ui/preferences.ui:19
+msgid "Privacy"
+msgstr "Zasebnost"
+
+#: data/resources/ui/preferences.ui:22
+msgid "_Passphrase"
+msgstr "_Šifrirno geslo"
+
+#: data/resources/ui/preferences.ui:24
+msgid "Set up a passphrase to lock the application with"
+msgstr "Nastavi šifrirno geslo za zaklepanje uporabe programa"
+
+#: data/resources/ui/preferences.ui:37
+msgid "_Auto Lock the Application"
+msgstr "_Samodejno zakleni program"
+
+#: data/resources/ui/preferences.ui:39
+msgid "Whether to automatically lock the application"
+msgstr "Ali naj se program samodejno zaklene"
+
+#: data/resources/ui/preferences.ui:45
+msgid "Auto Lock _Timeout"
+msgstr "_Časovni zamik zaklepanja"
+
+#: data/resources/ui/preferences.ui:46
+msgid "The time in minutes"
+msgstr "Čas v minutah"
+
+#: data/resources/ui/preferences.ui:59
+msgid "Network"
+msgstr "Omrežje"
+
+#: data/resources/ui/preferences.ui:62
+msgid "_Download Favicons"
+msgstr "_Prenesi zaznamke (favikone)"
+
+#: data/resources/ui/preferences.ui:64
+msgid "Automatically attempt fetching a website icon"
+msgstr "Samodejno poskusi pridobiti ikono spletnega mesta"
+
+#: data/resources/ui/preferences.ui:69
+msgid "_Metered Connection"
+msgstr "_Omejena povezava"
+
+#: data/resources/ui/preferences.ui:71
+msgid "Fetch a website icon on a metered connection"
+msgstr "Pridobi ikono spletnega mesta prek omejene povezave"
+
+#: data/resources/ui/preferences.ui:81
+msgid "Backup/Restore"
+msgstr "Ustvari kopijo/Obnovi"
+
+#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:481
+msgid "Backup"
+msgstr "Varnostna kopija"
+
+#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:489
+msgid "Restore"
+msgstr "Obnovi"
 
 #: data/resources/ui/preferences_password_page.ui:4
 msgid "Create Password"
@@ -322,70 +386,6 @@ msgstr "Ponovi šifrirno geslo"
 msgid "_Reset"
 msgstr "_Ponastavi"
 
-#: data/resources/ui/preferences.ui:16
-msgid "General"
-msgstr "Splošno"
-
-#: data/resources/ui/preferences.ui:19
-msgid "Privacy"
-msgstr "Zasebnost"
-
-#: data/resources/ui/preferences.ui:22
-msgid "_Passphrase"
-msgstr "_Šifrirno geslo"
-
-#: data/resources/ui/preferences.ui:24
-msgid "Set up a passphrase to lock the application with"
-msgstr "Nastavi šifrirno geslo za zaklepanje uporabe programa"
-
-#: data/resources/ui/preferences.ui:36
-msgid "_Auto Lock the Application"
-msgstr "_Samodejno zakleni program"
-
-#: data/resources/ui/preferences.ui:38
-msgid "Whether to automatically lock the application"
-msgstr "Ali naj se program samodejno zaklene"
-
-#: data/resources/ui/preferences.ui:44
-msgid "Auto Lock _Timeout"
-msgstr "_Časovni zamik zaklepanja"
-
-#: data/resources/ui/preferences.ui:45
-msgid "The time in minutes"
-msgstr "Čas v minutah"
-
-#: data/resources/ui/preferences.ui:58
-msgid "Network"
-msgstr "Omrežje"
-
-#: data/resources/ui/preferences.ui:61
-msgid "_Download Favicons"
-msgstr "_Prenesi zaznamke (favikone)"
-
-#: data/resources/ui/preferences.ui:63
-msgid "Automatically attempt fetching a website icon"
-msgstr "Samodejno poskusi pridobiti ikono spletnega mesta"
-
-#: data/resources/ui/preferences.ui:68
-msgid "_Metered Connection"
-msgstr "_Omejena povezava"
-
-#: data/resources/ui/preferences.ui:70
-msgid "Fetch a website icon on a metered connection"
-msgstr "Pridobi ikono spletnega mesta prek omejene povezave"
-
-#: data/resources/ui/preferences.ui:80
-msgid "Backup/Restore"
-msgstr "Ustvari kopijo/Obnovi"
-
-#: data/resources/ui/preferences.ui:83 src/widgets/preferences/window.rs:481
-msgid "Backup"
-msgstr "Varnostna kopija"
-
-#: data/resources/ui/preferences.ui:88 src/widgets/preferences/window.rs:489
-msgid "Restore"
-msgstr "Obnovi"
-
 #: data/resources/ui/provider_page.ui:82
 msgid "Select a _File"
 msgstr "Izbor _datoteke"
@@ -402,32 +402,39 @@ msgstr "Privzeta vrednost za števčni način"
 msgid "Help URL"
 msgstr "Naslov URL pomoči"
 
-#: data/resources/ui/providers_dialog.ui:20
+#: data/resources/ui/providers_dialog.ui:10
+#: data/resources/ui/providers_dialog.ui:21
 msgid "Providers"
 msgstr "Ponudniki"
 
-#: data/resources/ui/providers_dialog.ui:30 src/widgets/providers/page.rs:209
+#: data/resources/ui/providers_dialog.ui:31 src/widgets/providers/page.rs:209
 msgid "New Provider"
 msgstr "Nov ponudnik"
 
-#: data/resources/ui/providers_dialog.ui:37 data/resources/ui/window.ui:218
+#: data/resources/ui/providers_dialog.ui:38
+#: data/resources/ui/providers_dialog.ui:54 data/resources/ui/window.ui:201
+#: data/resources/ui/window.ui:222
 msgid "Search"
 msgstr "Iskanje"
 
-#: data/resources/ui/providers_dialog.ui:90
+#: data/resources/ui/providers_dialog.ui:49 data/resources/ui/window.ui:196
+msgid "Search…"
+msgstr "Poišči …"
+
+#: data/resources/ui/providers_dialog.ui:95
 #: data/resources/ui/providers_list.ui:38
 msgid "No Results"
 msgstr "Ni najdenih zadetkov"
 
-#: data/resources/ui/providers_dialog.ui:91
+#: data/resources/ui/providers_dialog.ui:96
 msgid "No providers matching the query were found."
 msgstr "Ni mogoče najti ponudnika na poizvedbo."
 
-#: data/resources/ui/providers_dialog.ui:136
+#: data/resources/ui/providers_dialog.ui:141
 msgid "No Provider Selected"
 msgstr "Ponudnik ni izbran"
 
-#: data/resources/ui/providers_dialog.ui:137
+#: data/resources/ui/providers_dialog.ui:142
 msgid "Select a provider or create a new one"
 msgstr "Izberite ponudnika ali ustvarite novega"
 
@@ -516,7 +523,7 @@ msgstr "Računi"
 msgid "New Account"
 msgstr "Nov račun"
 
-#: data/resources/ui/window.ui:142 data/resources/ui/window.ui:212
+#: data/resources/ui/window.ui:142 data/resources/ui/window.ui:216
 msgid "Main Menu"
 msgstr "Glavni meni"
 
@@ -667,9 +674,25 @@ msgstr "Izberite kodo QR"
 msgid "Invalid Token"
 msgstr "Neveljaven žeton"
 
-#: src/widgets/window.rs:115
-msgid "Wrong Password"
-msgstr "Napačno geslo"
+#: src/widgets/accounts/details.rs:127
+msgid "Are you sure you want to delete the account?"
+msgstr "Ali ste prepričani, da želite izbrisati račun?"
+
+#: src/widgets/accounts/details.rs:128
+msgid "This action is irreversible"
+msgstr "To dejanje je nepovratno"
+
+#: src/widgets/accounts/details.rs:132
+msgid "No"
+msgstr "Ne"
+
+#: src/widgets/accounts/details.rs:132
+msgid "Yes"
+msgstr "Da"
+
+#: src/widgets/camera.rs:221
+msgid "Unknown Device"
+msgstr "Neznana naprava"
 
 #: src/widgets/preferences/password_page.rs:172
 #: src/widgets/preferences/password_page.rs:214
@@ -723,3 +746,7 @@ msgstr "Urejanje ponudnika: {}"
 #: src/widgets/providers/page.rs:325
 msgid "The provider has accounts assigned to it, please remove them first"
 msgstr "Ponudnik že ima dodeljene račune, najprej je treba te odstraniti."
+
+#: src/widgets/window.rs:115
+msgid "Wrong Password"
+msgstr "Napačno geslo"
