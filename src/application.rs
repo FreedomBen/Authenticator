@@ -286,7 +286,6 @@ impl Application {
                 }
             }
         });
-        let is_keyring_open = false;
 
         let has_set_password = if is_keyring_open {
             spawn_tokio_blocking(async { keyring::has_set_password().await.unwrap_or(false) })
