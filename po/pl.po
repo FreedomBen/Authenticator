@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Authenticator\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2023-09-14 05:02+0000\n"
-"PO-Revision-Date: 2023-09-16 15:54+0200\n"
+"POT-Creation-Date: 2023-09-17 10:32+0000\n"
+"PO-Revision-Date: 2023-09-24 14:12+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
-#: data/resources/ui/window.ui:36 src/application.rs:86 src/main.rs:41
+#: data/resources/ui/window.ui:36 src/application.rs:88 src/main.rs:41
 msgid "Authenticator"
 msgstr "Authenticator"
 
@@ -32,7 +32,7 @@ msgstr "Uwierzytelnianie dwuetapowe"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:5
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:89
+#: src/application.rs:91
 msgid "Generate Two-Factor Codes"
 msgstr "Generowanie kodów uwierzytelniania dwuetapowego"
 
@@ -291,6 +291,48 @@ msgstr "Nie odnaleziono aparatu"
 msgid "_From a Screenshot"
 msgstr "_Ze zrzutu ekranu"
 
+#: data/resources/ui/keyring_error_dialog.ui:8
+msgid "Secret Service Error"
+msgstr "Błąd usługi Secret Service"
+
+#: data/resources/ui/keyring_error_dialog.ui:32
+msgid ""
+"Authenticator relies on a Secret Service Provider to manage your sensitive "
+"session information and an error occurred while we were trying to store or "
+"get your session."
+msgstr ""
+"Ten program korzysta z dostawcy usługi Secret Service do zarządzania "
+"prywatnymi informacjami o sesji użytkownika i wystąpił błąd podczas próby "
+"przechowania lub uzyskania sesji użytkownika."
+
+#: data/resources/ui/keyring_error_dialog.ui:44
+msgid ""
+"Here are a few things that might help you fix issues with the Secret Service:"
+msgstr ""
+"Oto kilka rzeczy, które mogą pomóc rozwiązać problemy z usługą Secret "
+"Service:"
+
+#: data/resources/ui/keyring_error_dialog.ui:61
+msgid ""
+"Make sure you have a Secret Service Provider installed, like gnome-keyring."
+msgstr ""
+"Należy się upewnić, że dostawca usługi Secret Service, taki jak "
+"gnome-keyring, jest zainstalowany."
+
+#: data/resources/ui/keyring_error_dialog.ui:80
+msgid "Check that you have a default keyring and that it is unlocked."
+msgstr ""
+"Należy sprawdzić, czy użytkownik ma domyślną bazę kluczy i jest ona "
+"odblokowana."
+
+#: data/resources/ui/keyring_error_dialog.ui:92
+msgid ""
+"Check the application logs and your distribution’s documentation for more "
+"details."
+msgstr ""
+"Dzienniki programu i dokumentacja używanej dystrybucji mogą zawierać więcej "
+"informacji."
+
 #: data/resources/ui/preferences.ui:16
 msgid "General"
 msgstr "Ogólne"
@@ -533,22 +575,22 @@ msgstr "Nie ma kont"
 msgid "Add an account or scan a QR code first."
 msgstr "Należy najpierw dodać konto lub zeskanować kod QR."
 
-#: src/application.rs:72
+#: src/application.rs:74
 msgid "Accounts restored successfully"
 msgstr "Pomyślnie przywrócono konta"
 
-#: src/application.rs:98
+#: src/application.rs:100
 msgid "translator-credits"
 msgstr ""
 "WaldiS <admin@sto.ugu.pl>, 2018\n"
 "Piotr Drąg <piotrdrag@gmail.com>, 2019-2023\n"
 "Aviary.pl <community-poland@mozilla.org>, 2019-2023"
 
-#: src/application.rs:362 src/widgets/accounts/row.rs:46
+#: src/application.rs:382 src/widgets/accounts/row.rs:46
 msgid "One-Time password copied"
 msgstr "Skopiowano jednorazowe hasło"
 
-#: src/application.rs:363
+#: src/application.rs:383
 msgid "Password was copied successfully"
 msgstr "Pomyślnie skopiowano hasło"
 
