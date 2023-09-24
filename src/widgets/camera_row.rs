@@ -1,12 +1,5 @@
 use gtk::{glib, prelude::*, subclass::prelude::*};
 
-#[derive(Clone, glib::Boxed)]
-#[boxed_type(name = "CameraItem")]
-pub struct CameraItem {
-    pub nick: String,
-    pub node_id: u32,
-}
-
 mod imp {
     use super::*;
 
@@ -58,9 +51,5 @@ impl CameraRow {
 
     pub fn set_selected(&self, selected: bool) {
         self.imp().checkmark.set_visible(selected);
-    }
-
-    pub fn set_item(&self, item: &CameraItem) {
-        self.imp().label.set_label(&item.nick);
     }
 }

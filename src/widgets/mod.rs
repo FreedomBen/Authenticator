@@ -1,6 +1,5 @@
 mod accounts;
 mod camera;
-mod camera_paintable;
 mod camera_row;
 mod error_revealer;
 mod keyring_error_dialog;
@@ -12,9 +11,8 @@ mod window;
 
 pub use self::{
     accounts::{AccountAddDialog, QRCodeData},
-    camera::{screenshot, Camera, CameraEvent},
-    camera_paintable::CameraPaintable,
-    camera_row::{CameraItem, CameraRow},
+    camera::{screenshot, Camera},
+    camera_row::CameraRow,
     error_revealer::ErrorRevealer,
     keyring_error_dialog::KeyringErrorDialog,
     preferences::PreferencesWindow,

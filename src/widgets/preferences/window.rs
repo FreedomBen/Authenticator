@@ -531,7 +531,6 @@ impl PreferencesWindow {
         let close_page = gio::ActionEntry::builder("close_page")
             .activate(clone!(@weak self as win => move |_, _, _| {
                 win.pop_subpage();
-                win.imp().camera_page.imp().camera.stop();
             }))
             .build();
 

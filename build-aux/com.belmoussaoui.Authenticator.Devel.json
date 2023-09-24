@@ -15,7 +15,7 @@
         "--socket=wayland",
         "--device=dri",
         "--talk-name=org.freedesktop.secrets",
-        "--env=RUST_LOG=authenticator=debug,ashpd=debug,oo7=debug",
+        "--env=RUST_LOG=authenticator=debug,ashpd=debug,oo7=debug,aperture=debug",
         "--env=G_MESSAGES_DEBUG=none",
         "--talk-name=org.gtk.vfs.*",
         "--filesystem=xdg-run/gvfs",

@@ -1,22 +1,20 @@
-use std::cell::RefCell;
+use std::cell::OnceCell;
+use std::os::fd::RawFd;
+use std::sync::Once;
 
 use adw::subclass::prelude::*;
 use anyhow::Result;
 use ashpd::desktop::screenshot::ScreenshotRequest;
-use gettextrs::gettext;
 use glib::once_cell::sync::Lazy;
-use gst::prelude::*;
 use gtk::{
     gio,
-    glib::{self, clone, Receiver},
+    glib::{self, clone},
     prelude::*,
 };
 use image::GenericImageView;
 
-use super::{CameraItem, CameraRow};
-use crate::{utils::spawn_tokio, widgets::CameraPaintable};
-
-static CAMERA_LOCATION: &str = "api.libcamera.location";
+use super::CameraRow;
+use crate::utils::spawn_tokio;
 
 pub mod screenshot {
     use super::*;
@@ -62,30 +60,18 @@ pub mod screenshot {
     }
 }
 
-pub enum CameraEvent {
-    CodeDetected(String),
-    StreamStarted,
-}
-
-pub enum CameraState {
-    NotFound,
-    Ready,
-}
-
 mod imp {
     use glib::subclass::{InitializingObject, Signal};
 
     use super::*;
 
-    #[derive(gtk::CompositeTemplate)]
+    #[derive(gtk::CompositeTemplate, Default)]
     #[template(resource = "/com/belmoussaoui/Authenticator/camera.ui")]
     pub struct Camera {
-        pub paintable: CameraPaintable,
-        pub receiver: RefCell<Option<Receiver<CameraEvent>>>,
         #[template_child]
         pub stack: TemplateChild<gtk::Stack>,
         #[template_child]
-        pub picture: TemplateChild<gtk::Picture>,
+        pub viewfinder: TemplateChild<aperture::Viewfinder>,
         #[template_child]
         pub spinner: TemplateChild<gtk::Spinner>,
         #[template_child]
@@ -94,8 +80,8 @@ mod imp {
         pub camera_selection_button: TemplateChild<gtk::MenuButton>,
         #[template_child]
         pub toolbar_view: TemplateChild<adw::ToolbarView>,
-        pub stream_list: gio::ListStore,
         pub selection: gtk::SingleSelection,
+        pub provider: OnceCell<aperture::DeviceProvider>,
     }
 
     #[glib::object_subclass]
@@ -112,24 +98,6 @@ mod imp {
 
         fn instance_init(obj: &InitializingObject<Self>) {
             obj.init_template();
-        }
-
-        fn new() -> Self {
-            let (sender, r) = glib::MainContext::channel(glib::Priority::default());
-            let receiver = RefCell::new(Some(r));
-
-            Self {
-                paintable: CameraPaintable::new(sender),
-                receiver,
-                camera_selection_button: TemplateChild::default(),
-                spinner: TemplateChild::default(),
-                stack: TemplateChild::default(),
-                picture: TemplateChild::default(),
-                screenshot: TemplateChild::default(),
-                toolbar_view: TemplateChild::default(),
-                stream_list: gio::ListStore::new::<glib::BoxedAnyObject>(),
-                selection: Default::default(),
-            }
         }
     }
 
@@ -150,14 +118,67 @@ mod imp {
         fn constructed(&self) {
             self.parent_constructed();
             let obj = self.obj();
-            obj.setup_receiver();
-            obj.setup_widget();
-            obj.set_state(CameraState::NotFound);
-            self.picture.set_paintable(Some(&self.paintable));
-        }
 
-        fn dispose(&self) {
-            self.paintable.close_pipeline();
+            let provider = aperture::DeviceProvider::instance();
+            self.provider.set(provider.clone()).unwrap();
+
+            self.viewfinder
+                .connect_state_notify(glib::clone!(@weak obj => move |_| {
+                    obj.update_viewfinder_state();
+                }));
+            obj.update_viewfinder_state();
+
+            self.viewfinder.connect_code_detected(
+                glib::clone!(@weak obj => move|_, code_type, code| {
+                    if matches!(code_type, aperture::CodeType::Qr) {
+                        obj.emit_by_name::<()>("code-detected", &[&code]);
+                    }
+                }),
+            );
+
+            let popover = gtk::Popover::new();
+            popover.add_css_class("menu");
+
+            self.selection.set_model(Some(provider));
+            let factory = gtk::SignalListItemFactory::new();
+            factory.connect_setup(|_, item| {
+                let camera_row = CameraRow::default();
+
+                item.downcast_ref::<gtk::ListItem>()
+                    .unwrap()
+                    .set_child(Some(&camera_row));
+            });
+            let selection = &self.selection;
+            factory.connect_bind(glib::clone!(@weak selection => move |_, item| {
+                let item = item.downcast_ref::<gtk::ListItem>().unwrap();
+                let child = item.child().unwrap();
+                let row = child.downcast_ref::<CameraRow>().unwrap();
+
+                let item = item.item().and_downcast::<aperture::Camera>().unwrap();
+                row.set_label(&item.display_name());
+
+                selection.connect_selected_item_notify(glib::clone!(@weak row, @weak item => move |selection| {
+                    if let Some(selected_item) = selection.selected_item() {
+                        row.set_selected(selected_item == item);
+                    } else {
+                        row.set_selected(false);
+                    }
+                }));
+            }));
+            let list_view = gtk::ListView::new(Some(self.selection.clone()), Some(factory));
+            popover.set_child(Some(&list_view));
+
+            self.selection.connect_selected_item_notify(
+                glib::clone!(@weak obj, @weak popover => move |selection| {
+                    if let Some(selected_item) = selection.selected_item() {
+                        let camera = selected_item.downcast_ref::<aperture::Camera>();
+                        obj.imp().viewfinder.set_camera(camera);
+                    }
+                    popover.popdown();
+                }),
+            );
+
+            self.camera_selection_button.set_popover(Some(&popover));
         }
     }
 
@@ -172,19 +193,6 @@ glib::wrapper! {
 
 #[gtk::template_callbacks]
 impl Camera {
-    pub fn start(&self) {
-        let imp = self.imp();
-        imp.paintable.start();
-        self.set_state(CameraState::Ready);
-    }
-
-    pub fn stop(&self) {
-        let imp = self.imp();
-        imp.paintable.stop();
-        imp.stream_list.remove_all();
-        imp.selection.set_selected(gtk::INVALID_LIST_POSITION);
-    }
-
     pub fn connect_close<F>(&self, callback: F) -> glib::SignalHandlerId
     where
         F: Fn(&Self) + 'static,
@@ -214,46 +222,27 @@ impl Camera {
         )
     }
 
-    fn set_streams(&self, streams: Vec<ashpd::desktop::camera::Stream>) {
-        let imp = self.imp();
-        let mut selected_stream = 0;
-        for (id, stream) in streams.into_iter().enumerate() {
-            let default = gettext("Unknown Device");
-            let nick = stream
-                .properties()
-                .get("node.nick")
-                .unwrap_or(&default)
-                .to_string();
+    pub async fn scan_from_camera(&self) {
+        static INIT: Once = Once::new();
+        if INIT.is_completed() {
+            return;
+        }
 
-            if let Some(location) = stream.properties().get(CAMERA_LOCATION) {
-                if location == "front" {
-                    selected_stream = id;
+        let provider = self.imp().provider.get().unwrap();
+        match spawn_tokio(stream()).await {
+            Ok(fd) => {
+                if let Err(err) = provider.set_fd(fd) {
+                    tracing::error!("Could not use the camera portal: {err}");
+                } else {
+                    if let Err(err) = provider.start() {
+                        tracing::error!("Could not start the device provider: {err}");
+                    } else {
+                        tracing::debug!("Device provider started");
+                        INIT.call_once(|| ());
+                    };
                 }
             }
-
-            let item = CameraItem {
-                nick,
-                node_id: stream.node_id(),
-            };
-            imp.stream_list.append(&glib::BoxedAnyObject::new(item));
-        }
-        imp.selection.set_selected(selected_stream as u32);
-    }
-
-    pub async fn scan_from_camera(&self) {
-        match spawn_tokio(ashpd::desktop::camera::request()).await {
-            Ok(Some((stream_fd, nodes_id))) => {
-                match self.imp().paintable.set_pipewire_fd(stream_fd) {
-                    Ok(_) => {
-                        self.set_streams(nodes_id);
-                    }
-                    Err(err) => tracing::error!("Failed to start the camera stream {err}"),
-                };
-            }
-            Ok(None) => {
-                self.set_state(CameraState::NotFound);
-            }
-            Err(e) => tracing::error!("Failed to stream {}", e),
+            Err(err) => tracing::error!("Failed to start the camera portal: {err}"),
         }
     }
 
@@ -273,93 +262,38 @@ impl Camera {
         Ok(())
     }
 
-    fn set_state(&self, state: CameraState) {
+    fn update_viewfinder_state(&self) {
         let imp = self.imp();
+        let state = imp.viewfinder.state();
         match state {
-            CameraState::NotFound => {
-                tracing::info!("The camera state changed: Not Found");
-                imp.stack.set_visible_child_name("not-found");
-                imp.toolbar_view.set_extend_content_to_top_edge(false);
-                imp.toolbar_view.remove_css_class("extended");
+            aperture::ViewfinderState::Loading => {
+                imp.stack.set_visible_child_name("loading");
             }
-            CameraState::Ready => {
-                tracing::info!("The camera state changed: Ready");
+            aperture::ViewfinderState::Error => {
+                imp.stack.set_visible_child_name("not-found");
+            }
+            aperture::ViewfinderState::NoCameras => {
+                imp.stack.set_visible_child_name("not-found");
+            }
+            aperture::ViewfinderState::Ready => {
                 imp.stack.set_visible_child_name("stream");
-                imp.toolbar_view.set_extend_content_to_top_edge(true);
-                imp.toolbar_view.add_css_class("extended");
-                imp.spinner.stop();
             }
         }
-    }
+        tracing::info!("The camera state changed: {state:?}");
 
-    fn setup_receiver(&self) {
-        self.imp().receiver.borrow_mut().take().unwrap().attach(
-            None,
-            glib::clone!(@weak self as camera => @default-return glib::ControlFlow::Break, move |event| {
-                match event {
-                    CameraEvent::CodeDetected(code) => {
-                        camera.emit_by_name::<()>("code-detected", &[&code]);
-                    }
-                    CameraEvent::StreamStarted => {
-                        camera.set_state(CameraState::Ready);
-                    }
-                }
-                glib::ControlFlow::Continue
-            }),
-        );
-    }
+        let is_ready = matches!(state, aperture::ViewfinderState::Ready);
+        imp.toolbar_view.set_extend_content_to_top_edge(is_ready);
+        if is_ready {
+            imp.toolbar_view.add_css_class("extended");
+        } else {
+            imp.toolbar_view.remove_css_class("extended");
+        }
 
-    fn setup_widget(&self) {
-        let imp = self.imp();
-        let popover = gtk::Popover::new();
-        popover.add_css_class("menu");
-
-        imp.selection.set_model(Some(&imp.stream_list));
-        let factory = gtk::SignalListItemFactory::new();
-        factory.connect_setup(|_, item| {
-            let camera_row = CameraRow::default();
-
-            item.downcast_ref::<gtk::ListItem>()
-                .unwrap()
-                .set_child(Some(&camera_row));
-        });
-        let selection = &imp.selection;
-        factory.connect_bind(glib::clone!(@weak selection => move |_, item| {
-            let item = item.downcast_ref::<gtk::ListItem>().unwrap();
-            let child = item.child().unwrap();
-            let row = child.downcast_ref::<CameraRow>().unwrap();
-
-            let item = item.item().and_downcast::<glib::BoxedAnyObject>().unwrap();
-            let camera_item = item.borrow::<CameraItem>();
-            row.set_label(&camera_item.nick);
-
-            selection.connect_selected_item_notify(glib::clone!(@weak row, @weak item => move |selection| {
-                if let Some(selected_item) = selection.selected_item() {
-                    row.set_selected(selected_item == item);
-                } else {
-                    row.set_selected(false);
-                }
-            }));
-        }));
-        let list_view = gtk::ListView::new(Some(imp.selection.clone()), Some(factory));
-        popover.set_child(Some(&list_view));
-
-        imp.selection.connect_selected_item_notify(glib::clone!(@weak self as obj, @weak popover => move |selection| {
-            if let Some(selected_item) = selection.selected_item() {
-                let node_id = selected_item.downcast_ref::<glib::BoxedAnyObject>().unwrap().borrow::<CameraItem>().node_id;
-                match obj.imp().paintable.set_pipewire_node_id(node_id) {
-                    Ok(_) => {
-                        obj.start();
-                    },
-                    Err(err) => {
-                        tracing::error!("Failed to start a camera stream {err}");
-                    }
-                }
-            }
-            popover.popdown();
-        }));
-
-        imp.camera_selection_button.set_popover(Some(&popover));
+        if matches!(state, aperture::ViewfinderState::Loading) {
+            imp.spinner.start();
+        } else {
+            imp.spinner.stop();
+        }
     }
 
     #[template_callback]
@@ -374,4 +308,11 @@ impl Default for Camera {
     fn default() -> Self {
         glib::Object::new()
     }
+}
+
+async fn stream() -> ashpd::Result<RawFd> {
+    let proxy = ashpd::desktop::camera::Camera::new().await?;
+    proxy.request_access().await?;
+
+    proxy.open_pipe_wire_remote().await
 }

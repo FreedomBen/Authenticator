@@ -27,7 +27,6 @@ src/models/algorithm.rs
 src/widgets/accounts/add.rs
 src/widgets/accounts/details.rs
 src/widgets/accounts/row.rs
-src/widgets/camera.rs
 src/widgets/preferences/password_page.rs
 src/widgets/preferences/window.rs
 src/widgets/providers/dialog.rs

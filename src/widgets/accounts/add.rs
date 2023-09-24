@@ -199,11 +199,6 @@ impl AccountAddDialog {
     }
 
     #[template_callback]
-    fn camera_page_hidden(&self, _page: &adw::NavigationPage) {
-        self.imp().camera.stop();
-    }
-
-    #[template_callback]
     fn camera_closed(&self, _camera: Camera) {
         self.activate_action("add.previous", None).unwrap();
     }
