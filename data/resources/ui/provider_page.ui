@@ -19,6 +19,7 @@
     <property name="page-increment">10</property>
   </object>
   <template parent="AdwNavigationPage" class="ProviderPage">
+    <property name="title" translatable="yes">Provider</property>
     <child>
       <object class="AdwToolbarView">
         <child type="top">
