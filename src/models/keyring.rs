@@ -79,7 +79,7 @@ pub async fn token_exists(token: &str) -> anyhow::Result<bool> {
 pub async fn has_set_password() -> anyhow::Result<bool> {
     let attributes = password_attributes();
     match SECRET_SERVICE.get().unwrap().search_items(attributes).await {
-        Ok(items) => Ok(matches!(items.get(0), Some(_))),
+        Ok(items) => Ok(items.get(0).is_some()),
         _ => Ok(false),
     }
 }

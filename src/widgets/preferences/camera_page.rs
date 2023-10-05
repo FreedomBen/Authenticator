@@ -155,7 +155,7 @@ impl CameraPage {
 
                 error.into()
             }),
-            result = (|| async move {
+            result = async move {
                 imp.camera.scan_from_screenshot().await?;
 
                 // Give the GLib event loop a whole 2.5 seconds to dispatch the "code-detected"
@@ -169,7 +169,7 @@ impl CameraPage {
                     "CameraPage::scan_from_screenshot failed to receive the resulting QR code in ",
                     "a reasonable amount of time."
                 ));
-            })() => result.map_err(From::from),
+            } => result.map_err(From::from),
         }
     }
 

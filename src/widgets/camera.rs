@@ -1,6 +1,4 @@
-use std::cell::OnceCell;
-use std::os::fd::RawFd;
-use std::sync::Once;
+use std::{cell::OnceCell, os::fd::RawFd, sync::Once};
 
 use adw::subclass::prelude::*;
 use anyhow::Result;
@@ -233,14 +231,12 @@ impl Camera {
             Ok(fd) => {
                 if let Err(err) = provider.set_fd(fd) {
                     tracing::error!("Could not use the camera portal: {err}");
+                } else if let Err(err) = provider.start() {
+                    tracing::error!("Could not start the device provider: {err}");
                 } else {
-                    if let Err(err) = provider.start() {
-                        tracing::error!("Could not start the device provider: {err}");
-                    } else {
-                        tracing::debug!("Device provider started");
-                        INIT.call_once(|| ());
-                    };
-                }
+                    tracing::debug!("Device provider started");
+                    INIT.call_once(|| ());
+                };
             }
             Err(err) => tracing::error!("Failed to start the camera portal: {err}"),
         }
