@@ -143,20 +143,14 @@ impl PreferencesWindow {
         let imp = self.imp();
 
         SETTINGS
-            .bind("download-favicons", &*imp.download_favicons, "active")
+            .bind_download_favicons(&*imp.download_favicons, "active")
             .build();
         SETTINGS
-            .bind(
-                "download-favicons-metered",
-                &*imp.download_favicons_metered,
-                "active",
-            )
+            .bind_download_favicons_metred(&*imp.download_favicons_metered, "active")
             .build();
+        SETTINGS.bind_auto_lock(&*imp.auto_lock, "active").build();
         SETTINGS
-            .bind("auto-lock", &*imp.auto_lock, "active")
-            .build();
-        SETTINGS
-            .bind("auto-lock-timeout", &*imp.lock_timeout, "value")
+            .bind_auto_lock_timeout(&*imp.lock_timeout, "value")
             .build();
 
         imp.password_page

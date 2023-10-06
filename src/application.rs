@@ -152,22 +152,17 @@ mod imp {
                 }
             });
 
-            SETTINGS.connect_changed(
-                None,
-                clone!(@weak app => move |settings, key| {
-                    match key {
-                        "auto-lock" => {
-                            if settings.boolean(key) {
-                                app.restart_lock_timeout();
-                            } else {
-                                app.cancel_lock_timeout();
-                            }
-                        },
-                        "auto-lock-timeout" => app.restart_lock_timeout(),
-                        _ => ()
-                    }
-                }),
-            );
+            SETTINGS.connect_auto_lock_changed(clone!(@weak app => move |auto_lock| {
+                if auto_lock {
+                    app.restart_lock_timeout();
+                } else {
+                    app.cancel_lock_timeout();
+                }
+            }));
+
+            SETTINGS.connect_auto_lock_timeout_changed(clone!(@weak app => move |_| {
+                app.restart_lock_timeout()
+            }));
 
             spawn(clone!(@strong app => async move {
                 app.start_search_provider().await;
@@ -243,7 +238,7 @@ impl Application {
         std::fs::create_dir_all(&*FAVICONS_PATH).ok();
 
         // To be removed in the upcoming release
-        if !SETTINGS.boolean("keyrings-migrated") {
+        if !SETTINGS.keyrings_migrated() {
             tracing::info!("Migrating the secrets to the file backend");
             let output: oo7::Result<()> = RUNTIME.block_on(async {
                 oo7::migrate(
@@ -259,7 +254,7 @@ impl Application {
             match output {
                 Ok(_) => {
                     SETTINGS
-                        .set_boolean("keyrings-migrated", true)
+                        .set_keyrings_migrated(true)
                         .expect("Failed to update settings");
                     tracing::info!("Secrets were migrated successfully");
                 }
@@ -321,8 +316,8 @@ impl Application {
     /// Starts or restarts the lock timeout.
     pub fn restart_lock_timeout(&self) {
         let imp = self.imp();
-        let auto_lock = SETTINGS.boolean("auto-lock");
-        let timeout = SETTINGS.uint("auto-lock-timeout") * 60;
+        let auto_lock = SETTINGS.auto_lock();
+        let timeout = SETTINGS.auto_lock_timeout() * 60;
 
         if !auto_lock {
             return;

@@ -143,14 +143,14 @@ mod imp {
             self.locked_status_page.set_icon_name(Some(config::APP_ID));
 
             // load latest window state
-            let width = SETTINGS.int("window-width");
-            let height = SETTINGS.int("window-height");
+            let width = SETTINGS.window_width();
+            let height = SETTINGS.window_height();
 
             if width > -1 && height > -1 {
                 win.set_default_size(width, height);
             }
 
-            let is_maximized = SETTINGS.boolean("is-maximized");
+            let is_maximized = SETTINGS.is_maximized();
             if is_maximized {
                 win.maximize();
             }
@@ -291,10 +291,9 @@ impl Window {
 
     fn save_window_state(&self) -> anyhow::Result<()> {
         let size = self.default_size();
-        SETTINGS.set_int("window-width", size.0)?;
-        SETTINGS.set_int("window-height", size.1)?;
-
-        SETTINGS.set_boolean("is-maximized", self.is_maximized())?;
+        SETTINGS.set_window_width(size.0)?;
+        SETTINGS.set_window_height(size.1)?;
+        SETTINGS.set_is_maximized(self.is_maximized())?;
         Ok(())
     }
 
