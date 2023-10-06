@@ -146,6 +146,7 @@
                             <child>
                               <object class="AdwActionRow" id="period_row">
                                 <property name="title" translatable="yes">Period</property>
+                                <property name="subtitle" translatable="yes">Duration in seconds until the next password update</property>
                                 <child>
                                   <object class="GtkLabel" id="period_label">
                                     <property name="halign">end</property>
@@ -156,6 +157,7 @@
                             <child>
                               <object class="AdwActionRow">
                                 <property name="title" translatable="yes">Digits</property>
+                                <property name="subtitle" translatable="yes">Length of the generated code</property>
                                 <child>
                                   <object class="GtkLabel" id="digits_label">
                                     <property name="halign">end</property>
