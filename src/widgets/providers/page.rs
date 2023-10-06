@@ -389,6 +389,18 @@ impl ProviderPage {
         imp.digits_spinbutton
             .set_sensitive(selected != Method::Steam);
     }
+
+    #[template_callback]
+    fn otp_method_to_locale_string(item: adw::EnumListItem) -> String {
+        let method = Method::from(item.value() as u32);
+        method.to_locale_string()
+    }
+
+    #[template_callback]
+    fn algorithm_to_locale_string(item: adw::EnumListItem) -> String {
+        let algorithm = Algorithm::from(item.value() as u32);
+        algorithm.to_locale_string()
+    }
 }
 
 impl Default for ProviderPage {

@@ -124,7 +124,7 @@
                               </object>
                             </property>
                             <property name="expression">
-                              <lookup type="AdwEnumListItem" name="name" />
+                              <closure type="gchararray" function="otp_method_to_locale_string"/>
                             </property>
                           </object>
                         </child>
@@ -137,7 +137,7 @@
                               </object>
                             </property>
                             <property name="expression">
-                              <lookup type="AdwEnumListItem" name="name" />
+                              <closure type="gchararray" function="algorithm_to_locale_string"/>
                             </property>
                           </object>
                         </child>
