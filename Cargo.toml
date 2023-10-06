@@ -4,6 +4,15 @@ name = "authenticator"
 version = "4.3.1"
 rust-version = "1.70"
 
+[profile.release]
+debug = true
+
+[profile.dev]
+opt-level = 1
+
+[profile.dev.package."*"]
+opt-level = 3
+
 [dependencies]
 adw = {package = "libadwaita", version = "0.5", features = ["v1_4"]}
 aes-gcm = "0.10"

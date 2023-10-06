@@ -1,4 +1,7 @@
-use std::collections::HashMap;
+use std::{
+    collections::HashMap,
+    sync::{Arc, Mutex},
+};
 
 use adw::prelude::*;
 use futures_util::StreamExt;
@@ -36,7 +39,7 @@ mod imp {
         pub model: ProvidersModel,
         #[property(get, set, construct)]
         pub is_locked: Cell<bool>,
-        pub lock_timeout_id: RefCell<Option<glib::SourceId>>,
+        pub lock_timeout_id: RefCell<Option<glib::Source>>,
         #[property(get, set, construct)]
         pub can_be_locked: Cell<bool>,
         #[property(get, set, construct_only)]
@@ -326,20 +329,33 @@ impl Application {
         self.cancel_lock_timeout();
 
         if !self.is_locked() && self.can_be_locked() {
-            let id = glib::timeout_add_seconds_local(
+            let (tx, rx) = futures_channel::oneshot::channel::<()>();
+            let tx = Arc::new(Mutex::new(Some(tx)));
+            let id = glib::source::timeout_source_new_seconds(
                 timeout,
-                clone!(@weak self as app => @default-return glib::ControlFlow::Break, move || {
-                    app.set_is_locked(true);
+                None,
+                glib::Priority::HIGH,
+                clone!(@strong tx => move || {
+                    let Some(tx) = tx.lock().unwrap().take() else {
+                        return glib::ControlFlow::Break;
+                    };
+                    tx.send(()).unwrap();
                     glib::ControlFlow::Break
                 }),
             );
+            spawn(clone!(@strong self as app => async move {
+                if let Ok(()) = rx.await {
+                    app.set_is_locked(true);
+                }
+            }));
+            id.attach(Some(&glib::MainContext::default()));
             imp.lock_timeout_id.replace(Some(id));
         }
     }
 
     fn cancel_lock_timeout(&self) {
         if let Some(id) = self.imp().lock_timeout_id.borrow_mut().take() {
-            id.remove();
+            id.destroy();
         }
     }
 
