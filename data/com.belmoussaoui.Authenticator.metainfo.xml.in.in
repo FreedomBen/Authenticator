@@ -45,6 +45,7 @@
   <url type="bugtracker">https://gitlab.gnome.org/World/Authenticator/issues</url>
   <url type="translate">https://l10n.gnome.org/module/authenticator/</url>
   <url type="donation">https://liberapay.com/bielmoussaoui</url>
+  <url type="vcs-browser">https://gitlab.gnome.org/World/Authenticator</url>
   <content_rating type="oars-1.1" />
   <releases>
     <release version="4.3.1" date="2023-04-22">
