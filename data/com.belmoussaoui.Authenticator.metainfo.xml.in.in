@@ -48,6 +48,13 @@
   <url type="vcs-browser">https://gitlab.gnome.org/World/Authenticator</url>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="4.4.0" date="2023-10-13">
+      <ul>
+        <li>Display an error dialog when the application fails to use the keyring</li>
+        <li>Use new Adwaita widgets</li>
+        <li>Camera improvements thanks to Aperture, the library used by Snapshot</li>
+      </ul>
+    </release>
     <release version="4.3.1" date="2023-04-22">
       <ul>
         <li>Add support for rotated camera</li>

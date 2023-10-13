@@ -1,5 +1,5 @@
 project('authenticator', 'rust',
-	version: '4.3.1',
+	version: '4.4.0',
   meson_version: '>= 0.59',
   license: 'GPL-3.0-or-later'
 )
@@ -15,9 +15,9 @@ dependency('gstreamer-base-1.0', version: '>= 1.18')
 dependency('gstreamer-plugins-base-1.0', version: '>= 1.18')
 dependency('gstreamer-plugins-bad-1.0', version: '>= 1.18')
 
-cargo = find_program('cargo', required: true)
-glib_compile_schemas = find_program('glib-compile-schemas', required: true)
-glib_compile_resources = find_program('glib-compile-resources', required: true)
+cargo = find_program('cargo')
+glib_compile_schemas = find_program('glib-compile-schemas')
+glib_compile_resources = find_program('glib-compile-resources')
 
 version = meson.project_version()
 
@@ -46,7 +46,6 @@ else
   version_suffix = ''
   application_id = 'com.belmoussaoui.Authenticator'
   object_path = '/com/belmoussaoui/Authenticator/SearchProvider'
-
 endif
 
 i18n = import('i18n')
