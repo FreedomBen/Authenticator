@@ -32,10 +32,10 @@ hex = {version = "0.4.3", features = ["serde"]}
 image = {version = "0.24", default-features = false, features = ["png"]}
 oo7 = {version = "0.2", default-features = false, features = ["tokio", "native_crypto", "tracing"]}
 percent-encoding = "2.1"
-prost = "0.11"
+prost = "0.12"
 qrencode = {version = "0.14", features = ["image"]}
 rand = "0.8"
-ring = "0.16"
+ring = "0.17"
 rust-argon2 = {version = "2.0", default-features = false}
 scrypt = {version = "0.11", default-features = false}
 search-provider = {version = "0.6", default-features = false, features = ["tokio"]}
