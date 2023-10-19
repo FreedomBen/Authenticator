@@ -7,9 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: authenticator master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2021-02-13 20:41+0000\n"
-"PO-Revision-Date: 2021-05-05 13:36+0200\n"
-"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
+"POT-Creation-Date: 2023-10-01 12:30+0000\n"
+"PO-Revision-Date: 2023-10-11 12:53+0300\n"
+"Last-Translator: Florentina Mușat <florentina [dot] musat [dot] 28 [at] "
+"gmail [dot] com>\n"
 "Language-Team: Romanian <gnomero-list@lists.sourceforge.net>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.4\n"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
-#: data/resources/ui/window.ui:34 src/application.rs:152 src/main.rs:34
+#: data/resources/ui/window.ui:36 src/application.rs:88 src/main.rs:40
 msgid "Authenticator"
 msgstr "Autentificator"
 
@@ -31,7 +32,7 @@ msgstr "Autentificare în doi factori"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:5
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:155
+#: src/application.rs:91
 msgid "Generate Two-Factor Codes"
 msgstr "Generează coduri cu doi factori"
 
@@ -55,28 +56,41 @@ msgid "Default window maximized behaviour"
 msgstr "Comportamentul maximizat al ferestrei implicite"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:21
-msgid "Dark Theme"
-msgstr "Temă întunecată"
-
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:22
-msgid "Whether the application should use a dark theme."
-msgstr "Dacă aplicația ar trebui să utilizeze o temă întunecată."
-
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:26
 msgid "Auto lock"
 msgstr "Blocare automată"
 
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:27
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:22
 msgid "Whether to auto lock the application or not"
 msgstr "Dacă să se blocheze sau nu automat aplicația"
 
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:31
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:26
 msgid "Auto lock timeout"
 msgstr "Temporizare blocare automată"
 
-#: data/com.belmoussaoui.Authenticator.gschema.xml.in:32
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:27
 msgid "Lock the application on idle after X minutes"
 msgstr "Blochează aplicația în așteptare dupa X minute"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:34
+msgid "Download Favicons"
+msgstr "Descarcă iconițe favorite"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:35
+msgid ""
+"Whether the application should attempt to find an icon for the providers."
+msgstr ""
+"Dacă aplicația ar trebui să încerce să găsească o iconiță pentru furnizori."
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:39
+msgid "Download Favicons over metered connections"
+msgstr "Descarcă iconițe favorite peste conexiuni contorizate"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:40
+msgid ""
+"Whether the application should download favicons over a metered connection."
+msgstr ""
+"Dacă aplicația ar trebui să descarce iconițe favorite peste o conexiune "
+"contorizată."
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:10
 msgid "Simple application for generating Two-Factor Authentication Codes."
@@ -108,280 +122,364 @@ msgid "Beautiful UI"
 msgstr "UI frumos"
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:18
-msgid "Backup/Restore from/into known applications like FreeOTP+, andOTP"
-msgstr ""
-"Fă/Restaurează o copie de siguranță de la/în aplicații cunoscute precum "
-"FreeOTP+, andOTP"
+msgid "GNOME Shell search provider"
+msgstr "Furnizor de căutare Shell GNOME"
 
-#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:24
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:19
+msgid ""
+"Backup/Restore from/into known applications like FreeOTP+, Aegis "
+"(encrypted / plain-text), andOTP, Google Authenticator"
+msgstr ""
+"Copiază de rezervă/restaurează de la/în aplicațiile cunoscute cum ar fi "
+"FreeOTP+, Aegis (criptat / text simplu), andOTP, Autentificator Google"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:25
 msgid "Main Window"
 msgstr "Fereastră principală"
 
-#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:28
-#: data/resources/ui/account_add.ui:24
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:29
+#: data/resources/ui/account_add.ui:32 data/resources/ui/account_add.ui:49
 msgid "Add a New Account"
 msgstr "Adaugă un cont nou"
 
-#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:32
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:33
 msgid "Add a New Provider"
 msgstr "Adaugă un furnizor nou"
 
-#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:36
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:37
 msgid "Account Details"
 msgstr "Detalii cont"
 
-#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:40
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:41
 msgid "Backup/Restore formats support"
 msgstr "Formate suportate de copiere de rezervă/restaurare"
 
-#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:202
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:296
 msgid "Bilal Elmoussaoui"
 msgstr "Bilal Elmoussaoui"
 
-#: data/resources/ui/account_add.ui:6
+#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:297
 msgid "_Camera"
 msgstr "_Cameră"
 
-#: data/resources/ui/account_add.ui:10
+#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:301
 msgid "_Screenshot"
 msgstr "Captură de _ecran"
 
-#: data/resources/ui/account_add.ui:44
-#: data/resources/ui/account_details_page.ui:13 data/resources/ui/camera.ui:35
-#: data/resources/ui/preferences_password_page.ui:13
-#: data/resources/ui/provider_page.ui:51
-msgid "Go Back"
-msgstr "Navighează înapoi"
+#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:306
+msgid "_QR Code Image"
+msgstr "Imagine cod _QR"
 
-#: data/resources/ui/account_add.ui:49
+#: data/resources/ui/account_add.ui:58
+msgid "Cancel"
+msgstr "Anulează"
+
+#: data/resources/ui/account_add.ui:64
 msgid "_Add"
 msgstr "_Adaugă"
 
-#: data/resources/ui/account_add.ui:61
+#: data/resources/ui/account_add.ui:76 src/widgets/preferences/window.rs:292
 msgid "Scan QR Code"
 msgstr "Scanează cod QR"
 
-#: data/resources/ui/account_add.ui:100
-#: data/resources/ui/account_details_page.ui:52
+#: data/resources/ui/account_add.ui:114
+#: data/resources/ui/account_details_page.ui:96
+#: data/resources/ui/provider_page.ui:22
+#: data/resources/ui/providers_dialog.ui:110
 msgid "Provider"
 msgstr "Furnizor"
 
-#: data/resources/ui/account_add.ui:101
+#: data/resources/ui/account_add.ui:115
 msgid "Token issuer"
 msgstr "Emițătorul jetonului"
 
-#: data/resources/ui/account_add.ui:116
-#: data/resources/ui/account_details_page.ui:42
+#: data/resources/ui/account_add.ui:129
+#: data/resources/ui/account_details_page.ui:91
 msgid "Account"
 msgstr "Cont"
 
-#: data/resources/ui/account_add.ui:130
+#: data/resources/ui/account_add.ui:135
 msgid "Token"
 msgstr "Jeton"
 
-#: data/resources/ui/account_add.ui:144 data/resources/ui/provider_page.ui:201
+#: data/resources/ui/account_add.ui:141
+#: data/resources/ui/account_details_page.ui:139
+#: data/resources/ui/provider_page.ui:158
 msgid "Counter"
 msgstr "Contor"
 
-#: data/resources/ui/account_add.ui:169 data/resources/ui/provider_page.ui:172
+#: data/resources/ui/account_add.ui:159
+#: data/resources/ui/account_details_page.ui:119
+#: data/resources/ui/provider_page.ui:133
 msgid "Algorithm"
 msgstr "Algoritm"
 
-#: data/resources/ui/account_add.ui:181 data/resources/ui/provider_page.ui:164
+#: data/resources/ui/account_add.ui:171
+#: data/resources/ui/account_details_page.ui:129
+#: data/resources/ui/provider_page.ui:118
 msgid "Computing Method"
 msgstr "Metodă de calcul"
 
-#: data/resources/ui/account_add.ui:193 data/resources/ui/provider_page.ui:184
+#: data/resources/ui/account_add.ui:183
+#: data/resources/ui/account_details_page.ui:148
+#: data/resources/ui/provider_page.ui:149
 msgid "Period"
 msgstr "Punct"
 
-#: data/resources/ui/account_add.ui:194 data/resources/ui/provider_page.ui:185
+#: data/resources/ui/account_add.ui:184 data/resources/ui/provider_page.ui:150
 msgid "Duration in seconds until the next password update"
 msgstr "Durata în secunde până la următoarea actualizare a parolei"
 
-#: data/resources/ui/account_add.ui:206 data/resources/ui/provider_page.ui:218
+#: data/resources/ui/account_add.ui:196
+#: data/resources/ui/account_details_page.ui:158
+#: data/resources/ui/provider_page.ui:167
 msgid "Digits"
 msgstr "Cifre"
 
-#: data/resources/ui/account_add.ui:207 data/resources/ui/provider_page.ui:219
+#: data/resources/ui/account_add.ui:197 data/resources/ui/provider_page.ui:168
 msgid "Length of the generated code"
 msgstr "Lungimea codului generat"
 
-#: data/resources/ui/account_add.ui:219
-#: data/resources/ui/account_details_page.ui:62
-#: data/resources/ui/provider_page.ui:150
+#: data/resources/ui/account_add.ui:209
+#: data/resources/ui/account_details_page.ui:168
+#: data/resources/ui/provider_page.ui:112
 msgid "Website"
 msgstr "Pagină web"
 
-#: data/resources/ui/account_add.ui:225
+#: data/resources/ui/account_add.ui:214
 msgid "How to Set Up"
 msgstr "Cum se configurează"
 
-#: data/resources/ui/account_row.ui:6
-msgid "D_etails"
-msgstr "D_etalii"
+#: data/resources/ui/account_add.ui:234
+#: data/resources/ui/preferences_camera_page.ui:4
+msgid "Camera"
+msgstr "Camera"
 
-#: data/resources/ui/account_row.ui:12
-msgid "_Rename"
-msgstr "_Redenumește"
+#: data/resources/ui/account_add.ui:246
+msgid "Create Provider"
+msgstr "Creează furnizorul"
 
-#: data/resources/ui/account_row.ui:16 data/resources/ui/provider_page.ui:252
-msgid "_Delete"
-msgstr "Șt_erge"
-
-#: data/resources/ui/account_row.ui:66
-msgid "Copy PIN to clipboard"
-msgstr "Copiază PIN-ul la clipboard"
-
-#: data/resources/ui/account_row.ui:106
-msgid "More"
-msgstr "Mai mult"
-
-#: data/resources/ui/account_row.ui:138
-#: data/resources/ui/preferences_password_page.ui:21
-#: data/resources/ui/provider_page.ui:56
+#: data/resources/ui/account_details_page.ui:56
+#: data/resources/ui/preferences_password_page.ui:17
+#: data/resources/ui/provider_page.ui:29
 msgid "_Save"
 msgstr "_Salvează"
 
-#: data/resources/ui/camera.ui:44
+#: data/resources/ui/account_details_page.ui:67
+#: data/resources/ui/provider_page.ui:185
+msgid "_Delete"
+msgstr "Șt_erge"
+
+#: data/resources/ui/account_details_page.ui:173
+msgid "Help"
+msgstr "Ajutor"
+
+#: data/resources/ui/account_row.ui:23
+msgid "Increment the counter"
+msgstr "Incrementează contorul"
+
+#: data/resources/ui/account_row.ui:34
+msgid "Copy PIN to clipboard"
+msgstr "Copiază PIN-ul la clipboard"
+
+#: data/resources/ui/account_row.ui:43
+msgid "Account details"
+msgstr "Detalii cont"
+
+#: data/resources/ui/camera.ui:36
 msgid "No Camera Found"
 msgstr "Nicio cameră găsită"
 
-#: data/resources/ui/camera.ui:47
+#: data/resources/ui/camera.ui:39
 msgid "_From a Screenshot"
 msgstr "_Dintr-o captură de ecran"
 
-#: data/resources/ui/camera.ui:82
-msgid "Capture from a screenshot"
-msgstr "Capturează dintr-o captură de ecran"
+#: data/resources/ui/keyring_error_dialog.ui:8
+msgid "Secret Service Error"
+msgstr "Eroare serviciu secret"
 
-#: data/resources/ui/preferences_password_page.ui:32
-msgid "Set up a Passphrase"
-msgstr "Configurează o frază parolă"
+#: data/resources/ui/keyring_error_dialog.ui:32
+msgid ""
+"Authenticator relies on a Secret Service Provider to manage your sensitive "
+"session information and an error occurred while we were trying to store or "
+"get your session."
+msgstr ""
+"Autentificator se bazează pe un furnizor de servicii secrete pentru a "
+"gestiona informațiile sensibile ale sesiunii și a apărut o eroare în timp ce "
+"încercam să stocăm sau să obținem sesiunea."
 
-#: data/resources/ui/preferences_password_page.ui:33
-msgid "Authenticator will start locked after a passphrase is set."
-msgstr "Autentificator va porni blocat după ce o frază parolă este stabilită."
+#: data/resources/ui/keyring_error_dialog.ui:44
+msgid ""
+"Here are a few things that might help you fix issues with the Secret Service:"
+msgstr ""
+"Iată câteva lucruri care vă pot ajuta să remediați problemele cu serviciul "
+"secret:"
 
-#: data/resources/ui/preferences_password_page.ui:52
-msgid "Current Passphrase"
-msgstr "Fraza parolă curentă"
+#: data/resources/ui/keyring_error_dialog.ui:61
+msgid ""
+"Make sure you have a Secret Service Provider installed, like gnome-keyring."
+msgstr ""
+"Asigurați-vă că aveți un furnizor de servicii secrete instalat, cum ar fi "
+"gnome-keyring."
 
-#: data/resources/ui/preferences_password_page.ui:66
-msgid "New Passphrase"
-msgstr "Frază parolă nouă"
+#: data/resources/ui/keyring_error_dialog.ui:80
+msgid "Check that you have a default keyring and that it is unlocked."
+msgstr "Verificați că aveți un inel de chei implicit și că este deblocat."
 
-#: data/resources/ui/preferences_password_page.ui:79
-msgid "Repeat Passphrase"
-msgstr "Repetă fraza parolă"
-
-#: data/resources/ui/preferences_password_page.ui:100
-#: data/resources/ui/provider_page.ui:101
-msgid "_Reset"
-msgstr "_Restabilește"
+#: data/resources/ui/keyring_error_dialog.ui:92
+msgid ""
+"Check the application logs and your distribution’s documentation for more "
+"details."
+msgstr ""
+"Verificați jurnalele aplicației și documentația distribuției pentru mai "
+"multe detalii."
 
 #: data/resources/ui/preferences.ui:16
 msgid "General"
 msgstr "Generale"
 
 #: data/resources/ui/preferences.ui:19
-msgid "Appearance"
-msgstr "Aspect"
-
-#: data/resources/ui/preferences.ui:22
-msgid "_Dark Theme"
-msgstr "Temă întunec_ată"
-
-#: data/resources/ui/preferences.ui:25
-msgid "Whether the application should use a dark theme"
-msgstr "Dacă aplicația ar trebui să utilizeze o temă întunecată"
-
-#: data/resources/ui/preferences.ui:37
 msgid "Privacy"
 msgstr "Confidențialitate"
 
-#: data/resources/ui/preferences.ui:40
+#: data/resources/ui/preferences.ui:22
 msgid "_Passphrase"
 msgstr "Frază _parolă"
 
-#: data/resources/ui/preferences.ui:42
+#: data/resources/ui/preferences.ui:24
 msgid "Set up a passphrase to lock the application with"
 msgstr "Configurați o frază parolă cu care să blocați aplicația"
 
-#: data/resources/ui/preferences.ui:54
+#: data/resources/ui/preferences.ui:37
 msgid "_Auto Lock the Application"
 msgstr "Bloc_ați automat aplicația"
 
-#: data/resources/ui/preferences.ui:57
+#: data/resources/ui/preferences.ui:39
 msgid "Whether to automatically lock the application"
 msgstr "Dacă să se blocheze automat aplicația"
 
-#: data/resources/ui/preferences.ui:68
+#: data/resources/ui/preferences.ui:45
 msgid "Auto Lock _Timeout"
 msgstr "Limită de _timp pentru blocarea automată"
 
-#: data/resources/ui/preferences.ui:69
+#: data/resources/ui/preferences.ui:46
 msgid "The time in minutes"
 msgstr "Ora în minute"
 
-#: data/resources/ui/preferences.ui:92
+#: data/resources/ui/preferences.ui:59
+msgid "Network"
+msgstr "Rețea"
+
+#: data/resources/ui/preferences.ui:62
+msgid "_Download Favicons"
+msgstr "_Descarcă iconițe favorite"
+
+#: data/resources/ui/preferences.ui:64
+msgid "Automatically attempt fetching a website icon"
+msgstr "Încearcă preluarea automată a unei iconițe de pagină web"
+
+#: data/resources/ui/preferences.ui:69
+msgid "_Metered Connection"
+msgstr "Conexiune _contorizată"
+
+#: data/resources/ui/preferences.ui:71
+msgid "Fetch a website icon on a metered connection"
+msgstr "Preia o iconiță de pagină web peste o conexiune contorizată"
+
+#: data/resources/ui/preferences.ui:81
 msgid "Backup/Restore"
 msgstr "Copiere de rezervă/Restaurare"
 
-#: data/resources/ui/preferences.ui:95 src/widgets/preferences/window.rs:297
+#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:481
 msgid "Backup"
 msgstr "Copie de rezervă"
 
-#: data/resources/ui/preferences.ui:100 src/widgets/preferences/window.rs:304
+#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:489
 msgid "Restore"
 msgstr "Restaurează"
 
-#: data/resources/ui/provider_page.ui:112
+#: data/resources/ui/preferences_password_page.ui:4
+msgid "Create Password"
+msgstr "Creează parola"
+
+#: data/resources/ui/preferences_password_page.ui:28
+msgid "Set up a Passphrase"
+msgstr "Configurează o frază parolă"
+
+#: data/resources/ui/preferences_password_page.ui:29
+msgid "Authenticator will start locked after a passphrase is set."
+msgstr "Autentificator va porni blocat după ce o frază parolă este stabilită."
+
+#: data/resources/ui/preferences_password_page.ui:50
+msgid "Current Passphrase"
+msgstr "Fraza parolă curentă"
+
+#: data/resources/ui/preferences_password_page.ui:56
+msgid "New Passphrase"
+msgstr "Frază parolă nouă"
+
+#: data/resources/ui/preferences_password_page.ui:62
+msgid "Repeat Passphrase"
+msgstr "Repetă fraza parolă"
+
+#: data/resources/ui/preferences_password_page.ui:76
+#: data/resources/ui/provider_page.ui:73
+msgid "_Reset"
+msgstr "_Restabilește"
+
+#: data/resources/ui/provider_page.ui:83
 msgid "Select a _File"
 msgstr "Selectează un _fișier"
 
-#: data/resources/ui/provider_page.ui:136
+#: data/resources/ui/provider_page.ui:106
 msgid "Name"
 msgstr "Nume"
 
-#: data/resources/ui/provider_page.ui:151
-msgid "Used to fetch the provider icon"
-msgstr "Utilizat pentru a aduce iconița furnizorului"
-
-#: data/resources/ui/provider_page.ui:202
+#: data/resources/ui/provider_page.ui:159
 msgid "The by default value for counter-based computing method"
 msgstr "Valoarea în mod implicit pentru metoda de calcul bazată pe contor"
 
-#: data/resources/ui/provider_page.ui:236
+#: data/resources/ui/provider_page.ui:177
 msgid "Help URL"
 msgstr "URL ajutor"
 
-#: data/resources/ui/provider_page.ui:237
-msgid "Provider setup instructions"
-msgstr "Instrucțiuni de configurare furnizor"
-
-#: data/resources/ui/providers_dialog.ui:5
+#: data/resources/ui/providers_dialog.ui:10
+#: data/resources/ui/providers_dialog.ui:21
 msgid "Providers"
 msgstr "Furnizori"
 
-#: data/resources/ui/providers_dialog.ui:25 src/widgets/providers/page.rs:206
+#: data/resources/ui/providers_dialog.ui:31 src/widgets/providers/page.rs:209
 msgid "New Provider"
 msgstr "Furnizor nou"
 
-#: data/resources/ui/providers_dialog.ui:62 data/resources/ui/window.ui:259
+#: data/resources/ui/providers_dialog.ui:38
+#: data/resources/ui/providers_dialog.ui:54 data/resources/ui/window.ui:201
+#: data/resources/ui/window.ui:222
 msgid "Search"
 msgstr "Caută"
 
-#: data/resources/ui/providers_dialog.ui:108
-#: data/resources/ui/providers_list.ui:42
+#: data/resources/ui/providers_dialog.ui:49 data/resources/ui/window.ui:196
+msgid "Search…"
+msgstr "Caută…"
+
+#: data/resources/ui/providers_dialog.ui:95
+#: data/resources/ui/providers_list.ui:38
 msgid "No Results"
 msgstr "Niciun rezultat"
 
-#: data/resources/ui/providers_dialog.ui:109
+#: data/resources/ui/providers_dialog.ui:96
 msgid "No providers matching the query were found."
 msgstr "Nu a fost găsit vreun furnizor potrivit cererii."
 
-#: data/resources/ui/providers_list.ui:43
+#: data/resources/ui/providers_dialog.ui:141
+msgid "No Provider Selected"
+msgstr "Niciun furnizor selectat"
+
+#: data/resources/ui/providers_dialog.ui:142
+msgid "Select a provider or create a new one"
+msgstr "Selectați un furnizor sau creați unul nou"
+
+#: data/resources/ui/providers_list.ui:39
 msgid "No accounts or providers matching the query were found."
 msgstr "Nu au fost găsite un cont sau furnizor care să se potrivească cererii."
 
@@ -450,65 +548,95 @@ msgstr "Scurtături de _tastatură"
 msgid "_About Authenticator"
 msgstr "_Despre Autentificator"
 
-#: data/resources/ui/window.ui:95
+#: data/resources/ui/window.ui:66
 msgid "Authenticator is Locked"
 msgstr "Autentificator este blocat"
 
-#: data/resources/ui/window.ui:123
+#: data/resources/ui/window.ui:89
 msgid "_Unlock"
 msgstr "_Deblochează"
 
-#: data/resources/ui/window.ui:173 data/resources/ui/window.ui:214
+#: data/resources/ui/window.ui:119
+msgid "Accounts"
+msgstr "Conturi"
+
+#: data/resources/ui/window.ui:134 data/resources/ui/window.ui:170
 msgid "New Account"
 msgstr "Cont nou"
 
-#: data/resources/ui/window.ui:181 data/resources/ui/window.ui:252
-msgid "Menu"
-msgstr "Meniu"
+#: data/resources/ui/window.ui:142 data/resources/ui/window.ui:216
+msgid "Main Menu"
+msgstr "Meniu principal"
 
-#: data/resources/ui/window.ui:192
+#: data/resources/ui/window.ui:150
 msgid "No Accounts"
 msgstr "Niciun cont"
 
-#: data/resources/ui/window.ui:193
+#: data/resources/ui/window.ui:151
 msgid "Add an account or scan a QR code first."
 msgstr "Adăugați un cont sau scanați un cod QR mai întâi."
 
-#: src/application.rs:159
+#: src/application.rs:74
+msgid "Accounts restored successfully"
+msgstr "Conturile restaurate cu succes"
+
+#: src/application.rs:100
 msgid "translator-credits"
 msgstr ""
 "Florentina Mușat <florentina [dot] musat [dot] 28 [at] gmail [dot] com>, "
-"2020-2021\n"
+"2020-2021, 2023\n"
 "Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>, 2021"
 
+#: src/application.rs:381 src/widgets/accounts/row.rs:46
+msgid "One-Time password copied"
+msgstr "Parola de unică folosință copiată"
+
+#: src/application.rs:382
+msgid "Password was copied successfully"
+msgstr "Parola a fost copiată cu succes"
+
+#. Translators: This is for making a backup for the aegis Android app.
+#. Translators: This is for restoring a backup from the aegis Android app.
+#: src/backup/aegis.rs:399 src/backup/aegis.rs:439
+msgid "Aegis"
+msgstr "Aegis"
+
+#: src/backup/aegis.rs:403
+msgid "Into a JSON file containing plain-text or encrypted fields"
+msgstr "Într-un fișier JSON care conține text simplu sau câmpuri criptate"
+
+#: src/backup/aegis.rs:443
+msgid "From a JSON file containing plain-text or encrypted fields"
+msgstr "De la un fișier JSON care conține text simplu sau câmpuri criptate"
+
 #. Translators: This is for making a backup for the andOTP Android app.
-#: src/backup/andotp.rs:66
+#: src/backup/andotp.rs:79
 msgid "a_ndOTP"
 msgstr "a_ndOTP"
 
-#: src/backup/andotp.rs:70
+#: src/backup/andotp.rs:83
 msgid "Into a plain-text JSON file"
 msgstr "Într-un fișier text simplu JSON"
 
 #. Translators: This is for restoring a backup from the andOTP Android app.
-#: src/backup/andotp.rs:128
+#: src/backup/andotp.rs:127
 msgid "an_dOTP"
 msgstr "an_dOTP"
 
-#: src/backup/andotp.rs:132 src/backup/bitwarden.rs:85 src/backup/legacy.rs:36
+#: src/backup/andotp.rs:131 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
 msgid "From a plain-text JSON file"
 msgstr "De la un fișier text simplu JSON"
 
-#: src/backup/bitwarden.rs:35
+#: src/backup/bitwarden.rs:47
 msgid "Unknown account"
 msgstr "Cont necunoscut"
 
-#: src/backup/bitwarden.rs:43
+#: src/backup/bitwarden.rs:55
 msgid "Unknown issuer"
 msgstr "Emițătorul necunoscut"
 
 #. Translators: This is for restoring a backup from Bitwarden.
-#: src/backup/bitwarden.rs:81
+#: src/backup/bitwarden.rs:120
 msgid "_Bitwarden"
 msgstr "_Bitwarden"
 
@@ -520,81 +648,179 @@ msgstr "_Autentificator"
 msgid "Into a plain-text file, compatible with FreeOTP+"
 msgstr "Într-un fișier text simplu, compatibil cu FreeOTP+"
 
-#: src/backup/freeotp.rs:64
+#: src/backup/freeotp.rs:51
 msgid "A_uthenticator"
 msgstr "A_utentificator"
 
-#: src/backup/freeotp.rs:68
+#: src/backup/freeotp.rs:55
 msgid "From a plain-text file, compatible with FreeOTP+"
 msgstr "De la un fișier text simplu, compatibil cu FreeOTP+"
 
-#. Translators: this is for restoring a backup from the old Authenticator release
-#: src/backup/legacy.rs:32
+#: src/backup/freeotp_json.rs:87
+msgid "FreeOTP+"
+msgstr "FreeOTP+"
+
+#: src/backup/freeotp_json.rs:91
+msgid "From a plain-text JSON file, compatible with FreeOTP+"
+msgstr "De la un fișier JSON cu text simplu, compatibil cu FreeOTP+"
+
+#: src/backup/google.rs:19
+msgid "Google Authenticator"
+msgstr "Autentificator Google"
+
+#: src/backup/google.rs:23
+msgid "From a QR code generated by Google Authenticator"
+msgstr "De la un cod QR generat de Autentificator Google"
+
+#. Translators: this is for restoring a backup from the old Authenticator
+#. release
+#: src/backup/legacy.rs:41
 msgid "Au_thenticator (Legacy)"
 msgstr "Au_tentificator (Vechi)"
 
-#: src/models/algorithm.rs:55
+#: src/models/algorithm.rs:60
 msgid "Counter-based"
 msgstr "Bazat pe numărare"
 
-#: src/models/algorithm.rs:56
+#: src/models/algorithm.rs:61
 msgid "Time-based"
 msgstr "Bazată pe timp"
 
 #. Translators: Steam refers to the gaming application by Valve.
-#: src/models/algorithm.rs:58
+#: src/models/algorithm.rs:63
 msgid "Steam"
 msgstr "Steam"
 
-#: src/models/algorithm.rs:125
+#: src/models/algorithm.rs:126
 msgid "SHA-1"
 msgstr "SHA-1"
 
-#: src/models/algorithm.rs:126
+#: src/models/algorithm.rs:127
 msgid "SHA-256"
 msgstr "SHA-256"
 
-#: src/models/algorithm.rs:127
+#: src/models/algorithm.rs:128
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:204
-msgid "Invalid Token"
-msgstr "Jeton nevalid"
-
-#: src/widgets/window.rs:324
-msgid "Wrong Password"
-msgstr "Parolă greșită"
-
-#: src/widgets/preferences/password_page.rs:228
-#: src/widgets/preferences/password_page.rs:259
-msgid "Wrong Passphrase"
-msgstr "Frază parolă greșită"
-
-#: src/widgets/preferences/window.rs:300 src/widgets/preferences/window.rs:307
-#: src/widgets/providers/page.rs:312
-msgid "Select"
-msgstr "Selectează"
-
-#: src/widgets/preferences/window.rs:301 src/widgets/preferences/window.rs:308
-#: src/widgets/providers/page.rs:313
-msgid "Cancel"
-msgstr "Anulează"
-
-#: src/widgets/providers/page.rs:176
-msgid "Editing Provider: {}"
-msgstr "Furnizor de editare: {}"
-
-#: src/widgets/providers/page.rs:320
+#: src/widgets/accounts/add.rs:269 src/widgets/preferences/window.rs:419
+#: src/widgets/providers/page.rs:292
 msgid "Image"
 msgstr "Imagine"
 
-#: src/widgets/providers/page.rs:356
+#: src/widgets/accounts/add.rs:277 src/widgets/preferences/window.rs:427
+msgid "Select QR Code"
+msgstr "Selectați codul QR"
+
+#: src/widgets/accounts/add.rs:295
+msgid "Invalid Token"
+msgstr "Jeton nevalid"
+
+#: src/widgets/accounts/details.rs:127
+msgid "Are you sure you want to delete the account?"
+msgstr "Sigur doriți să ștergeți contul?"
+
+#: src/widgets/accounts/details.rs:128
+msgid "This action is irreversible"
+msgstr "Această acțiune nu este reversibilă"
+
+#: src/widgets/accounts/details.rs:132
+msgid "No"
+msgstr "Nu"
+
+#: src/widgets/accounts/details.rs:132
+msgid "Yes"
+msgstr "Da"
+
+#: src/widgets/preferences/password_page.rs:172
+#: src/widgets/preferences/password_page.rs:214
+msgid "Wrong Passphrase"
+msgstr "Frază parolă greșită"
+
+#: src/widgets/preferences/window.rs:196 src/widgets/preferences/window.rs:268
+msgid "Key / Passphrase"
+msgstr "Cheie / parolă tip frază"
+
+#: src/widgets/preferences/window.rs:207 src/widgets/preferences/window.rs:280
+msgid "Select File"
+msgstr "Selectați un fișier"
+
+#: src/widgets/preferences/window.rs:231
+msgid "Failed to create a backup"
+msgstr "Nu s-a putut crea o copie de rezervă"
+
+#: src/widgets/preferences/window.rs:343
+msgid "Failed to restore from camera"
+msgstr "Nu s-a putut restaura de la cameră"
+
+#: src/widgets/preferences/window.rs:354
+msgid "Failed to restore from a screenshot"
+msgstr "Nu s-a putut restaura de la o captură de ecran"
+
+#: src/widgets/preferences/window.rs:364
+msgid "Failed to restore from an image"
+msgstr "Nu s-a putut restaura de la o imagine"
+
+#: src/widgets/preferences/window.rs:377
+msgid "Failed to restore from a file"
+msgstr "Nu s-a putut restaura de la un fișier"
+
+#: src/widgets/providers/dialog.rs:235
+msgid "Provider created successfully"
+msgstr "Furnizorul creat cu succes"
+
+#: src/widgets/providers/dialog.rs:245
+msgid "Provider updated successfully"
+msgstr "Furnizorul actualizat cu succes"
+
+#: src/widgets/providers/dialog.rs:261
+msgid "Provider removed successfully"
+msgstr "Furnizorul eliminat cu succes"
+
+#: src/widgets/providers/page.rs:186
+msgid "Editing Provider: {}"
+msgstr "Furnizor de editare: {}"
+
+#: src/widgets/providers/page.rs:325
 msgid "The provider has accounts assigned to it, please remove them first"
 msgstr "Furnizorul are conturi atașate, eliminați-le mai întâi"
 
-#~ msgid "QR code scanner"
-#~ msgstr "Scaner cod QR"
+#: src/widgets/window.rs:115
+msgid "Wrong Password"
+msgstr "Parolă greșită"
+
+#~ msgid "Dark Theme"
+#~ msgstr "Temă întunecată"
+
+#~ msgid "Go Back"
+#~ msgstr "Navighează înapoi"
+
+#~ msgid "D_etails"
+#~ msgstr "D_etalii"
+
+#~ msgid "_Rename"
+#~ msgstr "_Redenumește"
+
+#~ msgid "More"
+#~ msgstr "Mai mult"
+
+#~ msgid "Appearance"
+#~ msgstr "Aspect"
+
+#~ msgid "_Dark Theme"
+#~ msgstr "Temă întunec_ată"
+
+#~ msgid "Whether the application should use a dark theme"
+#~ msgstr "Dacă aplicația ar trebui să utilizeze o temă întunecată"
+
+#~ msgid "Used to fetch the provider icon"
+#~ msgstr "Utilizat pentru a aduce iconița furnizorului"
+
+#~ msgid "Provider setup instructions"
+#~ msgstr "Instrucțiuni de configurare furnizor"
+
+#~ msgid "Select"
+#~ msgstr "Selectează"
 
 #~ msgid "Huge database of more than 560 supported services"
 #~ msgstr "Bază de date imensă de mai bine de 560 de dispozitive suportate"
@@ -602,10 +828,6 @@ msgstr "Furnizorul are conturi atașate, eliminați-le mai întâi"
 #~ msgid "Keep your tokens secure by locking the application with a password"
 #~ msgstr ""
 #~ "Păstrați-vă jetoanele în siguranță prin blocarea aplicației cu o parolă"
-
-#~ msgid "Automatically fetch an image for services using their favicon"
-#~ msgstr ""
-#~ "Aduce automat o imagine pentru serviciile care își utilizează faviconul"
 
 #~ msgid "The possibility to add new services"
 #~ msgstr "Posibilitatea de a adăuga servicii noi"
@@ -615,9 +837,6 @@ msgstr "Furnizorul are conturi atașate, eliminați-le mai întâi"
 
 #~ msgid "Sharing an account"
 #~ msgstr "Partajarea unui cont"
-
-#~ msgid "The service provider"
-#~ msgstr "Furnizorul serviciului"
 
 #~ msgid "By setting a password, Authenticator will from now on start locked."
 #~ msgstr ""
@@ -684,17 +903,11 @@ msgstr "Furnizorul are conturi atașate, eliminați-le mai întâi"
 #~ msgid "Add"
 #~ msgstr "Adaugă"
 
-#~ msgid "The One-Time Passwords expire in {} seconds"
-#~ msgstr "Parolele de unică folosință expiră în {} secunde"
-
 #~ msgid "Couldn't generate the secret code"
 #~ msgstr "Nu s-a putut genera codul secret"
 
 #~ msgid "The PIN of {} was copied to the clipboard"
 #~ msgstr "PIN-ul al {} a fost copiat la clipboard"
-
-#~ msgid "The account was updated successfully"
-#~ msgstr "Contul a fost actualizat cu succes"
 
 #~ msgid "Undo"
 #~ msgstr "Refă"
