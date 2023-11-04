@@ -140,6 +140,9 @@
                                 <property name="vexpand">True</property>
                                 <property name="title" translatable="yes">No Provider Selected</property>
                                 <property name="description" translatable="yes">Select a provider or create a new one</property>
+                                <style>
+                                  <class name="icon-dropshadow" />
+                                </style>
                               </object>
                             </child>
                           </object>
