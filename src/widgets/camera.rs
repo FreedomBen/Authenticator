@@ -231,7 +231,9 @@ impl Camera {
             Ok(fd) => {
                 if let Err(err) = provider.set_fd(fd) {
                     tracing::error!("Could not use the camera portal: {err}");
-                } else if let Err(err) = provider.start() {
+                } else if let Err(err) = provider.start_with_default(|camera| {
+                    matches!(camera.location(), aperture::CameraLocation::Back)
+                }) {
                     tracing::error!("Could not start the device provider: {err}");
                 } else {
                     tracing::debug!("Device provider started");
