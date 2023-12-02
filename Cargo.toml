@@ -17,7 +17,7 @@ opt-level = 3
 adw = {package = "libadwaita", version = "0.5", features = ["v1_4"]}
 aes-gcm = "0.10"
 anyhow = "1.0"
-aperture = "0.3.2"
+aperture = "0.4.1"
 ashpd = {version = "0.6", default-features = false, features = ["gtk4", "tokio", "tracing"]}
 data-encoding = "2.3"
 diesel = {version = "2.0", features = ["sqlite", "r2d2"]}
