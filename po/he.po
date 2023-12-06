@@ -8,21 +8,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: authenticator master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2023-09-14 05:02+0000\n"
-"PO-Revision-Date: 2023-09-14 16:27+0300\n"
-"Last-Translator: Yosef Or Boczko <yoseforb@gmail.com>\n"
+"POT-Creation-Date: 2023-10-01 12:30+0000\n"
+"PO-Revision-Date: 2023-12-06 11:22+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <yoseforb@gmail.com>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
-"2 : 3)\n"
-"X-Generator: Gtranslator 42.0\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? 2 : "
+"3);\n"
+"X-Generator: Poedit 3.4.1\n"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
-#: data/resources/ui/window.ui:36 src/application.rs:86 src/main.rs:41
+#: data/resources/ui/window.ui:36 src/application.rs:88 src/main.rs:40
 msgid "Authenticator"
 msgstr "מאמת"
 
@@ -31,16 +31,15 @@ msgid "Two-Factor Authentication"
 msgstr "אימות דו־שלבי"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:5
-#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:89
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8 src/application.rs:91
 msgid "Generate Two-Factor Codes"
 msgstr "יצירת קודים לאימות דו־שלבי"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:10
 msgid "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;"
 msgstr ""
-"‫Gnome;GTK;GNOME;אימות;וידוא;דו־שלבי;דו שלבי;דושלבי;חד־פעמי;חד פעמי;חדפעמי;"
-"קוד חד פעמי;"
+"‫Gnome;GTK;GNOME;אימות;וידוא;דו־שלבי;דו שלבי;דושלבי;חד־פעמי;חד פעמי;חדפעמי;קוד "
+"חד פעמי;"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:6
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:7
@@ -74,23 +73,20 @@ msgstr "לנעול את היישום אם אינו פעיל לאחר X דקות"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:34
 msgid "Download Favicons"
-msgstr "Download Favicons"
+msgstr "הורדת סמלי מועדפים"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:35
-msgid ""
-"Whether the application should attempt to find an icon for the providers."
-msgstr ""
-"Whether the application should attempt to find an icon for the providers."
+msgid "Whether the application should attempt to find an icon for the providers."
+msgstr "האם היישום צריך לנסות למצוא סמל לספקים."
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:39
 msgid "Download Favicons over metered connections"
-msgstr "Download Favicons over metered connections"
+msgstr "להוריד סמלי מועדפים בחיבור מוגבל"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:40
 msgid ""
 "Whether the application should download favicons over a metered connection."
-msgstr ""
-"Whether the application should download favicons over a metered connection."
+msgstr "האם על היישום להוריד סמלי מועדפים ברשתות שמוגבלות בנפח תעבורה."
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:10
 msgid "Simple application for generating Two-Factor Authentication Codes."
@@ -126,8 +122,8 @@ msgstr "ספק חיפוש למעטפת GNOME"
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:19
 msgid ""
-"Backup/Restore from/into known applications like FreeOTP+, Aegis "
-"(encrypted / plain-text), andOTP, Google Authenticator"
+"Backup/Restore from/into known applications like FreeOTP+, Aegis (encrypted / "
+"plain-text), andOTP, Google Authenticator"
 msgstr ""
 "גיבוי/שחזור מתוך/אל יישומים מוכרים כגון FreeOTP+‎, ‏Aegis (מוצפן / טקסט פשוט), "
 "andOTP ומאמת Google"
@@ -183,6 +179,7 @@ msgstr "סריקת קוד QR"
 
 #: data/resources/ui/account_add.ui:114
 #: data/resources/ui/account_details_page.ui:96
+#: data/resources/ui/provider_page.ui:22
 #: data/resources/ui/providers_dialog.ui:110
 msgid "Provider"
 msgstr "ספק"
@@ -202,45 +199,45 @@ msgstr "אסימון"
 
 #: data/resources/ui/account_add.ui:141
 #: data/resources/ui/account_details_page.ui:139
-#: data/resources/ui/provider_page.ui:157
+#: data/resources/ui/provider_page.ui:158
 msgid "Counter"
 msgstr "מונה"
 
 #: data/resources/ui/account_add.ui:159
 #: data/resources/ui/account_details_page.ui:119
-#: data/resources/ui/provider_page.ui:132
+#: data/resources/ui/provider_page.ui:133
 msgid "Algorithm"
 msgstr "אלגוריתם"
 
 #: data/resources/ui/account_add.ui:171
 #: data/resources/ui/account_details_page.ui:129
-#: data/resources/ui/provider_page.ui:117
+#: data/resources/ui/provider_page.ui:118
 msgid "Computing Method"
 msgstr "שיטת חישוב"
 
 #: data/resources/ui/account_add.ui:183
 #: data/resources/ui/account_details_page.ui:148
-#: data/resources/ui/provider_page.ui:148
+#: data/resources/ui/provider_page.ui:149
 msgid "Period"
 msgstr "תקופה"
 
-#: data/resources/ui/account_add.ui:184 data/resources/ui/provider_page.ui:149
+#: data/resources/ui/account_add.ui:184 data/resources/ui/provider_page.ui:150
 msgid "Duration in seconds until the next password update"
 msgstr "משך הזמן בשניות עד לעדכון הססמה הבאה"
 
 #: data/resources/ui/account_add.ui:196
 #: data/resources/ui/account_details_page.ui:158
-#: data/resources/ui/provider_page.ui:166
+#: data/resources/ui/provider_page.ui:167
 msgid "Digits"
 msgstr "ספרות"
 
-#: data/resources/ui/account_add.ui:197 data/resources/ui/provider_page.ui:167
+#: data/resources/ui/account_add.ui:197 data/resources/ui/provider_page.ui:168
 msgid "Length of the generated code"
 msgstr "אורך הקוד שנוצר"
 
 #: data/resources/ui/account_add.ui:209
 #: data/resources/ui/account_details_page.ui:168
-#: data/resources/ui/provider_page.ui:111
+#: data/resources/ui/provider_page.ui:112
 msgid "Website"
 msgstr "אתר"
 
@@ -253,18 +250,18 @@ msgstr "איך להקים"
 msgid "Camera"
 msgstr "מצלמה"
 
-#: data/resources/ui/account_add.ui:247
+#: data/resources/ui/account_add.ui:246
 msgid "Create Provider"
 msgstr "יצירת ספק"
 
 #: data/resources/ui/account_details_page.ui:56
 #: data/resources/ui/preferences_password_page.ui:17
-#: data/resources/ui/provider_page.ui:28
+#: data/resources/ui/provider_page.ui:29
 msgid "_Save"
 msgstr "_שמירה"
 
 #: data/resources/ui/account_details_page.ui:67
-#: data/resources/ui/provider_page.ui:184
+#: data/resources/ui/provider_page.ui:185
 msgid "_Delete"
 msgstr "מ_חיקה"
 
@@ -291,6 +288,39 @@ msgstr "לא נמצאה מצלמה"
 #: data/resources/ui/camera.ui:39
 msgid "_From a Screenshot"
 msgstr "מצי_לום מסך"
+
+#: data/resources/ui/keyring_error_dialog.ui:8
+msgid "Secret Service Error"
+msgstr "שגיאה בשירות הסודות"
+
+#: data/resources/ui/keyring_error_dialog.ui:32
+msgid ""
+"Authenticator relies on a Secret Service Provider to manage your sensitive "
+"session information and an error occurred while we were trying to store or get "
+"your session."
+msgstr ""
+"המאמת מסתמך על ספק שירות סודות כדי לנהל את פרטי ההפעלה הרגישים שלך ואירעה "
+"שגיאה בעת הניסיון לאחסן או למשוך את ההפעלה שלך."
+
+#: data/resources/ui/keyring_error_dialog.ui:44
+msgid ""
+"Here are a few things that might help you fix issues with the Secret Service:"
+msgstr "הינה כמה דברים שעשויים לסייע לך לתקן את התקלות מול שירות הסודות:"
+
+#: data/resources/ui/keyring_error_dialog.ui:61
+msgid ""
+"Make sure you have a Secret Service Provider installed, like gnome-keyring."
+msgstr "נא לוודא שיש לך סוכן שירות סודות מותקן כגון gnome-keyring."
+
+#: data/resources/ui/keyring_error_dialog.ui:80
+msgid "Check that you have a default keyring and that it is unlocked."
+msgstr "נא לבדוק שיש לך מחזיק מפתחות כברירת מחדל ושהוא לא נעול."
+
+#: data/resources/ui/keyring_error_dialog.ui:92
+msgid ""
+"Check the application logs and your distribution’s documentation for more "
+"details."
+msgstr "כדאי לעיין ביומני היישום ובתיעוד ההפצה שלך לפרטים נוספים."
 
 #: data/resources/ui/preferences.ui:16
 msgid "General"
@@ -330,11 +360,11 @@ msgstr "רשת"
 
 #: data/resources/ui/preferences.ui:62
 msgid "_Download Favicons"
-msgstr "הור_דת צלמית מועדפים"
+msgstr "הור_דת סמל מועדפים"
 
 #: data/resources/ui/preferences.ui:64
 msgid "Automatically attempt fetching a website icon"
-msgstr "ניסיון למשיכה אוטומטית של צלמית אתר אינטרנט"
+msgstr "ניסיון למשיכה אוטומטית של סמל אתר אינטרנט"
 
 #: data/resources/ui/preferences.ui:69
 msgid "_Metered Connection"
@@ -342,7 +372,7 @@ msgstr "רשת מו_גבלת"
 
 #: data/resources/ui/preferences.ui:71
 msgid "Fetch a website icon on a metered connection"
-msgstr "קבלת צלמית אתר אינטרנט ברשת מוגבלת"
+msgstr "קבלת סמל אתר אינטרנט ברשת מוגבלת"
 
 #: data/resources/ui/preferences.ui:81
 msgid "Backup/Restore"
@@ -362,7 +392,7 @@ msgstr "יצירת ססמה"
 
 #: data/resources/ui/preferences_password_page.ui:28
 msgid "Set up a Passphrase"
-msgstr "הקמת מילת צופן"
+msgstr "הגדרת מילת צופן"
 
 #: data/resources/ui/preferences_password_page.ui:29
 msgid "Authenticator will start locked after a passphrase is set."
@@ -381,23 +411,23 @@ msgid "Repeat Passphrase"
 msgstr "חזרה על מילת הצופן"
 
 #: data/resources/ui/preferences_password_page.ui:76
-#: data/resources/ui/provider_page.ui:72
+#: data/resources/ui/provider_page.ui:73
 msgid "_Reset"
 msgstr "_איפוס"
 
-#: data/resources/ui/provider_page.ui:82
+#: data/resources/ui/provider_page.ui:83
 msgid "Select a _File"
 msgstr "_בחירת קובץ"
 
-#: data/resources/ui/provider_page.ui:105
+#: data/resources/ui/provider_page.ui:106
 msgid "Name"
 msgstr "שם"
 
-#: data/resources/ui/provider_page.ui:158
+#: data/resources/ui/provider_page.ui:159
 msgid "The by default value for counter-based computing method"
 msgstr "ערך ברירת המחדל לשיטת חישוב מבוססת מונה"
 
-#: data/resources/ui/provider_page.ui:176
+#: data/resources/ui/provider_page.ui:177
 msgid "Help URL"
 msgstr "כתובת עזרה"
 
@@ -535,22 +565,22 @@ msgstr "אין חשבונות"
 msgid "Add an account or scan a QR code first."
 msgstr "יש להוסיף חשבון או לסרוק QR תחילה."
 
-#: src/application.rs:72
+#: src/application.rs:74
 msgid "Accounts restored successfully"
 msgstr "חשבונות שוחזרו בהצלחה"
 
-#: src/application.rs:98
+#: src/application.rs:100
 msgid "translator-credits"
 msgstr ""
 "ירון שהרבני <sh.yaron@gmail.com>\n"
 "יוסף אור בוצ׳קו <yoseforb@gmail.com>\n"
 "מיזם תרגום GNOME לעברית https://l10n.gnome.org/teams/he/"
 
-#: src/application.rs:362 src/widgets/accounts/row.rs:46
+#: src/application.rs:381 src/widgets/accounts/row.rs:46
 msgid "One-Time password copied"
 msgstr "הססמה החד־פעמית הועתקה"
 
-#: src/application.rs:363
+#: src/application.rs:382
 msgid "Password was copied successfully"
 msgstr "הססמה הועתקה בהצלחה"
 
@@ -662,26 +692,26 @@ msgstr "SHA-256"
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:274 src/widgets/preferences/window.rs:419
+#: src/widgets/accounts/add.rs:269 src/widgets/preferences/window.rs:419
 #: src/widgets/providers/page.rs:292
 msgid "Image"
 msgstr "תמונה"
 
-#: src/widgets/accounts/add.rs:282 src/widgets/preferences/window.rs:427
+#: src/widgets/accounts/add.rs:277 src/widgets/preferences/window.rs:427
 msgid "Select QR Code"
 msgstr "בחירת קוד QR"
 
-#: src/widgets/accounts/add.rs:300
+#: src/widgets/accounts/add.rs:295
 msgid "Invalid Token"
 msgstr "אסימון שגוי"
 
 #: src/widgets/accounts/details.rs:127
 msgid "Are you sure you want to delete the account?"
-msgstr "האם אכן ברצונך למחוק את החשבון?"
+msgstr "למחוק את החשבון?"
 
 #: src/widgets/accounts/details.rs:128
 msgid "This action is irreversible"
-msgstr "פעולה זו אינה ניתנת לביטול"
+msgstr "פעולה זו היא בלתי הפיכה"
 
 #: src/widgets/accounts/details.rs:132
 msgid "No"
@@ -690,10 +720,6 @@ msgstr "לא"
 #: src/widgets/accounts/details.rs:132
 msgid "Yes"
 msgstr "כן"
-
-#: src/widgets/camera.rs:221
-msgid "Unknown Device"
-msgstr "התקן לא ידוע"
 
 #: src/widgets/preferences/password_page.rs:172
 #: src/widgets/preferences/password_page.rs:214
@@ -714,19 +740,19 @@ msgstr "אירע כשל ביצירת גיבוי"
 
 #: src/widgets/preferences/window.rs:343
 msgid "Failed to restore from camera"
-msgstr "אירע כשל בשחזור ממצלמה"
+msgstr "שחזור ממצלמה נכשל"
 
 #: src/widgets/preferences/window.rs:354
 msgid "Failed to restore from a screenshot"
-msgstr "אירע כשל בשחזור מצילום מסך"
+msgstr "שחזור מצילום מסך נכשל"
 
 #: src/widgets/preferences/window.rs:364
 msgid "Failed to restore from an image"
-msgstr "אירע כשל משחזור מתוך תמונה"
+msgstr "שחזור מתוך תמונה נכשל"
 
 #: src/widgets/preferences/window.rs:377
 msgid "Failed to restore from a file"
-msgstr "אירע כשל משחזור מקובץ"
+msgstr "שחזור מקובץ נכשל"
 
 #: src/widgets/providers/dialog.rs:235
 msgid "Provider created successfully"
@@ -751,6 +777,9 @@ msgstr "יש חשבונות שמשויכים לספק, נא להסיר אותם 
 #: src/widgets/window.rs:115
 msgid "Wrong Password"
 msgstr "ססמה שגויה"
+
+#~ msgid "Unknown Device"
+#~ msgstr "התקן לא ידוע"
 
 #~ msgid "Back"
 #~ msgstr "אחורה"
