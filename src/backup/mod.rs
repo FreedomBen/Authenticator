@@ -93,7 +93,8 @@ mod freeotp;
 mod freeotp_json;
 mod google;
 mod legacy;
+mod raivootp;
 pub use self::{
     aegis::Aegis, andotp::AndOTP, bitwarden::Bitwarden, freeotp::FreeOTP,
-    freeotp_json::FreeOTPJSON, google::Google, legacy::LegacyAuthenticator,
+    freeotp_json::FreeOTPJSON, google::Google, legacy::LegacyAuthenticator, raivootp::RaivoOTP,
 };

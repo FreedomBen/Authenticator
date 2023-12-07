@@ -11,7 +11,7 @@ use super::{camera_page::CameraPage, password_page::PasswordPage};
 use crate::{
     backup::{
         Aegis, AndOTP, Backupable, Bitwarden, FreeOTP, FreeOTPJSON, Google, LegacyAuthenticator,
-        Operation, Restorable, RestorableItem,
+        Operation, RaivoOTP, Restorable, RestorableItem,
     },
     models::{ProvidersModel, SETTINGS},
     utils::spawn,
@@ -174,6 +174,7 @@ impl PreferencesWindow {
         self.register_restore::<Bitwarden>(&["application/json"]);
         self.register_restore::<Google>(&[]);
         self.register_restore::<LegacyAuthenticator>(&["application/json"]);
+        self.register_restore::<RaivoOTP>(&["application/zip"]);
     }
 
     fn register_backup<T: Backupable>(&self, filters: &'static [&str]) {
