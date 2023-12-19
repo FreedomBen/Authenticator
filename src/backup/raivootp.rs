@@ -2,6 +2,7 @@ use anyhow::Result;
 use gettextrs::gettext;
 use serde::{de::Deserializer, Deserialize, Serialize};
 use std::io::Cursor;
+use zeroize::{Zeroize, ZeroizeOnDrop};
 use zip::{self, ZipArchive};
 
 use super::{Restorable, RestorableItem};
@@ -16,20 +17,27 @@ pub struct RaivoOTP;
 /// [See Raivo's source code for each item's serialized form.][0]
 ///
 /// [0]: https://github.com/raivo-otp/ios-application/blob/3a8aaa0ea16a761e6205abd2700ac90dd4c9c9b6/Raivo/Models/Password.swift#L104-L116
-#[derive(Deserialize)]
+#[derive(Deserialize, Zeroize, ZeroizeOnDrop)]
 pub struct Item {
+    #[zeroize(skip)]
     issuer: String,
+    #[zeroize(skip)]
     account: String,
     secret: String,
+    #[zeroize(skip)]
     algorithm: Algorithm,
     #[serde(deserialize_with = "deserialize_raivo_u32")]
+    #[zeroize(skip)]
     digits: Option<u32>,
     #[serde(rename = "kind")]
+    #[zeroize(skip)]
     method: Method,
     #[serde(rename = "timer")]
     #[serde(deserialize_with = "deserialize_raivo_u32")]
+    #[zeroize(skip)]
     period: Option<u32>,
     #[serde(deserialize_with = "deserialize_raivo_u32")]
+    #[zeroize(skip)]
     counter: Option<u32>,
 }
 
