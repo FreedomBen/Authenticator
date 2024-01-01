@@ -69,12 +69,13 @@ metainfo_file = i18n.merge_file(
   install_dir: get_option('datadir') / 'metainfo'
 )
 # Validate metainfo File
-appstream_util = find_program('appstream-util', required: false)
-if appstream_util.found()
+appstreamcli = find_program('appstreamcli', required: false)
+if appstreamcli.found()
   test (
     'Validate metainfo file',
-    appstream_util,
-    args: ['validate-relax', '--nonet', metainfo_file.full_path()]
+    appstreamcli,
+    args: ['validate', '--no-net', '--explain', metainfo_file],
+    workdir: meson.current_build_dir()
   )
 endif
 
