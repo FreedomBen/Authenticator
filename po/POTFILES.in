@@ -22,6 +22,7 @@ src/backup/freeotp.rs
 src/backup/freeotp_json.rs
 src/backup/google.rs
 src/backup/legacy.rs
+src/backup/raivootp.rs
 src/main.rs
 src/models/algorithm.rs
 src/widgets/accounts/add.rs
