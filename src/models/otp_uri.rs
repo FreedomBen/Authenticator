@@ -228,6 +228,13 @@ mod tests {
         assert_eq!(uri.secret(), "HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ");
         assert_eq!(uri.account(), "john.doe@email.com");
         assert_eq!(uri.method(), Method::TOTP);
+
+        let uri = OTPUri::from_str("otpauth://totp/GitLab:sbeve72?secret=[secret]&issuer=GitLab")
+            .unwrap();
+        assert_eq!(uri.issuer(), "GitLab");
+        assert_eq!(uri.account(), "sbeve72");
+        assert_eq!(uri.secret(), "[secret]");
+        assert_eq!(uri.method(), Method::TOTP);
     }
 
     #[test]
