@@ -23,7 +23,7 @@ impl<B: AsRef<[u8]>> From<B> for QRCodeData {
             })
             .collect::<Vec<Vec<bool>>>();
 
-        let width = items.get(0).unwrap().len() as i32;
+        let width = items.first().unwrap().len() as i32;
         let height = items.len() as i32;
         Self {
             width,

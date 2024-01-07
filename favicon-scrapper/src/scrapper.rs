@@ -97,7 +97,7 @@ impl Scrapper {
                 }
             }
         }
-        best.or_else(|| self.0.get(0))
+        best.or_else(|| self.0.first())
     }
 
     fn from_reader(reader: &mut quick_xml::Reader<&[u8]>, base_url: Option<&Url>) -> Vec<Favicon> {

@@ -30,7 +30,7 @@ pub mod screenshot {
             .scan_y800(&img_data, width, height)
             .map_err(|e| anyhow::format_err!(e))?;
 
-        if let Some(result) = results.get(0) {
+        if let Some(result) = results.first() {
             let content = String::from_utf8(result.data.clone())?;
             return Ok(content);
         }

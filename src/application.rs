@@ -209,7 +209,7 @@ mod imp {
                 .filter_map(|f| f.uri().parse::<OTPUri>().ok())
                 .collect::<Vec<OTPUri>>();
             // We only handle a single URI (see the desktop file)
-            if let Some(uri) = uris.get(0) {
+            if let Some(uri) = uris.first() {
                 let window = self.obj().active_window();
                 window.open_add_account(Some(uri))
             }
