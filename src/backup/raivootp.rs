@@ -1,7 +1,8 @@
+use std::io::Cursor;
+
 use anyhow::Result;
 use gettextrs::gettext;
 use serde::{de::Deserializer, Deserialize, Serialize};
-use std::io::Cursor;
 use zeroize::{Zeroize, ZeroizeOnDrop};
 use zip::{self, ZipArchive};
 
