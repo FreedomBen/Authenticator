@@ -11,14 +11,14 @@ use crate::config;
 pub struct Settings(ThreadGuard<gio::Settings>);
 
 impl Settings {
-    const KEY_KEYRINGS_MIGRATED: &str = "keyrings-migrated";
-    const KEY_AUTO_LOCK: &str = "auto-lock";
-    const KEY_AUTO_LOCK_TIMEOUT: &str = "auto-lock-timeout";
-    const KEY_WINDOW_WIDTH: &str = "window-width";
-    const KEY_WINDOW_HEIGHT: &str = "window-height";
-    const KEY_IS_MAXIMIZED: &str = "is-maximized";
-    const KEY_DOWNLOAD_FAVICONS: &str = "download-favicons";
-    const KEY_DOWNLOAD_FAVICONS_METRED: &str = "download-favicons-metered";
+    const KEY_KEYRINGS_MIGRATED: &'static str = "keyrings-migrated";
+    const KEY_AUTO_LOCK: &'static str = "auto-lock";
+    const KEY_AUTO_LOCK_TIMEOUT: &'static str = "auto-lock-timeout";
+    const KEY_WINDOW_WIDTH: &'static str = "window-width";
+    const KEY_WINDOW_HEIGHT: &'static str = "window-height";
+    const KEY_IS_MAXIMIZED: &'static str = "is-maximized";
+    const KEY_DOWNLOAD_FAVICONS: &'static str = "download-favicons";
+    const KEY_DOWNLOAD_FAVICONS_METRED: &'static str = "download-favicons-metered";
 
     pub fn set_keyrings_migrated(&self, keyrings_migrated: bool) -> Result<(), glib::BoolError> {
         self.set_boolean(Self::KEY_KEYRINGS_MIGRATED, keyrings_migrated)

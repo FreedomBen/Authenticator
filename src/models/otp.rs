@@ -21,7 +21,7 @@ pub struct OTP {
 }
 
 impl OTP {
-    const STEAM_CHARS: &str = "23456789BCDFGHJKMNPQRTVWXY";
+    const STEAM_CHARS: &'static str = "23456789BCDFGHJKMNPQRTVWXY";
     pub const STEAM_DEFAULT_PERIOD: u32 = 30;
     pub const STEAM_DEFAULT_DIGITS: u32 = 5;
     pub const DEFAULT_COUNTER: u32 = 1;

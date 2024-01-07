@@ -10,14 +10,14 @@ mod url_row;
 mod window;
 
 pub use self::{
-    accounts::{AccountAddDialog, QRCodeData},
+    accounts::AccountAddDialog,
     camera::{screenshot, Camera},
     camera_row::CameraRow,
     error_revealer::ErrorRevealer,
     keyring_error_dialog::KeyringErrorDialog,
     preferences::PreferencesWindow,
     progress_icon::ProgressIcon,
-    providers::{ProviderImage, ProvidersDialog, ProvidersList},
+    providers::{ProviderImage, ProvidersDialog},
     url_row::UrlRow,
-    window::{View, Window},
+    window::Window,
 };
