@@ -5,7 +5,7 @@
   <metadata_license>CC0</metadata_license>
   <project_license>GPL-3.0-or-later</project_license>
   <name>Authenticator</name>
-  <summary>Generate Two-Factor Codes</summary>
+  <summary>Generate two-factor codes</summary>
   <description>
     <p>Simple application for generating Two-Factor Authentication Codes.</p>
     <p>Features:</p>

@@ -91,7 +91,7 @@ mod imp {
                         .application_name(gettext("Authenticator"))
                         .modal(true)
                         .version(config::VERSION)
-                        .comments(gettext("Generate Two-Factor Codes"))
+                        .comments(gettext("Generate two-factor codes"))
                         .website("https://gitlab.gnome.org/World/Authenticator")
                         .developers(vec![
                             "Bilal Elmoussaoui",

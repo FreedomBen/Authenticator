@@ -7,7 +7,7 @@
 
   <name xml:lang="en">Authenticator</name>
   <shortdesc xml:lang="en">
-      Generate Two-Factor Codes
+      Generate two-factor codes
   </shortdesc>
   <bug-database rdf:resource="https://gitlab.gnome.org/World/Authenticator" />
 
