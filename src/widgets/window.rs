@@ -79,21 +79,21 @@ mod imp {
             klass.bind_template();
             klass.bind_template_instance_callbacks();
 
-            klass.install_action("win.search", None, move |win, _, _| {
+            klass.install_action("win.search", None, |win, _, _| {
                 let search_btn = &win.imp().search_btn;
                 search_btn.set_active(!search_btn.is_active());
             });
 
-            klass.install_action("win.add_account", None, move |win, _, _| {
+            klass.install_action("win.add_account", None, |win, _, _| {
                 win.open_add_account(None);
             });
 
-            klass.install_action("win.back", None, move |win, _, _| {
+            klass.install_action("win.back", None, |win, _, _| {
                 // Always return back to accounts list
                 win.set_view(View::Accounts);
             });
 
-            klass.install_action("win.unlock", None, move |win, _, _| {
+            klass.install_action("win.unlock", None, |win, _, _| {
                 let imp = win.imp();
                 let app = win.app();
                 let password = imp.password_entry.text();

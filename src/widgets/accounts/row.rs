@@ -37,17 +37,16 @@ mod imp {
                 gdk::Key::c,
                 gdk::ModifierType::CONTROL_MASK,
                 "account.copy-otp",
-                None,
             );
 
-            klass.install_action("account.copy-otp", None, move |row, _, _| {
+            klass.install_action("account.copy-otp", None, |row, _, _| {
                 row.account().copy_otp();
                 let window = row.root().and_downcast::<Window>().unwrap();
                 let toast = adw::Toast::new(&gettext("One-Time password copied"));
                 toast.set_timeout(3);
                 window.add_toast(toast);
             });
-            klass.install_action("account.increment-counter", None, move |row, _, _| {
+            klass.install_action("account.increment-counter", None, |row, _, _| {
                 match row.account().increment_counter() {
                     Ok(_) => row.account().generate_otp(),
                     Err(err) => tracing::error!("Failed to increment the counter {err}"),

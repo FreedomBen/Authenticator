@@ -1,6 +1,6 @@
 use gtk::{
     gio,
-    glib::{self, clone, Receiver, Sender},
+    glib::{self, clone},
     prelude::*,
     subclass::prelude::*,
 };
@@ -9,11 +9,6 @@ use crate::{
     models::{Provider, FAVICONS_PATH, RUNTIME, SETTINGS},
     utils::spawn,
 };
-
-pub enum ImageAction {
-    Ready(String),
-    Failed,
-}
 
 mod imp {
     use std::cell::{Cell, RefCell};
@@ -28,8 +23,6 @@ mod imp {
         #[property(get, set, minimum = 32, maximum = 96, default = 48, construct)]
         pub size: Cell<u32>,
         pub was_downloaded: Cell<bool>,
-        pub sender: Sender<ImageAction>,
-        pub receiver: RefCell<Option<Receiver<ImageAction>>>,
         #[property(get, set = Self::set_provider, nullable)]
         pub provider: RefCell<Option<Provider>>,
         #[template_child]
@@ -49,11 +42,7 @@ mod imp {
         type ParentType = gtk::Box;
 
         fn new() -> Self {
-            let (sender, r) = glib::MainContext::channel(glib::Priority::default());
-            let receiver = RefCell::new(Some(r));
             Self {
-                sender,
-                receiver,
                 size: Cell::new(96),
                 was_downloaded: Cell::new(false),
                 stack: TemplateChild::default(),
@@ -189,17 +178,34 @@ impl ProviderImage {
                 spawn(clone!(@weak self as this => async move {
                    let imp = this.imp();
                    imp.was_downloaded.set(true);
-                    match receiver.await {
-                        Ok(Some(cache_name)) => {
-                            imp.sender.send(ImageAction::Ready(cache_name)).unwrap();
+                    let image_path = match receiver.await {
+                        // TODO: handle network failure and other errors differently
+                        Ok(None) => {
+                            imp.image.set_from_icon_name(Some("provider-fallback"));
+                            "invalid".to_string()
                         }
-                        Ok(None) =>  {
-                            imp.sender.send(ImageAction::Failed).unwrap();
-                        },
-                        Err(_) => {
-                            tracing::debug!("Provider image fetching aborted");
+                        Ok(Some(cache_name)) => {
+                            if imp.size.get() == 32 {
+                                imp.image
+                                    .set_from_file(Some(&FAVICONS_PATH.join(format!("{cache_name}_32x32"))));
+                            } else {
+                                imp.image
+                                    .set_from_file(Some(&FAVICONS_PATH.join(format!("{cache_name}_96x96"))));
+                            }
+                            cache_name
+                        }
+                        Err(e) => {
+                            tracing::error!("Failed to receive data {e}");
+                            return;
                         }
                     };
+                    if let Some(provider) = this.provider() {
+                        let guard = provider.freeze_notify();
+                        provider.set_image_uri(image_path);
+                        drop(guard);
+                    }
+                    imp.stack.set_visible_child_name("image");
+                    imp.spinner.stop();
                 }));
             }
         }
@@ -221,11 +227,6 @@ impl ProviderImage {
 
     fn setup_widget(&self) {
         let imp = self.imp();
-        let receiver = imp.receiver.borrow_mut().take().unwrap();
-        receiver.attach(
-            None,
-            clone!(@weak self as image => @default-return glib::ControlFlow::Break, move |action| image.do_action(action)),
-        );
         self.bind_property("size", &*imp.image, "pixel-size")
             .sync_create()
             .build();
@@ -243,35 +244,5 @@ impl ProviderImage {
                     }
             }),
         );
-    }
-
-    fn do_action(&self, action: ImageAction) -> glib::ControlFlow {
-        let imp = self.imp();
-        let image_path = match action {
-            // TODO: handle network failure and other errors differently
-            ImageAction::Failed => {
-                imp.image.set_from_icon_name(Some("provider-fallback"));
-                "invalid".to_string()
-            }
-            ImageAction::Ready(cache_name) => {
-                if imp.size.get() == 32 {
-                    imp.image
-                        .set_from_file(Some(&FAVICONS_PATH.join(format!("{cache_name}_32x32"))));
-                } else {
-                    imp.image
-                        .set_from_file(Some(&FAVICONS_PATH.join(format!("{cache_name}_96x96"))));
-                }
-                cache_name
-            }
-        };
-        if let Some(provider) = self.provider() {
-            let guard = provider.freeze_notify();
-            provider.set_image_uri(image_path);
-            drop(guard);
-        }
-
-        imp.stack.set_visible_child_name("image");
-        imp.spinner.stop();
-        glib::ControlFlow::Continue
     }
 }

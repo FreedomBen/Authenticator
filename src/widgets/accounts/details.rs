@@ -14,7 +14,8 @@ use crate::{
 mod imp {
     use std::cell::{OnceCell, RefCell};
 
-    use glib::{once_cell::sync::Lazy, subclass::Signal};
+    use glib::subclass::Signal;
+    use once_cell::sync::Lazy;
 
     use super::*;
 
@@ -63,25 +64,20 @@ mod imp {
             klass.bind_template();
             klass.bind_template_instance_callbacks();
 
-            klass.install_action("account.delete", None, move |page, _, _| {
+            klass.install_action("account.delete", None, |page, _, _| {
                 page.delete_account();
             });
-            klass.install_action("account.save", None, move |page, _, _| {
+            klass.install_action("account.save", None, |page, _, _| {
                 if let Err(err) = page.save() {
                     tracing::error!("Failed to save account details {}", err);
                 }
             });
 
-            klass.install_action("account.back", None, move |page, _, _| {
+            klass.install_action("account.back", None, |page, _, _| {
                 page.activate_action("win.back", None).unwrap();
             });
 
-            klass.add_binding_action(
-                gdk::Key::Escape,
-                gdk::ModifierType::empty(),
-                "account.back",
-                None,
-            );
+            klass.add_binding_action(gdk::Key::Escape, gdk::ModifierType::empty(), "account.back");
         }
 
         fn instance_init(obj: &glib::subclass::InitializingObject<Self>) {

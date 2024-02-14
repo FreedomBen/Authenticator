@@ -88,18 +88,18 @@ mod imp {
             klass.bind_template();
             klass.bind_template_instance_callbacks();
 
-            klass.install_action("providers.save", None, move |page, _, _| {
+            klass.install_action("providers.save", None, |page, _, _| {
                 if let Err(err) = page.save() {
                     tracing::warn!("Failed to save provider {}", err);
                 }
             });
-            klass.install_action("providers.delete", None, move |page, _, _| {
+            klass.install_action("providers.delete", None, |page, _, _| {
                 if let Err(err) = page.delete_provider() {
                     tracing::warn!("Failed to delete the provider {}", err);
                 }
             });
 
-            klass.install_action("providers.reset_image", None, move |page, _, _| {
+            klass.install_action("providers.reset_image", None, |page, _, _| {
                 page.reset_image();
             });
             klass.install_action_async("providers.select_image", None, |page, _, _| async move {
@@ -114,7 +114,7 @@ mod imp {
 
     impl ObjectImpl for ProviderPage {
         fn signals() -> &'static [Signal] {
-            use glib::once_cell::sync::Lazy;
+            use once_cell::sync::Lazy;
             static SIGNALS: Lazy<Vec<Signal>> = Lazy::new(|| {
                 vec![
                     Signal::builder("created")

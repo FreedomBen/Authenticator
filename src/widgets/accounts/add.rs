@@ -15,10 +15,8 @@ use crate::{
 mod imp {
     use std::cell::{OnceCell, RefCell};
 
-    use glib::{
-        once_cell::sync::Lazy,
-        subclass::{InitializingObject, Signal},
-    };
+    use glib::subclass::{InitializingObject, Signal};
+    use once_cell::sync::Lazy;
 
     use super::*;
 

@@ -3,13 +3,13 @@ use std::{cell::OnceCell, os::fd::RawFd, sync::Once};
 use adw::subclass::prelude::*;
 use anyhow::Result;
 use ashpd::desktop::screenshot::ScreenshotRequest;
-use glib::once_cell::sync::Lazy;
 use gtk::{
     gio,
     glib::{self, clone},
     prelude::*,
 };
 use image::GenericImageView;
+use once_cell::sync::Lazy;
 
 use super::CameraRow;
 use crate::utils::spawn_tokio;

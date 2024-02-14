@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 
-use gtk::glib::once_cell::sync::OnceCell;
+use once_cell::sync::OnceCell;
 use rand::RngCore;
 
 use crate::config;

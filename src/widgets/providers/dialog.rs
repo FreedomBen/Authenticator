@@ -14,7 +14,8 @@ enum View {
 mod imp {
     use std::cell::OnceCell;
 
-    use glib::{once_cell::sync::Lazy, subclass::Signal};
+    use glib::subclass::Signal;
+    use once_cell::sync::Lazy;
 
     use super::*;
     use crate::config;
@@ -58,15 +59,15 @@ mod imp {
             klass.bind_template();
             klass.bind_template_instance_callbacks();
 
-            klass.install_action("providers.back", None, move |dialog, _, _| {
+            klass.install_action("providers.back", None, |dialog, _, _| {
                 dialog.set_view(View::List);
             });
 
-            klass.install_action("providers.add", None, move |dialog, _, _| {
+            klass.install_action("providers.add", None, |dialog, _, _| {
                 dialog.add_provider();
             });
 
-            klass.install_action("providers.search", None, move |dialog, _, _| {
+            klass.install_action("providers.search", None, |dialog, _, _| {
                 let search_btn = &*dialog.imp().search_btn;
                 search_btn.set_active(!search_btn.is_active());
             });

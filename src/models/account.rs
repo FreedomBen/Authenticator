@@ -36,7 +36,8 @@ pub struct DieselAccount {
 mod imp {
     use std::cell::{Cell, OnceCell, RefCell};
 
-    use glib::{once_cell::sync::Lazy, ParamSpecObject};
+    use glib::ParamSpecObject;
+    use once_cell::sync::Lazy;
 
     use super::*;
 

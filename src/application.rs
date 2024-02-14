@@ -381,12 +381,12 @@ impl Application {
         loop {
             let response = receiver.next().await.unwrap();
             match response {
-                SearchProviderAction::LaunchSearch(terms, timestamp) => {
+                SearchProviderAction::LaunchSearch(terms, _) => {
                     self.activate();
                     let window = self.active_window();
                     window.imp().search_entry.set_text(&terms.join(" "));
                     window.imp().search_btn.set_active(true);
-                    window.present_with_time(timestamp);
+                    window.present();
                 }
                 SearchProviderAction::ActivateResult => {
                     let notification = gio::Notification::new(&gettext("One-Time password copied"));

@@ -1,10 +1,10 @@
 use adw::subclass::prelude::*;
-use gtk::{self, gio, glib, CompositeTemplate};
+use gtk::{gio, glib, prelude::*};
 
 mod imp {
     use super::*;
 
-    #[derive(Debug, Default, CompositeTemplate)]
+    #[derive(Debug, Default, gtk::CompositeTemplate)]
     #[template(resource = "/com/belmoussaoui/Authenticator/keyring_error_dialog.ui")]
     pub struct KeyringErrorDialog {
         #[template_child]
@@ -45,7 +45,7 @@ glib::wrapper! {
 }
 
 impl KeyringErrorDialog {
-    pub fn new<A: glib::IsA<gio::Application>>(app: &A) -> Self {
+    pub fn new<A: IsA<gio::Application>>(app: &A) -> Self {
         glib::Object::builder().property("application", app).build()
     }
 }
