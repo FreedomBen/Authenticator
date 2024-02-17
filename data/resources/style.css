@@ -28,3 +28,14 @@ camera .selectionbutton {
   min-height: 44px;
   min-width: 44px;
 }
+
+camera {
+  background: black;
+  color: #f2f2f2;
+}
+
+camera popover contents,
+camera popover arrow {
+  background: alpha(#181818, .9);
+  color: white;
+}
