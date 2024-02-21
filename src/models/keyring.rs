@@ -36,7 +36,7 @@ pub async fn store(label: &str, token: &str) -> anyhow::Result<String> {
     SECRET_SERVICE
         .get()
         .unwrap()
-        .create_item(label, attributes, base64_encoded_token.as_bytes(), true)
+        .create_item(label, &attributes, base64_encoded_token.as_bytes(), true)
         .await?;
     Ok(token_id)
 }
@@ -46,7 +46,7 @@ pub async fn token(token_id: &str) -> anyhow::Result<Option<String>> {
     let items = SECRET_SERVICE
         .get()
         .unwrap()
-        .search_items(attributes)
+        .search_items(&attributes)
         .await?;
     Ok(match items.first() {
         Some(e) => Some(String::from_utf8(hex::decode(&*e.secret().await?)?)?),
@@ -56,7 +56,7 @@ pub async fn token(token_id: &str) -> anyhow::Result<Option<String>> {
 
 pub async fn remove_token(token_id: &str) -> anyhow::Result<()> {
     let attributes = token_attributes(token_id);
-    SECRET_SERVICE.get().unwrap().delete(attributes).await?;
+    SECRET_SERVICE.get().unwrap().delete(&attributes).await?;
     Ok(())
 }
 
@@ -65,7 +65,7 @@ pub async fn token_exists(token: &str) -> anyhow::Result<bool> {
     let items = SECRET_SERVICE
         .get()
         .unwrap()
-        .search_items(attributes)
+        .search_items(&attributes)
         .await?;
     for item in items {
         let item_token = String::from_utf8(hex::decode(&*item.secret().await?)?)?;
@@ -78,7 +78,12 @@ pub async fn token_exists(token: &str) -> anyhow::Result<bool> {
 
 pub async fn has_set_password() -> anyhow::Result<bool> {
     let attributes = password_attributes();
-    match SECRET_SERVICE.get().unwrap().search_items(attributes).await {
+    match SECRET_SERVICE
+        .get()
+        .unwrap()
+        .search_items(&attributes)
+        .await
+    {
         Ok(items) => Ok(items.first().is_some()),
         _ => Ok(false),
     }
@@ -93,7 +98,7 @@ pub async fn set_password(password: &str) -> anyhow::Result<()> {
         .unwrap()
         .create_item(
             "Authenticator password",
-            attributes,
+            &attributes,
             encoded_password.as_bytes(),
             true,
         )
@@ -103,7 +108,7 @@ pub async fn set_password(password: &str) -> anyhow::Result<()> {
 
 pub async fn reset_password() -> anyhow::Result<()> {
     let attributes = password_attributes();
-    SECRET_SERVICE.get().unwrap().delete(attributes).await?;
+    SECRET_SERVICE.get().unwrap().delete(&attributes).await?;
     Ok(())
 }
 
@@ -112,7 +117,7 @@ pub async fn is_current_password(password: &str) -> anyhow::Result<bool> {
     let items = SECRET_SERVICE
         .get()
         .unwrap()
-        .search_items(attributes)
+        .search_items(&attributes)
         .await?;
     Ok(match items.first() {
         Some(i) => {

@@ -1,4 +1,4 @@
-use std::{cell::OnceCell, os::fd::RawFd, sync::Once};
+use std::{cell::OnceCell, os::fd::OwnedFd, sync::Once};
 
 use adw::subclass::prelude::*;
 use anyhow::Result;
@@ -308,7 +308,7 @@ impl Default for Camera {
     }
 }
 
-async fn stream() -> ashpd::Result<RawFd> {
+async fn stream() -> ashpd::Result<OwnedFd> {
     let proxy = ashpd::desktop::camera::Camera::new().await?;
     proxy.request_access().await?;
 
