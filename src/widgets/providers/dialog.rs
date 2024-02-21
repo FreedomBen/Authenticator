@@ -53,7 +53,7 @@ mod imp {
     impl ObjectSubclass for ProvidersDialog {
         const NAME: &'static str = "ProvidersDialog";
         type Type = super::ProvidersDialog;
-        type ParentType = adw::Window;
+        type ParentType = adw::Dialog;
 
         fn class_init(klass: &mut Self::Class) {
             klass.bind_template();
@@ -119,12 +119,11 @@ mod imp {
         }
     }
     impl WidgetImpl for ProvidersDialog {}
-    impl WindowImpl for ProvidersDialog {}
-    impl AdwWindowImpl for ProvidersDialog {}
+    impl AdwDialogImpl for ProvidersDialog {}
 }
 glib::wrapper! {
     pub struct ProvidersDialog(ObjectSubclass<imp::ProvidersDialog>)
-        @extends gtk::Widget, gtk::Window, adw::Window;
+        @extends gtk::Widget, adw::Dialog;
 }
 
 #[gtk::template_callbacks]

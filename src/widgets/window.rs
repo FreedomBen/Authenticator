@@ -1,10 +1,10 @@
 use std::cell::OnceCell;
 
+use adw::prelude::*;
 use gettextrs::gettext;
 use gtk::{
     gio,
     glib::{self, clone},
-    prelude::*,
     subclass::prelude::*,
 };
 
@@ -270,7 +270,6 @@ impl Window {
     pub fn open_add_account(&self, otp_uri: Option<&OTPUri>) {
         let model = self.model();
         let dialog = AccountAddDialog::new(&model);
-        dialog.set_transient_for(Some(self));
         if let Some(uri) = otp_uri {
             dialog.set_from_otp_uri(uri);
         }
@@ -278,7 +277,7 @@ impl Window {
         dialog.connect_added(clone!(@weak self as win => move |_| {
             win.providers().refilter();
         }));
-        dialog.present();
+        dialog.present(self);
     }
 
     pub fn providers(&self) -> ProvidersList {

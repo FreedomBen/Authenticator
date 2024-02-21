@@ -69,7 +69,7 @@ mod imp {
     impl ObjectSubclass for AccountAddDialog {
         const NAME: &'static str = "AccountAddDialog";
         type Type = super::AccountAddDialog;
-        type ParentType = adw::Window;
+        type ParentType = adw::Dialog;
 
         fn class_init(klass: &mut Self::Class) {
             klass.bind_template();
@@ -132,12 +132,11 @@ mod imp {
         }
     }
     impl WidgetImpl for AccountAddDialog {}
-    impl WindowImpl for AccountAddDialog {}
-    impl AdwWindowImpl for AccountAddDialog {}
+    impl AdwDialogImpl for AccountAddDialog {}
 }
 glib::wrapper! {
     pub struct AccountAddDialog(ObjectSubclass<imp::AccountAddDialog>)
-        @extends gtk::Widget, gtk::Window, adw::Window;
+        @extends gtk::Widget, adw::Dialog;
 }
 
 #[gtk::template_callbacks]
@@ -263,6 +262,8 @@ impl AccountAddDialog {
     }
 
     async fn open_qr_code(&self) -> Result<()> {
+        let window = self.root().and_downcast::<gtk::Window>().unwrap();
+
         let images_filter = gtk::FileFilter::new();
         images_filter.set_name(Some(&gettext("Image")));
         images_filter.add_pixbuf_formats();
@@ -274,7 +275,7 @@ impl AccountAddDialog {
             .filters(&model)
             .title(gettext("Select QR Code"))
             .build();
-        let file = dialog.open_future(Some(self)).await?;
+        let file = dialog.open_future(Some(&window)).await?;
         let (data, _) = file.load_contents_future().await?;
         let code = screenshot::scan(&data)?;
         let uri = code.parse::<OTPUri>()?;

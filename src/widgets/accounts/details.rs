@@ -119,11 +119,9 @@ impl AccountDetailsPage {
     fn delete_account(&self) {
         let parent = self.root().and_downcast::<gtk::Window>().unwrap();
 
-        let dialog = adw::MessageDialog::builder()
+        let dialog = adw::AlertDialog::builder()
             .heading(gettext("Are you sure you want to delete the account?"))
             .body(gettext("This action is irreversible"))
-            .modal(true)
-            .transient_for(&parent)
             .build();
         dialog.add_responses(&[("no", &gettext("No")), ("yes", &gettext("Yes"))]);
         dialog.set_response_appearance("yes", adw::ResponseAppearance::Destructive);
@@ -138,7 +136,7 @@ impl AccountDetailsPage {
             }),
         );
 
-        dialog.present();
+        dialog.present(&parent);
     }
 
     pub fn set_account(&self, account: &Account) {

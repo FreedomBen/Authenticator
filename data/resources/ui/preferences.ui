@@ -6,10 +6,10 @@
     <property name="step-increment">1</property>
     <property name="page-increment">10</property>
   </object>
-  <template class="PreferencesWindow" parent="AdwPreferencesWindow">
-    <property name="default-width">550</property>
-    <property name="default-height">570</property>
-    <property name="can-navigate-back">True</property>
+  <template class="PreferencesWindow" parent="AdwPreferencesDialog">
+    <property name="content-width">550</property>
+    <property name="content-height">570</property>
+    <property name="search-enabled">True</property>
     <child>
       <object class="AdwPreferencesPage">
         <property name="icon-name">applications-system-symbolic</property>

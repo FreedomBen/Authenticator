@@ -79,17 +79,15 @@ mod imp {
                     preferences.connect_has_set_password_notify(clone!(@weak app => move |pref| {
                         app.set_can_be_locked(pref.has_set_password());
                     }));
-                    preferences.set_transient_for(Some(&window));
-                    preferences.present();
+                    preferences.present(&window);
                 }).build();
 
             // About
             let about_action = gio::ActionEntry::builder("about")
                 .activate(|app: &Self::Type, _, _| {
                     let window = app.active_window();
-                    adw::AboutWindow::builder()
+                    adw::AboutDialog::builder()
                         .application_name(gettext("Authenticator"))
-                        .modal(true)
                         .version(config::VERSION)
                         .comments(gettext("Generate two-factor codes"))
                         .website("https://gitlab.gnome.org/World/Authenticator")
@@ -103,9 +101,8 @@ mod imp {
                         .translator_credits(gettext("translator-credits"))
                         .application_icon(config::APP_ID)
                         .license_type(gtk::License::Gpl30)
-                        .transient_for(&window)
                         .build()
-                        .present();
+                        .present(&window);
                 })
                 .build();
 
@@ -117,8 +114,7 @@ mod imp {
                     providers.connect_changed(clone!(@weak window => move |_| {
                         window.providers().refilter();
                     }));
-                    providers.set_transient_for(Some(&window));
-                    providers.present();
+                    providers.present(&window);
                 })
                 .build();
 

@@ -62,7 +62,7 @@ mod imp {
     impl ObjectSubclass for PreferencesWindow {
         const NAME: &'static str = "PreferencesWindow";
         type Type = super::PreferencesWindow;
-        type ParentType = adw::PreferencesWindow;
+        type ParentType = adw::PreferencesDialog;
 
         fn new() -> Self {
             let actions = gio::SimpleActionGroup::new();
@@ -111,14 +111,13 @@ mod imp {
         }
     }
     impl WidgetImpl for PreferencesWindow {}
-    impl WindowImpl for PreferencesWindow {}
-    impl AdwWindowImpl for PreferencesWindow {}
-    impl PreferencesWindowImpl for PreferencesWindow {}
+    impl AdwDialogImpl for PreferencesWindow {}
+    impl PreferencesDialogImpl for PreferencesWindow {}
 }
 
 glib::wrapper! {
     pub struct PreferencesWindow(ObjectSubclass<imp::PreferencesWindow>)
-        @extends gtk::Widget, gtk::Window, adw::Window, adw::PreferencesWindow;
+        @extends gtk::Widget, adw::Dialog, adw::PreferencesDialog;
 }
 
 impl PreferencesWindow {
@@ -411,6 +410,8 @@ impl PreferencesWindow {
     }
 
     async fn restore_from_image<T: Restorable<Item = Q>, Q: RestorableItem>(&self) -> Result<()> {
+        let window = self.root().and_downcast::<gtk::Window>().unwrap();
+
         let images_filter = gtk::FileFilter::new();
         images_filter.set_name(Some(&gettext("Image")));
         images_filter.add_pixbuf_formats();
@@ -422,7 +423,7 @@ impl PreferencesWindow {
             .filters(&model)
             .title(gettext("Select QR Code"))
             .build();
-        let file = dialog.open_future(Some(self)).await?;
+        let file = dialog.open_future(Some(&window)).await?;
         let (data, _) = file.load_contents_future().await?;
         let code = screenshot::scan(&data)?;
         let items = T::restore_from_data(code.as_bytes(), None)?;
@@ -462,6 +463,7 @@ impl PreferencesWindow {
         operation: Operation,
     ) -> Result<gio::File, glib::Error> {
         let filters_model = gio::ListStore::new::<gtk::FileFilter>();
+        let window = self.root().and_downcast::<gtk::Window>().unwrap();
         filters.iter().for_each(|f| {
             let filter = gtk::FileFilter::new();
             filter.add_mime_type(f);
@@ -476,7 +478,7 @@ impl PreferencesWindow {
                     .filters(&filters_model)
                     .title(gettext("Backup"))
                     .build();
-                dialog.save_future(Some(self)).await
+                dialog.save_future(Some(&window)).await
             }
             Operation::Restore => {
                 let dialog = gtk::FileDialog::builder()
@@ -484,7 +486,7 @@ impl PreferencesWindow {
                     .filters(&filters_model)
                     .title(gettext("Restore"))
                     .build();
-                dialog.open_future(Some(self)).await
+                dialog.open_future(Some(&window)).await
             }
         }
     }
