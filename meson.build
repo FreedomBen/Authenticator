@@ -6,7 +6,6 @@ project('authenticator', 'rust',
 
 dependency('glib-2.0', version: '>= 2.56')
 dependency('gio-2.0', version: '>= 2.56')
-dependency('gdk-pixbuf-2.0')
 dependency('gtk4', version: '>= 4.10')
 dependency('libadwaita-1', version: '>=1.5.beta')
 dependency('zbar', version: '>= 0.20')
