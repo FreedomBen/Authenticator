@@ -11,20 +11,20 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Authenticator\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2023-10-01 12:30+0000\n"
-"PO-Revision-Date: 2023-11-29 13:52-0300\n"
-"Last-Translator: Alex Jr <alexalencarjr@outlook.com>\n"
+"POT-Creation-Date: 2024-03-07 09:35+0000\n"
+"PO-Revision-Date: 2024-03-08 13:08-0300\n"
+"Last-Translator: Leônidas Araújo <leorusvellt@hotmail.com>\n"
 "Language-Team: Brazilian Portuguese <>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"X-Generator: Gtranslator 45.3\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
-#: data/resources/ui/window.ui:36 src/application.rs:88 src/main.rs:40
+#: data/resources/ui/window.ui:36 src/application.rs:90 src/main.rs:40
 msgid "Authenticator"
 msgstr "Autenticador"
 
@@ -34,8 +34,8 @@ msgstr "Autenticação de dois fatores"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:5
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:91
-msgid "Generate Two-Factor Codes"
+#: src/application.rs:92
+msgid "Generate two-factor codes"
 msgstr "Gere códigos de dois fatores"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:10
@@ -136,7 +136,7 @@ msgid "Main Window"
 msgstr "Janela principal"
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:29
-#: data/resources/ui/account_add.ui:32 data/resources/ui/account_add.ui:49
+#: data/resources/ui/account_add.ui:30 data/resources/ui/account_add.ui:47
 msgid "Add a New Account"
 msgstr "Adição de uma nova conta"
 
@@ -152,108 +152,108 @@ msgstr "Detalhes da conta"
 msgid "Backup/Restore formats support"
 msgstr "Suporte a formatos de backup/restauração"
 
-#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:296
-msgid "Bilal Elmoussaoui"
-msgstr "Bilal Elmoussaoui"
-
-#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:297
+#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:292
 msgid "_Camera"
 msgstr "_Câmera"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:301
+#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:296
 msgid "_Screenshot"
 msgstr "Captura de _tela"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:306
+#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:301
 msgid "_QR Code Image"
 msgstr "_Escaneador de código QR"
 
-#: data/resources/ui/account_add.ui:58
+#: data/resources/ui/account_add.ui:56
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: data/resources/ui/account_add.ui:64
+#: data/resources/ui/account_add.ui:62
 msgid "_Add"
 msgstr "_Adicionar"
 
-#: data/resources/ui/account_add.ui:76 src/widgets/preferences/window.rs:292
+#: data/resources/ui/account_add.ui:74 src/widgets/preferences/window.rs:287
 msgid "Scan QR Code"
 msgstr "Escanear código QR"
 
-#: data/resources/ui/account_add.ui:114
+#: data/resources/ui/account_add.ui:112
 #: data/resources/ui/account_details_page.ui:96
 #: data/resources/ui/provider_page.ui:22
-#: data/resources/ui/providers_dialog.ui:110
+#: data/resources/ui/providers_dialog.ui:108
 msgid "Provider"
 msgstr "Provedor"
 
-#: data/resources/ui/account_add.ui:115
+#: data/resources/ui/account_add.ui:113
 msgid "Token issuer"
 msgstr "Emissor de token"
 
-#: data/resources/ui/account_add.ui:129
+#: data/resources/ui/account_add.ui:127
 #: data/resources/ui/account_details_page.ui:91
 msgid "Account"
 msgstr "Conta"
 
-#: data/resources/ui/account_add.ui:135
+#: data/resources/ui/account_add.ui:133
 msgid "Token"
 msgstr "Token"
 
-#: data/resources/ui/account_add.ui:141
+#: data/resources/ui/account_add.ui:139
 #: data/resources/ui/account_details_page.ui:139
 #: data/resources/ui/provider_page.ui:158
 msgid "Counter"
 msgstr "Contador"
 
-#: data/resources/ui/account_add.ui:159
+#: data/resources/ui/account_add.ui:157
 #: data/resources/ui/account_details_page.ui:119
 #: data/resources/ui/provider_page.ui:133
 msgid "Algorithm"
 msgstr "Algoritmo"
 
-#: data/resources/ui/account_add.ui:171
+#: data/resources/ui/account_add.ui:169
 #: data/resources/ui/account_details_page.ui:129
 #: data/resources/ui/provider_page.ui:118
 msgid "Computing Method"
 msgstr "Método de computação"
 
-#: data/resources/ui/account_add.ui:183
+#: data/resources/ui/account_add.ui:181
 #: data/resources/ui/account_details_page.ui:148
 #: data/resources/ui/provider_page.ui:149
 msgid "Period"
 msgstr "Período"
 
-#: data/resources/ui/account_add.ui:184 data/resources/ui/provider_page.ui:150
+#: data/resources/ui/account_add.ui:182
+#: data/resources/ui/account_details_page.ui:149
+#: data/resources/ui/provider_page.ui:150
 msgid "Duration in seconds until the next password update"
 msgstr "Duração em segundos até a próxima atualização de senha"
 
-#: data/resources/ui/account_add.ui:196
-#: data/resources/ui/account_details_page.ui:158
+#: data/resources/ui/account_add.ui:194
+#: data/resources/ui/account_details_page.ui:159
 #: data/resources/ui/provider_page.ui:167
 msgid "Digits"
 msgstr "Dígitos"
 
-#: data/resources/ui/account_add.ui:197 data/resources/ui/provider_page.ui:168
+#: data/resources/ui/account_add.ui:195
+#: data/resources/ui/account_details_page.ui:160
+#: data/resources/ui/provider_page.ui:168
 msgid "Length of the generated code"
 msgstr "Comprimento do código gerado"
 
-#: data/resources/ui/account_add.ui:209
-#: data/resources/ui/account_details_page.ui:168
+#: data/resources/ui/account_add.ui:207
+#: data/resources/ui/account_details_page.ui:170
 #: data/resources/ui/provider_page.ui:112
 msgid "Website"
 msgstr "Site"
 
-#: data/resources/ui/account_add.ui:214
+#: data/resources/ui/account_add.ui:212
 msgid "How to Set Up"
 msgstr "Como configurar"
 
-#: data/resources/ui/account_add.ui:234
+#: data/resources/ui/account_add.ui:232
 #: data/resources/ui/preferences_camera_page.ui:4
 msgid "Camera"
 msgstr "Câmera"
 
-#: data/resources/ui/account_add.ui:246
+#: data/resources/ui/account_add.ui:244
 msgid "Create Provider"
 msgstr "Criar provedor"
 
@@ -268,7 +268,7 @@ msgstr "_Salvar"
 msgid "_Delete"
 msgstr "_Excluir"
 
-#: data/resources/ui/account_details_page.ui:173
+#: data/resources/ui/account_details_page.ui:175
 msgid "Help"
 msgstr "Ajuda"
 
@@ -281,8 +281,6 @@ msgid "Copy PIN to clipboard"
 msgstr "Copiar PIN pra área de transferência"
 
 #: data/resources/ui/account_row.ui:43
-#, fuzzy
-#| msgid "Account Details"
 msgid "Account details"
 msgstr "Detalhes da conta"
 
@@ -298,7 +296,7 @@ msgstr "_De uma captura de tela"
 msgid "Secret Service Error"
 msgstr "Erro no Serviço de Segredos"
 
-#: data/resources/ui/keyring_error_dialog.ui:32
+#: data/resources/ui/keyring_error_dialog.ui:35
 msgid ""
 "Authenticator relies on a Secret Service Provider to manage your sensitive "
 "session information and an error occurred while we were trying to store or "
@@ -308,31 +306,32 @@ msgstr ""
 "as informações sensíveis da sua sessão e ocorreu um erro ao tentarmos "
 "armazenar ou obter a sua sessão."
 
-#: data/resources/ui/keyring_error_dialog.ui:44
+#: data/resources/ui/keyring_error_dialog.ui:47
 msgid ""
 "Here are a few things that might help you fix issues with the Secret Service:"
 msgstr ""
 "Veja algumas coisas que o podem ajudar a resolver problemas com o Serviço de "
 "Segredos:"
 
-#: data/resources/ui/keyring_error_dialog.ui:61
+#: data/resources/ui/keyring_error_dialog.ui:64
 msgid ""
 "Make sure you have a Secret Service Provider installed, like gnome-keyring."
 msgstr ""
 "Certifique-se de que tem um Fornecedor de Serviço de Segredos instalado, "
 "como o gnome-keyring."
 
-#: data/resources/ui/keyring_error_dialog.ui:80
+#: data/resources/ui/keyring_error_dialog.ui:83
 msgid "Check that you have a default keyring and that it is unlocked."
-msgstr "Verifique se tem um keyring predefinido e se ele está desbloqueado"
+msgstr ""
+"Verifique se você possui um chaveiro padrão e se ele está desbloqueado."
 
-#: data/resources/ui/keyring_error_dialog.ui:92
+#: data/resources/ui/keyring_error_dialog.ui:95
 msgid ""
 "Check the application logs and your distribution’s documentation for more "
 "details."
 msgstr ""
-"Verifique os registros (logs) da aplicação e a documentação da sua distribuição para "
-"obter mais detalhes"
+"Verifique os registros (logs) da aplicação e a documentação da sua "
+"distribuição para obter mais detalhes"
 
 #: data/resources/ui/preferences.ui:16
 msgid "General"
@@ -390,11 +389,11 @@ msgstr "Obter um ícone de website em conexão limitada"
 msgid "Backup/Restore"
 msgstr "Backup/Restaurar"
 
-#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:481
+#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:479
 msgid "Backup"
 msgstr "Cópia de segurança"
 
-#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:489
+#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:487
 msgid "Restore"
 msgstr "Restaurar"
 
@@ -411,19 +410,19 @@ msgid "Authenticator will start locked after a passphrase is set."
 msgstr ""
 "O Autenticador vai iniciar bloqueado após uma frase secreta ser definida."
 
-#: data/resources/ui/preferences_password_page.ui:50
+#: data/resources/ui/preferences_password_page.ui:53
 msgid "Current Passphrase"
 msgstr "Frase secreta atual"
 
-#: data/resources/ui/preferences_password_page.ui:56
+#: data/resources/ui/preferences_password_page.ui:59
 msgid "New Passphrase"
 msgstr "Nova frase secreta"
 
-#: data/resources/ui/preferences_password_page.ui:62
+#: data/resources/ui/preferences_password_page.ui:65
 msgid "Repeat Passphrase"
 msgstr "Repetir frase secreta"
 
-#: data/resources/ui/preferences_password_page.ui:76
+#: data/resources/ui/preferences_password_page.ui:79
 #: data/resources/ui/provider_page.ui:73
 msgid "_Reset"
 msgstr "_Redefinir"
@@ -444,41 +443,39 @@ msgstr "O valor por padrão para métodos de computação baseadas em contagem"
 msgid "Help URL"
 msgstr "URL de ajuda"
 
-#: data/resources/ui/providers_dialog.ui:10
-#: data/resources/ui/providers_dialog.ui:21
+#: data/resources/ui/providers_dialog.ui:8
+#: data/resources/ui/providers_dialog.ui:19
 msgid "Providers"
 msgstr "Provedores"
 
-#: data/resources/ui/providers_dialog.ui:31 src/widgets/providers/page.rs:209
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:209
 msgid "New Provider"
 msgstr "Novo provedor"
 
-#: data/resources/ui/providers_dialog.ui:38
-#: data/resources/ui/providers_dialog.ui:54 data/resources/ui/window.ui:201
-#: data/resources/ui/window.ui:222
+#: data/resources/ui/providers_dialog.ui:36
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:207
+#: data/resources/ui/window.ui:228
 msgid "Search"
 msgstr "Procurar"
 
-#: data/resources/ui/providers_dialog.ui:49 data/resources/ui/window.ui:196
-#, fuzzy
-#| msgid "Search"
+#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:202
 msgid "Search…"
-msgstr "Procurar"
+msgstr "Procurar…"
 
-#: data/resources/ui/providers_dialog.ui:95
+#: data/resources/ui/providers_dialog.ui:93
 #: data/resources/ui/providers_list.ui:38
 msgid "No Results"
 msgstr "Nenhum resultado"
 
-#: data/resources/ui/providers_dialog.ui:96
+#: data/resources/ui/providers_dialog.ui:94
 msgid "No providers matching the query were found."
 msgstr "Nenhum provedor correspondente à consulta foi encontrado."
 
-#: data/resources/ui/providers_dialog.ui:141
+#: data/resources/ui/providers_dialog.ui:139
 msgid "No Provider Selected"
 msgstr "Novo provedor selecionado"
 
-#: data/resources/ui/providers_dialog.ui:142
+#: data/resources/ui/providers_dialog.ui:140
 msgid "Select a provider or create a new one"
 msgstr "Selecione um provedor ou crie um novo"
 
@@ -555,48 +552,49 @@ msgstr "_Sobre o Autenticador"
 msgid "Authenticator is Locked"
 msgstr "O Autenticador está bloqueado"
 
-#: data/resources/ui/window.ui:89
+#: data/resources/ui/window.ui:92
 msgid "_Unlock"
 msgstr "_Desbloquear"
 
-#: data/resources/ui/window.ui:119
+#: data/resources/ui/window.ui:122
 msgid "Accounts"
 msgstr "Contas"
 
-#: data/resources/ui/window.ui:134 data/resources/ui/window.ui:170
+#: data/resources/ui/window.ui:137 data/resources/ui/window.ui:176
 msgid "New Account"
 msgstr "Nova conta"
 
-#: data/resources/ui/window.ui:142 data/resources/ui/window.ui:216
+#: data/resources/ui/window.ui:145 data/resources/ui/window.ui:222
 msgid "Main Menu"
 msgstr "Menu principal"
 
-#: data/resources/ui/window.ui:150
+#: data/resources/ui/window.ui:153
 msgid "No Accounts"
 msgstr "Nenhuma conta"
 
-#: data/resources/ui/window.ui:151
+#: data/resources/ui/window.ui:154
 msgid "Add an account or scan a QR code first."
 msgstr "Adicione uma conta ou leia um código QR primeiro."
 
-#: src/application.rs:74
+#: src/application.rs:77
 msgid "Accounts restored successfully"
 msgstr "Contas restauradas com sucesso"
 
-#: src/application.rs:100
+#: src/application.rs:101
 msgid "translator-credits"
 msgstr ""
 "Fúlvio Alves <fga.fulvio@gmail.com>\n"
 "Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Enrico Nicoletto <liverig@gmail.com>\n"
 "Matheus Barbosa <mdpb.matheus@gmail.com>\n"
-"Rilson Joás <rilsonjoas10@gmail.com>"
+"Rilson Joás <rilsonjoas10@gmail.com>\n"
+"Leônidas Araújo <leorusvellt@hotmail.com>"
 
-#: src/application.rs:381 src/widgets/accounts/row.rs:46
+#: src/application.rs:388 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Senha de uso único (OTP) copiada"
 
-#: src/application.rs:382
+#: src/application.rs:389
 msgid "Password was copied successfully"
 msgstr "A conta foi copiada com sucesso"
 
@@ -683,6 +681,14 @@ msgstr "De um código QR gerado pelo Google Authenticator"
 msgid "Au_thenticator (Legacy)"
 msgstr "Au_tenticador (legado)"
 
+#: src/backup/raivootp.rs:102
+msgid "Raivo OTP"
+msgstr "Raivo OTP"
+
+#: src/backup/raivootp.rs:106
+msgid "From a ZIP export generated by Raivo OTP"
+msgstr "De uma exportação ZIP gerada pelo Raivo OTP"
+
 #: src/models/algorithm.rs:60
 msgid "Counter-based"
 msgstr "Com base em contador"
@@ -708,32 +714,32 @@ msgstr "SHA-256"
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:269 src/widgets/preferences/window.rs:419
+#: src/widgets/accounts/add.rs:268 src/widgets/preferences/window.rs:416
 #: src/widgets/providers/page.rs:292
 msgid "Image"
 msgstr "Imagem"
 
-#: src/widgets/accounts/add.rs:277 src/widgets/preferences/window.rs:427
+#: src/widgets/accounts/add.rs:276 src/widgets/preferences/window.rs:424
 msgid "Select QR Code"
 msgstr "Escanear código QR"
 
-#: src/widgets/accounts/add.rs:295
+#: src/widgets/accounts/add.rs:294
 msgid "Invalid Token"
 msgstr "Token inválido"
 
-#: src/widgets/accounts/details.rs:127
+#: src/widgets/accounts/details.rs:123
 msgid "Are you sure you want to delete the account?"
 msgstr "Tem certeza de que deseja excluir a conta?"
 
-#: src/widgets/accounts/details.rs:128
+#: src/widgets/accounts/details.rs:124
 msgid "This action is irreversible"
 msgstr "Esta ação é irreversível"
 
-#: src/widgets/accounts/details.rs:132
+#: src/widgets/accounts/details.rs:126
 msgid "No"
 msgstr "Não"
 
-#: src/widgets/accounts/details.rs:132
+#: src/widgets/accounts/details.rs:126
 msgid "Yes"
 msgstr "Sim"
 
@@ -742,31 +748,31 @@ msgstr "Sim"
 msgid "Wrong Passphrase"
 msgstr "Frase secreta incorreta"
 
-#: src/widgets/preferences/window.rs:196 src/widgets/preferences/window.rs:268
+#: src/widgets/preferences/window.rs:191 src/widgets/preferences/window.rs:263
 msgid "Key / Passphrase"
 msgstr "Chave / Senha"
 
-#: src/widgets/preferences/window.rs:207 src/widgets/preferences/window.rs:280
+#: src/widgets/preferences/window.rs:202 src/widgets/preferences/window.rs:275
 msgid "Select File"
 msgstr "Selecionar um arquivo"
 
-#: src/widgets/preferences/window.rs:231
+#: src/widgets/preferences/window.rs:226
 msgid "Failed to create a backup"
 msgstr "Falha ao criar uma cópia de segurança"
 
-#: src/widgets/preferences/window.rs:343
+#: src/widgets/preferences/window.rs:338
 msgid "Failed to restore from camera"
 msgstr "Falha ao restaurar da câmera"
 
-#: src/widgets/preferences/window.rs:354
+#: src/widgets/preferences/window.rs:349
 msgid "Failed to restore from a screenshot"
 msgstr "Falha ao restaurar da captura de tela"
 
-#: src/widgets/preferences/window.rs:364
+#: src/widgets/preferences/window.rs:359
 msgid "Failed to restore from an image"
 msgstr "Falha ao restaurar da imagem"
 
-#: src/widgets/preferences/window.rs:377
+#: src/widgets/preferences/window.rs:372
 msgid "Failed to restore from a file"
 msgstr "Falha ao restaurar do arquivo"
 
@@ -793,6 +799,9 @@ msgstr "O provedor tem contas atribuídas a ele. Remova-as primeiro"
 #: src/widgets/window.rs:115
 msgid "Wrong Password"
 msgstr "Senha incorreta"
+
+#~ msgid "Bilal Elmoussaoui"
+#~ msgstr "Bilal Elmoussaoui"
 
 #~ msgid "Dark Mode"
 #~ msgstr "Tema escuro"
