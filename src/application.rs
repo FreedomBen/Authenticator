@@ -384,10 +384,19 @@ impl Application {
                     window.imp().search_btn.set_active(true);
                     window.present();
                 }
-                SearchProviderAction::ActivateResult => {
+                SearchProviderAction::ActivateResult(id) => {
                     let notification = gio::Notification::new(&gettext("One-Time password copied"));
                     notification.set_body(Some(&gettext("Password was copied successfully")));
-                    self.send_notification(None, &notification);
+                    self.send_notification(Some(&id), &notification);
+                    let Some((provider, _)) = self.account_provider_by_identifier(&id) else {
+                        return;
+                    };
+                    glib::timeout_add_seconds_local_once(
+                        provider.period(),
+                        glib::clone!(@weak self as app => move || {
+                            app.withdraw_notification(&id);
+                        }),
+                    );
                 }
                 SearchProviderAction::InitialResultSet(terms, sender) => {
                     // don't show any results if the application is locked
