@@ -47,6 +47,7 @@ mod imp {
         pub placeholder_page: TemplateChild<adw::StatusPage>,
         #[template_child]
         pub toast_overlay: TemplateChild<adw::ToastOverlay>,
+        pub(super) sort_model: gtk::SortListModel,
     }
 
     #[glib::object_subclass]
@@ -105,9 +106,10 @@ mod imp {
                 .ignore_case(true)
                 .expression(Provider::this_expression("name"))
                 .build();
-            let sort_model = gtk::SortListModel::new(Some(self.filter_model.clone()), Some(sorter));
+            self.sort_model.set_model(Some(&self.filter_model));
+            self.sort_model.set_sorter(Some(&sorter));
 
-            let selection_model = gtk::NoSelection::new(Some(sort_model));
+            let selection_model = gtk::NoSelection::new(Some(self.sort_model.clone()));
             self.providers_list
                 .bind_model(Some(&selection_model), move |obj| {
                     let provider = obj.downcast_ref::<Provider>().unwrap();
@@ -166,7 +168,21 @@ impl ProvidersDialog {
 
     fn edit_provider(&self, provider: Provider) {
         self.set_view(View::Form);
-        self.imp().page.set_provider(Some(provider));
+        let imp = self.imp();
+        let model = &imp.sort_model;
+
+        let mut index = -1;
+        for pos in 0..model.n_items() {
+            let other_provider = model.item(pos).and_downcast::<Provider>().unwrap();
+            if provider.id() == other_provider.id() {
+                index = pos as i32;
+                break;
+            }
+        }
+
+        imp.page.set_provider(Some(provider));
+        let row = imp.providers_list.row_at_index(index);
+        imp.providers_list.select_row(row.as_ref());
     }
 
     fn set_view(&self, view: View) {
