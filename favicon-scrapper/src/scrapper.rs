@@ -43,8 +43,9 @@ impl Scrapper {
 
     fn from_string(body: String, base_url: Option<&Url>) -> Result<Self, Error> {
         let mut reader = quick_xml::Reader::from_str(&body);
-        reader.check_end_names(false);
-        reader.trim_markup_names_in_closing_tags(true);
+        let config = reader.config_mut();
+        config.check_end_names = false;
+        config.trim_markup_names_in_closing_tags = true;
 
         let mut icons = Self::from_reader(&mut reader, base_url);
         if let Some(base) = base_url {

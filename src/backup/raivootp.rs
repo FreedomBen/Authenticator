@@ -117,7 +117,7 @@ impl Restorable for RaivoOTP {
             Some(k) => k.as_bytes(),
         };
         let mut archive = ZipArchive::new(Cursor::new(from))?;
-        let file = archive.by_name_decrypt("raivo-otp-export.json", password)??;
+        let file = archive.by_name_decrypt("raivo-otp-export.json", password)?;
         let items = serde_json::from_reader(file)?;
         Ok(items)
     }
