@@ -258,6 +258,8 @@ impl AccountAddDialog {
             )
             .ok();
 
+        imp.provider_completion
+            .set_model(Some(&self.model().completion_model()));
         self.set_provider(provider);
     }
 
