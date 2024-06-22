@@ -10,7 +10,7 @@ use crate::{
 };
 
 #[allow(clippy::upper_case_acronyms)]
-#[derive(Zeroize, ZeroizeOnDrop)]
+#[derive(Debug, PartialEq, Eq, Zeroize, ZeroizeOnDrop)]
 pub struct OTPUri {
     #[zeroize(skip)]
     pub(crate) algorithm: Algorithm,
@@ -250,5 +250,20 @@ mod tests {
             counter: None,
         };
         assert_eq!(String::from(uri), "otpauth://totp/account%20test?secret=dznF36H0IIg17rK&issuer=Test&algorithm=SHA1&digits=6&period=30");
+    }
+
+    #[test]
+    fn ljl_issue() {
+        let uri = OTPUri {
+            algorithm: Algorithm::SHA512,
+            label: "SpidItalia%3REDACTED@REDACTED (persona fisica)".to_owned(),
+            secret: "REDACTED".to_owned(),
+            issuer: "SpidItalia".to_owned(),
+            method: Method::TOTP,
+            digits: Some(6),
+            period: Some(30),
+            counter: None,
+        };
+        assert_eq!(OTPUri::from_str("otpauth://totp/SpidItalia%3REDACTED%40REDACTED%20(persona%20fisica)?period=30&digits=6&algorithm=SHA512&secret=REDACTED&issuer=SpidItalia").unwrap(), uri);
     }
 }
