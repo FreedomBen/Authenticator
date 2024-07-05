@@ -30,8 +30,9 @@ If you have any questions regarding the use or development of Authenticator, ple
 
 ## Hack on Authenticator
 
-To build the development version of Authenticator and hack on the code
-see the [general guide](https://wiki.gnome.org/Newcomers/BuildProject)
+To build the development version of Authenticator and hack on the code see the
+[general
+guide](https://welcome.gnome.org/en/app/Authenticator/#getting-the-app-to-build)
 for building GNOME apps with Flatpak and GNOME Builder.
 
 ## Credits
