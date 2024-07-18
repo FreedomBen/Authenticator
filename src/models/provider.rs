@@ -396,10 +396,16 @@ impl Provider {
             Method::TOTP | Method::Steam => {
                 let source_id = glib::timeout_add_seconds_local(
                     1,
-                    clone!(@weak self as provider => @default-return glib::ControlFlow::Break, move || {
-                        provider.tick();
-                        glib::ControlFlow::Continue
-                    }),
+                    clone!(
+                        #[weak(rename_to = provider)]
+                        self,
+                        #[upgrade_or]
+                        glib::ControlFlow::Break,
+                        move || {
+                            provider.tick();
+                            glib::ControlFlow::Continue
+                        }
+                    ),
                 );
                 self.imp().tick_callback.replace(Some(source_id));
             }
@@ -464,15 +470,19 @@ impl Provider {
     }
 
     pub fn filter(&self, text: String) {
-        let filter = gtk::CustomFilter::new(
-            glib::clone!(@weak self as provider => @default-return false, move |obj| {
+        let filter = gtk::CustomFilter::new(glib::clone!(
+            #[weak(rename_to = provider)]
+            self,
+            #[upgrade_or]
+            false,
+            move |obj| {
                 let account = obj.downcast_ref::<Account>().unwrap();
                 let account_name = account.name();
                 let provider_name = provider.name();
 
                 Self::tokenize_search(&account_name, &provider_name, &text)
-            }),
-        );
+            }
+        ));
         self.imp().filter_model.set_filter(Some(&filter));
     }
 

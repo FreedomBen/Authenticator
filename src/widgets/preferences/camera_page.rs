@@ -78,8 +78,13 @@ impl CameraPage {
         let src = Rc::new(Cell::new(None));
 
         src.set(Some(imp.camera.connect_code_detected(clone!(
-            @weak self as camera_page, @strong src, @strong tx
-            => move |_, code| {
+            #[weak(rename_to = camera_page)]
+            self,
+            #[strong]
+            src,
+            #[strong]
+            tx,
+            move |_, code| {
                 match tx.take().unwrap().send(code) {
                     Ok(()) => (),
                     Err(_) => {
@@ -126,8 +131,13 @@ impl CameraPage {
         let src = Rc::new(Cell::new(None));
 
         src.set(Some(imp.camera.connect_code_detected(clone!(
-            @weak self as camera_page, @strong src, @strong tx
-            => move |_, code| {
+            #[weak(rename_to = camera_page)]
+            self,
+            #[strong]
+            src,
+            #[strong]
+            tx,
+            move |_, code| {
                 match tx.take().unwrap().send(code) {
                     Ok(()) => (),
                     Err(_) => {

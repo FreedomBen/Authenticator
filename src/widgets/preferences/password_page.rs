@@ -69,9 +69,13 @@ mod imp {
             self.status_page.set_icon_name(Some(config::APP_ID));
             page.reset_validation();
             // Reset the validation whenever the password state changes
-            page.connect_has_set_password_notify(clone!(@weak page  => move |_| {
-                page.reset_validation();
-            }));
+            page.connect_has_set_password_notify(clone!(
+                #[weak]
+                page,
+                move |_| {
+                    page.reset_validation();
+                }
+            ));
         }
     }
 
@@ -123,8 +127,11 @@ impl PasswordPage {
     fn reset_validation(&self) {
         let imp = self.imp();
         if self.has_set_password() {
-            imp.current_password_entry
-                .connect_changed(clone!(@weak self as page => move |_| page.validate(None)));
+            imp.current_password_entry.connect_changed(clone!(
+                #[weak(rename_to = page)]
+                self,
+                move |_| page.validate(None)
+            ));
         } else if let Some(handler_id) = imp.default_password_signal.borrow_mut().take() {
             imp.current_password_entry.disconnect(handler_id);
         }
@@ -133,18 +140,34 @@ impl PasswordPage {
     fn setup_actions(&self) {
         let actions = self.actions();
         let save_password = gio::ActionEntry::builder("save_password")
-            .activate(clone!(@weak self as page => move |_, _, _| {
-                spawn(clone!(@weak page => async move {
-                    page.save().await;
-                }));
-            }))
+            .activate(clone!(
+                #[weak(rename_to = page)]
+                self,
+                move |_, _, _| {
+                    spawn(clone!(
+                        #[weak]
+                        page,
+                        async move {
+                            page.save().await;
+                        }
+                    ));
+                }
+            ))
             .build();
         let reset_password = gio::ActionEntry::builder("reset_password")
-            .activate(clone!(@weak self as page => move |_, _, _| {
-                spawn(clone!(@weak page => async move {
-                    page.reset_password().await;
-                }));
-            }))
+            .activate(clone!(
+                #[weak(rename_to = page)]
+                self,
+                move |_, _, _| {
+                    spawn(clone!(
+                        #[weak]
+                        page,
+                        async move {
+                            page.reset_password().await;
+                        }
+                    ));
+                }
+            ))
             .build();
         actions.add_action_entries([save_password, reset_password]);
 

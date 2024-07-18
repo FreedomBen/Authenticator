@@ -129,14 +129,16 @@ mod imp {
             let win = self.obj();
             self.providers.set_model(win.model());
 
-            self.providers
-                .model()
-                .connect_items_changed(clone!(@weak win => move |_, _,_,_| {
-                // We do a check on set_view to ensure we always use the right page
-                if !win.app().is_locked() {
-                    win.set_view(View::Accounts);
+            self.providers.model().connect_items_changed(clone!(
+                #[weak]
+                win,
+                move |_, _, _, _| {
+                    // We do a check on set_view to ensure we always use the right page
+                    if !win.app().is_locked() {
+                        win.set_view(View::Accounts);
+                    }
                 }
-                }));
+            ));
 
             win.set_icon_name(Some(config::APP_ID));
             self.empty_status_page.set_icon_name(Some(config::APP_ID));
@@ -191,15 +193,19 @@ mod imp {
             let win = self.obj();
             let app = win.app();
             win.action_set_enabled("win.add_account", !app.is_locked());
-            app.connect_is_locked_notify(clone!(@weak win => move |app| {
-                let is_locked = app.is_locked();
-                win.action_set_enabled("win.add_account", !is_locked);
-                if is_locked{
-                    win.set_view(View::Login);
-                } else {
-                    win.set_view(View::Accounts);
-                };
-            }));
+            app.connect_is_locked_notify(clone!(
+                #[weak]
+                win,
+                move |app| {
+                    let is_locked = app.is_locked();
+                    win.action_set_enabled("win.add_account", !is_locked);
+                    if is_locked {
+                        win.set_view(View::Login);
+                    } else {
+                        win.set_view(View::Accounts);
+                    };
+                }
+            ));
             if app.is_locked() {
                 win.set_view(View::Login);
             }
@@ -274,9 +280,13 @@ impl Window {
             dialog.set_from_otp_uri(uri);
         }
 
-        dialog.connect_added(clone!(@weak self as win => move |_| {
-            win.providers().refilter();
-        }));
+        dialog.connect_added(clone!(
+            #[weak(rename_to = win)]
+            self,
+            move |_| {
+                win.providers().refilter();
+            }
+        ));
         dialog.present(Some(self));
     }
 

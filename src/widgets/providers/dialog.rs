@@ -92,15 +92,20 @@ mod imp {
             let obj = self.obj();
             self.placeholder_page.set_icon_name(Some(config::APP_ID));
             self.filter_model.set_model(Some(&obj.model()));
-            self.filter_model.connect_items_changed(
-                clone!(@weak obj as dialog => move |model, _, _, _| {
+            self.filter_model.connect_items_changed(clone!(
+                #[weak(rename_to = dialog)]
+                obj,
+                move |model, _, _, _| {
                     if model.n_items() == 0 {
-                        dialog.imp().search_stack.set_visible_child_name("no-results");
+                        dialog
+                            .imp()
+                            .search_stack
+                            .set_visible_child_name("no-results");
                     } else {
                         dialog.imp().search_stack.set_visible_child_name("results");
                     }
-                }),
-            );
+                }
+            ));
 
             let sorter = gtk::StringSorter::builder()
                 .ignore_case(true)
@@ -141,10 +146,16 @@ impl ProvidersDialog {
         self.connect_local(
             "changed",
             false,
-            clone!(@weak self as dialog => @default-return None, move |_| {
-                callback(&dialog);
-                None
-            }),
+            clone!(
+                #[weak(rename_to = dialog)]
+                self,
+                #[upgrade_or]
+                None,
+                move |_| {
+                    callback(&dialog);
+                    None
+                }
+            ),
         )
     }
 

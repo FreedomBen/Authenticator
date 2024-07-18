@@ -93,10 +93,16 @@ impl ProviderRow {
         self.connect_local(
             "changed",
             false,
-            clone!(@weak self as row => @default-return None, move |_| {
-                callback(&row);
-                None
-            }),
+            clone!(
+                #[weak(rename_to = row)]
+                self,
+                #[upgrade_or]
+                None,
+                move |_| {
+                    callback(&row);
+                    None
+                }
+            ),
         )
     }
 
@@ -107,11 +113,17 @@ impl ProviderRow {
         self.connect_local(
             "shared",
             false,
-            clone!(@weak self as row => @default-return None, move |args| {
-                let account = args[1].get::<Account>().unwrap();
-                callback(&row, account);
-                None
-            }),
+            clone!(
+                #[weak(rename_to = row)]
+                self,
+                #[upgrade_or]
+                None,
+                move |args| {
+                    let account = args[1].get::<Account>().unwrap();
+                    callback(&row, account);
+                    None
+                }
+            ),
         )
     }
 
@@ -141,9 +153,13 @@ impl ProviderRow {
         } else {
             // Update the progress bar whnever the remaining-time is updated
             self.tick_progressbar();
-            provider.connect_remaining_time_notify(clone!(@weak self as row => move |_| {
-                row.tick_progressbar();
-            }));
+            provider.connect_remaining_time_notify(clone!(
+                #[weak(rename_to = row)]
+                self,
+                move |_| {
+                    row.tick_progressbar();
+                }
+            ));
         }
 
         provider
@@ -158,23 +174,39 @@ impl ProviderRow {
         let sort_model =
             gtk::SortListModel::new(Some(provider.accounts().clone()), Some(sorter.clone()));
 
-        let create_callback = clone!(@strong self as provider_row, @strong sorter, @strong provider => move |account: &glib::Object| {
-            let account = account.downcast_ref::<Account>().unwrap();
-            let row = AccountRow::new(account);
+        let create_callback = clone!(
+            #[strong(rename_to = provider_row)]
+            self,
+            #[strong]
+            sorter,
+            move |account: &glib::Object| {
+                let account = account.downcast_ref::<Account>().unwrap();
+                let row = AccountRow::new(account);
 
-            row.connect_activated(
-                clone!(@weak account, @weak provider_row => move |_| {
-                    provider_row.emit_by_name::<()>("shared", &[&account]);
-                }),
-            );
+                row.connect_activated(clone!(
+                    #[weak]
+                    account,
+                    #[weak]
+                    provider_row,
+                    move |_| {
+                        provider_row.emit_by_name::<()>("shared", &[&account]);
+                    }
+                ));
 
-            account.connect_name_notify(clone!(@weak provider_row, @weak sorter => move |_| {
-                // Re-sort in case the name was updated
-                sorter.changed(gtk::SorterChange::Different);
-                provider_row.emit_by_name::<()>("changed", &[]);
-            }));
-            row.upcast::<gtk::Widget>()
-        });
+                account.connect_name_notify(clone!(
+                    #[weak]
+                    provider_row,
+                    #[weak]
+                    sorter,
+                    move |_| {
+                        // Re-sort in case the name was updated
+                        sorter.changed(gtk::SorterChange::Different);
+                        provider_row.emit_by_name::<()>("changed", &[]);
+                    }
+                ));
+                row.upcast::<gtk::Widget>()
+            }
+        );
 
         imp.accounts_list
             .bind_model(Some(&sort_model), create_callback);

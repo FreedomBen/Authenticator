@@ -83,10 +83,13 @@ mod imp {
                     self.spinner.start();
                     obj.on_provider_image_changed();
                 }
-                let signal_id =
-                    provider.connect_image_uri_notify(clone!(@weak obj as image => move |_| {
+                let signal_id = provider.connect_image_uri_notify(clone!(
+                    #[weak(rename_to = image)]
+                    obj,
+                    move |_| {
                         image.on_provider_image_changed();
-                    }));
+                    }
+                ));
                 self.signal_id.replace(Some(signal_id));
                 return;
             } else if let (Some(signal_id), Some(provider)) =
@@ -175,38 +178,44 @@ impl ProviderImage {
                 let join_handle = RUNTIME.spawn(future);
                 imp.join_handle.borrow_mut().replace(join_handle);
 
-                spawn(clone!(@weak self as this => async move {
-                   let imp = this.imp();
-                   imp.was_downloaded.set(true);
-                    let image_path = match receiver.await {
-                        // TODO: handle network failure and other errors differently
-                        Ok(None) => {
-                            imp.image.set_icon_name(Some("provider-fallback"));
-                            "invalid".to_string()
-                        }
-                        Ok(Some(cache_name)) => {
-                            if imp.size.get() == 32 {
-                                imp.image
-                                    .set_from_file(Some(&FAVICONS_PATH.join(format!("{cache_name}_32x32"))));
-                            } else {
-                                imp.image
-                                    .set_from_file(Some(&FAVICONS_PATH.join(format!("{cache_name}_96x96"))));
+                spawn(clone!(
+                    #[weak(rename_to = this)]
+                    self,
+                    async move {
+                        let imp = this.imp();
+                        imp.was_downloaded.set(true);
+                        let image_path = match receiver.await {
+                            // TODO: handle network failure and other errors differently
+                            Ok(None) => {
+                                imp.image.set_icon_name(Some("provider-fallback"));
+                                "invalid".to_string()
                             }
-                            cache_name
+                            Ok(Some(cache_name)) => {
+                                if imp.size.get() == 32 {
+                                    imp.image.set_from_file(Some(
+                                        &FAVICONS_PATH.join(format!("{cache_name}_32x32")),
+                                    ));
+                                } else {
+                                    imp.image.set_from_file(Some(
+                                        &FAVICONS_PATH.join(format!("{cache_name}_96x96")),
+                                    ));
+                                }
+                                cache_name
+                            }
+                            Err(e) => {
+                                tracing::error!("Failed to receive data {e}");
+                                return;
+                            }
+                        };
+                        if let Some(provider) = this.provider() {
+                            let guard = provider.freeze_notify();
+                            provider.set_image_uri(image_path);
+                            drop(guard);
                         }
-                        Err(e) => {
-                            tracing::error!("Failed to receive data {e}");
-                            return;
-                        }
-                    };
-                    if let Some(provider) = this.provider() {
-                        let guard = provider.freeze_notify();
-                        provider.set_image_uri(image_path);
-                        drop(guard);
+                        imp.stack.set_visible_child_name("image");
+                        imp.spinner.stop();
                     }
-                    imp.stack.set_visible_child_name("image");
-                    imp.spinner.stop();
-                }));
+                ));
             }
         }
     }
@@ -228,19 +237,28 @@ impl ProviderImage {
         self.bind_property("size", &*imp.image, "pixel-size")
             .sync_create()
             .build();
-        SETTINGS.connect_download_favicons_changed(clone!(@weak self as image => move |state| {
-            if state && !image.imp().was_downloaded.get() {
-                image.fetch();
+        SETTINGS.connect_download_favicons_changed(clone!(
+            #[weak(rename_to = image)]
+            self,
+            move |state| {
+                if state && !image.imp().was_downloaded.get() {
+                    image.fetch();
+                }
             }
-        }));
+        ));
 
-        SETTINGS.connect_download_favicons_metered_changed(
-            clone!(@weak self as image => move |state| {
+        SETTINGS.connect_download_favicons_metered_changed(clone!(
+            #[weak(rename_to = image)]
+            self,
+            move |state| {
                 let network_monitor = gio::NetworkMonitor::default();
-                    if !image.imp().was_downloaded.get() && (network_monitor.is_network_metered() && state) || !network_monitor.is_network_metered() {
-                        image.fetch();
-                    }
-            }),
-        );
+                if !image.imp().was_downloaded.get()
+                    && (network_monitor.is_network_metered() && state)
+                    || !network_monitor.is_network_metered()
+                {
+                    image.fetch();
+                }
+            }
+        ));
     }
 }

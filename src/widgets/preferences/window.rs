@@ -132,10 +132,16 @@ impl PreferencesWindow {
         self.connect_local(
             "restore-completed",
             false,
-            clone!(@weak self as win => @default-return None, move |_| {
-                callback(&win);
-                None
-            }),
+            clone!(
+                #[weak(rename_to = win)]
+                self,
+                #[upgrade_or]
+                None,
+                move |_| {
+                    callback(&win);
+                    None
+                }
+            ),
         )
     }
 
@@ -219,14 +225,24 @@ impl PreferencesWindow {
         }
 
         let action = gio::ActionEntry::builder(T::IDENTIFIER)
-            .activate(clone!(@weak self as win => move |_, _,_| {
-                spawn(clone!(@weak win => async move {
-                    if let Err(err) = win.backup_into_file::<T>(filters).await {
-                        tracing::error!("Failed to backup into a file {err}");
-                        win.add_toast(adw::Toast::new(&gettext("Failed to create a backup")));
-                    }
-                }));
-            }))
+            .activate(clone!(
+                #[weak(rename_to = win)]
+                self,
+                move |_, _, _| {
+                    spawn(clone!(
+                        #[weak]
+                        win,
+                        async move {
+                            if let Err(err) = win.backup_into_file::<T>(filters).await {
+                                tracing::error!("Failed to backup into a file {err}");
+                                win.add_toast(adw::Toast::new(&gettext(
+                                    "Failed to create a backup",
+                                )));
+                            }
+                        }
+                    ));
+                }
+            ))
             .build();
         imp.backup_actions.add_action_entries([action]);
     }
@@ -330,49 +346,94 @@ impl PreferencesWindow {
         }
         if T::SCANNABLE {
             let camera_action = gio::ActionEntry::builder(&format!("{}.camera", T::IDENTIFIER))
-                .activate(clone!(@weak self as win=> move |_, _, _| {
-                    win.imp().actions.activate_action("show_camera_page", None);
-                    spawn(clone!(@weak win => async move {
-                        if let Err(err) = win.restore_from_camera::<T, T::Item>().await {
-                            tracing::error!("Failed to restore from camera {err}");
-                            win.add_toast(adw::Toast::new(&gettext("Failed to restore from camera")));
-                        }
-                    }));
-                }))
+                .activate(clone!(
+                    #[weak(rename_to = win)]
+                    self,
+                    move |_, _, _| {
+                        win.imp().actions.activate_action("show_camera_page", None);
+                        spawn(clone!(
+                            #[weak]
+                            win,
+                            async move {
+                                if let Err(err) = win.restore_from_camera::<T, T::Item>().await {
+                                    tracing::error!("Failed to restore from camera {err}");
+                                    win.add_toast(adw::Toast::new(&gettext(
+                                        "Failed to restore from camera",
+                                    )));
+                                }
+                            }
+                        ));
+                    }
+                ))
                 .build();
             let screenshot_action =
                 gio::ActionEntry::builder(&format!("{}.screenshot", T::IDENTIFIER))
-                    .activate(clone!(@weak self as win => move |_, _, _| {
-                        spawn(clone!(@weak win => async move {
-                            if let Err(err) = win.restore_from_screenshot::<T, T::Item>().await {
-                                tracing::error!("Failed to restore from a screenshot {err}");
-                                win.add_toast(adw::Toast::new(&gettext("Failed to restore from a screenshot")));
-                            }
-                        }));
-                    }))
+                    .activate(clone!(
+                        #[weak(rename_to = win)]
+                        self,
+                        move |_, _, _| {
+                            spawn(clone!(
+                                #[weak]
+                                win,
+                                async move {
+                                    if let Err(err) =
+                                        win.restore_from_screenshot::<T, T::Item>().await
+                                    {
+                                        tracing::error!(
+                                            "Failed to restore from a screenshot {err}"
+                                        );
+                                        win.add_toast(adw::Toast::new(&gettext(
+                                            "Failed to restore from a screenshot",
+                                        )));
+                                    }
+                                }
+                            ));
+                        }
+                    ))
                     .build();
             let file_action = gio::ActionEntry::builder(&format!("{}.file", T::IDENTIFIER))
-                .activate(clone!(@weak self as win => move |_, _, _| {
-                    spawn(clone!(@weak win => async move {
-                        if let Err(err) = win.restore_from_image::<T, T::Item>().await {
-                            tracing::error!("Failed to restore from an image {err}");
-                            win.add_toast(adw::Toast::new(&gettext("Failed to restore from an image")));
-                        }
-                    }));
-                }))
+                .activate(clone!(
+                    #[weak(rename_to = win)]
+                    self,
+                    move |_, _, _| {
+                        spawn(clone!(
+                            #[weak]
+                            win,
+                            async move {
+                                if let Err(err) = win.restore_from_image::<T, T::Item>().await {
+                                    tracing::error!("Failed to restore from an image {err}");
+                                    win.add_toast(adw::Toast::new(&gettext(
+                                        "Failed to restore from an image",
+                                    )));
+                                }
+                            }
+                        ));
+                    }
+                ))
                 .build();
             imp.restore_actions
                 .add_action_entries([camera_action, file_action, screenshot_action]);
         } else {
             let action = gio::ActionEntry::builder(T::IDENTIFIER)
-                .activate(clone!(@weak self as win => move |_, _, _| {
-                    spawn(clone!(@weak win => async move {
-                        if let Err(err) = win.restore_from_file::<T, T::Item>(filters).await {
-                            tracing::error!("Failed to restore from a file {err}");
-                            win.add_toast(adw::Toast::new(&gettext("Failed to restore from a file")));
-                        }
-                    }));
-                }))
+                .activate(clone!(
+                    #[weak(rename_to = win)]
+                    self,
+                    move |_, _, _| {
+                        spawn(clone!(
+                            #[weak]
+                            win,
+                            async move {
+                                if let Err(err) = win.restore_from_file::<T, T::Item>(filters).await
+                                {
+                                    tracing::error!("Failed to restore from a file {err}");
+                                    win.add_toast(adw::Toast::new(&gettext(
+                                        "Failed to restore from a file",
+                                    )));
+                                }
+                            }
+                        ));
+                    }
+                ))
                 .build();
 
             imp.restore_actions.add_action_entries([action]);
@@ -494,42 +555,66 @@ impl PreferencesWindow {
     fn setup_actions(&self) {
         let imp = self.imp();
 
-        imp.camera_page
-            .connect_map(clone!(@weak self as win => move |_| {
+        imp.camera_page.connect_map(clone!(
+            #[weak(rename_to = win)]
+            self,
+            move |_| {
                 win.set_search_enabled(false);
-            }));
+            }
+        ));
 
-        imp.camera_page
-            .connect_unmap(clone!(@weak self as win => move |_| {
+        imp.camera_page.connect_unmap(clone!(
+            #[weak(rename_to = win)]
+            self,
+            move |_| {
                 win.set_search_enabled(true);
-            }));
+            }
+        ));
 
-        imp.password_page
-            .connect_map(clone!(@weak self as win => move |_| {
+        imp.password_page.connect_map(clone!(
+            #[weak(rename_to = win)]
+            self,
+            move |_| {
                 win.set_search_enabled(false);
-            }));
+            }
+        ));
 
-        imp.password_page
-            .connect_unmap(clone!(@weak self as win => move |_| {
+        imp.password_page.connect_unmap(clone!(
+            #[weak(rename_to = win)]
+            self,
+            move |_| {
                 win.set_search_enabled(true);
-            }));
+            }
+        ));
 
         let show_camera_page = gio::ActionEntry::builder("show_camera_page")
-            .activate(clone!(@weak self as win => move |_, _, _| {
-                win.push_subpage(&win.imp().camera_page);
-            }))
+            .activate(clone!(
+                #[weak(rename_to = win)]
+                self,
+                move |_, _, _| {
+                    win.push_subpage(&win.imp().camera_page);
+                }
+            ))
             .build();
 
         let show_password_page = gio::ActionEntry::builder("show_password_page")
-            .activate(clone!(@weak self as win => move |_, _, _| {
-                win.push_subpage(&win.imp().password_page);
-            }))
+            .activate(clone!(
+                #[weak(rename_to = win)]
+                self,
+                move |_, _, _| {
+                    win.push_subpage(&win.imp().password_page);
+                }
+            ))
             .build();
 
         let close_page = gio::ActionEntry::builder("close_page")
-            .activate(clone!(@weak self as win => move |_, _, _| {
-                win.pop_subpage();
-            }))
+            .activate(clone!(
+                #[weak(rename_to = win)]
+                self,
+                move |_, _, _| {
+                    win.pop_subpage();
+                }
+            ))
             .build();
 
         imp.actions

@@ -32,17 +32,21 @@ mod imp {
             self.parent_constructed();
             let obj = self.obj();
             obj.set_activatable(true);
-            obj.connect_activated(clone!(@weak obj as row => move |_| {
-                if let Some(uri) = row.imp().uri.borrow().clone() {
-                    spawn(async move {
-                        let file = gio::File::for_uri(&uri);
-                        let launcher = gtk::FileLauncher::new(Some(&file));
-                        if let Err(err) = launcher.launch_future(gtk::Window::NONE).await {
-                            tracing::error!("Failed to open URI {err}");
-                        }
-                    });
-                };
-            }));
+            obj.connect_activated(clone!(
+                #[weak(rename_to = row)]
+                obj,
+                move |_| {
+                    if let Some(uri) = row.imp().uri.borrow().clone() {
+                        spawn(async move {
+                            let file = gio::File::for_uri(&uri);
+                            let launcher = gtk::FileLauncher::new(Some(&file));
+                            if let Err(err) = launcher.launch_future(gtk::Window::NONE).await {
+                                tracing::error!("Failed to open URI {err}");
+                            }
+                        });
+                    };
+                }
+            ));
 
             let image_suffix = gtk::Image::from_icon_name("link-symbolic");
             image_suffix.set_accessible_role(gtk::AccessibleRole::Presentation);

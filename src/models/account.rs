@@ -208,25 +208,30 @@ impl Account {
         let results = DieselAccount::belonging_to(&dip)
             .load::<DieselAccount>(&mut conn)?
             .into_iter()
-            .filter_map(clone!(@strong p => move |account| {
-                match Self::new(
-                    account.id  as u32,
-                    &account.name,
-                    &account.token_id,
-                    account.counter as u32,
-                    &p,
-                    None,
-                )
-                {
-                    Ok(account) => Some(account),
-                    Err(e) => {
-                        let name = account.name;
-                        let provider = p.name();
-                        tracing::error!("Failed to load account '{name}' / '{provider}' with error {e}");
-                        None
+            .filter_map(clone!(
+                #[strong]
+                p,
+                move |account| {
+                    match Self::new(
+                        account.id as u32,
+                        &account.name,
+                        &account.token_id,
+                        account.counter as u32,
+                        &p,
+                        None,
+                    ) {
+                        Ok(account) => Some(account),
+                        Err(e) => {
+                            let name = account.name;
+                            let provider = p.name();
+                            tracing::error!(
+                                "Failed to load account '{name}' / '{provider}' with error {e}"
+                            );
+                            None
+                        }
                     }
                 }
-            }));
+            ));
 
         Ok(results)
     }

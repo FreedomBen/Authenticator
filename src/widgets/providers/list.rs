@@ -132,18 +132,30 @@ impl ProvidersList {
 
         imp.providers_list.bind_model(
             Some(&sort_model),
-            clone!(@strong self as list => move |obj| {
-                let provider = obj.downcast_ref::<Provider>().unwrap();
-                let row = ProviderRow::new(provider);
-                row.connect_changed(clone!(@weak list => move |_| {
-                    list.refilter();
-                }));
-                row.connect_shared(clone!(@weak list => move |_, account| {
-                    list.emit_by_name::<()>("shared", &[&account]);
-                }));
+            clone!(
+                #[strong(rename_to = list)]
+                self,
+                move |obj| {
+                    let provider = obj.downcast_ref::<Provider>().unwrap();
+                    let row = ProviderRow::new(provider);
+                    row.connect_changed(clone!(
+                        #[weak]
+                        list,
+                        move |_| {
+                            list.refilter();
+                        }
+                    ));
+                    row.connect_shared(clone!(
+                        #[weak]
+                        list,
+                        move |_, account| {
+                            list.emit_by_name::<()>("shared", &[&account]);
+                        }
+                    ));
 
-                row.upcast::<gtk::Widget>()
-            }),
+                    row.upcast::<gtk::Widget>()
+                }
+            ),
         );
     }
 }

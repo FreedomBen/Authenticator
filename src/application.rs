@@ -72,15 +72,29 @@ mod imp {
                     let window = app.active_window();
                     let preferences = PreferencesWindow::new(model);
                     preferences.set_has_set_password(app.can_be_locked());
-                    preferences.connect_restore_completed(clone!(@weak window =>move |_| {
-                        window.providers().refilter();
-                        window.imp().toast_overlay.add_toast(adw::Toast::new(&gettext("Accounts restored successfully")));
-                    }));
-                    preferences.connect_has_set_password_notify(clone!(@weak app => move |pref| {
-                        app.set_can_be_locked(pref.has_set_password());
-                    }));
+                    preferences.connect_restore_completed(clone!(
+                        #[weak]
+                        window,
+                        move |_| {
+                            window.providers().refilter();
+                            window
+                                .imp()
+                                .toast_overlay
+                                .add_toast(adw::Toast::new(&gettext(
+                                    "Accounts restored successfully",
+                                )));
+                        }
+                    ));
+                    preferences.connect_has_set_password_notify(clone!(
+                        #[weak]
+                        app,
+                        move |pref| {
+                            app.set_can_be_locked(pref.has_set_password());
+                        }
+                    ));
                     preferences.present(Some(&window));
-                }).build();
+                })
+                .build();
 
             // About
             let about_action = gio::ActionEntry::builder("about")
@@ -111,9 +125,13 @@ mod imp {
                     let model = &app.imp().model;
                     let window = app.active_window();
                     let providers = ProvidersDialog::new(model);
-                    providers.connect_changed(clone!(@weak window => move |_| {
-                        window.providers().refilter();
-                    }));
+                    providers.connect_changed(clone!(
+                        #[weak]
+                        window,
+                        move |_| {
+                            window.providers().refilter();
+                        }
+                    ));
                     providers.present(Some(&window));
                 })
                 .build();
@@ -151,21 +169,31 @@ mod imp {
                 }
             });
 
-            SETTINGS.connect_auto_lock_changed(clone!(@weak app => move |auto_lock| {
-                if auto_lock {
-                    app.restart_lock_timeout();
-                } else {
-                    app.cancel_lock_timeout();
+            SETTINGS.connect_auto_lock_changed(clone!(
+                #[weak]
+                app,
+                move |auto_lock| {
+                    if auto_lock {
+                        app.restart_lock_timeout();
+                    } else {
+                        app.cancel_lock_timeout();
+                    }
                 }
-            }));
+            ));
 
-            SETTINGS.connect_auto_lock_timeout_changed(clone!(@weak app => move |_| {
-                app.restart_lock_timeout()
-            }));
+            SETTINGS.connect_auto_lock_timeout_changed(clone!(
+                #[weak]
+                app,
+                move |_| app.restart_lock_timeout()
+            ));
 
-            spawn(clone!(@strong app => async move {
-                app.start_search_provider().await;
-            }));
+            spawn(clone!(
+                #[strong]
+                app,
+                async move {
+                    app.start_search_provider().await;
+                }
+            ));
         }
 
         fn activate(&self) {
@@ -331,19 +359,27 @@ impl Application {
                 timeout,
                 None,
                 glib::Priority::HIGH,
-                clone!(@strong tx => move || {
-                    let Some(tx) = tx.lock().unwrap().take() else {
-                        return glib::ControlFlow::Break;
-                    };
-                    tx.send(()).unwrap();
-                    glib::ControlFlow::Break
-                }),
+                clone!(
+                    #[strong]
+                    tx,
+                    move || {
+                        let Some(tx) = tx.lock().unwrap().take() else {
+                            return glib::ControlFlow::Break;
+                        };
+                        tx.send(()).unwrap();
+                        glib::ControlFlow::Break
+                    }
+                ),
             );
-            spawn(clone!(@strong self as app => async move {
-                if let Ok(()) = rx.await {
-                    app.set_is_locked(true);
+            spawn(clone!(
+                #[strong(rename_to = app)]
+                self,
+                async move {
+                    if let Ok(()) = rx.await {
+                        app.set_is_locked(true);
+                    }
                 }
-            }));
+            ));
             id.attach(Some(&glib::MainContext::default()));
             imp.lock_timeout_id.replace(Some(id));
         }
@@ -393,9 +429,13 @@ impl Application {
                     };
                     glib::timeout_add_seconds_local_once(
                         provider.period(),
-                        glib::clone!(@weak self as app => move || {
-                            app.withdraw_notification(&id);
-                        }),
+                        glib::clone!(
+                            #[weak(rename_to = app)]
+                            self,
+                            move || {
+                                app.withdraw_notification(&id);
+                            }
+                        ),
                     );
                 }
                 SearchProviderAction::InitialResultSet(terms, sender) => {
