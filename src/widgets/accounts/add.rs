@@ -192,7 +192,7 @@ impl AccountAddDialog {
 
         let name_entry = imp.provider_page.name_entry();
         name_entry.set_text(&entry.text());
-        name_entry.set_position(entry.cursor_position());
+        name_entry.set_position(entry.position());
     }
 
     #[template_callback]

@@ -96,7 +96,7 @@ mod imp {
                 provider.disconnect(signal_id);
             }
 
-            self.image.set_from_icon_name(Some("provider-fallback"));
+            self.image.set_icon_name(Some("provider-fallback"));
         }
     }
 }
@@ -114,7 +114,7 @@ impl ProviderImage {
                 // Very dirty hack to store that we couldn't find an icon
                 // to avoid re-hitting the website every time we have to display it
                 if uri == "invalid" {
-                    imp.image.set_from_icon_name(Some("provider-fallback"));
+                    imp.image.set_icon_name(Some("provider-fallback"));
                     imp.stack.set_visible_child_name("image");
                     return;
                 }
@@ -146,7 +146,7 @@ impl ProviderImage {
         if (network_monitor.is_network_metered() && !SETTINGS.download_favicons_metered())
             || !SETTINGS.download_favicons()
         {
-            imp.image.set_from_icon_name(Some("provider-fallback"));
+            imp.image.set_icon_name(Some("provider-fallback"));
             imp.stack.set_visible_child_name("image");
             return;
         }
@@ -181,7 +181,7 @@ impl ProviderImage {
                     let image_path = match receiver.await {
                         // TODO: handle network failure and other errors differently
                         Ok(None) => {
-                            imp.image.set_from_icon_name(Some("provider-fallback"));
+                            imp.image.set_icon_name(Some("provider-fallback"));
                             "invalid".to_string()
                         }
                         Ok(Some(cache_name)) => {
@@ -212,9 +212,7 @@ impl ProviderImage {
     }
 
     pub fn reset(&self) {
-        self.imp()
-            .image
-            .set_from_icon_name(Some("provider-fallback"));
+        self.imp().image.set_icon_name(Some("provider-fallback"));
         self.fetch();
     }
 

@@ -136,7 +136,7 @@ impl AccountDetailsPage {
             }),
         );
 
-        dialog.present(&parent);
+        dialog.present(Some(&parent));
     }
 
     pub fn set_account(&self, account: &Account) {

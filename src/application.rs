@@ -79,7 +79,7 @@ mod imp {
                     preferences.connect_has_set_password_notify(clone!(@weak app => move |pref| {
                         app.set_can_be_locked(pref.has_set_password());
                     }));
-                    preferences.present(&window);
+                    preferences.present(Some(&window));
                 }).build();
 
             // About
@@ -102,7 +102,7 @@ mod imp {
                         .application_icon(config::APP_ID)
                         .license_type(gtk::License::Gpl30)
                         .build()
-                        .present(&window);
+                        .present(Some(&window));
                 })
                 .build();
 
@@ -114,7 +114,7 @@ mod imp {
                     providers.connect_changed(clone!(@weak window => move |_| {
                         window.providers().refilter();
                     }));
-                    providers.present(&window);
+                    providers.present(Some(&window));
                 })
                 .build();
 
