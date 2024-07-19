@@ -35,10 +35,7 @@ pub(crate) mod imp {
             let size = widget.size() as f32;
             let radius = size / 2.0;
             let progress = 1.0 - widget.progress();
-            let color = widget
-                .style_context()
-                .lookup_color("accent_color")
-                .unwrap_or_else(|| gdk::RGBA::new(0.47058824, 0.68235296, 0.92941177, 1.0));
+            let color = adw::StyleManager::default().accent_color_rgba();
 
             let rect = graphene::Rect::new(0.0, 0.0, size, size);
             let circle = gsk::RoundedRect::from_rect(rect, radius);

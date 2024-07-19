@@ -14,7 +14,7 @@ opt-level = 1
 opt-level = 3
 
 [dependencies]
-adw = {package = "libadwaita", version = "0.7", features = ["v1_5"]}
+adw = {package = "libadwaita", version = "0.7", features = ["v1_6"]}
 aes-gcm = "0.10"
 anyhow = "1.0"
 aperture = "0.7"
