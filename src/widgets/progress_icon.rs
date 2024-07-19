@@ -1,7 +1,7 @@
 use gtk::{gdk, glib, graphene, gsk, prelude::*, subclass::prelude::*};
 
 pub(crate) mod imp {
-    use std::cell::Cell;
+    use std::cell::{Cell, RefCell};
 
     use super::*;
 
@@ -11,6 +11,7 @@ pub(crate) mod imp {
         #[property(get, set = Self::set_progress, minimum = 0.0,
                    maximum = 1.0, default = 0.0, explicit_notify)]
         pub progress: Cell<f32>,
+        pub signal_id: RefCell<Option<glib::SignalHandlerId>>,
     }
 
     #[glib::object_subclass]
@@ -24,7 +25,24 @@ pub(crate) mod imp {
     impl ObjectImpl for ProgressIcon {
         fn constructed(&self) {
             self.parent_constructed();
-            self.obj().set_valign(gtk::Align::Center);
+            let obj = self.obj();
+
+            obj.set_valign(gtk::Align::Center);
+
+            let signal_id = adw::StyleManager::default().connect_accent_color_notify(glib::clone!(
+                #[weak(rename_to = progress_icon)]
+                obj,
+                move |_| {
+                    progress_icon.queue_draw();
+                }
+            ));
+            self.signal_id.replace(Some(signal_id));
+        }
+
+        fn dispose(&self) {
+            if let Some(signal_id) = self.signal_id.take() {
+                adw::StyleManager::default().disconnect(signal_id);
+            }
         }
     }
 
