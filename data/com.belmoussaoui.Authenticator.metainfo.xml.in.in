@@ -47,6 +47,16 @@
   <url type="vcs-browser">https://gitlab.gnome.org/World/Authenticator</url>
   <content_rating type="oars-1.1" />
   <releases>
+    <release version="4.5.0" date="2024-07-19">
+      <description>
+        <ul>
+          <li>backup: Add import of Raivo OTP files</li>
+          <li>qr scanner: Use back camera by default</li>
+          <li>search provider: Withdraw notification once the code is no longer valid</li>
+          <li>accounts: Refresh completion model when scanning from qr code</li>
+        </ul>
+      </description>
+    </release>
     <release version="4.4.0" date="2023-10-13">
       <description>
         <ul>

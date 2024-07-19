@@ -1,7 +1,6 @@
 [package]
 edition = "2021"
 name = "authenticator"
-version = "4.4.0"
 rust-version = "1.70"
 
 [profile.release]

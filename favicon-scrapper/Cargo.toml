@@ -2,7 +2,6 @@
 autotests = false
 edition = "2021"
 name = "favicon-scrapper"
-version = "0.1.0"
 
 [dependencies]
 data-encoding = "2.3"
