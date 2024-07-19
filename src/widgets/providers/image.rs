@@ -29,8 +29,6 @@ mod imp {
         pub stack: TemplateChild<gtk::Stack>,
         #[template_child]
         pub image: TemplateChild<gtk::Image>,
-        #[template_child]
-        pub spinner: TemplateChild<gtk::Spinner>,
         pub signal_id: RefCell<Option<glib::SignalHandlerId>>,
         pub join_handle: RefCell<Option<tokio::task::JoinHandle<()>>>,
     }
@@ -47,7 +45,6 @@ mod imp {
                 was_downloaded: Cell::new(false),
                 stack: TemplateChild::default(),
                 image: TemplateChild::default(),
-                spinner: TemplateChild::default(),
                 provider: RefCell::default(),
                 signal_id: RefCell::default(),
                 join_handle: RefCell::default(),
@@ -80,7 +77,6 @@ mod imp {
                 self.provider.borrow_mut().replace(provider.clone());
                 if provider.website().is_some() || provider.image_uri().is_some() {
                     self.stack.set_visible_child_name("loading");
-                    self.spinner.start();
                     obj.on_provider_image_changed();
                 }
                 let signal_id = provider.connect_image_uri_notify(clone!(
@@ -158,7 +154,6 @@ impl ProviderImage {
         }
         if let Some(provider) = self.provider() {
             imp.stack.set_visible_child_name("loading");
-            imp.spinner.start();
 
             if let Some(website) = provider.website() {
                 let id = provider.id();
@@ -213,7 +208,6 @@ impl ProviderImage {
                             drop(guard);
                         }
                         imp.stack.set_visible_child_name("image");
-                        imp.spinner.stop();
                     }
                 ));
             }

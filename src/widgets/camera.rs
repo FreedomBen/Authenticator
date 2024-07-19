@@ -71,8 +71,6 @@ mod imp {
         #[template_child]
         pub viewfinder: TemplateChild<aperture::Viewfinder>,
         #[template_child]
-        pub spinner: TemplateChild<gtk::Spinner>,
-        #[template_child]
         pub screenshot: TemplateChild<gtk::Button>,
         #[template_child]
         pub camera_selection_button: TemplateChild<gtk::MenuButton>,
@@ -316,12 +314,6 @@ impl Camera {
             imp.toolbar_view.add_css_class("extended");
         } else {
             imp.toolbar_view.remove_css_class("extended");
-        }
-
-        if matches!(state, aperture::ViewfinderState::Loading) {
-            imp.spinner.start();
-        } else {
-            imp.spinner.stop();
         }
     }
 
