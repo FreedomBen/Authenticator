@@ -9,7 +9,7 @@ pub struct SearchProvider {
 }
 
 pub enum SearchProviderAction {
-    LaunchSearch(Vec<String>, u32),
+    LaunchSearch(Vec<String>),
     ActivateResult(ResultID),
     InitialResultSet(Vec<String>, futures_channel::oneshot::Sender<Vec<ResultID>>),
     ResultMetas(
@@ -32,13 +32,10 @@ impl SearchProviderImpl for SearchProvider {
             .unbounded_send(SearchProviderAction::ActivateResult(identifier));
     }
 
-    fn launch_search(&self, terms: &[String], timestamp: u32) {
+    fn launch_search(&self, terms: &[String], _timestamp: u32) {
         let _ = self
             .sender
-            .unbounded_send(SearchProviderAction::LaunchSearch(
-                terms.to_owned(),
-                timestamp,
-            ));
+            .unbounded_send(SearchProviderAction::LaunchSearch(terms.to_owned()));
     }
 
     fn initial_result_set(&self, terms: &[String]) -> Vec<ResultID> {

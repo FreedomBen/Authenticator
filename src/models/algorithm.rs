@@ -77,14 +77,13 @@ impl FromStr for Method {
     }
 }
 
-impl ToString for Method {
-    fn to_string(&self) -> String {
+impl std::fmt::Display for Method {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match *self {
-            Self::TOTP => "totp",
-            Self::HOTP => "hotp",
-            Self::Steam => "steam",
+            Self::TOTP => write!(f, "totp"),
+            Self::HOTP => write!(f, "hotp"),
+            Self::Steam => write!(f, "steam"),
         }
-        .to_string()
     }
 }
 
@@ -142,14 +141,13 @@ impl FromStr for Algorithm {
     }
 }
 
-impl ToString for Algorithm {
-    fn to_string(&self) -> String {
+impl std::fmt::Display for Algorithm {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match *self {
-            Self::SHA1 => "sha1",
-            Self::SHA256 => "sha256",
-            Self::SHA512 => "sha512",
+            Self::SHA1 => write!(f, "sha1"),
+            Self::SHA256 => write!(f, "sha256"),
+            Self::SHA512 => write!(f, "sha512"),
         }
-        .to_string()
     }
 }
 
