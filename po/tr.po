@@ -1,16 +1,16 @@
 # Turkish translation for Authenticator
-# Copyright (C) 2019-2023 Authenticator'S COPYRIGHT HOLDER
+# Copyright (C) 2019-2024 Authenticator'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the Authenticator package.
 #
 # Serdar Sağlam <teknomobil@yandex.com>, 2019.
-# Sabri Ünal <libreajans@gmail.com>, 2019, 2022, 2023.
+# Sabri Ünal <yakushabb@gmail.com>, 2019, 2022, 2023, 2024.
 # Emin Tufan Çetin <etcetin@gmail.com>, 2020, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Authenticator master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2024-01-22 13:44+0000\n"
+"POT-Creation-Date: 2024-07-29 20:35+0000\n"
 "PO-Revision-Date: 2024-05-09 10:29+0300\n"
 "Last-Translator: Sabri Ünal <yakushabb@gmail.com>\n"
 "Language-Team: Türkçe <takim@gnome.org.tr>\n"
@@ -23,7 +23,7 @@ msgstr ""
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
-#: data/resources/ui/window.ui:36 src/application.rs:91 src/main.rs:40
+#: data/resources/ui/window.ui:36 src/application.rs:104 src/main.rs:40
 msgid "Authenticator"
 msgstr "Kimlik Doğrulayıcı"
 
@@ -33,7 +33,7 @@ msgstr "İki Aşamalı Kimlik Doğrulama"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:5
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:94
+#: src/application.rs:106
 msgid "Generate two-factor codes"
 msgstr "İki aşamalı kodlar oluştur"
 
@@ -137,7 +137,7 @@ msgid "Main Window"
 msgstr "Ana Pencere"
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:29
-#: data/resources/ui/account_add.ui:32 data/resources/ui/account_add.ui:49
+#: data/resources/ui/account_add.ui:30 data/resources/ui/account_add.ui:47
 msgid "Add a New Account"
 msgstr "Yeni Hesap Ekle"
 
@@ -153,108 +153,108 @@ msgstr "Hesap Ayrıntıları"
 msgid "Backup/Restore formats support"
 msgstr "Yedekleme/Geri Yükleme biçimleri desteği"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:292
+#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:308
 msgid "_Camera"
 msgstr "_Kamera"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:296
+#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:312
 msgid "_Screenshot"
 msgstr "_Ekran Görüntüsü"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:301
+#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:317
 msgid "_QR Code Image"
 msgstr "_QR Kod Görüntüsü"
 
-#: data/resources/ui/account_add.ui:58
+#: data/resources/ui/account_add.ui:56
 msgid "Cancel"
 msgstr "İptal"
 
-#: data/resources/ui/account_add.ui:64
+#: data/resources/ui/account_add.ui:62
 msgid "_Add"
 msgstr "_Ekle"
 
-#: data/resources/ui/account_add.ui:76 src/widgets/preferences/window.rs:287
+#: data/resources/ui/account_add.ui:74 src/widgets/preferences/window.rs:303
 msgid "Scan QR Code"
 msgstr "QR Kodunu Tara"
 
-#: data/resources/ui/account_add.ui:114
+#: data/resources/ui/account_add.ui:112
 #: data/resources/ui/account_details_page.ui:96
 #: data/resources/ui/provider_page.ui:22
-#: data/resources/ui/providers_dialog.ui:110
+#: data/resources/ui/providers_dialog.ui:108
 msgid "Provider"
 msgstr "Sağlayıcı"
 
-#: data/resources/ui/account_add.ui:115
+#: data/resources/ui/account_add.ui:113
 msgid "Token issuer"
 msgstr "Jeton imzacısı"
 
-#: data/resources/ui/account_add.ui:129
+#: data/resources/ui/account_add.ui:127
 #: data/resources/ui/account_details_page.ui:91
 msgid "Account"
 msgstr "Hesap"
 
-#: data/resources/ui/account_add.ui:135
+#: data/resources/ui/account_add.ui:133
 msgid "Token"
 msgstr "Jeton"
 
-#: data/resources/ui/account_add.ui:141
+#: data/resources/ui/account_add.ui:139
 #: data/resources/ui/account_details_page.ui:139
 #: data/resources/ui/provider_page.ui:158
 msgid "Counter"
 msgstr "Sayaç"
 
-#: data/resources/ui/account_add.ui:159
+#: data/resources/ui/account_add.ui:157
 #: data/resources/ui/account_details_page.ui:119
 #: data/resources/ui/provider_page.ui:133
 msgid "Algorithm"
 msgstr "Algoritma"
 
-#: data/resources/ui/account_add.ui:171
+#: data/resources/ui/account_add.ui:169
 #: data/resources/ui/account_details_page.ui:129
 #: data/resources/ui/provider_page.ui:118
 msgid "Computing Method"
 msgstr "Hesaplama Yöntemi"
 
-#: data/resources/ui/account_add.ui:183
+#: data/resources/ui/account_add.ui:181
 #: data/resources/ui/account_details_page.ui:148
 #: data/resources/ui/provider_page.ui:149
 msgid "Period"
 msgstr "Sıklık"
 
-#: data/resources/ui/account_add.ui:184
+#: data/resources/ui/account_add.ui:182
 #: data/resources/ui/account_details_page.ui:149
 #: data/resources/ui/provider_page.ui:150
 msgid "Duration in seconds until the next password update"
 msgstr "Sonraki parola güncellemesine dek saniye türünden süre"
 
-#: data/resources/ui/account_add.ui:196
+#: data/resources/ui/account_add.ui:194
 #: data/resources/ui/account_details_page.ui:159
 #: data/resources/ui/provider_page.ui:167
 msgid "Digits"
 msgstr "Sayılar"
 
-#: data/resources/ui/account_add.ui:197
+#: data/resources/ui/account_add.ui:195
 #: data/resources/ui/account_details_page.ui:160
 #: data/resources/ui/provider_page.ui:168
 msgid "Length of the generated code"
 msgstr "Oluşturulan kodun uzunluğu"
 
-#: data/resources/ui/account_add.ui:209
+#: data/resources/ui/account_add.ui:207
 #: data/resources/ui/account_details_page.ui:170
 #: data/resources/ui/provider_page.ui:112
 msgid "Website"
 msgstr "Web Sitesi"
 
-#: data/resources/ui/account_add.ui:214
+#: data/resources/ui/account_add.ui:212
 msgid "How to Set Up"
 msgstr "Nasıl Kurulur"
 
-#: data/resources/ui/account_add.ui:234
+#: data/resources/ui/account_add.ui:232
 #: data/resources/ui/preferences_camera_page.ui:4
 msgid "Camera"
 msgstr "Kamera"
 
-#: data/resources/ui/account_add.ui:246
+#: data/resources/ui/account_add.ui:244
 msgid "Create Provider"
 msgstr "Sağlayıcı Oluştur"
 
@@ -285,11 +285,11 @@ msgstr "PIN’i panoya kopyala"
 msgid "Account details"
 msgstr "Hesap ayrıntıları"
 
-#: data/resources/ui/camera.ui:36
+#: data/resources/ui/camera.ui:35
 msgid "No Camera Found"
 msgstr "Kamera Bulunamadı"
 
-#: data/resources/ui/camera.ui:39
+#: data/resources/ui/camera.ui:38
 msgid "_From a Screenshot"
 msgstr "_Ekran Görüntüsünden"
 
@@ -387,11 +387,11 @@ msgstr "Ölçülen bağlantıda web sitesi simgesi getir"
 msgid "Backup/Restore"
 msgstr "Yedekle/Geri Yükle"
 
-#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:476
+#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:540
 msgid "Backup"
 msgstr "Yedekle"
 
-#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:484
+#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:548
 msgid "Restore"
 msgstr "Geri Yükle"
 
@@ -441,39 +441,39 @@ msgstr "Sayaç tabanlı hesaplama yöntemi için öntanımlı değer"
 msgid "Help URL"
 msgstr "Yardım URLʼsi"
 
-#: data/resources/ui/providers_dialog.ui:10
-#: data/resources/ui/providers_dialog.ui:21
+#: data/resources/ui/providers_dialog.ui:8
+#: data/resources/ui/providers_dialog.ui:19
 msgid "Providers"
 msgstr "Sağlayıcılar"
 
-#: data/resources/ui/providers_dialog.ui:31 src/widgets/providers/page.rs:209
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:209
 msgid "New Provider"
 msgstr "Yeni Sağlayıcı"
 
-#: data/resources/ui/providers_dialog.ui:38
-#: data/resources/ui/providers_dialog.ui:54 data/resources/ui/window.ui:207
+#: data/resources/ui/providers_dialog.ui:36
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:207
 #: data/resources/ui/window.ui:228
 msgid "Search"
 msgstr "Ara"
 
-#: data/resources/ui/providers_dialog.ui:49 data/resources/ui/window.ui:202
+#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:202
 msgid "Search…"
 msgstr "Ara…"
 
-#: data/resources/ui/providers_dialog.ui:95
+#: data/resources/ui/providers_dialog.ui:93
 #: data/resources/ui/providers_list.ui:38
 msgid "No Results"
 msgstr "Sonuç Yok"
 
-#: data/resources/ui/providers_dialog.ui:96
+#: data/resources/ui/providers_dialog.ui:94
 msgid "No providers matching the query were found."
 msgstr "Sorguyla eşleşen sağlayıcı bulunamadı."
 
-#: data/resources/ui/providers_dialog.ui:141
+#: data/resources/ui/providers_dialog.ui:139
 msgid "No Provider Selected"
 msgstr "Sağlayıcı Seçilmedi"
 
-#: data/resources/ui/providers_dialog.ui:142
+#: data/resources/ui/providers_dialog.ui:140
 msgid "Select a provider or create a new one"
 msgstr "Yenisini oluşturmak için sağlayıcı seç"
 
@@ -574,22 +574,22 @@ msgstr "Hesap Yok"
 msgid "Add an account or scan a QR code first."
 msgstr "Önce hesap ekleyin veya QR kodu tarayın."
 
-#: src/application.rs:77
+#: src/application.rs:84
 msgid "Accounts restored successfully"
 msgstr "Hesaplar başarıyla geri yüklendi"
 
-#: src/application.rs:103
+#: src/application.rs:115
 msgid "translator-credits"
 msgstr ""
 "Serdar Sağlam <teknomobil@yandex.com\n"
 "Emin Tufan Çetin <etcetin@gmail.com>\n"
-"Sabri Ünal <libreajans@gmail.com>"
+"Sabri Ünal <yakushabb@gmail.com>"
 
-#: src/application.rs:392 src/widgets/accounts/row.rs:46
+#: src/application.rs:424 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Tek kullanımlık parola kopyalandı"
 
-#: src/application.rs:393
+#: src/application.rs:425
 msgid "Password was copied successfully"
 msgstr "Parola başarıyla kopyalandı"
 
@@ -701,89 +701,89 @@ msgstr "Zaman tabanlı"
 msgid "Steam"
 msgstr "Akış"
 
-#: src/models/algorithm.rs:126
+#: src/models/algorithm.rs:125
 msgid "SHA-1"
 msgstr "SHA-1"
 
-#: src/models/algorithm.rs:127
+#: src/models/algorithm.rs:126
 msgid "SHA-256"
 msgstr "SHA-256"
 
-#: src/models/algorithm.rs:128
+#: src/models/algorithm.rs:127
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:269 src/widgets/preferences/window.rs:414
+#: src/widgets/accounts/add.rs:270 src/widgets/preferences/window.rs:477
 #: src/widgets/providers/page.rs:292
 msgid "Image"
 msgstr "Resim"
 
-#: src/widgets/accounts/add.rs:277 src/widgets/preferences/window.rs:422
+#: src/widgets/accounts/add.rs:278 src/widgets/preferences/window.rs:485
 msgid "Select QR Code"
 msgstr "QR Kodu Seç"
 
-#: src/widgets/accounts/add.rs:295
+#: src/widgets/accounts/add.rs:296
 msgid "Invalid Token"
 msgstr "Geçersiz Jeton"
 
-#: src/widgets/accounts/details.rs:127
+#: src/widgets/accounts/details.rs:123
 msgid "Are you sure you want to delete the account?"
 msgstr "Bu hesabı silmek istediğinize emin misiniz?"
 
-#: src/widgets/accounts/details.rs:128
+#: src/widgets/accounts/details.rs:124
 msgid "This action is irreversible"
 msgstr "Bu işlem geri alınamaz"
 
-#: src/widgets/accounts/details.rs:132
+#: src/widgets/accounts/details.rs:126
 msgid "No"
 msgstr "Hayır"
 
-#: src/widgets/accounts/details.rs:132
+#: src/widgets/accounts/details.rs:126
 msgid "Yes"
 msgstr "Evet"
 
-#: src/widgets/preferences/password_page.rs:172
-#: src/widgets/preferences/password_page.rs:214
+#: src/widgets/preferences/password_page.rs:195
+#: src/widgets/preferences/password_page.rs:237
 msgid "Wrong Passphrase"
 msgstr "Yanlış Parola Metni"
 
-#: src/widgets/preferences/window.rs:191 src/widgets/preferences/window.rs:263
+#: src/widgets/preferences/window.rs:197 src/widgets/preferences/window.rs:279
 msgid "Key / Passphrase"
 msgstr "Anahtar / Parola Metni"
 
-#: src/widgets/preferences/window.rs:202 src/widgets/preferences/window.rs:275
+#: src/widgets/preferences/window.rs:208 src/widgets/preferences/window.rs:291
 msgid "Select File"
 msgstr "Dosya Seç"
 
-#: src/widgets/preferences/window.rs:226
+#: src/widgets/preferences/window.rs:239
 msgid "Failed to create a backup"
 msgstr "Yedek oluşturulamadı"
 
-#: src/widgets/preferences/window.rs:338
+#: src/widgets/preferences/window.rs:361
 msgid "Failed to restore from camera"
 msgstr "Kameradan geri yüklenemedi"
 
-#: src/widgets/preferences/window.rs:349
+#: src/widgets/preferences/window.rs:386
 msgid "Failed to restore from a screenshot"
 msgstr "Ekran görüntüsünden geri yüklenemedi"
 
-#: src/widgets/preferences/window.rs:359
+#: src/widgets/preferences/window.rs:406
 msgid "Failed to restore from an image"
 msgstr "Görüntüden geri yüklenemedi"
 
-#: src/widgets/preferences/window.rs:372
+#: src/widgets/preferences/window.rs:430
 msgid "Failed to restore from a file"
 msgstr "Dosyadan geri yüklenemedi"
 
-#: src/widgets/providers/dialog.rs:235
+#: src/widgets/providers/dialog.rs:262
 msgid "Provider created successfully"
 msgstr "Sağlayıcı başarıyla oluşturuldu"
 
-#: src/widgets/providers/dialog.rs:245
+#: src/widgets/providers/dialog.rs:272
 msgid "Provider updated successfully"
 msgstr "Sağlayıcı başarıyla güncellendi"
 
-#: src/widgets/providers/dialog.rs:261
+#: src/widgets/providers/dialog.rs:288
 msgid "Provider removed successfully"
 msgstr "Sağlayıcı başarıyla kaldırıldı"
 
@@ -798,9 +798,3 @@ msgstr "Sağlayıcıya atanmış hesaplar var, lütfen önce bunları kaldırın
 #: src/widgets/window.rs:115
 msgid "Wrong Password"
 msgstr "Hatalı Parola"
-
-#~ msgid "Bilal Elmoussaoui"
-#~ msgstr "Bilal Elmoussaoui"
-
-#~ msgid "Unknown Device"
-#~ msgstr "Bilinmeyen Aygıt"
