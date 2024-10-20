@@ -79,6 +79,7 @@ mod imp {
                 .bind_property("code", &*self.otp_label, "label")
                 .sync_create()
                 .build();
+            self.otp_label.set_direction(gtk::TextDirection::Ltr);
 
             // Only display the increment button if it is a HOTP account
             self.increment_btn
