@@ -206,10 +206,9 @@ impl Provider {
             .load::<DieselProvider>(&mut conn)?
             .into_iter()
             .map(From::from)
-            .map(|p: Provider| {
-                let accounts = Account::load(&p).unwrap().collect::<Vec<_>>();
+            .inspect(|p: &Provider| {
+                let accounts = Account::load(p).unwrap().collect::<Vec<_>>();
                 p.add_accounts(&accounts);
-                p
             });
         Ok(results)
     }

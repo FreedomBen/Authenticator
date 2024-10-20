@@ -22,11 +22,11 @@ mod imp {
     use std::{
         cell::{Cell, OnceCell, RefCell},
         collections::HashMap,
+        sync::LazyLock,
     };
 
     use adw::subclass::prelude::*;
     use glib::subclass::Signal;
-    use once_cell::sync::Lazy;
 
     use super::*;
 
@@ -97,8 +97,8 @@ mod imp {
     #[glib::derived_properties]
     impl ObjectImpl for PreferencesWindow {
         fn signals() -> &'static [Signal] {
-            static SIGNALS: Lazy<Vec<Signal>> =
-                Lazy::new(|| vec![Signal::builder("restore-completed").action().build()]);
+            static SIGNALS: LazyLock<Vec<Signal>> =
+                LazyLock::new(|| vec![Signal::builder("restore-completed").action().build()]);
             SIGNALS.as_ref()
         }
 

@@ -13,10 +13,12 @@ use crate::{
 };
 
 mod imp {
-    use std::cell::{OnceCell, RefCell};
+    use std::{
+        cell::{OnceCell, RefCell},
+        sync::LazyLock,
+    };
 
     use glib::subclass::{InitializingObject, Signal};
-    use once_cell::sync::Lazy;
 
     use super::*;
 
@@ -118,8 +120,8 @@ mod imp {
     #[glib::derived_properties]
     impl ObjectImpl for AccountAddDialog {
         fn signals() -> &'static [Signal] {
-            static SIGNALS: Lazy<Vec<Signal>> =
-                Lazy::new(|| vec![Signal::builder("added").action().build()]);
+            static SIGNALS: LazyLock<Vec<Signal>> =
+                LazyLock::new(|| vec![Signal::builder("added").action().build()]);
             SIGNALS.as_ref()
         }
 

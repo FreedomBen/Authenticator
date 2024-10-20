@@ -12,10 +12,9 @@ use crate::{
 };
 
 mod imp {
-    use std::cell::OnceCell;
+    use std::{cell::OnceCell, sync::LazyLock};
 
     use glib::subclass::Signal;
-    use once_cell::sync::Lazy;
 
     use super::*;
 
@@ -53,7 +52,7 @@ mod imp {
     #[glib::derived_properties]
     impl ObjectImpl for ProviderRow {
         fn signals() -> &'static [Signal] {
-            static SIGNALS: Lazy<Vec<Signal>> = Lazy::new(|| {
+            static SIGNALS: LazyLock<Vec<Signal>> = LazyLock::new(|| {
                 vec![
                     Signal::builder("changed").action().build(),
                     Signal::builder("shared")

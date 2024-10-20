@@ -34,10 +34,12 @@ pub struct DieselAccount {
 
 #[doc(hidden)]
 mod imp {
-    use std::cell::{Cell, OnceCell, RefCell};
+    use std::{
+        cell::{Cell, OnceCell, RefCell},
+        sync::LazyLock,
+    };
 
     use glib::ParamSpecObject;
-    use once_cell::sync::Lazy;
 
     use super::*;
 
@@ -79,7 +81,7 @@ mod imp {
 
     impl ObjectImpl for Account {
         fn properties() -> &'static [glib::ParamSpec] {
-            static PROPERTIES: Lazy<Vec<glib::ParamSpec>> = Lazy::new(|| {
+            static PROPERTIES: LazyLock<Vec<glib::ParamSpec>> = LazyLock::new(|| {
                 let mut props = Account::derived_properties().to_vec();
                 props.push(ParamSpecObject::builder::<Provider>("provider").build());
                 props

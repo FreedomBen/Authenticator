@@ -1,14 +1,14 @@
-use std::{fs, fs::File, path::PathBuf};
+use std::{fs, fs::File, path::PathBuf, sync::LazyLock};
 
 use anyhow::Result;
 use diesel::{prelude::*, r2d2, r2d2::ConnectionManager};
 use diesel_migrations::{embed_migrations, EmbeddedMigrations, MigrationHarness};
-use once_cell::sync::Lazy;
 
 type Pool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 
-static DB_PATH: Lazy<PathBuf> = Lazy::new(|| gtk::glib::user_data_dir().join("authenticator"));
-static POOL: Lazy<Pool> = Lazy::new(|| init_pool().expect("Failed to create a pool"));
+static DB_PATH: LazyLock<PathBuf> =
+    LazyLock::new(|| gtk::glib::user_data_dir().join("authenticator"));
+static POOL: LazyLock<Pool> = LazyLock::new(|| init_pool().expect("Failed to create a pool"));
 
 pub const MIGRATIONS: EmbeddedMigrations = embed_migrations!("migrations/");
 

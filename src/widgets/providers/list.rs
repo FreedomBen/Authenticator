@@ -15,6 +15,8 @@ pub enum ProvidersListView {
 }
 
 mod imp {
+    use std::sync::LazyLock;
+
     use glib::subclass::Signal;
 
     use super::*;
@@ -52,8 +54,7 @@ mod imp {
         }
 
         fn signals() -> &'static [Signal] {
-            use once_cell::sync::Lazy;
-            static SIGNALS: Lazy<Vec<Signal>> = Lazy::new(|| {
+            static SIGNALS: LazyLock<Vec<Signal>> = LazyLock::new(|| {
                 vec![Signal::builder("shared")
                     .param_types([Account::static_type()])
                     .action()

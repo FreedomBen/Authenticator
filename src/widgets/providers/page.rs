@@ -14,7 +14,7 @@ use crate::{
 };
 
 mod imp {
-    use std::cell::RefCell;
+    use std::{cell::RefCell, sync::LazyLock};
 
     use glib::subclass::Signal;
 
@@ -114,8 +114,7 @@ mod imp {
 
     impl ObjectImpl for ProviderPage {
         fn signals() -> &'static [Signal] {
-            use once_cell::sync::Lazy;
-            static SIGNALS: Lazy<Vec<Signal>> = Lazy::new(|| {
+            static SIGNALS: LazyLock<Vec<Signal>> = LazyLock::new(|| {
                 vec![
                     Signal::builder("created")
                         .param_types([Provider::static_type()])

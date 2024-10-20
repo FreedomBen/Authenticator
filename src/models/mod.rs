@@ -1,4 +1,4 @@
-use once_cell::sync::Lazy;
+use std::sync::LazyLock;
 
 mod account;
 mod accounts;
@@ -13,10 +13,10 @@ mod providers;
 mod search_provider;
 mod settings;
 
-pub static RUNTIME: Lazy<tokio::runtime::Runtime> =
-    Lazy::new(|| tokio::runtime::Runtime::new().unwrap());
-pub static SETTINGS: Lazy<Settings> = Lazy::new(Settings::default);
-pub static FAVICONS_PATH: Lazy<std::path::PathBuf> = Lazy::new(|| {
+pub static RUNTIME: LazyLock<tokio::runtime::Runtime> =
+    LazyLock::new(|| tokio::runtime::Runtime::new().unwrap());
+pub static SETTINGS: LazyLock<Settings> = LazyLock::new(Settings::default);
+pub static FAVICONS_PATH: LazyLock<std::path::PathBuf> = LazyLock::new(|| {
     gtk::glib::user_cache_dir()
         .join("authenticator")
         .join("favicons")

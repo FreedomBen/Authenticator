@@ -1,6 +1,6 @@
 use std::{fmt, io::Cursor, path::PathBuf};
 
-use image::io::Reader as ImageReader;
+use image::ImageReader;
 use tokio::{io::AsyncWriteExt, sync::Mutex};
 use url::Url;
 

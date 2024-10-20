@@ -1,11 +1,10 @@
-use std::collections::HashMap;
+use std::{collections::HashMap, sync::OnceLock};
 
-use once_cell::sync::OnceCell;
 use rand::RngCore;
 
 use crate::config;
 
-pub static SECRET_SERVICE: OnceCell<oo7::Keyring> = OnceCell::new();
+pub static SECRET_SERVICE: OnceLock<oo7::Keyring> = OnceLock::new();
 
 fn token_attributes(token_id: &str) -> HashMap<&str, &str> {
     HashMap::from([

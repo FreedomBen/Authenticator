@@ -1,7 +1,7 @@
 [package]
 edition = "2021"
 name = "authenticator"
-rust-version = "1.70"
+rust-version = "1.80"
 
 [profile.release]
 debug = true
@@ -29,7 +29,6 @@ gettext-rs = {version = "0.7", features = ["gettext-system"]}
 gtk = {package = "gtk4", version = "0.9", features = ["v4_10"]}
 hex = {version = "0.4.3", features = ["serde"]}
 image = {version = "0.25", default-features = false, features = ["png"]}
-once_cell = "1.9"
 oo7 = {version = "0.3", default-features = false, features = ["tokio", "native_crypto", "tracing"]}
 percent-encoding = "2.1"
 prost = "0.13"

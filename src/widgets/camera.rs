@@ -1,4 +1,8 @@
-use std::{cell::OnceCell, os::fd::OwnedFd, sync::Once};
+use std::{
+    cell::OnceCell,
+    os::fd::OwnedFd,
+    sync::{LazyLock, Once},
+};
 
 use adw::subclass::prelude::*;
 use anyhow::Result;
@@ -9,7 +13,6 @@ use gtk::{
     prelude::*,
 };
 use image::GenericImageView;
-use once_cell::sync::Lazy;
 
 use super::CameraRow;
 use crate::utils::spawn_tokio;
@@ -99,7 +102,7 @@ mod imp {
 
     impl ObjectImpl for Camera {
         fn signals() -> &'static [Signal] {
-            static SIGNALS: Lazy<Vec<Signal>> = Lazy::new(|| {
+            static SIGNALS: LazyLock<Vec<Signal>> = LazyLock::new(|| {
                 vec![
                     Signal::builder("close").action().build(),
                     Signal::builder("code-detected")

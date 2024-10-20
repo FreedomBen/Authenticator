@@ -90,9 +90,7 @@ impl Restorable for Google {
                     secret: {
                         let string = data_encoding::BASE32_NOPAD.encode(&otp.secret);
 
-                        string
-                            .trim_end_matches(|c| c == '\0' || c == '=')
-                            .to_owned()
+                        string.trim_end_matches(['\0', '=']).to_owned()
                     },
                     label: otp.name.clone(),
                     issuer: otp.issuer.clone(),

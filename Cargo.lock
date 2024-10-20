@@ -293,7 +293,6 @@ dependencies = [
  "hex",
  "image 0.25.4",
  "libadwaita",
- "once_cell",
  "oo7",
  "percent-encoding",
  "prost",

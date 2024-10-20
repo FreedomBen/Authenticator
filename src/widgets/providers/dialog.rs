@@ -12,10 +12,9 @@ enum View {
 }
 
 mod imp {
-    use std::cell::OnceCell;
+    use std::{cell::OnceCell, sync::LazyLock};
 
     use glib::subclass::Signal;
-    use once_cell::sync::Lazy;
 
     use super::*;
     use crate::config;
@@ -82,8 +81,8 @@ mod imp {
     #[glib::derived_properties]
     impl ObjectImpl for ProvidersDialog {
         fn signals() -> &'static [Signal] {
-            static SIGNALS: Lazy<Vec<Signal>> =
-                Lazy::new(|| vec![Signal::builder("changed").build()]);
+            static SIGNALS: LazyLock<Vec<Signal>> =
+                LazyLock::new(|| vec![Signal::builder("changed").build()]);
             SIGNALS.as_ref()
         }
 
