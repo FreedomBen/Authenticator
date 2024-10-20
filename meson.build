@@ -16,7 +16,6 @@ dependency('gstreamer-plugins-bad-1.0', version: '>= 1.18')
 
 cargo = find_program('cargo')
 glib_compile_schemas = find_program('glib-compile-schemas')
-glib_compile_resources = find_program('glib-compile-resources')
 
 version = meson.project_version()
 

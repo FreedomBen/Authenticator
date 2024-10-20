@@ -8,7 +8,7 @@ global_conf.set_quoted('VERSION', version + version_suffix)
 global_conf.set_quoted('GETTEXT_PACKAGE', gettext_package)
 global_conf.set_quoted('LOCALEDIR', localedir)
 global_conf.set_quoted('OBJECT_PATH', object_path)
-config_output_file = configure_file(
+configure_file(
     input: 'config.rs.in',
     output: 'config.rs',
     configuration: global_conf
@@ -36,7 +36,7 @@ endif
 
 cargo_env = [ 'CARGO_HOME=' + meson.project_build_root() / 'cargo-home' ]
 
-cargo_build = custom_target(
+custom_target(
   'cargo-build',
   build_by_default: true,
   build_always_stale: true,
