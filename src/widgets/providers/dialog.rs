@@ -209,7 +209,7 @@ impl ProvidersDialog {
                 imp.search_bar.set_key_capture_widget(Some(self));
             }
             View::Placeholder => {
-                imp.deck.set_show_content(true);
+                imp.deck.set_show_content(false);
                 imp.stack.set_visible_child_name("placeholder");
                 imp.search_bar.set_key_capture_widget(Some(self));
             }
