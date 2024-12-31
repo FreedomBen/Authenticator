@@ -46,15 +46,13 @@ mod imp {
         #[template_child]
         pub more_list: TemplateChild<gtk::ListBox>,
         #[template_child]
-        pub period_label: TemplateChild<gtk::Label>,
-        #[template_child]
-        pub digits_label: TemplateChild<gtk::Label>,
+        pub digits_row: TemplateChild<adw::ActionRow>,
         #[template_child]
         pub provider_entry: TemplateChild<gtk::Entry>,
         #[template_child]
-        pub method_label: TemplateChild<gtk::Label>,
+        pub method_row: TemplateChild<adw::ActionRow>,
         #[template_child]
-        pub algorithm_label: TemplateChild<gtk::Label>,
+        pub algorithm_row: TemplateChild<adw::ActionRow>,
         #[template_child]
         pub counter_spinbutton: TemplateChild<adw::SpinRow>,
         #[template_child]
@@ -315,17 +313,17 @@ impl AccountAddDialog {
         if let Some(provider) = provider {
             imp.more_list.set_visible(true);
             imp.provider_entry.set_text(&provider.name());
-            imp.period_label.set_text(&provider.period().to_string());
+            imp.period_row.set_subtitle(&provider.period().to_string());
 
             imp.image.set_provider(Some(&provider));
 
-            imp.method_label
-                .set_text(&provider.method().to_locale_string());
+            imp.method_row
+                .set_subtitle(&provider.method().to_locale_string());
 
-            imp.algorithm_label
-                .set_text(&provider.algorithm().to_locale_string());
+            imp.algorithm_row
+                .set_subtitle(&provider.algorithm().to_locale_string());
 
-            imp.digits_label.set_text(&provider.digits().to_string());
+            imp.digits_row.set_subtitle(&provider.digits().to_string());
 
             if provider.method().is_time_based() {
                 imp.counter_spinbutton.set_visible(false);
