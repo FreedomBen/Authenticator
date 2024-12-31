@@ -305,16 +305,6 @@
     <release version="0.1.1" date="2016-06-28" />
     <release version="0.1.0" date="2016-06-22" />
   </releases>
-  <kudos>
-    <!--
-        GNOME Software kudos:
-        https://gitlab.gnome.org/GNOME/gnome-software/blob/main/doc/kudos.md
-      -->
-    <kudo>ModernToolkit</kudo>
-    <kudo>SearchProvider</kudo>
-    <kudo>HighContrast</kudo>
-    <kudo>HiDpiIcon</kudo>
-  </kudos>
   <recommends>
     <control>keyboard</control>
     <control>pointing</control>
@@ -334,9 +324,6 @@
   <update_contact>bilal.elmoussaoui@gnome.org</update_contact>
   <translation type="gettext">@gettext-package@</translation>
   <launchable type="desktop-id">@app-id@.desktop</launchable>
-  <custom>
-    <value key="Purism::form_factor">mobile</value>
-  </custom>
   <branding>
     <color type="primary" scheme_preference="light">#f66151</color>
     <color type="primary" scheme_preference="dark">#a51d2d</color>
