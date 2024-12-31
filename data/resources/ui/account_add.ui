@@ -53,8 +53,9 @@
                     <property name="show-start-title-buttons">False</property>
                     <child>
                       <object class="GtkButton">
-                        <property name="label" translatable="yes">Cancel</property>
+                        <property name="label" translatable="yes">_Cancel</property>
                         <property name="action-name">window.close</property>
+                        <property name="use-underline">True</property>
                       </object>
                     </child>
                     <child type="end">
