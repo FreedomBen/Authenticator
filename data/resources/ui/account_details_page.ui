@@ -115,23 +115,19 @@
                             <property name="selection-mode">none</property>
                             <property name="margin-bottom">18</property>
                             <child>
-                              <object class="AdwActionRow">
+                              <object class="AdwActionRow" id="algorithm_row">
                                 <property name="title" translatable="yes">Algorithm</property>
-                                <child>
-                                  <object class="GtkLabel" id="algorithm_label">
-                                    <property name="halign">end</property>
-                                  </object>
-                                </child>
+                                <style>
+                                  <class name="property"/>
+                                </style>
                               </object>
                             </child>
                             <child>
-                              <object class="AdwActionRow">
+                              <object class="AdwActionRow" id="method_row">
                                 <property name="title" translatable="yes">Computing Method</property>
-                                <child>
-                                  <object class="GtkLabel" id="method_label">
-                                    <property name="halign">end</property>
-                                  </object>
-                                </child>
+                                <style>
+                                  <class name="property"/>
+                                </style>
                               </object>
                             </child>
                             <child>
@@ -147,22 +143,18 @@
                               <object class="AdwActionRow" id="period_row">
                                 <property name="title" translatable="yes">Period</property>
                                 <property name="subtitle" translatable="yes">Duration in seconds until the next password update</property>
-                                <child>
-                                  <object class="GtkLabel" id="period_label">
-                                    <property name="halign">end</property>
-                                  </object>
-                                </child>
+                                <style>
+                                  <class name="property"/>
+                                </style>
                               </object>
                             </child>
                             <child>
-                              <object class="AdwActionRow">
+                              <object class="AdwActionRow" id="digits_row">
                                 <property name="title" translatable="yes">Digits</property>
                                 <property name="subtitle" translatable="yes">Length of the generated code</property>
-                                <child>
-                                  <object class="GtkLabel" id="digits_label">
-                                    <property name="halign">end</property>
-                                  </object>
-                                </child>
+                                <style>
+                                  <class name="property"/>
+                                </style>
                               </object>
                             </child>
                             <child>

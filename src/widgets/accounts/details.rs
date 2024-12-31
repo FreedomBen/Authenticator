@@ -33,15 +33,13 @@ mod imp {
         #[template_child(id = "list")]
         pub listbox: TemplateChild<gtk::ListBox>,
         #[template_child]
-        pub algorithm_label: TemplateChild<gtk::Label>,
+        pub algorithm_row: TemplateChild<adw::ActionRow>,
         #[template_child]
-        pub method_label: TemplateChild<gtk::Label>,
+        pub method_row: TemplateChild<adw::ActionRow>,
         #[template_child]
         pub counter_spinbutton: TemplateChild<adw::SpinRow>,
         #[template_child]
-        pub period_label: TemplateChild<gtk::Label>,
-        #[template_child]
-        pub digits_label: TemplateChild<gtk::Label>,
+        pub digits_row: TemplateChild<adw::ActionRow>,
         #[template_child]
         pub period_row: TemplateChild<adw::ActionRow>,
         #[template_child]
@@ -164,19 +162,19 @@ impl AccountDetailsPage {
     fn set_provider(&self, provider: Provider) {
         let imp = self.imp();
         imp.provider_entry.set_text(&provider.name());
-        imp.algorithm_label
-            .set_text(&provider.algorithm().to_locale_string());
-        imp.method_label
-            .set_text(&provider.method().to_locale_string());
+        imp.algorithm_row
+            .set_subtitle(&provider.algorithm().to_locale_string());
+        imp.method_row
+            .set_subtitle(&provider.method().to_locale_string());
         if provider.method().is_event_based() {
             imp.counter_spinbutton.set_visible(true);
             imp.period_row.set_visible(false);
         } else {
             imp.counter_spinbutton.set_visible(false);
             imp.period_row.set_visible(true);
-            imp.period_label.set_text(&provider.period().to_string());
+            imp.period_row.set_subtitle(&provider.period().to_string());
         }
-        imp.digits_label.set_text(&provider.digits().to_string());
+        imp.digits_row.set_subtitle(&provider.digits().to_string());
         if let Some(help) = provider.help_url() {
             imp.help_row.set_uri(help);
             imp.help_row.set_visible(true);
