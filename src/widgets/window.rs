@@ -61,8 +61,6 @@ mod imp {
         #[template_child]
         pub empty_status_page: TemplateChild<adw::StatusPage>,
         #[template_child]
-        pub title_stack: TemplateChild<gtk::Stack>,
-        #[template_child]
         pub unlock_button: TemplateChild<gtk::Button>,
         #[template_child]
         pub toast_overlay: TemplateChild<adw::ToastOverlay>,
@@ -355,17 +353,5 @@ impl Window {
     #[template_callback]
     fn on_search_stopped(&self, _entry: &gtk::SearchEntry) {
         self.imp().search_btn.set_active(false);
-    }
-
-    #[template_callback]
-    fn on_search_btn_toggled(&self, btn: &gtk::ToggleButton) {
-        let imp = self.imp();
-        if btn.is_active() {
-            imp.title_stack.set_visible_child_name("search");
-            imp.search_entry.grab_focus();
-        } else {
-            imp.search_entry.set_text("");
-            imp.title_stack.set_visible_child_name("title");
-        }
     }
 }
