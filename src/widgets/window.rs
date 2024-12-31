@@ -45,6 +45,8 @@ mod imp {
         #[template_child]
         pub account_details: TemplateChild<AccountDetailsPage>,
         #[template_child]
+        pub search_bar: TemplateChild<gtk::SearchBar>,
+        #[template_child]
         pub search_entry: TemplateChild<gtk::SearchEntry>,
         #[template_child]
         pub navigation_view: TemplateChild<adw::NavigationView>,
@@ -160,6 +162,8 @@ mod imp {
                 win.add_css_class("devel");
             }
             win.set_view(View::Accounts);
+
+            self.search_bar.connect_entry(&*self.search_entry);
         }
     }
     impl WidgetImpl for Window {}
@@ -234,7 +238,7 @@ impl Window {
             View::Login => {
                 self.set_default_widget(Some(&*imp.unlock_button));
                 imp.main_stack.set_visible_child_name("login");
-                imp.search_entry.set_key_capture_widget(gtk::Widget::NONE);
+                imp.search_bar.set_key_capture_widget(gtk::Widget::NONE);
                 imp.password_entry.grab_focus();
             }
             View::Accounts => {
@@ -249,17 +253,17 @@ impl Window {
                         imp.providers.set_view(ProvidersListView::NoSearchResults);
                     } else {
                         imp.accounts_stack.set_visible_child_name("empty");
-                        imp.search_entry.set_key_capture_widget(gtk::Widget::NONE);
+                        imp.search_bar.set_key_capture_widget(gtk::Widget::NONE);
                     }
                 } else {
                     imp.providers.set_view(ProvidersListView::List);
                     imp.accounts_stack.set_visible_child_name("accounts");
-                    imp.search_entry.set_key_capture_widget(Some(self));
+                    imp.search_bar.set_key_capture_widget(Some(self));
                 }
             }
             View::Account(account) => {
                 self.set_default_widget(gtk::Widget::NONE);
-                imp.search_entry.set_key_capture_widget(gtk::Widget::NONE);
+                imp.search_bar.set_key_capture_widget(gtk::Widget::NONE);
                 imp.main_stack.set_visible_child_name("unlocked");
                 imp.navigation_view.push_by_tag("account");
                 imp.account_details.set_account(&account);

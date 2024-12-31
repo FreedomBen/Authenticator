@@ -200,14 +200,21 @@
                                     <child type="top">
                                       <object class="GtkSearchBar" id="search_bar">
                                         <child>
-                                          <object class="GtkSearchEntry" id="search_entry">
-                                            <property name="placeholder-text" translatable="yes">Search…</property>
-                                            <signal name="search-started" handler="on_search_started" swapped="true" />
-                                            <signal name="search-changed" handler="on_search_changed" swapped="true" />
-                                            <signal name="stop-search" handler="on_search_stopped" swapped="true" />
-                                            <accessibility>
-                                              <property name="label" translatable="yes">Search</property>
-                                            </accessibility>
+                                          <object class="AdwClamp">
+                                            <property name="tightening-threshold">300</property>
+                                            <property name="maximum-size">400</property>
+                                            <child>
+                                              <object class="GtkSearchEntry" id="search_entry">
+                                                <property name="hexpand">True</property>
+                                                <property name="placeholder-text" translatable="yes">Search…</property>
+                                                <signal name="search-started" handler="on_search_started" swapped="true" />
+                                                <signal name="search-changed" handler="on_search_changed" swapped="true" />
+                                                <signal name="stop-search" handler="on_search_stopped" swapped="true" />
+                                                <accessibility>
+                                                  <property name="label" translatable="yes">Search</property>
+                                                </accessibility>
+                                              </object>
+                                            </child>
                                           </object>
                                         </child>
                                       </object>
