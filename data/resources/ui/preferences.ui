@@ -9,7 +9,6 @@
   <template class="PreferencesWindow" parent="AdwPreferencesDialog">
     <property name="content-width">550</property>
     <property name="content-height">570</property>
-    <property name="search-enabled">True</property>
     <child>
       <object class="AdwPreferencesPage">
         <property name="icon-name">applications-system-symbolic</property>

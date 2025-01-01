@@ -555,38 +555,6 @@ impl PreferencesWindow {
     fn setup_actions(&self) {
         let imp = self.imp();
 
-        imp.camera_page.connect_map(clone!(
-            #[weak(rename_to = win)]
-            self,
-            move |_| {
-                win.set_search_enabled(false);
-            }
-        ));
-
-        imp.camera_page.connect_unmap(clone!(
-            #[weak(rename_to = win)]
-            self,
-            move |_| {
-                win.set_search_enabled(true);
-            }
-        ));
-
-        imp.password_page.connect_map(clone!(
-            #[weak(rename_to = win)]
-            self,
-            move |_| {
-                win.set_search_enabled(false);
-            }
-        ));
-
-        imp.password_page.connect_unmap(clone!(
-            #[weak(rename_to = win)]
-            self,
-            move |_| {
-                win.set_search_enabled(true);
-            }
-        ));
-
         let show_camera_page = gio::ActionEntry::builder("show_camera_page")
             .activate(clone!(
                 #[weak(rename_to = win)]
