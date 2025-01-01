@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="BackupDialog" parent="AdwPreferencesDialog">
+    <property name="title" translatable="yes">Backup &amp; Restore</property>
+    <child>
+      <object class="AdwPreferencesPage">
+        <property name="icon-name">document-save-as-symbolic</property>
+        <property name="title" translatable="yes">Backup &amp; Restore</property>
+        <child>
+          <object class="AdwPreferencesGroup" id="backup_group">
+            <property name="title" translatable="yes">Backup</property>
+          </object>
+        </child>
+        <child>
+          <object class="AdwPreferencesGroup" id="restore_group">
+            <property name="title" translatable="yes">Restore</property>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

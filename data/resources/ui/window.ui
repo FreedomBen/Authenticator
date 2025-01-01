@@ -16,6 +16,10 @@
         <attribute name="label" translatable="yes">_Preferences</attribute>
         <attribute name="action">app.preferences</attribute>
       </item>
+      <item>
+        <attribute name="label" translatable="yes">_Backup &amp; Restore</attribute>
+        <attribute name="action">app.show-backup-dialog</attribute>
+      </item>
     </section>
     <section>
       <item>

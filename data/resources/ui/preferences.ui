@@ -7,7 +7,6 @@
     <property name="page-increment">10</property>
   </object>
   <template class="PreferencesWindow" parent="AdwPreferencesDialog">
-    <property name="content-width">550</property>
     <property name="content-height">570</property>
     <child>
       <object class="AdwPreferencesPage">
@@ -70,22 +69,6 @@
                 <property name="subtitle" translatable="yes">Fetch a website icon on a metered connection</property>
               </object>
             </child>
-          </object>
-        </child>
-      </object>
-    </child>
-    <child>
-      <object class="AdwPreferencesPage">
-        <property name="icon-name">document-save-as-symbolic</property>
-        <property name="title" translatable="yes">Backup/Restore</property>
-        <child>
-          <object class="AdwPreferencesGroup" id="backup_group">
-            <property name="title" translatable="yes">Backup</property>
-          </object>
-        </child>
-        <child>
-          <object class="AdwPreferencesGroup" id="restore_group">
-            <property name="title" translatable="yes">Restore</property>
           </object>
         </child>
       </object>

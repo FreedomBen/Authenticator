@@ -4,6 +4,7 @@ data/com.belmoussaoui.Authenticator.metainfo.xml.in.in
 data/resources/ui/account_add.ui
 data/resources/ui/account_details_page.ui
 data/resources/ui/account_row.ui
+data/resources/ui/backup_dialog.ui
 data/resources/ui/camera.ui
 data/resources/ui/keyring_error_dialog.ui
 data/resources/ui/preferences.ui
@@ -28,8 +29,8 @@ src/models/algorithm.rs
 src/widgets/accounts/add.rs
 src/widgets/accounts/details.rs
 src/widgets/accounts/row.rs
+src/widgets/backup/dialog.rs
 src/widgets/preferences/password_page.rs
-src/widgets/preferences/window.rs
 src/widgets/providers/dialog.rs
 src/widgets/providers/page.rs
 src/widgets/window.rs

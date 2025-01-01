@@ -20,7 +20,7 @@ use crate::{
         SearchProviderAction, FAVICONS_PATH, RUNTIME, SECRET_SERVICE, SETTINGS,
     },
     utils::{spawn, spawn_tokio_blocking},
-    widgets::{KeyringErrorDialog, PreferencesWindow, ProvidersDialog, Window},
+    widgets::{BackupDialog, KeyringErrorDialog, PreferencesWindow, ProvidersDialog, Window},
 };
 
 mod imp {
@@ -66,12 +66,11 @@ mod imp {
                 .activate(|app: &Self::Type, _, _| app.quit())
                 .build();
 
-            let preferences_action = gio::ActionEntry::builder("preferences")
+            let show_backup_dialog_action = gio::ActionEntry::builder("show-backup-dialog")
                 .activate(|app: &Self::Type, _, _| {
                     let model = &app.imp().model;
                     let window = app.active_window();
-                    let preferences = PreferencesWindow::new(model);
-                    preferences.set_has_set_password(app.can_be_locked());
+                    let preferences = BackupDialog::new(model);
                     preferences.connect_restore_completed(clone!(
                         #[weak]
                         window,
@@ -85,6 +84,15 @@ mod imp {
                                 )));
                         }
                     ));
+                    preferences.present(Some(&window));
+                })
+                .build();
+
+            let preferences_action = gio::ActionEntry::builder("preferences")
+                .activate(|app: &Self::Type, _, _| {
+                    let window = app.active_window();
+                    let preferences = PreferencesWindow::new();
+                    preferences.set_has_set_password(app.can_be_locked());
                     preferences.connect_has_set_password_notify(clone!(
                         #[weak]
                         app,
@@ -146,6 +154,7 @@ mod imp {
                 lock_action,
                 providers_action,
                 preferences_action,
+                show_backup_dialog_action,
             ]);
 
             let lock_action = app.lookup_action("lock").unwrap();

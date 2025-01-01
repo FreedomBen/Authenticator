@@ -1,4 +1,5 @@
 mod accounts;
+mod backup;
 mod camera;
 mod camera_row;
 mod error_revealer;
@@ -11,6 +12,7 @@ mod window;
 
 pub use self::{
     accounts::AccountAddDialog,
+    backup::BackupDialog,
     camera::{screenshot, Camera},
     camera_row::CameraRow,
     error_revealer::ErrorRevealer,
