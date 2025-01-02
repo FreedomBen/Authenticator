@@ -221,6 +221,7 @@ mod imp {
             app.set_accels_for_action("win.show-help-overlay", &["<primary>question"]);
             app.set_accels_for_action("win.search", &["<primary>f"]);
             app.set_accels_for_action("win.add_account", &["<primary>n"]);
+            app.set_accels_for_action("window.close", &["<primary>w"]);
             // Start the timeout to lock the app if the auto-lock
             // setting is enabled.
             app.restart_lock_timeout();
