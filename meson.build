@@ -12,7 +12,6 @@ dependency('zbar', version: '>= 0.20')
 dependency('gstreamer-1.0', version: '>= 1.18')
 dependency('gstreamer-base-1.0', version: '>= 1.18')
 dependency('gstreamer-plugins-base-1.0', version: '>= 1.18')
-dependency('gstreamer-plugins-bad-1.0', version: '>= 1.18')
 
 cargo = find_program('cargo')
 glib_compile_schemas = find_program('glib-compile-schemas')

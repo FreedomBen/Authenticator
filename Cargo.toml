@@ -16,7 +16,7 @@ opt-level = 3
 adw = {package = "libadwaita", version = "0.7", features = ["v1_6"]}
 aes-gcm = "0.10"
 anyhow = "1.0"
-aperture = "0.7"
+aperture = "0.9"
 ashpd = {version = "0.9", default-features = false, features = ["gtk4", "tokio", "tracing"]}
 data-encoding = "2.3"
 diesel = {version = "2.0", features = ["sqlite", "r2d2"]}
@@ -48,3 +48,6 @@ uuid = {version = "1.0", features = ["v4"]}
 zbar-rust = "0.0"
 zeroize = {version = "1", features = ["zeroize_derive"]}
 zip = { version = "2.1", features = ["aes-crypto"] }
+
+[profile.dev.package.rqrr]
+opt-level = 3

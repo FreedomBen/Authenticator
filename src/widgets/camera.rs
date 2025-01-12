@@ -133,9 +133,13 @@ mod imp {
             self.viewfinder.connect_code_detected(glib::clone!(
                 #[weak]
                 obj,
-                move |_, code_type, code| {
-                    if matches!(code_type, aperture::CodeType::Qr) {
-                        obj.emit_by_name::<()>("code-detected", &[&code]);
+                move |_, code| {
+                    match std::str::from_utf8(&code) {
+                        Ok(code) => obj.emit_by_name::<()>("code-detected", &[&code]),
+                        Err(err) => {
+                            let code = String::from_utf8_lossy(&code);
+                            tracing::error!("Could not decode QR code {code}: {err}");
+                        }
                     }
                 }
             ));
