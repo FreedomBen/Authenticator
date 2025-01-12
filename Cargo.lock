@@ -290,6 +290,7 @@ dependencies = [
  "qrencode",
  "rand",
  "ring",
+ "rqrr",
  "rust-argon2",
  "scrypt",
  "search-provider",
@@ -300,7 +301,6 @@ dependencies = [
  "tracing-subscriber",
  "url",
  "uuid",
- "zbar-rust",
  "zeroize",
  "zip",
 ]
@@ -801,26 +801,6 @@ name = "endi"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a3d8a32ae18130a3c84dd492d4215c3d913c3b07c6b63c2eb3eb7ff1101ab7bf"
-
-[[package]]
-name = "enum-ordinalize"
-version = "4.3.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fea0dcfa4e54eeb516fe454635a95753ddd39acda650ce703031c6973e315dd5"
-dependencies = [
- "enum-ordinalize-derive",
-]
-
-[[package]]
-name = "enum-ordinalize-derive"
-version = "4.3.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0d28318a75d4aead5c4db25382e8ef717932d0346600cacae6357eb5941bc5ff"
-dependencies = [
- "proc-macro2",
- "quote",
- "syn",
-]
 
 [[package]]
 name = "enumflags2"
@@ -2730,6 +2710,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f126a9b02152815d84315316e7a759ee18a216d057095d56d19cec68a428b385"
 dependencies = [
  "g2p",
+ "image 0.25.4",
  "lru",
 ]
 
@@ -3721,17 +3702,6 @@ checksum = "ec1cdab258fb55c0da61328dc52c8764709b249011b2cad0454c72f0bf10a1f6"
 dependencies = [
  "libc",
  "windows-sys 0.59.0",
-]
-
-[[package]]
-name = "zbar-rust"
-version = "0.0.24"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f8f7bacc14b37fba9a631a76a5c87ba243ea31eebff12d592d320516472c4626"
-dependencies = [
- "enum-ordinalize",
- "libc",
- "pkg-config",
 ]
 
 [[package]]

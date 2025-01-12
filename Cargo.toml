@@ -35,6 +35,7 @@ prost = "0.13"
 qrencode = {version = "0.14", features = ["image"]}
 rand = "0.8"
 ring = "0.17"
+rqrr = { version = "0.9", default-features = false, features = ["img"] }
 rust-argon2 = {version = "2.0", default-features = false}
 scrypt = {version = "0.11", default-features = false}
 search-provider = {version = "0.10", default-features = false, features = ["tokio"]}
@@ -45,7 +46,6 @@ tracing = {version = "0.1", default-features = false}
 tracing-subscriber = {version = "0.3", default-features = false, features = ["fmt"]}
 url = "2.2"
 uuid = {version = "1.0", features = ["v4"]}
-zbar-rust = "0.0"
 zeroize = {version = "1", features = ["zeroize_derive"]}
 zip = { version = "2.1", features = ["aes-crypto"] }
 

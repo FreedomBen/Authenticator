@@ -12,7 +12,6 @@ use gtk::{
     glib::{self, clone},
     prelude::*,
 };
-use image::GenericImageView;
 
 use super::CameraRow;
 use crate::utils::spawn_tokio;
@@ -23,21 +22,18 @@ pub mod screenshot {
     pub fn scan(data: &[u8]) -> Result<String> {
         // remove the file after reading the data
         let img = image::load_from_memory(data)?;
+        let img_data = img.to_luma8();
+        let mut prepared_img = rqrr::PreparedImage::prepare(img_data);
+        let grids = prepared_img.detect_grids();
+        let mut decoded = Vec::new();
 
-        let (width, height) = img.dimensions();
-        let img_data: Vec<u8> = img.to_luma8().to_vec();
-
-        let mut scanner = zbar_rust::ZBarImageScanner::new();
-
-        let results = scanner
-            .scan_y800(&img_data, width, height)
-            .map_err(|e| anyhow::format_err!(e))?;
-
-        if let Some(result) = results.first() {
-            let content = String::from_utf8(result.data.clone())?;
-            return Ok(content);
+        if let Some(grid) = grids.first() {
+            grid.decode_to(&mut decoded)?;
+        } else {
+            anyhow::bail!("Invalid QR code")
         }
-        anyhow::bail!("Invalid QR code")
+
+        Ok(String::from_utf8(decoded)?)
     }
 
     pub async fn capture(window: Option<gtk::Window>) -> Result<gio::File> {
