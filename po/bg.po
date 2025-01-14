@@ -1,14 +1,14 @@
 # Bulgarian translation for authenticator.
 # Copyright (C) 2021 authenticator's COPYRIGHT HOLDER
 # This file is distributed under the same license as the authenticator package.
-# Stefan Marinov <smarnv@dnl.sk>, 2021.
+# Stefan Marinov <smarnv@dnl.sk>, 2021, 2025.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: authenticator master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2024-05-05 13:43+0000\n"
-"PO-Revision-Date: 2024-05-16 20:08+0200\n"
+"POT-Creation-Date: 2025-01-12 11:19+0000\n"
+"PO-Revision-Date: 2025-01-14 18:52+0100\n"
 "Last-Translator: Stefan Marinov <smarnv@dnl.sk>\n"
 "Language-Team: Bulgarian <dict@ludost.net>\n"
 "Language: bg\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"X-Generator: Gtranslator 3.38.0\n"
+"X-Generator: Gtranslator 47.1\n"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
-#: data/resources/ui/window.ui:36 src/application.rs:90 src/main.rs:40
+#: data/resources/ui/window.ui:36 src/application.rs:104 src/main.rs:40
 msgid "Authenticator"
 msgstr "Удостоверител"
 
@@ -30,15 +30,13 @@ msgstr "Двуфакторно удостоверяване на самолич�
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:5
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:92
+#: src/application.rs:106
 msgid "Generate two-factor codes"
 msgstr "Генериране на двуфакторни кодове"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:10
 msgid "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;"
-msgstr ""
-"гном;удостоверяване;потвърждаване;самоличност;верификация;автентикация;2фа;"
-"gnome;gtk;verification;2fa;authentication;otp;totp;"
+msgstr "гном;удостоверяване;потвърждаване;самоличност;верификация;автентикация;2фа;gnome;gtk;verification;2fa;authentication;otp;totp;"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:6
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:7
@@ -152,108 +150,108 @@ msgstr "Детайли на регистрацията"
 msgid "Backup/Restore formats support"
 msgstr "Поддръжка на формати за пренос на данни"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:292
+#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:308
 msgid "_Camera"
 msgstr "_Камера"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:296
+#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:312
 msgid "_Screenshot"
 msgstr "_Снимка на екрана"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:301
+#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:317
 msgid "_QR Code Image"
 msgstr "_Изображение с _QR код"
 
 #: data/resources/ui/account_add.ui:56
-msgid "Cancel"
-msgstr "Отказ"
+msgid "_Cancel"
+msgstr "_Отказване"
 
-#: data/resources/ui/account_add.ui:62
+#: data/resources/ui/account_add.ui:63
 msgid "_Add"
 msgstr "_Добавяне"
 
-#: data/resources/ui/account_add.ui:74 src/widgets/preferences/window.rs:287
+#: data/resources/ui/account_add.ui:75 src/widgets/preferences/window.rs:303
 msgid "Scan QR Code"
 msgstr "Сканиране на QR код"
 
-#: data/resources/ui/account_add.ui:112
+#: data/resources/ui/account_add.ui:113
 #: data/resources/ui/account_details_page.ui:96
 #: data/resources/ui/provider_page.ui:22
 #: data/resources/ui/providers_dialog.ui:108
 msgid "Provider"
 msgstr "Доставчик"
 
-#: data/resources/ui/account_add.ui:113
+#: data/resources/ui/account_add.ui:114
 msgid "Token issuer"
 msgstr "Издател на жетона"
 
-#: data/resources/ui/account_add.ui:127
+#: data/resources/ui/account_add.ui:128
 #: data/resources/ui/account_details_page.ui:91
 msgid "Account"
 msgstr "Регистрация"
 
-#: data/resources/ui/account_add.ui:133
+#: data/resources/ui/account_add.ui:134
 msgid "Token"
 msgstr "Жетон"
 
-#: data/resources/ui/account_add.ui:139
-#: data/resources/ui/account_details_page.ui:139
+#: data/resources/ui/account_add.ui:140
+#: data/resources/ui/account_details_page.ui:135
 #: data/resources/ui/provider_page.ui:158
 msgid "Counter"
 msgstr "Брояч"
 
-#: data/resources/ui/account_add.ui:157
+#: data/resources/ui/account_add.ui:158
 #: data/resources/ui/account_details_page.ui:119
 #: data/resources/ui/provider_page.ui:133
 msgid "Algorithm"
 msgstr "Алгоритъм"
 
-#: data/resources/ui/account_add.ui:169
-#: data/resources/ui/account_details_page.ui:129
+#: data/resources/ui/account_add.ui:166
+#: data/resources/ui/account_details_page.ui:127
 #: data/resources/ui/provider_page.ui:118
 msgid "Computing Method"
 msgstr "Метод за изчисление"
 
-#: data/resources/ui/account_add.ui:181
-#: data/resources/ui/account_details_page.ui:148
+#: data/resources/ui/account_add.ui:174
+#: data/resources/ui/account_details_page.ui:144
 #: data/resources/ui/provider_page.ui:149
 msgid "Period"
 msgstr "Период"
 
-#: data/resources/ui/account_add.ui:182
-#: data/resources/ui/account_details_page.ui:149
+#: data/resources/ui/account_add.ui:175
+#: data/resources/ui/account_details_page.ui:145
 #: data/resources/ui/provider_page.ui:150
 msgid "Duration in seconds until the next password update"
 msgstr "Времетраене (в секунди) до следващото обновяване на паролата"
 
-#: data/resources/ui/account_add.ui:194
-#: data/resources/ui/account_details_page.ui:159
+#: data/resources/ui/account_add.ui:183
+#: data/resources/ui/account_details_page.ui:153
 #: data/resources/ui/provider_page.ui:167
 msgid "Digits"
 msgstr "Цифри"
 
-#: data/resources/ui/account_add.ui:195
-#: data/resources/ui/account_details_page.ui:160
+#: data/resources/ui/account_add.ui:184
+#: data/resources/ui/account_details_page.ui:154
 #: data/resources/ui/provider_page.ui:168
 msgid "Length of the generated code"
 msgstr "Дължина на генерирания код"
 
-#: data/resources/ui/account_add.ui:207
-#: data/resources/ui/account_details_page.ui:170
+#: data/resources/ui/account_add.ui:192
+#: data/resources/ui/account_details_page.ui:162
 #: data/resources/ui/provider_page.ui:112
 msgid "Website"
 msgstr "Уебсайт"
 
-#: data/resources/ui/account_add.ui:212
+#: data/resources/ui/account_add.ui:197
 msgid "How to Set Up"
 msgstr "Ръководство за настройка"
 
-#: data/resources/ui/account_add.ui:232
+#: data/resources/ui/account_add.ui:217
 #: data/resources/ui/preferences_camera_page.ui:4
 msgid "Camera"
 msgstr "Камера"
 
-#: data/resources/ui/account_add.ui:244
+#: data/resources/ui/account_add.ui:229
 msgid "Create Provider"
 msgstr "Създаване на доставчик"
 
@@ -268,7 +266,7 @@ msgstr "_Запазване"
 msgid "_Delete"
 msgstr "_Изтриване"
 
-#: data/resources/ui/account_details_page.ui:175
+#: data/resources/ui/account_details_page.ui:167
 msgid "Help"
 msgstr "Помощ"
 
@@ -278,17 +276,17 @@ msgstr "Увеличаване на брояча"
 
 #: data/resources/ui/account_row.ui:34
 msgid "Copy PIN to clipboard"
-msgstr "Копиране на ПИН кода в буфера за обмяна"
+msgstr "Копиране на ПИН-а в буфера за обмяна"
 
 #: data/resources/ui/account_row.ui:43
 msgid "Account details"
 msgstr "Детайли за регистрацията"
 
-#: data/resources/ui/camera.ui:36
+#: data/resources/ui/camera.ui:35
 msgid "No Camera Found"
 msgstr "Не е намерена камера"
 
-#: data/resources/ui/camera.ui:39
+#: data/resources/ui/camera.ui:38
 msgid "_From a Screenshot"
 msgstr "_От снимка на екрана"
 
@@ -388,11 +386,11 @@ msgstr "Доставяне на икона на сайт при таксуван
 msgid "Backup/Restore"
 msgstr "Резервно копие/Възстановяване"
 
-#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:479
+#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:540
 msgid "Backup"
 msgstr "Създаване на резервно копие"
 
-#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:487
+#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:548
 msgid "Restore"
 msgstr "Възстановяване от резервно копие"
 
@@ -446,17 +444,17 @@ msgstr "Aдрес за помощ"
 msgid "Providers"
 msgstr "Доставчици"
 
-#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:209
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:208
 msgid "New Provider"
 msgstr "Нов доставчик"
 
 #: data/resources/ui/providers_dialog.ui:36
-#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:207
-#: data/resources/ui/window.ui:228
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:194
+#: data/resources/ui/window.ui:214
 msgid "Search"
 msgstr "Търсене"
 
-#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:202
+#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:209
 msgid "Search…"
 msgstr "Търсене…"
 
@@ -558,11 +556,11 @@ msgstr "_Отключване"
 msgid "Accounts"
 msgstr "Регистрации"
 
-#: data/resources/ui/window.ui:137 data/resources/ui/window.ui:176
+#: data/resources/ui/window.ui:137 data/resources/ui/window.ui:175
 msgid "New Account"
 msgstr "Нова регистрация"
 
-#: data/resources/ui/window.ui:145 data/resources/ui/window.ui:222
+#: data/resources/ui/window.ui:145 data/resources/ui/window.ui:188
 msgid "Main Menu"
 msgstr "Основно меню"
 
@@ -574,20 +572,20 @@ msgstr "Няма регистрации"
 msgid "Add an account or scan a QR code first."
 msgstr "Първо добавете регистрация или сканирайте QR код."
 
-#: src/application.rs:77
+#: src/application.rs:84
 msgid "Accounts restored successfully"
 msgstr "Успешно възстановена регистрация"
 
-#: src/application.rs:101
+#: src/application.rs:115
 msgid "translator-credits"
 msgstr ""
 "Стефан Маринов &lt;<a href='mailto:smarnv@dnl.sk'>smarnv@dnl.sk</a>&gt;"
 
-#: src/application.rs:388 src/widgets/accounts/row.rs:45
+#: src/application.rs:424 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Еднократната парола е копирана"
 
-#: src/application.rs:389
+#: src/application.rs:425
 msgid "Password was copied successfully"
 msgstr "Успешно копирана парола"
 
@@ -695,28 +693,28 @@ msgstr "Времеви"
 msgid "Steam"
 msgstr "Steam"
 
-#: src/models/algorithm.rs:126
+#: src/models/algorithm.rs:125
 msgid "SHA-1"
 msgstr "SHA-1"
 
-#: src/models/algorithm.rs:127
+#: src/models/algorithm.rs:126
 msgid "SHA-256"
 msgstr "SHA-256"
 
-#: src/models/algorithm.rs:128
+#: src/models/algorithm.rs:127
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:268 src/widgets/preferences/window.rs:416
-#: src/widgets/providers/page.rs:292
+#: src/widgets/accounts/add.rs:270 src/widgets/preferences/window.rs:477
+#: src/widgets/providers/page.rs:291
 msgid "Image"
 msgstr "Изображение"
 
-#: src/widgets/accounts/add.rs:276 src/widgets/preferences/window.rs:424
+#: src/widgets/accounts/add.rs:278 src/widgets/preferences/window.rs:485
 msgid "Select QR Code"
 msgstr "Сканиране на QR код"
 
-#: src/widgets/accounts/add.rs:294
+#: src/widgets/accounts/add.rs:296
 msgid "Invalid Token"
 msgstr "Неправилен жетон"
 
@@ -736,56 +734,56 @@ msgstr "Не"
 msgid "Yes"
 msgstr "Да"
 
-#: src/widgets/preferences/password_page.rs:172
-#: src/widgets/preferences/password_page.rs:214
+#: src/widgets/preferences/password_page.rs:195
+#: src/widgets/preferences/password_page.rs:237
 msgid "Wrong Passphrase"
 msgstr "Грешна парола"
 
-#: src/widgets/preferences/window.rs:191 src/widgets/preferences/window.rs:263
+#: src/widgets/preferences/window.rs:197 src/widgets/preferences/window.rs:279
 msgid "Key / Passphrase"
 msgstr "Ключ/Паролна фраза"
 
-#: src/widgets/preferences/window.rs:202 src/widgets/preferences/window.rs:275
+#: src/widgets/preferences/window.rs:208 src/widgets/preferences/window.rs:291
 msgid "Select File"
 msgstr "Избор на файл"
 
-#: src/widgets/preferences/window.rs:226
+#: src/widgets/preferences/window.rs:239
 msgid "Failed to create a backup"
 msgstr "Неуспешно създаване на резервно копие"
 
-#: src/widgets/preferences/window.rs:338
+#: src/widgets/preferences/window.rs:361
 msgid "Failed to restore from camera"
 msgstr "Неуспешно възстановяване от камера"
 
-#: src/widgets/preferences/window.rs:349
+#: src/widgets/preferences/window.rs:386
 msgid "Failed to restore from a screenshot"
 msgstr "Неуспешно възстановяване от снимка на екрана"
 
-#: src/widgets/preferences/window.rs:359
+#: src/widgets/preferences/window.rs:406
 msgid "Failed to restore from an image"
 msgstr "Неуспешно възстановяване от изображение"
 
-#: src/widgets/preferences/window.rs:372
+#: src/widgets/preferences/window.rs:430
 msgid "Failed to restore from a file"
 msgstr "Неуспешно възстановяване от файл"
 
-#: src/widgets/providers/dialog.rs:251
+#: src/widgets/providers/dialog.rs:261
 msgid "Provider created successfully"
 msgstr "Успешно създаден доставчик"
 
-#: src/widgets/providers/dialog.rs:261
+#: src/widgets/providers/dialog.rs:271
 msgid "Provider updated successfully"
 msgstr "Успешно обновен доставчик"
 
-#: src/widgets/providers/dialog.rs:277
+#: src/widgets/providers/dialog.rs:287
 msgid "Provider removed successfully"
-msgstr "Успешно изтрит доставчик<"
+msgstr "Успешно изтрит доставчик"
 
-#: src/widgets/providers/page.rs:186
+#: src/widgets/providers/page.rs:185
 msgid "Editing Provider: {}"
 msgstr "Промяна на доставчик: {}"
 
-#: src/widgets/providers/page.rs:325
+#: src/widgets/providers/page.rs:324
 msgid "The provider has accounts assigned to it, please remove them first"
 msgstr "Има регистрации към този доставчик — първо ги изтрийте"
 
