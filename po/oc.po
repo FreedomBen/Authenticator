@@ -7,15 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2024-07-29 20:35+0000\n"
-"PO-Revision-Date: 2024-01-12 09:23+0100\n"
+"POT-Creation-Date: 2025-01-10 20:51+0000\n"
+"PO-Revision-Date: 2025-01-24 06:56+0100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: \n"
 "Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
@@ -37,7 +37,7 @@ msgstr "Generar de còdis a dos factors"
 msgid "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;"
 msgstr ""
 "Gnome;GTK;Verificacion;2FA;Dos temps;Dos factors;autentificacion;"
-"identificacion;OTP;TOTP;Còdis;Getons"
+"identificacion;OTP;TOTP;Còdis;Getons;"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:6
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:7
@@ -166,95 +166,95 @@ msgid "_QR Code Image"
 msgstr "_Image còdi QR"
 
 #: data/resources/ui/account_add.ui:56
-msgid "Cancel"
-msgstr "Anullar"
+msgid "_Cancel"
+msgstr "_Anullar"
 
-#: data/resources/ui/account_add.ui:62
+#: data/resources/ui/account_add.ui:63
 msgid "_Add"
 msgstr "_Apondre"
 
-#: data/resources/ui/account_add.ui:74 src/widgets/preferences/window.rs:303
+#: data/resources/ui/account_add.ui:75 src/widgets/preferences/window.rs:303
 msgid "Scan QR Code"
 msgstr "Numerizar un còdis QR"
 
-#: data/resources/ui/account_add.ui:112
+#: data/resources/ui/account_add.ui:113
 #: data/resources/ui/account_details_page.ui:96
 #: data/resources/ui/provider_page.ui:22
 #: data/resources/ui/providers_dialog.ui:108
 msgid "Provider"
 msgstr "Provesidor"
 
-#: data/resources/ui/account_add.ui:113
+#: data/resources/ui/account_add.ui:114
 msgid "Token issuer"
 msgstr "Emetedor de geton"
 
-#: data/resources/ui/account_add.ui:127
+#: data/resources/ui/account_add.ui:128
 #: data/resources/ui/account_details_page.ui:91
 msgid "Account"
 msgstr "Compte"
 
-#: data/resources/ui/account_add.ui:133
+#: data/resources/ui/account_add.ui:134
 msgid "Token"
 msgstr "Geton"
 
-#: data/resources/ui/account_add.ui:139
-#: data/resources/ui/account_details_page.ui:139
+#: data/resources/ui/account_add.ui:140
+#: data/resources/ui/account_details_page.ui:135
 #: data/resources/ui/provider_page.ui:158
 msgid "Counter"
 msgstr "Comptador"
 
-#: data/resources/ui/account_add.ui:157
+#: data/resources/ui/account_add.ui:158
 #: data/resources/ui/account_details_page.ui:119
 #: data/resources/ui/provider_page.ui:133
 msgid "Algorithm"
 msgstr "Algoritme"
 
-#: data/resources/ui/account_add.ui:169
-#: data/resources/ui/account_details_page.ui:129
+#: data/resources/ui/account_add.ui:166
+#: data/resources/ui/account_details_page.ui:127
 #: data/resources/ui/provider_page.ui:118
 msgid "Computing Method"
 msgstr "Metòde de calcul"
 
-#: data/resources/ui/account_add.ui:181
-#: data/resources/ui/account_details_page.ui:148
+#: data/resources/ui/account_add.ui:174
+#: data/resources/ui/account_details_page.ui:144
 #: data/resources/ui/provider_page.ui:149
 msgid "Period"
 msgstr "Periòde"
 
-#: data/resources/ui/account_add.ui:182
-#: data/resources/ui/account_details_page.ui:149
+#: data/resources/ui/account_add.ui:175
+#: data/resources/ui/account_details_page.ui:145
 #: data/resources/ui/provider_page.ui:150
 msgid "Duration in seconds until the next password update"
 msgstr "Durada en segonda fins a l’actualizacion venenta del senhal"
 
-#: data/resources/ui/account_add.ui:194
-#: data/resources/ui/account_details_page.ui:159
+#: data/resources/ui/account_add.ui:183
+#: data/resources/ui/account_details_page.ui:153
 #: data/resources/ui/provider_page.ui:167
 msgid "Digits"
 msgstr "Chifras"
 
-#: data/resources/ui/account_add.ui:195
-#: data/resources/ui/account_details_page.ui:160
+#: data/resources/ui/account_add.ui:184
+#: data/resources/ui/account_details_page.ui:154
 #: data/resources/ui/provider_page.ui:168
 msgid "Length of the generated code"
 msgstr "Longor del còdi generat"
 
-#: data/resources/ui/account_add.ui:207
-#: data/resources/ui/account_details_page.ui:170
+#: data/resources/ui/account_add.ui:192
+#: data/resources/ui/account_details_page.ui:162
 #: data/resources/ui/provider_page.ui:112
 msgid "Website"
 msgstr "Site Web"
 
-#: data/resources/ui/account_add.ui:212
+#: data/resources/ui/account_add.ui:197
 msgid "How to Set Up"
 msgstr "Cossí configurar"
 
-#: data/resources/ui/account_add.ui:232
+#: data/resources/ui/account_add.ui:217
 #: data/resources/ui/preferences_camera_page.ui:4
 msgid "Camera"
 msgstr "Camèra"
 
-#: data/resources/ui/account_add.ui:244
+#: data/resources/ui/account_add.ui:229
 msgid "Create Provider"
 msgstr "Crear un provesidor"
 
@@ -269,7 +269,7 @@ msgstr "_Enregistrar"
 msgid "_Delete"
 msgstr "_Suprimir"
 
-#: data/resources/ui/account_details_page.ui:175
+#: data/resources/ui/account_details_page.ui:167
 msgid "Help"
 msgstr "Ajuda"
 
@@ -448,17 +448,17 @@ msgstr "URL d'Ajuda"
 msgid "Providers"
 msgstr "Provesidors"
 
-#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:209
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:208
 msgid "New Provider"
 msgstr "Provesidor novèl"
 
 #: data/resources/ui/providers_dialog.ui:36
-#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:207
-#: data/resources/ui/window.ui:228
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:194
+#: data/resources/ui/window.ui:214
 msgid "Search"
 msgstr "Recercar"
 
-#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:202
+#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:209
 msgid "Search…"
 msgstr "Recercar…"
 
@@ -560,11 +560,11 @@ msgstr "_Desverrolhar"
 msgid "Accounts"
 msgstr "Comptes"
 
-#: data/resources/ui/window.ui:137 data/resources/ui/window.ui:176
+#: data/resources/ui/window.ui:137 data/resources/ui/window.ui:175
 msgid "New Account"
 msgstr "Compte novèl"
 
-#: data/resources/ui/window.ui:145 data/resources/ui/window.ui:222
+#: data/resources/ui/window.ui:145 data/resources/ui/window.ui:188
 msgid "Main Menu"
 msgstr "Menú principal"
 
@@ -709,7 +709,7 @@ msgid "SHA-512"
 msgstr "SHA-512"
 
 #: src/widgets/accounts/add.rs:270 src/widgets/preferences/window.rs:477
-#: src/widgets/providers/page.rs:292
+#: src/widgets/providers/page.rs:291
 msgid "Image"
 msgstr "Imatge"
 
@@ -735,7 +735,7 @@ msgstr "Non"
 
 #: src/widgets/accounts/details.rs:126
 msgid "Yes"
-msgstr "Òc "
+msgstr "Òc"
 
 #: src/widgets/preferences/password_page.rs:195
 #: src/widgets/preferences/password_page.rs:237
@@ -770,23 +770,23 @@ msgstr "Fracàs de la restauracion a partir d’un imatge"
 msgid "Failed to restore from a file"
 msgstr "Fracàs de la restauracion a partir d’un fichièr"
 
-#: src/widgets/providers/dialog.rs:262
+#: src/widgets/providers/dialog.rs:261
 msgid "Provider created successfully"
 msgstr "Provesidor creat amb succès"
 
-#: src/widgets/providers/dialog.rs:272
+#: src/widgets/providers/dialog.rs:271
 msgid "Provider updated successfully"
 msgstr "Provesidor actualizat amb succès"
 
-#: src/widgets/providers/dialog.rs:288
+#: src/widgets/providers/dialog.rs:287
 msgid "Provider removed successfully"
 msgstr "Provesidor suprimit amb succès"
 
-#: src/widgets/providers/page.rs:186
+#: src/widgets/providers/page.rs:185
 msgid "Editing Provider: {}"
 msgstr "Modificacion provesidor : {}"
 
-#: src/widgets/providers/page.rs:325
+#: src/widgets/providers/page.rs:324
 msgid "The provider has accounts assigned to it, please remove them first"
 msgstr "Lo provesidor a de comptes atribuits, mercés de los suprimir abans"
 
