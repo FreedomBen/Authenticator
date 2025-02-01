@@ -17,7 +17,7 @@ adw = {package = "libadwaita", version = "0.7", features = ["v1_6"]}
 aes-gcm = "0.10"
 anyhow = "1.0"
 aperture = "0.9"
-ashpd = {version = "0.9", default-features = false, features = ["gtk4", "tokio", "tracing"]}
+ashpd = {version = "0.10", default-features = false, features = ["gtk4", "tokio", "tracing"]}
 data-encoding = "2.3"
 diesel = {version = "2.0", features = ["sqlite", "r2d2"]}
 diesel_migrations = {version = "2.0", features = ["sqlite"]}
@@ -33,7 +33,7 @@ oo7 = {version = "0.3", default-features = false, features = ["tokio", "native_c
 percent-encoding = "2.1"
 prost = "0.13"
 qrencode = {version = "0.14", features = ["image"]}
-rand = "0.8"
+rand = { version = "0.9", default-features = false, features = ["thread_rng"] }
 ring = "0.17"
 rqrr = { version = "0.9", default-features = false, features = ["img"] }
 rust-argon2 = {version = "2.0", default-features = false}

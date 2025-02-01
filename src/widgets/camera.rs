@@ -40,7 +40,7 @@ pub mod screenshot {
         let identifier = if let Some(ref window) = window {
             ashpd::WindowIdentifier::from_native(window).await
         } else {
-            ashpd::WindowIdentifier::default()
+            None
         };
         let uri = spawn_tokio(async {
             ScreenshotRequest::default()

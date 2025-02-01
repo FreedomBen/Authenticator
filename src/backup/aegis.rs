@@ -77,7 +77,7 @@ impl Aegis {
 
     pub fn encrypt(&mut self, password: &str) -> Result<()> {
         // Create a new master key
-        let mut rng = rand::thread_rng();
+        let mut rng = rand::rng();
         let mut master_key = [0u8; 32];
         rng.fill_bytes(&mut master_key);
 
@@ -219,7 +219,7 @@ impl HeaderSlot {
 
 impl Default for HeaderSlot {
     fn default() -> Self {
-        let mut rng = rand::thread_rng();
+        let mut rng = rand::rng();
         let mut salt = [0u8; 32];
         rng.fill_bytes(&mut salt);
 
@@ -247,7 +247,7 @@ pub struct HeaderParam {
 
 impl Default for HeaderParam {
     fn default() -> Self {
-        let mut rng = rand::thread_rng();
+        let mut rng = rand::rng();
         let mut nonce = [0u8; 12];
         rng.fill_bytes(&mut nonce);
 

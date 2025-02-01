@@ -21,7 +21,7 @@ fn password_attributes() -> HashMap<&'static str, &'static str> {
 fn encode_argon2(secret: &str) -> anyhow::Result<String> {
     let password = secret.as_bytes();
     let mut salt = [0u8; 64];
-    rand::thread_rng().fill_bytes(&mut salt);
+    rand::rng().fill_bytes(&mut salt);
     let config = argon2::Config::default();
     let hash = argon2::hash_encoded(password, &salt, &config)?;
 
