@@ -83,10 +83,6 @@ glib::wrapper! {
 }
 
 impl PreferencesWindow {
-    pub fn new() -> Self {
-        glib::Object::new()
-    }
-
     fn setup_widget(&self) {
         let imp = self.imp();
 
@@ -135,5 +131,11 @@ impl PreferencesWindow {
             .add_action_entries([show_password_page, close_page]);
 
         self.insert_action_group("preferences", Some(&imp.actions));
+    }
+}
+
+impl Default for PreferencesWindow {
+    fn default() -> Self {
+        glib::Object::new()
     }
 }

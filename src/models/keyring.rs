@@ -83,7 +83,7 @@ pub async fn has_set_password() -> anyhow::Result<bool> {
         .search_items(&attributes)
         .await
     {
-        Ok(items) => Ok(items.first().is_some()),
+        Ok(items) => Ok(!items.is_empty()),
         _ => Ok(false),
     }
 }

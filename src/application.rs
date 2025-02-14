@@ -91,7 +91,7 @@ mod imp {
             let preferences_action = gio::ActionEntry::builder("preferences")
                 .activate(|app: &Self::Type, _, _| {
                     let window = app.active_window();
-                    let preferences = PreferencesWindow::new();
+                    let preferences = PreferencesWindow::default();
                     preferences.set_has_set_password(app.can_be_locked());
                     preferences.connect_has_set_password_notify(clone!(
                         #[weak]
