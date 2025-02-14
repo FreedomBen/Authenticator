@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: authenticator master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2025-01-10 20:51+0000\n"
-"PO-Revision-Date: 2025-01-14 14:35+0800\n"
+"POT-Creation-Date: 2025-02-10 11:13+0000\n"
+"PO-Revision-Date: 2025-02-14 19:52+0800\n"
 "Last-Translator: lumingzh <lumingzh@qq.com>\n"
 "Language-Team: Chinese (China) <i18n-zh@googlegroups.com>\n"
 "Language: zh_CN\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
-#: data/resources/ui/window.ui:36 src/application.rs:104 src/main.rs:40
+#: data/resources/ui/window.ui:40 src/application.rs:112 src/main.rs:40
 msgid "Authenticator"
 msgstr "验证器"
 
@@ -34,7 +34,7 @@ msgstr "双因素认证"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:5
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:106
+#: src/application.rs:114
 msgid "Generate two-factor codes"
 msgstr "生成双因素验证码"
 
@@ -153,15 +153,15 @@ msgstr "账号详情"
 msgid "Backup/Restore formats support"
 msgstr "支持的备份/恢复格式"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:308
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:274
 msgid "_Camera"
 msgstr "摄像头(_C)"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:312
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:278
 msgid "_Screenshot"
 msgstr "截图(_S)"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:317
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:283
 msgid "_QR Code Image"
 msgstr "二维码(_Q)"
 
@@ -173,7 +173,7 @@ msgstr "取消(_C)"
 msgid "_Add"
 msgstr "添加(_A)"
 
-#: data/resources/ui/account_add.ui:75 src/widgets/preferences/window.rs:303
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:269
 msgid "Scan QR Code"
 msgstr "扫描二维码"
 
@@ -285,6 +285,18 @@ msgstr "复制验证码到剪贴板"
 msgid "Account details"
 msgstr "账号详情"
 
+#: data/resources/ui/backup_dialog.ui:4 data/resources/ui/backup_dialog.ui:8
+msgid "Backup & Restore"
+msgstr "备份与恢复"
+
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:506
+msgid "Backup"
+msgstr "备份"
+
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:514
+msgid "Restore"
+msgstr "恢复"
+
 #: data/resources/ui/camera.ui:35
 msgid "No Camera Found"
 msgstr "未找到摄像头"
@@ -326,69 +338,57 @@ msgid ""
 "details."
 msgstr "请查阅应用程序日志和您的发行版文档获取更多详情。"
 
-#: data/resources/ui/preferences.ui:16
+#: data/resources/ui/preferences.ui:14
 msgid "General"
 msgstr "常规"
 
-#: data/resources/ui/preferences.ui:19
+#: data/resources/ui/preferences.ui:17
 msgid "Privacy"
 msgstr "隐私"
 
-#: data/resources/ui/preferences.ui:22
+#: data/resources/ui/preferences.ui:20
 msgid "_Passphrase"
 msgstr "密码(_P)"
 
-#: data/resources/ui/preferences.ui:24
+#: data/resources/ui/preferences.ui:22
 msgid "Set up a passphrase to lock the application with"
 msgstr "设置密码以锁定本应用程序"
 
-#: data/resources/ui/preferences.ui:37
+#: data/resources/ui/preferences.ui:35
 msgid "_Auto Lock the Application"
 msgstr "自动锁定应用程序(_A)"
 
-#: data/resources/ui/preferences.ui:39
+#: data/resources/ui/preferences.ui:37
 msgid "Whether to automatically lock the application"
 msgstr "是否自动锁定本应用程序"
 
-#: data/resources/ui/preferences.ui:45
+#: data/resources/ui/preferences.ui:43
 msgid "Auto Lock _Timeout"
 msgstr "自动锁定时间(_T)"
 
-#: data/resources/ui/preferences.ui:46
+#: data/resources/ui/preferences.ui:44
 msgid "The time in minutes"
 msgstr "超时时间，单位为分钟"
 
-#: data/resources/ui/preferences.ui:59
+#: data/resources/ui/preferences.ui:57
 msgid "Network"
 msgstr "网络"
 
-#: data/resources/ui/preferences.ui:62
+#: data/resources/ui/preferences.ui:60
 msgid "_Download Favicons"
 msgstr "下载网站图标(_D)"
 
-#: data/resources/ui/preferences.ui:64
+#: data/resources/ui/preferences.ui:62
 msgid "Automatically attempt fetching a website icon"
 msgstr "自动尝试获取网站图标"
 
-#: data/resources/ui/preferences.ui:69
+#: data/resources/ui/preferences.ui:67
 msgid "_Metered Connection"
 msgstr "按流量计费的连接(_M)"
 
-#: data/resources/ui/preferences.ui:71
+#: data/resources/ui/preferences.ui:69
 msgid "Fetch a website icon on a metered connection"
 msgstr "在按流量计费的连接下获取网站图标"
-
-#: data/resources/ui/preferences.ui:81
-msgid "Backup/Restore"
-msgstr "备份/恢复"
-
-#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:540
-msgid "Backup"
-msgstr "备份"
-
-#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:548
-msgid "Restore"
-msgstr "恢复"
 
 #: data/resources/ui/preferences_password_page.ui:4
 msgid "Create Password"
@@ -445,12 +445,12 @@ msgid "New Provider"
 msgstr "新建提供方"
 
 #: data/resources/ui/providers_dialog.ui:36
-#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:194
-#: data/resources/ui/window.ui:214
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:198
+#: data/resources/ui/window.ui:218
 msgid "Search"
 msgstr "搜索"
 
-#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:209
+#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:213
 msgid "Search…"
 msgstr "搜索…"
 
@@ -532,47 +532,51 @@ msgstr "提供方(_R)"
 msgid "_Preferences"
 msgstr "首选项(_P)"
 
-#: data/resources/ui/window.ui:22
+#: data/resources/ui/window.ui:20
+msgid "_Backup & Restore"
+msgstr "备份与恢复(_B)"
+
+#: data/resources/ui/window.ui:26
 msgid "_Keyboard Shortcuts"
 msgstr "键盘快捷键(_K)"
 
-#: data/resources/ui/window.ui:26
+#: data/resources/ui/window.ui:30
 msgid "_About Authenticator"
 msgstr "关于验证器(_A)"
 
-#: data/resources/ui/window.ui:66
+#: data/resources/ui/window.ui:70
 msgid "Authenticator is Locked"
 msgstr "验证器已锁定"
 
-#: data/resources/ui/window.ui:92
+#: data/resources/ui/window.ui:96
 msgid "_Unlock"
 msgstr "解锁(_U)"
 
-#: data/resources/ui/window.ui:122
+#: data/resources/ui/window.ui:126
 msgid "Accounts"
 msgstr "账号"
 
-#: data/resources/ui/window.ui:137 data/resources/ui/window.ui:175
+#: data/resources/ui/window.ui:141 data/resources/ui/window.ui:179
 msgid "New Account"
 msgstr "新建账号"
 
-#: data/resources/ui/window.ui:145 data/resources/ui/window.ui:188
+#: data/resources/ui/window.ui:149 data/resources/ui/window.ui:192
 msgid "Main Menu"
 msgstr "主菜单"
 
-#: data/resources/ui/window.ui:153
+#: data/resources/ui/window.ui:157
 msgid "No Accounts"
 msgstr "无账号"
 
-#: data/resources/ui/window.ui:154
+#: data/resources/ui/window.ui:158
 msgid "Add an account or scan a QR code first."
 msgstr "请先添加账号或扫描二维码。"
 
-#: src/application.rs:84
+#: src/application.rs:83
 msgid "Accounts restored successfully"
 msgstr "账号已成功恢复"
 
-#: src/application.rs:115
+#: src/application.rs:123
 msgid "translator-credits"
 msgstr ""
 "Boyuan Yang <073plan@gmail.com>, 2020.\n"
@@ -582,11 +586,11 @@ msgstr ""
 "lumingzh <lumingzh@qq.com>, 2022-2025.\n"
 "Eni <enigma@petalmail.com>, 2023."
 
-#: src/application.rs:424 src/widgets/accounts/row.rs:45
+#: src/application.rs:434 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "动态口令已复制"
 
-#: src/application.rs:425
+#: src/application.rs:435
 msgid "Password was copied successfully"
 msgstr "密码已成功复制"
 
@@ -706,12 +710,12 @@ msgstr "SHA-256"
 msgid "SHA-512"
 msgstr "SHA-256"
 
-#: src/widgets/accounts/add.rs:270 src/widgets/preferences/window.rs:477
+#: src/widgets/accounts/add.rs:270 src/widgets/backup/dialog.rs:443
 #: src/widgets/providers/page.rs:291
 msgid "Image"
 msgstr "图像"
 
-#: src/widgets/accounts/add.rs:278 src/widgets/preferences/window.rs:485
+#: src/widgets/accounts/add.rs:278 src/widgets/backup/dialog.rs:451
 msgid "Select QR Code"
 msgstr "选择二维码"
 
@@ -735,38 +739,38 @@ msgstr "否"
 msgid "Yes"
 msgstr "是"
 
+#: src/widgets/backup/dialog.rs:163 src/widgets/backup/dialog.rs:245
+msgid "Key / Passphrase"
+msgstr "密钥/密码"
+
+#: src/widgets/backup/dialog.rs:174 src/widgets/backup/dialog.rs:257
+msgid "Select File"
+msgstr "选择文件"
+
+#: src/widgets/backup/dialog.rs:205
+msgid "Failed to create a backup"
+msgstr "创建备份失败"
+
+#: src/widgets/backup/dialog.rs:327
+msgid "Failed to restore from camera"
+msgstr "从相机中恢复失败"
+
+#: src/widgets/backup/dialog.rs:352
+msgid "Failed to restore from a screenshot"
+msgstr "从屏幕截图中恢复失败"
+
+#: src/widgets/backup/dialog.rs:372
+msgid "Failed to restore from an image"
+msgstr "从图片中恢复失败"
+
+#: src/widgets/backup/dialog.rs:396
+msgid "Failed to restore from a file"
+msgstr "从文件中恢复失败"
+
 #: src/widgets/preferences/password_page.rs:195
 #: src/widgets/preferences/password_page.rs:237
 msgid "Wrong Passphrase"
 msgstr "错误的密码"
-
-#: src/widgets/preferences/window.rs:197 src/widgets/preferences/window.rs:279
-msgid "Key / Passphrase"
-msgstr "密钥/密码"
-
-#: src/widgets/preferences/window.rs:208 src/widgets/preferences/window.rs:291
-msgid "Select File"
-msgstr "选择文件"
-
-#: src/widgets/preferences/window.rs:239
-msgid "Failed to create a backup"
-msgstr "创建备份失败"
-
-#: src/widgets/preferences/window.rs:361
-msgid "Failed to restore from camera"
-msgstr "从相机中恢复失败"
-
-#: src/widgets/preferences/window.rs:386
-msgid "Failed to restore from a screenshot"
-msgstr "从屏幕截图中恢复失败"
-
-#: src/widgets/preferences/window.rs:406
-msgid "Failed to restore from an image"
-msgstr "从图片中恢复失败"
-
-#: src/widgets/preferences/window.rs:430
-msgid "Failed to restore from a file"
-msgstr "从文件中恢复失败"
 
 #: src/widgets/providers/dialog.rs:261
 msgid "Provider created successfully"
