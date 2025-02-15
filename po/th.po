@@ -1,0 +1,782 @@
+# Thai translation for authenticator.
+# Copyright (C) 2025 authenticator's COPYRIGHT HOLDER
+# This file is distributed under the same license as the authenticator package.
+# Aefgh Threenine <aefgh39622@gmail.com>,  2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: authenticator master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
+"POT-Creation-Date: 2025-02-10 16:06+0000\n"
+"PO-Revision-Date: 2025-02-15 19:28+0700\n"
+"Last-Translator: \n"
+"Language-Team: Thai <th@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
+#: data/resources/ui/window.ui:40 src/application.rs:112 src/main.rs:40
+msgid "Authenticator"
+msgstr "Authenticator"
+
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
+msgid "Two-Factor Authentication"
+msgstr "การยืนยันตัวตนสองขั้นตอน"
+
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:5
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
+#: src/application.rs:114
+msgid "Generate two-factor codes"
+msgstr "สร้างรหัสสองขั้นตอน"
+
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:10
+msgid "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;"
+msgstr "Gnome;GTK;2FA;ยืนยันตัวตน;OTP;TOTP;"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:6
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:7
+msgid "Default window width"
+msgstr ""
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:11
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:12
+msgid "Default window height"
+msgstr ""
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:16
+msgid "Default window maximized behaviour"
+msgstr ""
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:21
+msgid "Auto lock"
+msgstr ""
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:22
+msgid "Whether to auto lock the application or not"
+msgstr ""
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:26
+msgid "Auto lock timeout"
+msgstr ""
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:27
+msgid "Lock the application on idle after X minutes"
+msgstr ""
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:34
+msgid "Download Favicons"
+msgstr "ดาวน์โหลด Favicon"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:35
+msgid ""
+"Whether the application should attempt to find an icon for the providers."
+msgstr "กำหนดว่าแอปพลิเคชันควรพยายามค้นหาไอคอนสำหรับผู้ให้บริการด้วยหรือไม่"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:39
+msgid "Download Favicons over metered connections"
+msgstr "ดาวน์โหลด Favicon ผ่านการเชื่อมต่อแบบคิดปริมาณ"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:40
+msgid ""
+"Whether the application should download favicons over a metered connection."
+msgstr "กำหนดว่าแอปพลิเคชันควรดาวน์โหลด favicon ผ่านการเชื่อมต่อแบบคิดปริมาณหรือไม่"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:10
+msgid "Simple application for generating Two-Factor Authentication Codes."
+msgstr "แอปพลิเคชันอย่างง่ายสำหรับสร้างรหัสยืนยันตัวตนสองขั้นตอน"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:11
+msgid "Features:"
+msgstr "คุณลักษณะ:"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:13
+msgid "Time-based/Counter-based/Steam methods support"
+msgstr "รองรับวิธีการแบบ Time-based/Counter-based/Steam"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:14
+msgid "SHA-1/SHA-256/SHA-512 algorithms support"
+msgstr "รองรับอัลกอริทึม SHA-1/SHA-256/SHA-512"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:15
+msgid "QR code scanner using a camera or from a screenshot"
+msgstr "ตัวสแกนคิวอาร์โค้ดโดยใช้กล้องหรือจากภาพถ่ายหน้าจอ"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:16
+msgid "Lock the application with a password"
+msgstr "ล็อกแอปพลิเคชันด้วยรหัสผ่าน"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:17
+msgid "Beautiful UI"
+msgstr "UI ที่สวยงาม"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:18
+msgid "GNOME Shell search provider"
+msgstr "ตัวให้บริการค้นหาเชลล์ GNOME"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:19
+msgid ""
+"Backup/Restore from/into known applications like FreeOTP+, Aegis "
+"(encrypted / plain-text), andOTP, Google Authenticator"
+msgstr ""
+"สำรอง/เรียกคืนข้อมูลจาก/ไปยังแอปพลิเคชันที่รู้จัก เช่น FreeOTP+, Aegis (encrypted / plain-"
+"text), andOTP, Google Authenticator"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:25
+msgid "Main Window"
+msgstr "หน้าต่างหลัก"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:29
+#: data/resources/ui/account_add.ui:30 data/resources/ui/account_add.ui:47
+msgid "Add a New Account"
+msgstr "เพิ่มบัญชีใหม่"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:33
+msgid "Add a New Provider"
+msgstr "เพิ่มผู้ให้บริการใหม่"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:37
+msgid "Account Details"
+msgstr "รายละเอียดบัญชี"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:41
+msgid "Backup/Restore formats support"
+msgstr "การรองรับรูปแบบสำหรับสำรอง/เรียกคืนข้อมูล"
+
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:274
+msgid "_Camera"
+msgstr "_กล้อง"
+
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:278
+msgid "_Screenshot"
+msgstr "_ภาพถ่ายหน้าจอ"
+
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:283
+msgid "_QR Code Image"
+msgstr "ภาพ_คิวอาร์โค้ด"
+
+#: data/resources/ui/account_add.ui:56
+msgid "_Cancel"
+msgstr "_ยกเลิก"
+
+#: data/resources/ui/account_add.ui:63
+msgid "_Add"
+msgstr "เ_พิ่ม"
+
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:269
+msgid "Scan QR Code"
+msgstr "สแกนคิวอาร์โค้ด"
+
+#: data/resources/ui/account_add.ui:113
+#: data/resources/ui/account_details_page.ui:96
+#: data/resources/ui/provider_page.ui:22
+#: data/resources/ui/providers_dialog.ui:108
+msgid "Provider"
+msgstr "ผู้ให้บริการ"
+
+#: data/resources/ui/account_add.ui:114
+msgid "Token issuer"
+msgstr "ผู้ออกโทเค็น"
+
+#: data/resources/ui/account_add.ui:128
+#: data/resources/ui/account_details_page.ui:91
+msgid "Account"
+msgstr "บัญชี"
+
+#: data/resources/ui/account_add.ui:134
+msgid "Token"
+msgstr "โทเค็น"
+
+#: data/resources/ui/account_add.ui:140
+#: data/resources/ui/account_details_page.ui:135
+#: data/resources/ui/provider_page.ui:158
+msgid "Counter"
+msgstr "ตัวนับ"
+
+#: data/resources/ui/account_add.ui:158
+#: data/resources/ui/account_details_page.ui:119
+#: data/resources/ui/provider_page.ui:133
+msgid "Algorithm"
+msgstr "อัลกอริทึม"
+
+#: data/resources/ui/account_add.ui:166
+#: data/resources/ui/account_details_page.ui:127
+#: data/resources/ui/provider_page.ui:118
+msgid "Computing Method"
+msgstr "วิธีการคำนวณ"
+
+#: data/resources/ui/account_add.ui:174
+#: data/resources/ui/account_details_page.ui:144
+#: data/resources/ui/provider_page.ui:149
+msgid "Period"
+msgstr "ระยะเวลา"
+
+#: data/resources/ui/account_add.ui:175
+#: data/resources/ui/account_details_page.ui:145
+#: data/resources/ui/provider_page.ui:150
+msgid "Duration in seconds until the next password update"
+msgstr "ระยะเวลาในหน่วยวินาทีจนกว่าจะปรับข้อมูลรหัสผ่านครั้งถัดไป"
+
+#: data/resources/ui/account_add.ui:183
+#: data/resources/ui/account_details_page.ui:153
+#: data/resources/ui/provider_page.ui:167
+msgid "Digits"
+msgstr "จำนวนหลัก"
+
+#: data/resources/ui/account_add.ui:184
+#: data/resources/ui/account_details_page.ui:154
+#: data/resources/ui/provider_page.ui:168
+msgid "Length of the generated code"
+msgstr "ความยาวของรหัสที่สร้างขึ้น"
+
+#: data/resources/ui/account_add.ui:192
+#: data/resources/ui/account_details_page.ui:162
+#: data/resources/ui/provider_page.ui:112
+msgid "Website"
+msgstr "เว็บไซต์"
+
+#: data/resources/ui/account_add.ui:197
+msgid "How to Set Up"
+msgstr "วิธีตั้งค่า"
+
+#: data/resources/ui/account_add.ui:217
+#: data/resources/ui/preferences_camera_page.ui:4
+msgid "Camera"
+msgstr "กล้อง"
+
+#: data/resources/ui/account_add.ui:229
+msgid "Create Provider"
+msgstr "เลือกผู้ให้บริการ"
+
+#: data/resources/ui/account_details_page.ui:56
+#: data/resources/ui/preferences_password_page.ui:17
+#: data/resources/ui/provider_page.ui:29
+msgid "_Save"
+msgstr "_บันทึก"
+
+#: data/resources/ui/account_details_page.ui:67
+#: data/resources/ui/provider_page.ui:185
+msgid "_Delete"
+msgstr "_ลบ"
+
+#: data/resources/ui/account_details_page.ui:167
+msgid "Help"
+msgstr "วิธีใช้"
+
+#: data/resources/ui/account_row.ui:23
+msgid "Increment the counter"
+msgstr "เพิ่มค่าตัวนับ"
+
+#: data/resources/ui/account_row.ui:34
+msgid "Copy PIN to clipboard"
+msgstr "คัดลอก PIN ไปยังคลิปบอร์ด"
+
+#: data/resources/ui/account_row.ui:43
+msgid "Account details"
+msgstr "รายละเอียดบัญชี"
+
+#: data/resources/ui/backup_dialog.ui:4 data/resources/ui/backup_dialog.ui:8
+msgid "Backup & Restore"
+msgstr "สำรองและเรียกคืนข้อมูล"
+
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:506
+msgid "Backup"
+msgstr "สำรองข้อมูล"
+
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:514
+msgid "Restore"
+msgstr "เรียกคืนข้อมูล"
+
+#: data/resources/ui/camera.ui:35
+msgid "No Camera Found"
+msgstr "ไม่พบกล้อง"
+
+#: data/resources/ui/camera.ui:38
+msgid "_From a Screenshot"
+msgstr "เลือก_จากภาพถ่ายหน้าจอ"
+
+#: data/resources/ui/keyring_error_dialog.ui:8
+msgid "Secret Service Error"
+msgstr ""
+
+#: data/resources/ui/keyring_error_dialog.ui:35
+msgid ""
+"Authenticator relies on a Secret Service Provider to manage your sensitive "
+"session information and an error occurred while we were trying to store or "
+"get your session."
+msgstr ""
+
+#: data/resources/ui/keyring_error_dialog.ui:47
+msgid ""
+"Here are a few things that might help you fix issues with the Secret Service:"
+msgstr ""
+
+#: data/resources/ui/keyring_error_dialog.ui:64
+msgid ""
+"Make sure you have a Secret Service Provider installed, like gnome-keyring."
+msgstr ""
+
+#: data/resources/ui/keyring_error_dialog.ui:83
+msgid "Check that you have a default keyring and that it is unlocked."
+msgstr ""
+
+#: data/resources/ui/keyring_error_dialog.ui:95
+msgid ""
+"Check the application logs and your distribution’s documentation for more "
+"details."
+msgstr ""
+
+#: data/resources/ui/preferences.ui:14
+msgid "General"
+msgstr "ทั่วไป"
+
+#: data/resources/ui/preferences.ui:17
+msgid "Privacy"
+msgstr "ความเป็นส่วนตัว"
+
+#: data/resources/ui/preferences.ui:20
+msgid "_Passphrase"
+msgstr "_วลีรหัสผ่าน"
+
+#: data/resources/ui/preferences.ui:22
+msgid "Set up a passphrase to lock the application with"
+msgstr "ตั้งค่าวลีรหัสผ่านเพื่อใช้ล็อกแอปพลิเคชัน"
+
+#: data/resources/ui/preferences.ui:35
+msgid "_Auto Lock the Application"
+msgstr "_ล็อกแอปพลิเคชันอัตโนมัติ"
+
+#: data/resources/ui/preferences.ui:37
+msgid "Whether to automatically lock the application"
+msgstr "กำหนดว่าจะล็อกแอปพลิเคชันโดยอัตโนมัติหรือไม่"
+
+#: data/resources/ui/preferences.ui:43
+msgid "Auto Lock _Timeout"
+msgstr "_ค่าหมดเวลาการล็อกอัตโนมัติ"
+
+#: data/resources/ui/preferences.ui:44
+msgid "The time in minutes"
+msgstr "ระบุเวลาในหน่วยนาที"
+
+#: data/resources/ui/preferences.ui:57
+msgid "Network"
+msgstr "เครือข่าย"
+
+#: data/resources/ui/preferences.ui:60
+msgid "_Download Favicons"
+msgstr "_ดาวน์โหลด Favicon"
+
+#: data/resources/ui/preferences.ui:62
+msgid "Automatically attempt fetching a website icon"
+msgstr "พยายามดึงไอคอนเว็บไซต์มาโดยอัตโนมัติ"
+
+#: data/resources/ui/preferences.ui:67
+msgid "_Metered Connection"
+msgstr "การเชื่อมต่อแบบคิด_ปริมาณ"
+
+#: data/resources/ui/preferences.ui:69
+msgid "Fetch a website icon on a metered connection"
+msgstr "ดึงไอคอนเว็บไซต์เมื่อใช้การเชื่อมต่อแบบคิดปริมาณ"
+
+#: data/resources/ui/preferences_password_page.ui:4
+msgid "Create Password"
+msgstr "สร้างรหัสผ่าน"
+
+#: data/resources/ui/preferences_password_page.ui:28
+msgid "Set up a Passphrase"
+msgstr "ตั้งค่าวลีรหัสผ่าน"
+
+#: data/resources/ui/preferences_password_page.ui:29
+msgid "Authenticator will start locked after a passphrase is set."
+msgstr "Authenticator จะเริ่มทำงานแบบถูกล็อกหลังจากที่ตั้งวลีรหัสผ่านแล้ว"
+
+#: data/resources/ui/preferences_password_page.ui:53
+msgid "Current Passphrase"
+msgstr "วลีรหัสผ่านปัจจุบัน"
+
+#: data/resources/ui/preferences_password_page.ui:59
+msgid "New Passphrase"
+msgstr "วลีรหัสผ่านใหม่"
+
+#: data/resources/ui/preferences_password_page.ui:65
+msgid "Repeat Passphrase"
+msgstr "ทวนวลีรหัสผ่าน"
+
+#: data/resources/ui/preferences_password_page.ui:79
+#: data/resources/ui/provider_page.ui:73
+msgid "_Reset"
+msgstr "_ล้างค่า"
+
+#: data/resources/ui/provider_page.ui:83
+msgid "Select a _File"
+msgstr "เลือกไ_ฟล์"
+
+#: data/resources/ui/provider_page.ui:106
+msgid "Name"
+msgstr "ชื่อ"
+
+#: data/resources/ui/provider_page.ui:159
+msgid "The by default value for counter-based computing method"
+msgstr ""
+
+#: data/resources/ui/provider_page.ui:177
+msgid "Help URL"
+msgstr "URL วิธีใช้"
+
+#: data/resources/ui/providers_dialog.ui:8
+#: data/resources/ui/providers_dialog.ui:19
+msgid "Providers"
+msgstr "ผู้ให้บริการ"
+
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:208
+msgid "New Provider"
+msgstr "ผู้ให้บริการใหม่"
+
+#: data/resources/ui/providers_dialog.ui:36
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:198
+#: data/resources/ui/window.ui:218
+msgid "Search"
+msgstr "ค้นหา"
+
+#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:213
+msgid "Search…"
+msgstr "ค้นหา…"
+
+#: data/resources/ui/providers_dialog.ui:93
+#: data/resources/ui/providers_list.ui:38
+msgid "No Results"
+msgstr "ไม่พบผลลัพธ์"
+
+#: data/resources/ui/providers_dialog.ui:94
+msgid "No providers matching the query were found."
+msgstr "ไม่พบผู้ให้บริการที่ตรงกับคำค้น"
+
+#: data/resources/ui/providers_dialog.ui:139
+msgid "No Provider Selected"
+msgstr "ไม่ได้เลือกผู้ให้บริการ"
+
+#: data/resources/ui/providers_dialog.ui:140
+msgid "Select a provider or create a new one"
+msgstr "โปรดเลือกผู้ให้บริการหรือสร้างผู้ให้บริการใหม่"
+
+#: data/resources/ui/providers_list.ui:39
+msgid "No accounts or providers matching the query were found."
+msgstr "ไม่พบบัญชีหรือผู้ให้บริการที่ตรงกับคำค้น"
+
+#: data/resources/ui/shortcuts.ui:11
+msgctxt "shortcut window"
+msgid "General"
+msgstr "ทั่วไป"
+
+#: data/resources/ui/shortcuts.ui:14
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr "แป้นพิมพ์ลัด"
+
+#: data/resources/ui/shortcuts.ui:20
+msgctxt "shortcut window"
+msgid "Lock"
+msgstr "ล็อก"
+
+#: data/resources/ui/shortcuts.ui:26
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "ปรับแต่ง"
+
+#: data/resources/ui/shortcuts.ui:32
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "ออก"
+
+#: data/resources/ui/shortcuts.ui:40
+msgctxt "shortcut window"
+msgid "Accounts"
+msgstr "บัญชี"
+
+#: data/resources/ui/shortcuts.ui:43
+msgctxt "shortcut window"
+msgid "New Account"
+msgstr "บัญชีใหม่"
+
+#: data/resources/ui/shortcuts.ui:49
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "ค้นหา"
+
+#: data/resources/ui/shortcuts.ui:55
+msgctxt "shortcut window"
+msgid "Show Providers List"
+msgstr "แสดงรายชื่อผู้ให้บริการ"
+
+#: data/resources/ui/window.ui:6
+msgid "_Lock the Application"
+msgstr "_ล็อกแอปพลิเคชัน"
+
+#: data/resources/ui/window.ui:12
+msgid "P_roviders"
+msgstr "_ผู้ให้บริการ"
+
+#: data/resources/ui/window.ui:16
+msgid "_Preferences"
+msgstr "_ปรับแต่ง"
+
+#: data/resources/ui/window.ui:20
+msgid "_Backup & Restore"
+msgstr "_สำรองและเรียกคืนข้อมูล"
+
+#: data/resources/ui/window.ui:26
+msgid "_Keyboard Shortcuts"
+msgstr "_แป้นพิมพ์ลัด"
+
+#: data/resources/ui/window.ui:30
+msgid "_About Authenticator"
+msgstr "เ_กี่ยวกับ Authenticator"
+
+#: data/resources/ui/window.ui:70
+msgid "Authenticator is Locked"
+msgstr "Authenticator ถูกล็อกอยู่"
+
+#: data/resources/ui/window.ui:96
+msgid "_Unlock"
+msgstr "ปลดล็อก"
+
+#: data/resources/ui/window.ui:126
+msgid "Accounts"
+msgstr "บัญชี"
+
+#: data/resources/ui/window.ui:141 data/resources/ui/window.ui:179
+msgid "New Account"
+msgstr "บัญชีใหม่"
+
+#: data/resources/ui/window.ui:149 data/resources/ui/window.ui:192
+msgid "Main Menu"
+msgstr "เมนูหลัก"
+
+#: data/resources/ui/window.ui:157
+msgid "No Accounts"
+msgstr "ไม่มีบัญชี"
+
+#: data/resources/ui/window.ui:158
+msgid "Add an account or scan a QR code first."
+msgstr "โปรดเพิ่มบัญชีหรือสแกนคิวอาร์โค้ดก่อน"
+
+#: src/application.rs:83
+msgid "Accounts restored successfully"
+msgstr "เรียกคืนบัญชีสำเร็จแล้ว"
+
+#: src/application.rs:123
+msgid "translator-credits"
+msgstr "Aefgh Threenine <aefgh39622@gmail.com>"
+
+#: src/application.rs:434 src/widgets/accounts/row.rs:45
+msgid "One-Time password copied"
+msgstr "คัดลอกรหัสผ่านใช้ครั้งเดียวแล้ว"
+
+#: src/application.rs:435
+msgid "Password was copied successfully"
+msgstr "คัดลอกรหัสผ่านเรียบร้อยแล้ว"
+
+#. Translators: This is for making a backup for the aegis Android app.
+#. Translators: This is for restoring a backup from the aegis Android app.
+#: src/backup/aegis.rs:399 src/backup/aegis.rs:439
+msgid "Aegis"
+msgstr "Aegis"
+
+#: src/backup/aegis.rs:403
+msgid "Into a JSON file containing plain-text or encrypted fields"
+msgstr "ลงในไฟล์ JSON ที่ประกอบด้วยข้อความธรรมดาหรือฟิลด์ข้อมูลที่เข้ารหัสลับ"
+
+#: src/backup/aegis.rs:443
+msgid "From a JSON file containing plain-text or encrypted fields"
+msgstr "จากไฟล์ JSON ที่ประกอบด้วยข้อความธรรมดาหรือฟิลด์ข้อมูลที่เข้ารหัสลับ"
+
+#. Translators: This is for making a backup for the andOTP Android app.
+#: src/backup/andotp.rs:79
+msgid "a_ndOTP"
+msgstr "a_ndOTP"
+
+#: src/backup/andotp.rs:83
+msgid "Into a plain-text JSON file"
+msgstr "ลงในไฟล์ JSON ข้อความธรรมดา"
+
+#. Translators: This is for restoring a backup from the andOTP Android app.
+#: src/backup/andotp.rs:127
+msgid "an_dOTP"
+msgstr "an_dOTP"
+
+#: src/backup/andotp.rs:131 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
+msgid "From a plain-text JSON file"
+msgstr "จากไฟล์ JSON ข้อความ ธรรมดา"
+
+#: src/backup/bitwarden.rs:47
+msgid "Unknown account"
+msgstr "ไม่ทราบบัญชี"
+
+#: src/backup/bitwarden.rs:55
+msgid "Unknown issuer"
+msgstr "ไม่ทราบผู้ออก"
+
+#. Translators: This is for restoring a backup from Bitwarden.
+#: src/backup/bitwarden.rs:120
+msgid "_Bitwarden"
+msgstr "_Bitwarden"
+
+#: src/backup/freeotp.rs:18
+msgid "_Authenticator"
+msgstr "_Authenticator"
+
+#: src/backup/freeotp.rs:22
+msgid "Into a plain-text file, compatible with FreeOTP+"
+msgstr "ลงในไฟล์ข้อความธรรมดา ใช้งานร่วมกับ FreeOTP+ ได้"
+
+#: src/backup/freeotp.rs:51
+msgid "A_uthenticator"
+msgstr "A_uthenticator"
+
+#: src/backup/freeotp.rs:55
+msgid "From a plain-text file, compatible with FreeOTP+"
+msgstr "จากไฟล์ข้อความธรรมดา ใช้งานร่วมกับ FreeOTP+ ได้"
+
+#: src/backup/freeotp_json.rs:87
+msgid "FreeOTP+"
+msgstr "FreeOTP+"
+
+#: src/backup/freeotp_json.rs:91
+msgid "From a plain-text JSON file, compatible with FreeOTP+"
+msgstr "จากไฟล์ JSON ข้อความธรรมดา ใช้งานร่วมกับ FreeOTP+ ได้"
+
+#: src/backup/google.rs:19
+msgid "Google Authenticator"
+msgstr "Google Authenticator"
+
+#: src/backup/google.rs:23
+msgid "From a QR code generated by Google Authenticator"
+msgstr "จากคิวอาร์โค้ดที่สร้างโดย Google Authenticator"
+
+#. Translators: this is for restoring a backup from the old Authenticator
+#. release
+#: src/backup/legacy.rs:41
+msgid "Au_thenticator (Legacy)"
+msgstr "Au_thenticator (รุ่นดั้งเดิม)"
+
+#: src/backup/raivootp.rs:102
+msgid "Raivo OTP"
+msgstr "Raivo OTP"
+
+#: src/backup/raivootp.rs:106
+msgid "From a ZIP export generated by Raivo OTP"
+msgstr "จากข้อมูลส่งออกรูปแบบ ZIP ที่สร้างโดย Raivo OTP"
+
+#: src/models/algorithm.rs:60
+msgid "Counter-based"
+msgstr "Counter-based"
+
+#: src/models/algorithm.rs:61
+msgid "Time-based"
+msgstr "Time-based"
+
+#. Translators: Steam refers to the gaming application by Valve.
+#: src/models/algorithm.rs:63
+msgid "Steam"
+msgstr "Steam"
+
+#: src/models/algorithm.rs:125
+msgid "SHA-1"
+msgstr "SHA-1"
+
+#: src/models/algorithm.rs:126
+msgid "SHA-256"
+msgstr "SHA-256"
+
+#: src/models/algorithm.rs:127
+msgid "SHA-512"
+msgstr "SHA-512"
+
+#: src/widgets/accounts/add.rs:270 src/widgets/backup/dialog.rs:443
+#: src/widgets/providers/page.rs:291
+msgid "Image"
+msgstr "ภาพ"
+
+#: src/widgets/accounts/add.rs:278 src/widgets/backup/dialog.rs:451
+msgid "Select QR Code"
+msgstr "เลือกคิวอาร์โค้ด"
+
+#: src/widgets/accounts/add.rs:296
+msgid "Invalid Token"
+msgstr "โทเค็นไม่ถูกต้อง"
+
+#: src/widgets/accounts/details.rs:123
+msgid "Are you sure you want to delete the account?"
+msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบบัญชี?"
+
+#: src/widgets/accounts/details.rs:124
+msgid "This action is irreversible"
+msgstr "การกระทำนี้ไม่สามารถเรียกคืนได้"
+
+#: src/widgets/accounts/details.rs:126
+msgid "No"
+msgstr "ไม่"
+
+#: src/widgets/accounts/details.rs:126
+msgid "Yes"
+msgstr "ใช่"
+
+#: src/widgets/backup/dialog.rs:163 src/widgets/backup/dialog.rs:245
+msgid "Key / Passphrase"
+msgstr "คีย์ / วลีรหัสผ่าน"
+
+#: src/widgets/backup/dialog.rs:174 src/widgets/backup/dialog.rs:257
+msgid "Select File"
+msgstr "เลือกไฟล์"
+
+#: src/widgets/backup/dialog.rs:205
+msgid "Failed to create a backup"
+msgstr "ไม่สามารถสร้างข้อมูลสำรองได้"
+
+#: src/widgets/backup/dialog.rs:327
+msgid "Failed to restore from camera"
+msgstr "ไม่สามารถเรียกคืนจากกล้องได้"
+
+#: src/widgets/backup/dialog.rs:352
+msgid "Failed to restore from a screenshot"
+msgstr "ไม่สามารถเรียกคืนจากภาพถ่ายหน้าจอได้"
+
+#: src/widgets/backup/dialog.rs:372
+msgid "Failed to restore from an image"
+msgstr "ไม่สามารถเรียกคืนจากภาพได้"
+
+#: src/widgets/backup/dialog.rs:396
+msgid "Failed to restore from a file"
+msgstr "ไม่สามารถเรียกคืนจากไฟล์ได้"
+
+#: src/widgets/preferences/password_page.rs:195
+#: src/widgets/preferences/password_page.rs:237
+msgid "Wrong Passphrase"
+msgstr "วลีรหัสผ่านผิด"
+
+#: src/widgets/providers/dialog.rs:261
+msgid "Provider created successfully"
+msgstr "สร้างผู้ให้บริการเรียบร้อยแล้ว"
+
+#: src/widgets/providers/dialog.rs:271
+msgid "Provider updated successfully"
+msgstr "ปรับปรุงข้อมูลผู้ให้บริการเรียบร้อยแล้ว"
+
+#: src/widgets/providers/dialog.rs:287
+msgid "Provider removed successfully"
+msgstr "ลบผู้ให้บริการเรียบร้อยแล้ว"
+
+#: src/widgets/providers/page.rs:185
+msgid "Editing Provider: {}"
+msgstr "แก้ไขผู้ให้บริการ: {}"
+
+#: src/widgets/providers/page.rs:324
+msgid "The provider has accounts assigned to it, please remove them first"
+msgstr ""
+
+#: src/widgets/window.rs:115
+msgid "Wrong Password"
+msgstr "รหัสผ่านผิด"
