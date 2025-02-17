@@ -7,11 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Authenticator\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2025-01-10 20:51+0000\n"
-"PO-Revision-Date: 2025-01-28 22:32+0300\n"
+"POT-Creation-Date: 2025-02-10 11:13+0000\n"
+"PO-Revision-Date: 2025-02-10 17:11+0300\n"
 "Last-Translator: Artur So <arturios2005@mail.ru>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/authenticator/"
-"translation/ru/>\n"
+"Language-Team: Russian\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +21,7 @@ msgstr ""
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
-#: data/resources/ui/window.ui:36 src/application.rs:104 src/main.rs:40
+#: data/resources/ui/window.ui:40 src/application.rs:112 src/main.rs:40
 msgid "Authenticator"
 msgstr "Аутентификатор"
 
@@ -32,7 +31,7 @@ msgstr "Двухфакторная аутентификация"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:5
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:106
+#: src/application.rs:114
 msgid "Generate two-factor codes"
 msgstr "Создание двухфакторных кодов"
 
@@ -150,15 +149,15 @@ msgstr "Данные учетной записи"
 msgid "Backup/Restore formats support"
 msgstr "Поддержка форматов резервного копирования/восстановления"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:308
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:274
 msgid "_Camera"
 msgstr "_Камера"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:312
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:278
 msgid "_Screenshot"
 msgstr "_Снимок экрана"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:317
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:283
 msgid "_QR Code Image"
 msgstr "Изображение _QR-кода"
 
@@ -170,7 +169,7 @@ msgstr "_Отменить"
 msgid "_Add"
 msgstr "_Добавить"
 
-#: data/resources/ui/account_add.ui:75 src/widgets/preferences/window.rs:303
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:269
 msgid "Scan QR Code"
 msgstr "Сканировать QR Код"
 
@@ -282,6 +281,18 @@ msgstr "Копировать PIN-код в буфер обмена"
 msgid "Account details"
 msgstr "Данные учетной записи"
 
+#: data/resources/ui/backup_dialog.ui:4 data/resources/ui/backup_dialog.ui:8
+msgid "Backup & Restore"
+msgstr "Резервное копирование и восстановление"
+
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:506
+msgid "Backup"
+msgstr "Резервное копирование"
+
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:514
+msgid "Restore"
+msgstr "Восстановление"
+
 #: data/resources/ui/camera.ui:35
 msgid "No Camera Found"
 msgstr "Камера не найдена"
@@ -332,69 +343,57 @@ msgstr ""
 "Проверьте журналы приложений и документацию вашего дистрибутива для "
 "получения более подробной информации."
 
-#: data/resources/ui/preferences.ui:16
+#: data/resources/ui/preferences.ui:14
 msgid "General"
 msgstr "Общие"
 
-#: data/resources/ui/preferences.ui:19
+#: data/resources/ui/preferences.ui:17
 msgid "Privacy"
 msgstr "Конфиденциальность"
 
-#: data/resources/ui/preferences.ui:22
+#: data/resources/ui/preferences.ui:20
 msgid "_Passphrase"
 msgstr "_Кодовая фраза"
 
-#: data/resources/ui/preferences.ui:24
+#: data/resources/ui/preferences.ui:22
 msgid "Set up a passphrase to lock the application with"
 msgstr "Установить кодовую фразу для блокировки приложения с помощью"
 
-#: data/resources/ui/preferences.ui:37
+#: data/resources/ui/preferences.ui:35
 msgid "_Auto Lock the Application"
 msgstr "_Автоблокировка приложения"
 
-#: data/resources/ui/preferences.ui:39
+#: data/resources/ui/preferences.ui:37
 msgid "Whether to automatically lock the application"
 msgstr "Нужно ли автоматически блокировать приложение"
 
-#: data/resources/ui/preferences.ui:45
+#: data/resources/ui/preferences.ui:43
 msgid "Auto Lock _Timeout"
 msgstr "Интервал _автоблокировки"
 
-#: data/resources/ui/preferences.ui:46
+#: data/resources/ui/preferences.ui:44
 msgid "The time in minutes"
 msgstr "Время в минутах"
 
-#: data/resources/ui/preferences.ui:59
+#: data/resources/ui/preferences.ui:57
 msgid "Network"
 msgstr "Сеть"
 
-#: data/resources/ui/preferences.ui:62
+#: data/resources/ui/preferences.ui:60
 msgid "_Download Favicons"
 msgstr "_Загружать фавиконы"
 
-#: data/resources/ui/preferences.ui:64
+#: data/resources/ui/preferences.ui:62
 msgid "Automatically attempt fetching a website icon"
 msgstr "Автоматическая попытка получения значка веб-сайта"
 
-#: data/resources/ui/preferences.ui:69
+#: data/resources/ui/preferences.ui:67
 msgid "_Metered Connection"
 msgstr "_Тарифицируемое соединение"
 
-#: data/resources/ui/preferences.ui:71
+#: data/resources/ui/preferences.ui:69
 msgid "Fetch a website icon on a metered connection"
 msgstr "Получение значка веб-сайта при тарифицируемом соединении"
-
-#: data/resources/ui/preferences.ui:81
-msgid "Backup/Restore"
-msgstr "Резервное копирование/восстановление"
-
-#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:540
-msgid "Backup"
-msgstr "Резервное копирование"
-
-#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:548
-msgid "Restore"
-msgstr "Восстановление"
 
 #: data/resources/ui/preferences_password_page.ui:4
 msgid "Create Password"
@@ -451,12 +450,12 @@ msgid "New Provider"
 msgstr "Новый провайдер"
 
 #: data/resources/ui/providers_dialog.ui:36
-#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:194
-#: data/resources/ui/window.ui:214
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:198
+#: data/resources/ui/window.ui:218
 msgid "Search"
 msgstr "Поиск"
 
-#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:209
+#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:213
 msgid "Search…"
 msgstr "Поиск…"
 
@@ -538,55 +537,59 @@ msgstr "П_ровайдеры"
 msgid "_Preferences"
 msgstr "_Параметры"
 
-#: data/resources/ui/window.ui:22
+#: data/resources/ui/window.ui:20
+msgid "_Backup & Restore"
+msgstr "Р_езервное копирование и восстановление"
+
+#: data/resources/ui/window.ui:26
 msgid "_Keyboard Shortcuts"
 msgstr "_Комбинации клавиш"
 
-#: data/resources/ui/window.ui:26
+#: data/resources/ui/window.ui:30
 msgid "_About Authenticator"
 msgstr "_О приложении"
 
-#: data/resources/ui/window.ui:66
+#: data/resources/ui/window.ui:70
 msgid "Authenticator is Locked"
 msgstr "Аутентификатор заблокирован"
 
-#: data/resources/ui/window.ui:92
+#: data/resources/ui/window.ui:96
 msgid "_Unlock"
 msgstr "_Разблокировать"
 
-#: data/resources/ui/window.ui:122
+#: data/resources/ui/window.ui:126
 msgid "Accounts"
 msgstr "Учетные записи"
 
-#: data/resources/ui/window.ui:137 data/resources/ui/window.ui:175
+#: data/resources/ui/window.ui:141 data/resources/ui/window.ui:179
 msgid "New Account"
 msgstr "Новая учетная запись"
 
-#: data/resources/ui/window.ui:145 data/resources/ui/window.ui:188
+#: data/resources/ui/window.ui:149 data/resources/ui/window.ui:192
 msgid "Main Menu"
 msgstr "Главное меню"
 
-#: data/resources/ui/window.ui:153
+#: data/resources/ui/window.ui:157
 msgid "No Accounts"
 msgstr "Нет учетных записей"
 
-#: data/resources/ui/window.ui:154
+#: data/resources/ui/window.ui:158
 msgid "Add an account or scan a QR code first."
 msgstr "Сначала добавьте учетную запись или отсканируйте QR-Код."
 
-#: src/application.rs:84
+#: src/application.rs:83
 msgid "Accounts restored successfully"
 msgstr "Учетные записи успешно восстановлены"
 
-#: src/application.rs:115
+#: src/application.rs:123
 msgid "translator-credits"
 msgstr "Aleksandr Melman <alexmelman88@gmail.com>, 2022-2023"
 
-#: src/application.rs:424 src/widgets/accounts/row.rs:45
+#: src/application.rs:434 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Одноразовый пароль скопирован"
 
-#: src/application.rs:425
+#: src/application.rs:435
 msgid "Password was copied successfully"
 msgstr "Пароль был успешно скопирован"
 
@@ -706,12 +709,12 @@ msgstr "SHA-256"
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:270 src/widgets/preferences/window.rs:477
+#: src/widgets/accounts/add.rs:270 src/widgets/backup/dialog.rs:443
 #: src/widgets/providers/page.rs:291
 msgid "Image"
 msgstr "Изображение"
 
-#: src/widgets/accounts/add.rs:278 src/widgets/preferences/window.rs:485
+#: src/widgets/accounts/add.rs:278 src/widgets/backup/dialog.rs:451
 msgid "Select QR Code"
 msgstr "Выбрать QR-код"
 
@@ -735,38 +738,38 @@ msgstr "Нет"
 msgid "Yes"
 msgstr "Да"
 
+#: src/widgets/backup/dialog.rs:163 src/widgets/backup/dialog.rs:245
+msgid "Key / Passphrase"
+msgstr "Ключ / Кодовая фраза"
+
+#: src/widgets/backup/dialog.rs:174 src/widgets/backup/dialog.rs:257
+msgid "Select File"
+msgstr "Выбрать файл"
+
+#: src/widgets/backup/dialog.rs:205
+msgid "Failed to create a backup"
+msgstr "Не удалось создать резервную копию"
+
+#: src/widgets/backup/dialog.rs:327
+msgid "Failed to restore from camera"
+msgstr "Не удалось восстановить с камеры"
+
+#: src/widgets/backup/dialog.rs:352
+msgid "Failed to restore from a screenshot"
+msgstr "Не удалось восстановить из снимка экрана"
+
+#: src/widgets/backup/dialog.rs:372
+msgid "Failed to restore from an image"
+msgstr "Не удалось восстановить из образа"
+
+#: src/widgets/backup/dialog.rs:396
+msgid "Failed to restore from a file"
+msgstr "Не удалось восстановить из файла"
+
 #: src/widgets/preferences/password_page.rs:195
 #: src/widgets/preferences/password_page.rs:237
 msgid "Wrong Passphrase"
 msgstr "Неверная кодовая фраза"
-
-#: src/widgets/preferences/window.rs:197 src/widgets/preferences/window.rs:279
-msgid "Key / Passphrase"
-msgstr "Ключ / Кодовая фраза"
-
-#: src/widgets/preferences/window.rs:208 src/widgets/preferences/window.rs:291
-msgid "Select File"
-msgstr "Выбрать файл"
-
-#: src/widgets/preferences/window.rs:239
-msgid "Failed to create a backup"
-msgstr "Не удалось создать резервную копию"
-
-#: src/widgets/preferences/window.rs:361
-msgid "Failed to restore from camera"
-msgstr "Не удалось восстановить с камеры"
-
-#: src/widgets/preferences/window.rs:386
-msgid "Failed to restore from a screenshot"
-msgstr "Не удалось восстановить из снимка экрана"
-
-#: src/widgets/preferences/window.rs:406
-msgid "Failed to restore from an image"
-msgstr "Не удалось восстановить из образа"
-
-#: src/widgets/preferences/window.rs:430
-msgid "Failed to restore from a file"
-msgstr "Не удалось восстановить из файла"
 
 #: src/widgets/providers/dialog.rs:261
 msgid "Provider created successfully"
