@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2025-01-10 20:51+0000\n"
-"PO-Revision-Date: 2025-01-11 18:24+0100\n"
+"POT-Creation-Date: 2025-02-10 11:13+0000\n"
+"PO-Revision-Date: 2025-02-13 20:44+0100\n"
 "Last-Translator: Jürgen Benvenuti <gastornis@posteo.org>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
-#: data/resources/ui/window.ui:36 src/application.rs:104 src/main.rs:40
+#: data/resources/ui/window.ui:40 src/application.rs:112 src/main.rs:40
 msgid "Authenticator"
 msgstr "Authenticator"
 
@@ -34,7 +34,7 @@ msgstr "Zwei-Faktor-Authentifizierung"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:5
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:106
+#: src/application.rs:114
 msgid "Generate two-factor codes"
 msgstr "Zwei-Faktor-Codes erzeugen"
 
@@ -160,15 +160,15 @@ msgstr "Kontodetails"
 msgid "Backup/Restore formats support"
 msgstr "Unterstützung für Sicherungs-/Wiederherstellungs-Formate"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:308
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:274
 msgid "_Camera"
 msgstr "_Kamera"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:312
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:278
 msgid "_Screenshot"
 msgstr "Bildschirm_foto"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:317
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:283
 msgid "_QR Code Image"
 msgstr "_QR-Code-Bild"
 
@@ -180,7 +180,7 @@ msgstr "_Abbruch"
 msgid "_Add"
 msgstr "_Hinzufügen"
 
-#: data/resources/ui/account_add.ui:75 src/widgets/preferences/window.rs:303
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:269
 msgid "Scan QR Code"
 msgstr "QR-Code scannen"
 
@@ -292,6 +292,18 @@ msgstr "PIN in die Zwischenablage kopieren"
 msgid "Account details"
 msgstr "Kontodetails"
 
+#: data/resources/ui/backup_dialog.ui:4 data/resources/ui/backup_dialog.ui:8
+msgid "Backup & Restore"
+msgstr "Sichern und Wiederherstellen"
+
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:506
+msgid "Backup"
+msgstr "Sicherung"
+
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:514
+msgid "Restore"
+msgstr "Wiederherstellen"
+
 #: data/resources/ui/camera.ui:35
 msgid "No Camera Found"
 msgstr "Keine Kamera gefunden"
@@ -342,69 +354,57 @@ msgstr ""
 "Überprüfen Sie die Anwendungsprotokolle und lesen Sie die Dokumentation "
 "Ihrer Distribution für mehr Informationen."
 
-#: data/resources/ui/preferences.ui:16
+#: data/resources/ui/preferences.ui:14
 msgid "General"
 msgstr "Allgemein"
 
-#: data/resources/ui/preferences.ui:19
+#: data/resources/ui/preferences.ui:17
 msgid "Privacy"
 msgstr "Privatsphäre"
 
-#: data/resources/ui/preferences.ui:22
+#: data/resources/ui/preferences.ui:20
 msgid "_Passphrase"
 msgstr "_Passphrase"
 
-#: data/resources/ui/preferences.ui:24
+#: data/resources/ui/preferences.ui:22
 msgid "Set up a passphrase to lock the application with"
 msgstr "Eine Passphrase zum Sperren der Anwendung festlegen"
 
-#: data/resources/ui/preferences.ui:37
+#: data/resources/ui/preferences.ui:35
 msgid "_Auto Lock the Application"
 msgstr "Die Anwendung automatisch sperren"
 
-#: data/resources/ui/preferences.ui:39
+#: data/resources/ui/preferences.ui:37
 msgid "Whether to automatically lock the application"
 msgstr "Legt fest, ob die Anwendung automatisch gesperrt werden soll"
 
-#: data/resources/ui/preferences.ui:45
+#: data/resources/ui/preferences.ui:43
 msgid "Auto Lock _Timeout"
 msgstr "Zeit bis zum automatischen Sperren"
 
-#: data/resources/ui/preferences.ui:46
+#: data/resources/ui/preferences.ui:44
 msgid "The time in minutes"
 msgstr "Zeit in Minuten"
 
-#: data/resources/ui/preferences.ui:59
+#: data/resources/ui/preferences.ui:57
 msgid "Network"
 msgstr "Netzwerk"
 
-#: data/resources/ui/preferences.ui:62
+#: data/resources/ui/preferences.ui:60
 msgid "_Download Favicons"
 msgstr "Favicons _herunterladen"
 
-#: data/resources/ui/preferences.ui:64
+#: data/resources/ui/preferences.ui:62
 msgid "Automatically attempt fetching a website icon"
 msgstr "Automatisch versuchen, ein Webseiten-Symbol zu holen"
 
-#: data/resources/ui/preferences.ui:69
+#: data/resources/ui/preferences.ui:67
 msgid "_Metered Connection"
 msgstr "_Getaktete Verbindung"
 
-#: data/resources/ui/preferences.ui:71
+#: data/resources/ui/preferences.ui:69
 msgid "Fetch a website icon on a metered connection"
 msgstr "Ein Webseiten-Symbol über eine getaktete Verbindung holen"
-
-#: data/resources/ui/preferences.ui:81
-msgid "Backup/Restore"
-msgstr "Sichern/Wiederherstellen"
-
-#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:540
-msgid "Backup"
-msgstr "Sicherung"
-
-#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:548
-msgid "Restore"
-msgstr "Wiederherstellen"
 
 #: data/resources/ui/preferences_password_page.ui:4
 msgid "Create Password"
@@ -463,12 +463,12 @@ msgid "New Provider"
 msgstr "Neuer Anbieter"
 
 #: data/resources/ui/providers_dialog.ui:36
-#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:194
-#: data/resources/ui/window.ui:214
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:198
+#: data/resources/ui/window.ui:218
 msgid "Search"
 msgstr "Suche"
 
-#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:209
+#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:213
 msgid "Search…"
 msgstr "Suche …"
 
@@ -550,47 +550,51 @@ msgstr "A_nbieter"
 msgid "_Preferences"
 msgstr "_Einstellungen"
 
-#: data/resources/ui/window.ui:22
+#: data/resources/ui/window.ui:20
+msgid "_Backup & Restore"
+msgstr "_Sichern und Wiederherstellen"
+
+#: data/resources/ui/window.ui:26
 msgid "_Keyboard Shortcuts"
 msgstr "_Tastenkürzel"
 
-#: data/resources/ui/window.ui:26
+#: data/resources/ui/window.ui:30
 msgid "_About Authenticator"
 msgstr "_Info zu Authenticator"
 
-#: data/resources/ui/window.ui:66
+#: data/resources/ui/window.ui:70
 msgid "Authenticator is Locked"
 msgstr "Authenticator ist gesperrt"
 
-#: data/resources/ui/window.ui:92
+#: data/resources/ui/window.ui:96
 msgid "_Unlock"
 msgstr "_Entsperren"
 
-#: data/resources/ui/window.ui:122
+#: data/resources/ui/window.ui:126
 msgid "Accounts"
 msgstr "Konten"
 
-#: data/resources/ui/window.ui:137 data/resources/ui/window.ui:175
+#: data/resources/ui/window.ui:141 data/resources/ui/window.ui:179
 msgid "New Account"
 msgstr "Neues Konto"
 
-#: data/resources/ui/window.ui:145 data/resources/ui/window.ui:188
+#: data/resources/ui/window.ui:149 data/resources/ui/window.ui:192
 msgid "Main Menu"
 msgstr "Hauptmenü"
 
-#: data/resources/ui/window.ui:153
+#: data/resources/ui/window.ui:157
 msgid "No Accounts"
 msgstr "Keine Konten"
 
-#: data/resources/ui/window.ui:154
+#: data/resources/ui/window.ui:158
 msgid "Add an account or scan a QR code first."
 msgstr "Fügen Sie zuerst ein Konto hinzu oder scannen Sie einen QR-Code."
 
-#: src/application.rs:84
+#: src/application.rs:83
 msgid "Accounts restored successfully"
 msgstr "Konten erfolgreich wiederhergestellt"
 
-#: src/application.rs:115
+#: src/application.rs:123
 msgid "translator-credits"
 msgstr ""
 "Joerg Schachner <jschachner@mailbox.org>\n"
@@ -599,11 +603,11 @@ msgstr ""
 "Philipp Kiemle <philipp.kiemle@gmail.com>\n"
 "Jürgen Benvenuti <gastornis@posteo.org>"
 
-#: src/application.rs:424 src/widgets/accounts/row.rs:45
+#: src/application.rs:434 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Einmal-Passwort kopiert"
 
-#: src/application.rs:425
+#: src/application.rs:435
 msgid "Password was copied successfully"
 msgstr "Passwort wurde erfolgreich kopiert"
 
@@ -727,12 +731,12 @@ msgstr "SHA-256"
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:270 src/widgets/preferences/window.rs:477
+#: src/widgets/accounts/add.rs:270 src/widgets/backup/dialog.rs:443
 #: src/widgets/providers/page.rs:291
 msgid "Image"
 msgstr "Bild"
 
-#: src/widgets/accounts/add.rs:278 src/widgets/preferences/window.rs:485
+#: src/widgets/accounts/add.rs:278 src/widgets/backup/dialog.rs:451
 msgid "Select QR Code"
 msgstr "QR-Code auswählen"
 
@@ -756,38 +760,38 @@ msgstr "Nein"
 msgid "Yes"
 msgstr "Ja"
 
+#: src/widgets/backup/dialog.rs:163 src/widgets/backup/dialog.rs:245
+msgid "Key / Passphrase"
+msgstr "Schlüssel / Passphrase"
+
+#: src/widgets/backup/dialog.rs:174 src/widgets/backup/dialog.rs:257
+msgid "Select File"
+msgstr "Datei auswählen"
+
+#: src/widgets/backup/dialog.rs:205
+msgid "Failed to create a backup"
+msgstr "Erstellen einer Datensicherung fehlgeschlagen"
+
+#: src/widgets/backup/dialog.rs:327
+msgid "Failed to restore from camera"
+msgstr "Wiederherstellung über Kamera fehlgeschlagen"
+
+#: src/widgets/backup/dialog.rs:352
+msgid "Failed to restore from a screenshot"
+msgstr "Wiederherstellung aus einem Bildschirmfoto fehlgeschlagen"
+
+#: src/widgets/backup/dialog.rs:372
+msgid "Failed to restore from an image"
+msgstr "Wiederherstellung aus einem Bild fehlgeschlagen"
+
+#: src/widgets/backup/dialog.rs:396
+msgid "Failed to restore from a file"
+msgstr "Wiederherstellung aus einer Datei fehlgeschlagen"
+
 #: src/widgets/preferences/password_page.rs:195
 #: src/widgets/preferences/password_page.rs:237
 msgid "Wrong Passphrase"
 msgstr "Falsche Passphrase"
-
-#: src/widgets/preferences/window.rs:197 src/widgets/preferences/window.rs:279
-msgid "Key / Passphrase"
-msgstr "Schlüssel / Passphrase"
-
-#: src/widgets/preferences/window.rs:208 src/widgets/preferences/window.rs:291
-msgid "Select File"
-msgstr "Datei auswählen"
-
-#: src/widgets/preferences/window.rs:239
-msgid "Failed to create a backup"
-msgstr "Erstellen einer Datensicherung fehlgeschlagen"
-
-#: src/widgets/preferences/window.rs:361
-msgid "Failed to restore from camera"
-msgstr "Wiederherstellung über Kamera fehlgeschlagen"
-
-#: src/widgets/preferences/window.rs:386
-msgid "Failed to restore from a screenshot"
-msgstr "Wiederherstellung aus einem Bildschirmfoto fehlgeschlagen"
-
-#: src/widgets/preferences/window.rs:406
-msgid "Failed to restore from an image"
-msgstr "Wiederherstellung aus einem Bild fehlgeschlagen"
-
-#: src/widgets/preferences/window.rs:430
-msgid "Failed to restore from a file"
-msgstr "Wiederherstellung aus einer Datei fehlgeschlagen"
 
 #: src/widgets/providers/dialog.rs:261
 msgid "Provider created successfully"
