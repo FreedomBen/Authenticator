@@ -1,0 +1,1 @@
+INSERT INTO "providers" ("name", "website", "help_url", "image_uri") VALUES ("GNOME SSO", "https://www.gnome.org", "https://handbook.gnome.org/infrastructure/accounts.html", "https://www.gnome.org/img/favicon.png");
