@@ -8,19 +8,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2024-03-13 16:11+0000\n"
-"PO-Revision-Date: 2024-03-17 17:34+0100\n"
+"POT-Creation-Date: 2025-02-10 11:13+0000\n"
+"PO-Revision-Date: 2025-03-02 17:42+0100\n"
 "Last-Translator: Brage <bragefuglseth@gnome.org>\n"
 "Language-Team: \n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
-#: data/resources/ui/window.ui:36 src/application.rs:90 src/main.rs:40
+#: data/resources/ui/window.ui:40 src/application.rs:112 src/main.rs:40
 msgid "Authenticator"
 msgstr "Authenticator"
 
@@ -30,7 +30,7 @@ msgstr "Tofaktorautentisering"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:5
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:92
+#: src/application.rs:114
 msgid "Generate two-factor codes"
 msgstr "Beskytt nettkontoene dine"
 
@@ -156,108 +156,108 @@ msgstr "Kontoinformasjon"
 msgid "Backup/Restore formats support"
 msgstr "Sikkerhetskopiering"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:292
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:274
 msgid "_Camera"
 msgstr "_Kamera"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:296
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:278
 msgid "_Screenshot"
 msgstr "_Skjermbilde"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:301
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:283
 msgid "_QR Code Image"
-msgstr "_Åpne fil…"
+msgstr "_Bilde med QR-kode"
 
 #: data/resources/ui/account_add.ui:56
-msgid "Cancel"
-msgstr "Avbryt"
+msgid "_Cancel"
+msgstr "_Avbryt"
 
-#: data/resources/ui/account_add.ui:62
+#: data/resources/ui/account_add.ui:63
 msgid "_Add"
 msgstr "_Legg til"
 
-#: data/resources/ui/account_add.ui:74 src/widgets/preferences/window.rs:287
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:269
 msgid "Scan QR Code"
 msgstr "Skann QR-kode"
 
-#: data/resources/ui/account_add.ui:112
+#: data/resources/ui/account_add.ui:113
 #: data/resources/ui/account_details_page.ui:96
 #: data/resources/ui/provider_page.ui:22
 #: data/resources/ui/providers_dialog.ui:108
 msgid "Provider"
 msgstr "Tjeneste"
 
-#: data/resources/ui/account_add.ui:113
+#: data/resources/ui/account_add.ui:114
 msgid "Token issuer"
 msgstr "Kodeutsteder"
 
-#: data/resources/ui/account_add.ui:127
+#: data/resources/ui/account_add.ui:128
 #: data/resources/ui/account_details_page.ui:91
 msgid "Account"
 msgstr "Konto"
 
-#: data/resources/ui/account_add.ui:133
+#: data/resources/ui/account_add.ui:134
 msgid "Token"
 msgstr "Kode"
 
-#: data/resources/ui/account_add.ui:139
-#: data/resources/ui/account_details_page.ui:139
+#: data/resources/ui/account_add.ui:140
+#: data/resources/ui/account_details_page.ui:135
 #: data/resources/ui/provider_page.ui:158
 msgid "Counter"
 msgstr "Teller"
 
-#: data/resources/ui/account_add.ui:157
+#: data/resources/ui/account_add.ui:158
 #: data/resources/ui/account_details_page.ui:119
 #: data/resources/ui/provider_page.ui:133
 msgid "Algorithm"
 msgstr "Algoritme"
 
-#: data/resources/ui/account_add.ui:169
-#: data/resources/ui/account_details_page.ui:129
+#: data/resources/ui/account_add.ui:166
+#: data/resources/ui/account_details_page.ui:127
 #: data/resources/ui/provider_page.ui:118
 msgid "Computing Method"
 msgstr "Generering"
 
-#: data/resources/ui/account_add.ui:181
-#: data/resources/ui/account_details_page.ui:148
+#: data/resources/ui/account_add.ui:174
+#: data/resources/ui/account_details_page.ui:144
 #: data/resources/ui/provider_page.ui:149
 msgid "Period"
 msgstr "Intervall"
 
-#: data/resources/ui/account_add.ui:182
-#: data/resources/ui/account_details_page.ui:149
+#: data/resources/ui/account_add.ui:175
+#: data/resources/ui/account_details_page.ui:145
 #: data/resources/ui/provider_page.ui:150
 msgid "Duration in seconds until the next password update"
 msgstr "Varighet i sekunder til neste generering"
 
-#: data/resources/ui/account_add.ui:194
-#: data/resources/ui/account_details_page.ui:159
+#: data/resources/ui/account_add.ui:183
+#: data/resources/ui/account_details_page.ui:153
 #: data/resources/ui/provider_page.ui:167
 msgid "Digits"
 msgstr "Antall sifre"
 
-#: data/resources/ui/account_add.ui:195
-#: data/resources/ui/account_details_page.ui:160
+#: data/resources/ui/account_add.ui:184
+#: data/resources/ui/account_details_page.ui:154
 #: data/resources/ui/provider_page.ui:168
 msgid "Length of the generated code"
 msgstr "Lengden på den genererte koden"
 
-#: data/resources/ui/account_add.ui:207
-#: data/resources/ui/account_details_page.ui:170
+#: data/resources/ui/account_add.ui:192
+#: data/resources/ui/account_details_page.ui:162
 #: data/resources/ui/provider_page.ui:112
 msgid "Website"
 msgstr "Nettsted"
 
-#: data/resources/ui/account_add.ui:212
+#: data/resources/ui/account_add.ui:197
 msgid "How to Set Up"
 msgstr "Oppsettsveiledning"
 
-#: data/resources/ui/account_add.ui:232
+#: data/resources/ui/account_add.ui:217
 #: data/resources/ui/preferences_camera_page.ui:4
 msgid "Camera"
 msgstr "Kamera"
 
-#: data/resources/ui/account_add.ui:244
+#: data/resources/ui/account_add.ui:229
 msgid "Create Provider"
 msgstr "Opprett tjeneste"
 
@@ -272,7 +272,7 @@ msgstr "_Lagre"
 msgid "_Delete"
 msgstr "_Slett"
 
-#: data/resources/ui/account_details_page.ui:175
+#: data/resources/ui/account_details_page.ui:167
 msgid "Help"
 msgstr "Hjelp"
 
@@ -288,11 +288,23 @@ msgstr "Kopier PIN-kode"
 msgid "Account details"
 msgstr "Kontoinformasjon"
 
-#: data/resources/ui/camera.ui:36
+#: data/resources/ui/backup_dialog.ui:4 data/resources/ui/backup_dialog.ui:8
+msgid "Backup & Restore"
+msgstr "Sikkerhetskopi"
+
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:506
+msgid "Backup"
+msgstr "Sikkerhetskopiering"
+
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:514
+msgid "Restore"
+msgstr "Gjenoppretting"
+
+#: data/resources/ui/camera.ui:35
 msgid "No Camera Found"
 msgstr "Fant ikke kamera"
 
-#: data/resources/ui/camera.ui:39
+#: data/resources/ui/camera.ui:38
 msgid "_From a Screenshot"
 msgstr "_Fra skjermbilde"
 
@@ -333,69 +345,57 @@ msgstr ""
 "Sjekk loggen til appen og dokumentasjonen til systemet ditt for mer "
 "informasjon."
 
-#: data/resources/ui/preferences.ui:16
+#: data/resources/ui/preferences.ui:14
 msgid "General"
 msgstr "Generelt"
 
-#: data/resources/ui/preferences.ui:19
+#: data/resources/ui/preferences.ui:17
 msgid "Privacy"
 msgstr "Personvern"
 
-#: data/resources/ui/preferences.ui:22
+#: data/resources/ui/preferences.ui:20
 msgid "_Passphrase"
 msgstr "_Passord"
 
-#: data/resources/ui/preferences.ui:24
+#: data/resources/ui/preferences.ui:22
 msgid "Set up a passphrase to lock the application with"
 msgstr "Sett opp et passord å låse appen med"
 
-#: data/resources/ui/preferences.ui:37
+#: data/resources/ui/preferences.ui:35
 msgid "_Auto Lock the Application"
 msgstr "_Automatisk låsing"
 
-#: data/resources/ui/preferences.ui:39
+#: data/resources/ui/preferences.ui:37
 msgid "Whether to automatically lock the application"
 msgstr "Om appen skal låses automatisk"
 
-#: data/resources/ui/preferences.ui:45
+#: data/resources/ui/preferences.ui:43
 msgid "Auto Lock _Timeout"
 msgstr "_Nedtelling til låsing"
 
-#: data/resources/ui/preferences.ui:46
+#: data/resources/ui/preferences.ui:44
 msgid "The time in minutes"
 msgstr "Antall minutter med inaktivitet før appen låses"
 
-#: data/resources/ui/preferences.ui:59
+#: data/resources/ui/preferences.ui:57
 msgid "Network"
 msgstr "Nettverk"
 
-#: data/resources/ui/preferences.ui:62
+#: data/resources/ui/preferences.ui:60
 msgid "_Download Favicons"
 msgstr "_Last ned nettikoner"
 
-#: data/resources/ui/preferences.ui:64
+#: data/resources/ui/preferences.ui:62
 msgid "Automatically attempt fetching a website icon"
 msgstr "Prøv å hente ikoner til nettsteder automatisk"
 
-#: data/resources/ui/preferences.ui:69
+#: data/resources/ui/preferences.ui:67
 msgid "_Metered Connection"
 msgstr "_Forbruksmålt tilkobling"
 
-#: data/resources/ui/preferences.ui:71
+#: data/resources/ui/preferences.ui:69
 msgid "Fetch a website icon on a metered connection"
 msgstr "Last ned nettikoner på forbruksmålte tilkoblinger"
-
-#: data/resources/ui/preferences.ui:81
-msgid "Backup/Restore"
-msgstr "Sikkerhetskopi"
-
-#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:479
-msgid "Backup"
-msgstr "Sikkerhetskopiering"
-
-#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:487
-msgid "Restore"
-msgstr "Gjenoppretting"
 
 #: data/resources/ui/preferences_password_page.ui:4
 msgid "Create Password"
@@ -447,17 +447,17 @@ msgstr "Hjelpelenke"
 msgid "Providers"
 msgstr "Tjenester"
 
-#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:209
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:208
 msgid "New Provider"
 msgstr "Ny tjeneste"
 
 #: data/resources/ui/providers_dialog.ui:36
-#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:207
-#: data/resources/ui/window.ui:228
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:198
+#: data/resources/ui/window.ui:218
 msgid "Search"
 msgstr "Søk"
 
-#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:202
+#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:213
 msgid "Search…"
 msgstr "Søk…"
 
@@ -539,55 +539,59 @@ msgstr "_Tjenester"
 msgid "_Preferences"
 msgstr "_Innstillinger"
 
-#: data/resources/ui/window.ui:22
+#: data/resources/ui/window.ui:20
+msgid "_Backup & Restore"
+msgstr "_Sikkerhetskopi"
+
+#: data/resources/ui/window.ui:26
 msgid "_Keyboard Shortcuts"
 msgstr "_Tastatursnarveier"
 
-#: data/resources/ui/window.ui:26
+#: data/resources/ui/window.ui:30
 msgid "_About Authenticator"
 msgstr "_Om Authenticator"
 
-#: data/resources/ui/window.ui:66
+#: data/resources/ui/window.ui:70
 msgid "Authenticator is Locked"
 msgstr "Authenticator er låst"
 
-#: data/resources/ui/window.ui:92
+#: data/resources/ui/window.ui:96
 msgid "_Unlock"
 msgstr "_Lås opp"
 
-#: data/resources/ui/window.ui:122
+#: data/resources/ui/window.ui:126
 msgid "Accounts"
 msgstr "Kontoer"
 
-#: data/resources/ui/window.ui:137 data/resources/ui/window.ui:176
+#: data/resources/ui/window.ui:141 data/resources/ui/window.ui:179
 msgid "New Account"
 msgstr "Ny konto"
 
-#: data/resources/ui/window.ui:145 data/resources/ui/window.ui:222
+#: data/resources/ui/window.ui:149 data/resources/ui/window.ui:192
 msgid "Main Menu"
 msgstr "Hovedmeny"
 
-#: data/resources/ui/window.ui:153
+#: data/resources/ui/window.ui:157
 msgid "No Accounts"
 msgstr "Ingen kontoer"
 
-#: data/resources/ui/window.ui:154
+#: data/resources/ui/window.ui:158
 msgid "Add an account or scan a QR code first."
 msgstr "Legg til en konto eller skann en QR-kode først."
 
-#: src/application.rs:77
+#: src/application.rs:83
 msgid "Accounts restored successfully"
 msgstr "Kontoer gjenopprettet"
 
-#: src/application.rs:101
+#: src/application.rs:123
 msgid "translator-credits"
 msgstr "Brage Fuglseth https://bragefuglseth.dev"
 
-#: src/application.rs:388 src/widgets/accounts/row.rs:45
+#: src/application.rs:434 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Engangspassord kopiert til utklippstavlen"
 
-#: src/application.rs:389
+#: src/application.rs:435
 msgid "Password was copied successfully"
 msgstr "Passord kopiert til utklippstavlen"
 
@@ -695,28 +699,28 @@ msgstr "Tidsbasert"
 msgid "Steam"
 msgstr "Steam"
 
-#: src/models/algorithm.rs:126
+#: src/models/algorithm.rs:125
 msgid "SHA-1"
 msgstr "SHA-1"
 
-#: src/models/algorithm.rs:127
+#: src/models/algorithm.rs:126
 msgid "SHA-256"
 msgstr "SHA-256"
 
-#: src/models/algorithm.rs:128
+#: src/models/algorithm.rs:127
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:268 src/widgets/preferences/window.rs:416
-#: src/widgets/providers/page.rs:292
+#: src/widgets/accounts/add.rs:270 src/widgets/backup/dialog.rs:443
+#: src/widgets/providers/page.rs:291
 msgid "Image"
 msgstr "Bilde"
 
-#: src/widgets/accounts/add.rs:276 src/widgets/preferences/window.rs:424
+#: src/widgets/accounts/add.rs:278 src/widgets/backup/dialog.rs:451
 msgid "Select QR Code"
 msgstr "Velg QR-kode"
 
-#: src/widgets/accounts/add.rs:294
+#: src/widgets/accounts/add.rs:296
 msgid "Invalid Token"
 msgstr "Ugyldig kode"
 
@@ -736,56 +740,56 @@ msgstr "Avbryt"
 msgid "Yes"
 msgstr "Slett"
 
-#: src/widgets/preferences/password_page.rs:172
-#: src/widgets/preferences/password_page.rs:214
-msgid "Wrong Passphrase"
-msgstr "Feil passord"
-
-#: src/widgets/preferences/window.rs:191 src/widgets/preferences/window.rs:263
+#: src/widgets/backup/dialog.rs:163 src/widgets/backup/dialog.rs:245
 msgid "Key / Passphrase"
 msgstr "Passord"
 
-#: src/widgets/preferences/window.rs:202 src/widgets/preferences/window.rs:275
+#: src/widgets/backup/dialog.rs:174 src/widgets/backup/dialog.rs:257
 msgid "Select File"
 msgstr "Velg fil"
 
-#: src/widgets/preferences/window.rs:226
+#: src/widgets/backup/dialog.rs:205
 msgid "Failed to create a backup"
 msgstr "Sikkerhetskopiering mislyktes"
 
-#: src/widgets/preferences/window.rs:338
+#: src/widgets/backup/dialog.rs:327
 msgid "Failed to restore from camera"
 msgstr "Gjenoppretting fra kamera mislyktes"
 
-#: src/widgets/preferences/window.rs:349
+#: src/widgets/backup/dialog.rs:352
 msgid "Failed to restore from a screenshot"
 msgstr "Gjenoppretting fra skjermbilde mislyktes"
 
-#: src/widgets/preferences/window.rs:359
+#: src/widgets/backup/dialog.rs:372
 msgid "Failed to restore from an image"
 msgstr "Gjenoppretting fra bilde mislyktes"
 
-#: src/widgets/preferences/window.rs:372
+#: src/widgets/backup/dialog.rs:396
 msgid "Failed to restore from a file"
 msgstr "Gjenoppretting fra fil mislyktes"
 
-#: src/widgets/providers/dialog.rs:235
+#: src/widgets/preferences/password_page.rs:195
+#: src/widgets/preferences/password_page.rs:237
+msgid "Wrong Passphrase"
+msgstr "Feil passord"
+
+#: src/widgets/providers/dialog.rs:261
 msgid "Provider created successfully"
 msgstr "Tjeneste opprettet"
 
-#: src/widgets/providers/dialog.rs:245
+#: src/widgets/providers/dialog.rs:271
 msgid "Provider updated successfully"
 msgstr "Tjeneste oppdatert"
 
-#: src/widgets/providers/dialog.rs:261
+#: src/widgets/providers/dialog.rs:287
 msgid "Provider removed successfully"
 msgstr "Tjeneste fjernet"
 
-#: src/widgets/providers/page.rs:186
+#: src/widgets/providers/page.rs:185
 msgid "Editing Provider: {}"
 msgstr "Redigering av tjeneste: {}"
 
-#: src/widgets/providers/page.rs:325
+#: src/widgets/providers/page.rs:324
 msgid "The provider has accounts assigned to it, please remove them first"
 msgstr "Tjenesten har tilknyttede kontoer, fjern dem først"
 
