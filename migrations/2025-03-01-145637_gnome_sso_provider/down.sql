@@ -1,1 +1,1 @@
-DELETE FROM "providers" WHERE "name"="GNOME SSO";
+DELETE FROM "providers" WHERE "name"="GNOME";

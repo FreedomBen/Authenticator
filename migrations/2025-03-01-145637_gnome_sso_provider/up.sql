@@ -1,1 +1,1 @@
-INSERT INTO "providers" ("name", "website", "help_url", "image_uri") VALUES ("GNOME SSO", "https://sso.gnome.org", "https://handbook.gnome.org/infrastructure/accounts.html", "https://www.gnome.org/img/favicon.png");
+INSERT INTO "providers" ("name", "website", "help_url", "image_uri") VALUES ("GNOME", "https://sso.gnome.org", "https://handbook.gnome.org/infrastructure/accounts.html", "https://www.gnome.org/img/favicon.png");
