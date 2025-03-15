@@ -179,7 +179,7 @@ impl CameraPage {
                     "CameraPage::scan_from_screenshot failed to receive the resulting QR code in ",
                     "a reasonable amount of time."
                 ));
-            } => result.map_err(From::from),
+            } => result,
         }
     }
 
