@@ -54,23 +54,3 @@ custom_target(
     'cp', 'src' / rust_target / meson.project_name(), '@OUTPUT@',
   ]
 )
-
-cargo_target_dir = meson.project_build_root() / 'target'
-cargo_home = cargo_target_dir / 'cargo-home'
-
-doc_deps = [
-  '--package=favicon-scrapper',
-  '--package=authenticator'
-]
-custom_target(
-  'cargo-doc',
-  build_by_default: false,
-  build_always_stale: true,
-  output: 'doc',
-  console: true,
-  command: [
-    'env', cargo_env,
-    cargo, 'doc',
-    cargo_options + doc_deps + ['--no-deps', '--document-private-items'] ,
-  ],
-)

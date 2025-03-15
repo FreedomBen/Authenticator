@@ -33,25 +33,6 @@ nightly@aarch64:
   extends: '.publish_nightly'
   needs: ['build-flatpak-aarch64']
 
-pages:
-  image: "quay.io/gnome_infrastructure/gnome-runtime-images:gnome-master"
-  stage: build
-  extends: ['.vars-devel', '.flatpak@x86_64']
-  tags:
-    - flatpak
-  script:
-    #- tar xf repo.tar
-    - flatpak-builder --keep-build-dirs --user --disable-rofiles-fuse --stop-at=${FLATPAK_MODULE} flatpak_docs --repo=repo ${BRANCH:+--default-branch=$BRANCH} ${MANIFEST_PATH}
-    - echo "ninja src/doc" | flatpak-builder --force-clean --disable-rofiles-fuse --build-shell=${FLATPAK_MODULE} flatpak_docs ${MANIFEST_PATH}
-    - mv .flatpak-builder/build/${FLATPAK_MODULE}/_flatpak_build/src/doc public
-    - chmod -R a=rwx public
-  artifacts:
-    paths:
-      - 'public'
-  only:
-    refs:
-      - master
-
 rustfmt:
   image: "rust:slim"
   stage: ".pre"
@@ -82,3 +63,17 @@ cargo-test:
   <<: *flatpak-command
   variables:
     COMMAND: "cargo test --workspace --all-features --all-targets"
+
+pages:
+  <<: *flatpak-command
+  variables:
+    COMMAND: "cargo doc --package=favicon-scrapper --package=authenticator --all-features --no-deps --document-private-items"
+  after_script:
+    - mv .flatpak-builder/build/${FLATPAK_MODULE}/target/doc public
+    - chmod -R a=rwx public
+  artifacts:
+    paths:
+      - 'public'
+  only:
+    refs:
+      - master
