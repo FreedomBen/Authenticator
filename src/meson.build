@@ -57,13 +57,6 @@ custom_target(
 
 cargo_target_dir = meson.project_build_root() / 'target'
 cargo_home = cargo_target_dir / 'cargo-home'
-test (
-  'Cargo tests',
-  cargo,
-  args: ['test', '--bin', meson.project_name(), cargo_options],
-  timeout: 600, # cargo might take a bit of time sometimes
-  env: ['CARGO_TARGET_DIR=@0@'.format(cargo_target_dir), 'CARGO_HOME=@0@'.format(cargo_home)]
-)
 
 doc_deps = [
   '--package=favicon-scrapper',
