@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2025-02-10 11:13+0000\n"
-"PO-Revision-Date: 2025-02-14 10:50+1100\n"
+"POT-Creation-Date: 2025-02-15 12:29+0000\n"
+"PO-Revision-Date: 2025-03-27 13:35+1100\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: \n"
 "Language: oc\n"
@@ -287,7 +287,7 @@ msgstr "Detalhs del compte"
 
 #: data/resources/ui/backup_dialog.ui:4 data/resources/ui/backup_dialog.ui:8
 msgid "Backup & Restore"
-msgstr "Salvagardare restaurar"
+msgstr "Salvagardar e restaurar"
 
 #: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:506
 msgid "Backup"
