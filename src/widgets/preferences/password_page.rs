@@ -109,9 +109,9 @@ impl PasswordPage {
         let password_repeat = imp.confirm_password_entry.text();
 
         let is_valid = if self.has_set_password() {
-            password_repeat == password && current_password != password && password != ""
+            password_repeat == password && current_password != password && !password.is_empty()
         } else {
-            password_repeat == password && password != ""
+            password_repeat == password && !password.is_empty()
         };
 
         let save_password_action = self
