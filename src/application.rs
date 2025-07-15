@@ -227,7 +227,6 @@ mod imp {
             app.set_accels_for_action("app.lock", &["<primary>l"]);
             app.set_accels_for_action("app.providers", &["<primary>p"]);
             app.set_accels_for_action("app.preferences", &["<primary>comma"]);
-            app.set_accels_for_action("win.show-help-overlay", &["<primary>question"]);
             app.set_accels_for_action("win.search", &["<primary>f"]);
             app.set_accels_for_action("win.add_account", &["<primary>n"]);
             app.set_accels_for_action("window.close", &["<primary>w"]);

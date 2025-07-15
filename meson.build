@@ -7,7 +7,7 @@ project('authenticator', 'rust',
 dependency('glib-2.0', version: '>= 2.56')
 dependency('gio-2.0', version: '>= 2.56')
 dependency('gtk4', version: '>= 4.10')
-dependency('libadwaita-1', version: '>=1.5.beta')
+dependency('libadwaita-1', version: '>=1.8.alpha')
 dependency('gstreamer-1.0', version: '>= 1.18')
 dependency('gstreamer-base-1.0', version: '>= 1.18')
 dependency('gstreamer-plugins-base-1.0', version: '>= 1.18')
