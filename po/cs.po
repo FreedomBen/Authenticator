@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: authenticator master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2024-01-07 14:35+0000\n"
-"PO-Revision-Date: 2024-01-22 22:50+0100\n"
+"POT-Creation-Date: 2025-08-10 11:12+0000\n"
+"PO-Revision-Date: 2025-08-19 22:20+0200\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -19,25 +19,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.6\n"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:2
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
-#: data/resources/ui/window.ui:36 src/application.rs:91 src/main.rs:40
+#: data/resources/ui/window.ui:40 src/application.rs:112 src/main.rs:40
 msgid "Authenticator"
 msgstr "Autentikátor"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 msgid "Two-Factor Authentication"
 msgstr "Dvoufaktorová autentizace"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:5
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:94
+#: src/application.rs:114
 msgid "Generate two-factor codes"
 msgstr "Generujte dvoufaktorové kódy"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:10
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:9
 msgid "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;"
 msgstr "Gnome;GTK;ověření;verifikace;2FA;autentizace;Authenticator;OTP;TOTP;"
 
@@ -135,7 +135,7 @@ msgid "Main Window"
 msgstr "Hlavní okno"
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:29
-#: data/resources/ui/account_add.ui:32 data/resources/ui/account_add.ui:49
+#: data/resources/ui/account_add.ui:30 data/resources/ui/account_add.ui:47
 msgid "Add a New Account"
 msgstr "Přidat nový účet"
 
@@ -151,108 +151,108 @@ msgstr "Podrobnosti účtu"
 msgid "Backup/Restore formats support"
 msgstr "Podpora formátů zálohy/obnovy"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:292
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:274
 msgid "_Camera"
 msgstr "_Kamera"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:296
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:278
 msgid "_Screenshot"
 msgstr "_Snímek obrazovky"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:301
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:283
 msgid "_QR Code Image"
 msgstr "Obrázek s _QR kódem"
 
-#: data/resources/ui/account_add.ui:58
-msgid "Cancel"
-msgstr "Zrušit"
+#: data/resources/ui/account_add.ui:56
+msgid "_Cancel"
+msgstr "_Zrušit"
 
-#: data/resources/ui/account_add.ui:64
+#: data/resources/ui/account_add.ui:63
 msgid "_Add"
 msgstr "_Přidat"
 
-#: data/resources/ui/account_add.ui:76 src/widgets/preferences/window.rs:287
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:269
 msgid "Scan QR Code"
 msgstr "Skenovat QR kód"
 
-#: data/resources/ui/account_add.ui:114
+#: data/resources/ui/account_add.ui:113
 #: data/resources/ui/account_details_page.ui:96
 #: data/resources/ui/provider_page.ui:22
-#: data/resources/ui/providers_dialog.ui:110
+#: data/resources/ui/providers_dialog.ui:108
 msgid "Provider"
 msgstr "Poskytovatel"
 
-#: data/resources/ui/account_add.ui:115
+#: data/resources/ui/account_add.ui:114
 msgid "Token issuer"
 msgstr "Vydavatel tiketu"
 
-#: data/resources/ui/account_add.ui:129
+#: data/resources/ui/account_add.ui:128
 #: data/resources/ui/account_details_page.ui:91
 msgid "Account"
 msgstr "Účet"
 
-#: data/resources/ui/account_add.ui:135
+#: data/resources/ui/account_add.ui:134
 msgid "Token"
 msgstr "Tiket"
 
-#: data/resources/ui/account_add.ui:141
-#: data/resources/ui/account_details_page.ui:139
+#: data/resources/ui/account_add.ui:140
+#: data/resources/ui/account_details_page.ui:135
 #: data/resources/ui/provider_page.ui:158
 msgid "Counter"
 msgstr "Čítač"
 
-#: data/resources/ui/account_add.ui:159
+#: data/resources/ui/account_add.ui:158
 #: data/resources/ui/account_details_page.ui:119
 #: data/resources/ui/provider_page.ui:133
 msgid "Algorithm"
 msgstr "Algoritmus"
 
-#: data/resources/ui/account_add.ui:171
-#: data/resources/ui/account_details_page.ui:129
+#: data/resources/ui/account_add.ui:166
+#: data/resources/ui/account_details_page.ui:127
 #: data/resources/ui/provider_page.ui:118
 msgid "Computing Method"
 msgstr "Metoda výpočtu"
 
-#: data/resources/ui/account_add.ui:183
-#: data/resources/ui/account_details_page.ui:148
+#: data/resources/ui/account_add.ui:174
+#: data/resources/ui/account_details_page.ui:144
 #: data/resources/ui/provider_page.ui:149
 msgid "Period"
 msgstr "Perioda"
 
-#: data/resources/ui/account_add.ui:184
-#: data/resources/ui/account_details_page.ui:149
+#: data/resources/ui/account_add.ui:175
+#: data/resources/ui/account_details_page.ui:145
 #: data/resources/ui/provider_page.ui:150
 msgid "Duration in seconds until the next password update"
 msgstr "Doba v sekundách do další aktualizace hesla"
 
-#: data/resources/ui/account_add.ui:196
-#: data/resources/ui/account_details_page.ui:159
+#: data/resources/ui/account_add.ui:183
+#: data/resources/ui/account_details_page.ui:153
 #: data/resources/ui/provider_page.ui:167
 msgid "Digits"
 msgstr "Číslice"
 
-#: data/resources/ui/account_add.ui:197
-#: data/resources/ui/account_details_page.ui:160
+#: data/resources/ui/account_add.ui:184
+#: data/resources/ui/account_details_page.ui:154
 #: data/resources/ui/provider_page.ui:168
 msgid "Length of the generated code"
 msgstr "Délka generovaného kódu"
 
-#: data/resources/ui/account_add.ui:209
-#: data/resources/ui/account_details_page.ui:170
+#: data/resources/ui/account_add.ui:192
+#: data/resources/ui/account_details_page.ui:162
 #: data/resources/ui/provider_page.ui:112
 msgid "Website"
 msgstr "Webové stránky"
 
-#: data/resources/ui/account_add.ui:214
+#: data/resources/ui/account_add.ui:197
 msgid "How to Set Up"
 msgstr "Jak nastavit"
 
-#: data/resources/ui/account_add.ui:234
+#: data/resources/ui/account_add.ui:217
 #: data/resources/ui/preferences_camera_page.ui:4
 msgid "Camera"
 msgstr "Kamera"
 
-#: data/resources/ui/account_add.ui:246
+#: data/resources/ui/account_add.ui:229
 msgid "Create Provider"
 msgstr "Vytvořit poskytovatele"
 
@@ -267,7 +267,7 @@ msgstr "_Uložit"
 msgid "_Delete"
 msgstr "_Odstranit"
 
-#: data/resources/ui/account_details_page.ui:175
+#: data/resources/ui/account_details_page.ui:167
 msgid "Help"
 msgstr "Nápověda"
 
@@ -283,11 +283,23 @@ msgstr "Zkopírovat PIN do schránky"
 msgid "Account details"
 msgstr "Podrobnosti účtu"
 
-#: data/resources/ui/camera.ui:36
+#: data/resources/ui/backup_dialog.ui:4 data/resources/ui/backup_dialog.ui:8
+msgid "Backup & Restore"
+msgstr "Zálohovat a obnovit"
+
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:506
+msgid "Backup"
+msgstr "Zálohovat"
+
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:514
+msgid "Restore"
+msgstr "Obnovit"
+
+#: data/resources/ui/camera.ui:35
 msgid "No Camera Found"
 msgstr "Nebyla nalezena žádná kamera"
 
-#: data/resources/ui/camera.ui:39
+#: data/resources/ui/camera.ui:38
 msgid "_From a Screenshot"
 msgstr "_Ze snímku obrazovky"
 
@@ -331,69 +343,57 @@ msgstr ""
 "Další podrobnosti naleznete v záznamech aplikace a dokumentaci vaší "
 "distribuce."
 
-#: data/resources/ui/preferences.ui:16
+#: data/resources/ui/preferences.ui:14
 msgid "General"
 msgstr "Obecné"
 
-#: data/resources/ui/preferences.ui:19
+#: data/resources/ui/preferences.ui:17
 msgid "Privacy"
 msgstr "Soukromí"
 
-#: data/resources/ui/preferences.ui:22
+#: data/resources/ui/preferences.ui:20
 msgid "_Passphrase"
 msgstr "_Heslo"
 
-#: data/resources/ui/preferences.ui:24
+#: data/resources/ui/preferences.ui:22
 msgid "Set up a passphrase to lock the application with"
 msgstr "Nastavte heslo pro uzamykání aplikace"
 
-#: data/resources/ui/preferences.ui:37
+#: data/resources/ui/preferences.ui:35
 msgid "_Auto Lock the Application"
 msgstr "_Automaticky uzamykat aplikaci"
 
-#: data/resources/ui/preferences.ui:39
+#: data/resources/ui/preferences.ui:37
 msgid "Whether to automatically lock the application"
 msgstr "Jestli se má aplikace automaticky uzamykat"
 
-#: data/resources/ui/preferences.ui:45
+#: data/resources/ui/preferences.ui:43
 msgid "Auto Lock _Timeout"
 msgstr "Časový _limit do automatického uzamčení"
 
-#: data/resources/ui/preferences.ui:46
+#: data/resources/ui/preferences.ui:44
 msgid "The time in minutes"
 msgstr "Čas v minutách"
 
-#: data/resources/ui/preferences.ui:59
+#: data/resources/ui/preferences.ui:57
 msgid "Network"
 msgstr "Síť"
 
-#: data/resources/ui/preferences.ui:62
+#: data/resources/ui/preferences.ui:60
 msgid "_Download Favicons"
 msgstr "_Stahovat ikony"
 
-#: data/resources/ui/preferences.ui:64
+#: data/resources/ui/preferences.ui:62
 msgid "Automatically attempt fetching a website icon"
 msgstr "Pokusit se automaticky načíst ikonu webové stránky"
 
-#: data/resources/ui/preferences.ui:69
+#: data/resources/ui/preferences.ui:67
 msgid "_Metered Connection"
 msgstr "_Měřená spojení"
 
-#: data/resources/ui/preferences.ui:71
+#: data/resources/ui/preferences.ui:69
 msgid "Fetch a website icon on a metered connection"
 msgstr "Načítat ikony přes měřená spojení"
-
-#: data/resources/ui/preferences.ui:81
-msgid "Backup/Restore"
-msgstr "Zálohovat / obnovit"
-
-#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:476
-msgid "Backup"
-msgstr "Zálohovat"
-
-#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:484
-msgid "Restore"
-msgstr "Obnovit"
 
 #: data/resources/ui/preferences_password_page.ui:4
 msgid "Create Password"
@@ -440,39 +440,39 @@ msgstr "Výchozí hodnota pro výpočetní metodu založenou na čítači"
 msgid "Help URL"
 msgstr "URL nápovědy"
 
-#: data/resources/ui/providers_dialog.ui:10
-#: data/resources/ui/providers_dialog.ui:21
+#: data/resources/ui/providers_dialog.ui:8
+#: data/resources/ui/providers_dialog.ui:19
 msgid "Providers"
 msgstr "Poskytovatelé"
 
-#: data/resources/ui/providers_dialog.ui:31 src/widgets/providers/page.rs:209
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:208
 msgid "New Provider"
 msgstr "Nový poskytovatel"
 
-#: data/resources/ui/providers_dialog.ui:38
-#: data/resources/ui/providers_dialog.ui:54 data/resources/ui/window.ui:207
-#: data/resources/ui/window.ui:228
+#: data/resources/ui/providers_dialog.ui:36
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:198
+#: data/resources/ui/window.ui:218
 msgid "Search"
 msgstr "Vyhledat"
 
-#: data/resources/ui/providers_dialog.ui:49 data/resources/ui/window.ui:202
+#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:213
 msgid "Search…"
 msgstr "hledat…"
 
-#: data/resources/ui/providers_dialog.ui:95
+#: data/resources/ui/providers_dialog.ui:93
 #: data/resources/ui/providers_list.ui:38
 msgid "No Results"
 msgstr "Žádné výsledky"
 
-#: data/resources/ui/providers_dialog.ui:96
+#: data/resources/ui/providers_dialog.ui:94
 msgid "No providers matching the query were found."
 msgstr "Nebyli nalezeni žádní poskytovatelé odpovídající dotazu."
 
-#: data/resources/ui/providers_dialog.ui:141
+#: data/resources/ui/providers_dialog.ui:139
 msgid "No Provider Selected"
 msgstr "Není vybrán žádný poskytovatel"
 
-#: data/resources/ui/providers_dialog.ui:142
+#: data/resources/ui/providers_dialog.ui:140
 msgid "Select a provider or create a new one"
 msgstr "Vyberte poskytovatele nebo udělejte nového"
 
@@ -537,58 +537,62 @@ msgstr "P_oskytovatelé"
 msgid "_Preferences"
 msgstr "_Předvolby"
 
-#: data/resources/ui/window.ui:22
+#: data/resources/ui/window.ui:20
+msgid "_Backup & Restore"
+msgstr "Zálohovat a o_bnovit"
+
+#: data/resources/ui/window.ui:26
 msgid "_Keyboard Shortcuts"
 msgstr "_Klávesové zkratky"
 
-#: data/resources/ui/window.ui:26
+#: data/resources/ui/window.ui:30
 msgid "_About Authenticator"
 msgstr "_O aplikaci Autentikátor"
 
-#: data/resources/ui/window.ui:66
+#: data/resources/ui/window.ui:70
 msgid "Authenticator is Locked"
 msgstr "Autentikátor je uzamčen"
 
-#: data/resources/ui/window.ui:92
+#: data/resources/ui/window.ui:96
 msgid "_Unlock"
 msgstr "_Odemknout"
 
-#: data/resources/ui/window.ui:122
+#: data/resources/ui/window.ui:126
 msgid "Accounts"
 msgstr "Účty"
 
-#: data/resources/ui/window.ui:137 data/resources/ui/window.ui:176
+#: data/resources/ui/window.ui:141 data/resources/ui/window.ui:179
 msgid "New Account"
 msgstr "Nový účet"
 
-#: data/resources/ui/window.ui:145 data/resources/ui/window.ui:222
+#: data/resources/ui/window.ui:149 data/resources/ui/window.ui:192
 msgid "Main Menu"
 msgstr "Hlavní nabídka"
 
-#: data/resources/ui/window.ui:153
+#: data/resources/ui/window.ui:157
 msgid "No Accounts"
 msgstr "Žádné účty"
 
-#: data/resources/ui/window.ui:154
+#: data/resources/ui/window.ui:158
 msgid "Add an account or scan a QR code first."
 msgstr "Nejprve přidejte účet nebo naskenujte QR kód."
 
-#: src/application.rs:77
+#: src/application.rs:83
 msgid "Accounts restored successfully"
 msgstr "Účty se úspěšně obnovily"
 
-#: src/application.rs:103
+#: src/application.rs:123
 msgid "translator-credits"
 msgstr ""
 "Zdeněk Hataš <zdenek.hatas@gmail.com>\n"
 "Marek Černocký <marek@manet.cz>\n"
 "Vojtěch Perník <translations@pervoj.cz>"
 
-#: src/application.rs:392 src/widgets/accounts/row.rs:46
+#: src/application.rs:434 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Jednorázové heslo bylo zkopírováno"
 
-#: src/application.rs:393
+#: src/application.rs:435
 msgid "Password was copied successfully"
 msgstr "Heslo bylo úspěšně zkopírováno"
 
@@ -696,97 +700,97 @@ msgstr "Založené na čase"
 msgid "Steam"
 msgstr "Steam"
 
-#: src/models/algorithm.rs:126
+#: src/models/algorithm.rs:125
 msgid "SHA-1"
 msgstr "SHA-1"
 
-#: src/models/algorithm.rs:127
+#: src/models/algorithm.rs:126
 msgid "SHA-256"
 msgstr "SHA-256"
 
-#: src/models/algorithm.rs:128
+#: src/models/algorithm.rs:127
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:269 src/widgets/preferences/window.rs:414
-#: src/widgets/providers/page.rs:292
+#: src/widgets/accounts/add.rs:270 src/widgets/backup/dialog.rs:443
+#: src/widgets/providers/page.rs:291
 msgid "Image"
 msgstr "Obrázek"
 
-#: src/widgets/accounts/add.rs:277 src/widgets/preferences/window.rs:422
+#: src/widgets/accounts/add.rs:278 src/widgets/backup/dialog.rs:451
 msgid "Select QR Code"
 msgstr "Vybrat QR kód"
 
-#: src/widgets/accounts/add.rs:295
+#: src/widgets/accounts/add.rs:296
 msgid "Invalid Token"
 msgstr "Neplatný tiket"
 
-#: src/widgets/accounts/details.rs:127
+#: src/widgets/accounts/details.rs:123
 msgid "Are you sure you want to delete the account?"
 msgstr "Jste si jisti, že chcete účet smazat?"
 
-#: src/widgets/accounts/details.rs:128
+#: src/widgets/accounts/details.rs:124
 msgid "This action is irreversible"
 msgstr "Tato akce je nevratná"
 
-#: src/widgets/accounts/details.rs:132
+#: src/widgets/accounts/details.rs:126
 msgid "No"
 msgstr "Ne"
 
-#: src/widgets/accounts/details.rs:132
+#: src/widgets/accounts/details.rs:126
 msgid "Yes"
 msgstr "Ano"
 
-#: src/widgets/preferences/password_page.rs:172
-#: src/widgets/preferences/password_page.rs:214
-msgid "Wrong Passphrase"
-msgstr "Nesprávná heslová fráze"
-
-#: src/widgets/preferences/window.rs:191 src/widgets/preferences/window.rs:263
+#: src/widgets/backup/dialog.rs:163 src/widgets/backup/dialog.rs:245
 msgid "Key / Passphrase"
 msgstr "Klíč / heslová fráze"
 
-#: src/widgets/preferences/window.rs:202 src/widgets/preferences/window.rs:275
+#: src/widgets/backup/dialog.rs:174 src/widgets/backup/dialog.rs:257
 msgid "Select File"
 msgstr "Výběr souboru"
 
-#: src/widgets/preferences/window.rs:226
+#: src/widgets/backup/dialog.rs:205
 msgid "Failed to create a backup"
 msgstr "Nepodařilo se vytvořit zálohu"
 
-#: src/widgets/preferences/window.rs:338
+#: src/widgets/backup/dialog.rs:327
 msgid "Failed to restore from camera"
 msgstr "Nepodařilo se obnovit z kamery"
 
-#: src/widgets/preferences/window.rs:349
+#: src/widgets/backup/dialog.rs:352
 msgid "Failed to restore from a screenshot"
 msgstr "Nepodařilo se obnovit ze snímku obrazovky"
 
-#: src/widgets/preferences/window.rs:359
+#: src/widgets/backup/dialog.rs:372
 msgid "Failed to restore from an image"
 msgstr "Nepodařilo se obnovit z obrázku"
 
-#: src/widgets/preferences/window.rs:372
+#: src/widgets/backup/dialog.rs:396
 msgid "Failed to restore from a file"
 msgstr "Nepodařilo se obnovit ze souboru"
 
-#: src/widgets/providers/dialog.rs:235
+#: src/widgets/preferences/password_page.rs:195
+#: src/widgets/preferences/password_page.rs:237
+msgid "Wrong Passphrase"
+msgstr "Nesprávná heslová fráze"
+
+#: src/widgets/providers/dialog.rs:261
 msgid "Provider created successfully"
 msgstr "Poskytovatel byl úspěšně vytvořen"
 
-#: src/widgets/providers/dialog.rs:245
+#: src/widgets/providers/dialog.rs:271
 msgid "Provider updated successfully"
 msgstr "Poskytovatel byl úspěšně aktualizován"
 
-#: src/widgets/providers/dialog.rs:261
+#: src/widgets/providers/dialog.rs:287
 msgid "Provider removed successfully"
 msgstr "Poskytovatel byl úspěšně odebrán"
 
-#: src/widgets/providers/page.rs:186
+#: src/widgets/providers/page.rs:185
 msgid "Editing Provider: {}"
 msgstr "Upravuje se  poskytovatel: {}"
 
-#: src/widgets/providers/page.rs:325
+#: src/widgets/providers/page.rs:324
 msgid "The provider has accounts assigned to it, please remove them first"
 msgstr "Poskytovatel má přiřazené účty. Nejprve je prosím odstraňte."
 
