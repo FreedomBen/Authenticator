@@ -144,7 +144,8 @@ mod imp {
 
 glib::wrapper! {
     pub struct ProviderPage(ObjectSubclass<imp::ProviderPage>)
-        @extends gtk::Widget, adw::NavigationPage;
+        @extends gtk::Widget, adw::NavigationPage,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 #[gtk::template_callbacks]

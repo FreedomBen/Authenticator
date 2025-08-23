@@ -136,7 +136,8 @@ mod imp {
 }
 glib::wrapper! {
     pub struct AccountAddDialog(ObjectSubclass<imp::AccountAddDialog>)
-        @extends gtk::Widget, adw::Dialog;
+        @extends gtk::Widget, adw::Dialog,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 #[gtk::template_callbacks]
@@ -152,10 +153,16 @@ impl AccountAddDialog {
         self.connect_local(
             "added",
             false,
-            clone!(@weak self as dialog => @default-return None, move |_| {
-                callback(&dialog);
-                None
-            }),
+            clone!(
+                #[weak(rename_to = dialog)]
+                self,
+                #[upgrade_or]
+                None,
+                move |_| {
+                    callback(&dialog);
+                    None
+                }
+            ),
         )
     }
 

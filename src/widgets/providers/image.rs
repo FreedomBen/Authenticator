@@ -102,8 +102,10 @@ mod imp {
 
 glib::wrapper! {
     pub struct ProviderImage(ObjectSubclass<imp::ProviderImage>)
-        @extends gtk::Widget, gtk::Box;
+        @extends gtk::Widget, gtk::Box,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
+
 impl ProviderImage {
     fn on_provider_image_changed(&self) {
         let imp = self.imp();

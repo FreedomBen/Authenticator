@@ -52,7 +52,8 @@ mod imp {
 
 glib::wrapper! {
 pub struct ProviderActionRow(ObjectSubclass<imp::ProviderActionRow>)
-    @extends gtk::Widget, gtk::ListBoxRow;
+    @extends gtk::Widget, gtk::ListBoxRow,
+    @implements gtk::Accessible, gtk::Actionable, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 impl ProviderActionRow {

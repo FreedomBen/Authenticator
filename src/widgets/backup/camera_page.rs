@@ -55,7 +55,8 @@ mod imp {
 
 glib::wrapper! {
     pub struct CameraPage(ObjectSubclass<imp::CameraPage>)
-        @extends gtk::Widget, adw::NavigationPage;
+        @extends gtk::Widget, adw::NavigationPage,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 #[gtk::template_callbacks]

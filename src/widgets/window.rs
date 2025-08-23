@@ -219,7 +219,9 @@ mod imp {
 glib::wrapper! {
     pub struct Window(ObjectSubclass<imp::Window>)
         @extends gtk::Widget, gtk::Window, gtk::ApplicationWindow, adw::ApplicationWindow,
-        @implements gio::Initable, gio::ActionMap, gio::ActionGroup, gtk::Native, gtk::Root;
+        @implements gio::Initable, gio::ActionMap, gio::ActionGroup, gtk::Accessible,
+                    gtk::Buildable, gtk::ConstraintTarget, gtk::ShortcutManager,
+                    gtk::Native, gtk::Root;
 }
 
 #[gtk::template_callbacks]

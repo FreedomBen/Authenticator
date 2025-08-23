@@ -69,8 +69,10 @@ mod imp {
 
 glib::wrapper! {
     pub struct ProvidersList(ObjectSubclass<imp::ProvidersList>)
-        @extends gtk::Widget, gtk::Box;
+        @extends gtk::Widget, gtk::Box,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
+
 impl ProvidersList {
     pub fn set_view(&self, view: ProvidersListView) {
         let imp = self.imp();

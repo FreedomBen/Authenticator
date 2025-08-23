@@ -129,7 +129,8 @@ mod imp {
 }
 glib::wrapper! {
     pub struct ProvidersDialog(ObjectSubclass<imp::ProvidersDialog>)
-        @extends gtk::Widget, adw::Dialog;
+        @extends gtk::Widget, adw::Dialog,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 #[gtk::template_callbacks]

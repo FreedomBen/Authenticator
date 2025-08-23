@@ -41,7 +41,10 @@ mod imp {
 
 glib::wrapper! {
     pub struct KeyringErrorDialog(ObjectSubclass<imp::KeyringErrorDialog>)
-        @extends gtk::Widget, gtk::Window, gtk::ApplicationWindow, adw::Window, adw::ApplicationWindow;
+        @extends gtk::Widget, gtk::Window, gtk::ApplicationWindow, adw::Window, adw::ApplicationWindow,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget,
+                    gio::ActionMap, gio::ActionGroup, gtk::Native, gtk::Root,
+                    gtk::ShortcutManager;
 }
 
 impl KeyringErrorDialog {

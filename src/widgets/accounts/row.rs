@@ -94,7 +94,8 @@ mod imp {
 
 glib::wrapper! {
     pub struct AccountRow(ObjectSubclass<imp::AccountRow>)
-        @extends gtk::Widget, gtk::ListBoxRow, adw::PreferencesRow, adw::ActionRow;
+        @extends gtk::Widget, gtk::ListBoxRow, adw::PreferencesRow, adw::ActionRow,
+        @implements gtk::Accessible, gtk::Actionable, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 impl AccountRow {

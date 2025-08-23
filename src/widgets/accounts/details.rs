@@ -111,7 +111,8 @@ mod imp {
 
 glib::wrapper! {
     pub struct AccountDetailsPage(ObjectSubclass<imp::AccountDetailsPage>)
-        @extends gtk::Widget, adw::NavigationPage;
+        @extends gtk::Widget, adw::NavigationPage,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 #[gtk::template_callbacks]
@@ -127,13 +128,17 @@ impl AccountDetailsPage {
         dialog.set_response_appearance("yes", adw::ResponseAppearance::Destructive);
         dialog.connect_response(
             None,
-            clone!(@weak self as page => move |dialog, response| {
-                if response == "yes" {
-                    let account = page.imp().account.borrow().as_ref().unwrap().clone();
-                    page.emit_by_name::<()>("removed", &[&account]);
+            clone!(
+                #[weak(rename_to = page)]
+                self,
+                move |dialog, response| {
+                    if response == "yes" {
+                        let account = page.imp().account.borrow().as_ref().unwrap().clone();
+                        page.emit_by_name::<()>("removed", &[&account]);
+                    }
+                    dialog.close();
                 }
-                dialog.close();
-            }),
+            ),
         );
 
         dialog.present(Some(&parent));
@@ -222,11 +227,11 @@ impl AccountDetailsPage {
         let provider_id = store.get::<u32>(&iter, 0);
         let model = self.imp().providers_model.get().unwrap();
         let provider = model.find_by_id(provider_id);
-        self.set_provider(
-            provider.unwrap_or_else(clone!(@strong self as page => move || {
-                page.imp().account.borrow().as_ref().unwrap().provider()
-            })),
-        );
+        self.set_provider(provider.unwrap_or_else(clone!(
+            #[strong(rename_to = page)]
+            self,
+            move || page.imp().account.borrow().as_ref().unwrap().provider()
+        )));
         ControlFlow::Break
     }
 }

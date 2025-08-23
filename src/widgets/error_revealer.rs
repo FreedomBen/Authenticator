@@ -40,7 +40,8 @@ mod imp {
 
 glib::wrapper! {
     pub struct ErrorRevealer(ObjectSubclass<imp::ErrorRevealer>)
-        @extends gtk::Widget;
+        @extends gtk::Widget,
+        @implements gtk::Accessible, gtk::Buildable, gtk::ConstraintTarget;
 }
 
 impl ErrorRevealer {
