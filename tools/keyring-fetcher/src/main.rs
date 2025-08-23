@@ -1,6 +1,6 @@
 use std::{collections::HashMap, path::PathBuf};
 
-#[async_std::main]
+#[tokio::main]
 async fn main() -> oo7::Result<()> {
     let home = std::env::var("HOME").unwrap();
     let keyring_path = [
@@ -10,24 +10,24 @@ async fn main() -> oo7::Result<()> {
     .iter()
     .collect::<PathBuf>();
 
-    let host_keyring = oo7::dbus::Service::new(oo7::dbus::Algorithm::Encrypted).await?;
+    let host_keyring = oo7::dbus::Service::new().await?;
     let collection = host_keyring
         .with_alias("login")
         .await?
         .expect("'login' collection not found");
 
     let items = collection
-        .search_items(HashMap::from([(
+        .search_items(&HashMap::from([(
             "app_id",
             "com.belmoussaoui.Authenticator",
         )]))
         .await?;
 
-    let secret = oo7::portal::Secret::from(items[0].secret().await?.to_vec());
-    let keyring = oo7::portal::Keyring::load(keyring_path, secret).await?;
+    let secret = oo7::Secret::from(items[0].secret().await?.to_vec());
+    let keyring = oo7::file::Keyring::load(keyring_path, secret).await?;
 
     let keyring_items = keyring
-        .search_items(HashMap::from([("type", "token")]))
+        .search_items(&HashMap::from([("type", "token")]))
         .await?;
     for item in keyring_items.iter() {
         let attributes = item.attributes();
