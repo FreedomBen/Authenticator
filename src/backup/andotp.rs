@@ -7,9 +7,12 @@ use zeroize::{Zeroize, ZeroizeOnDrop};
 use super::{Backupable, Restorable, RestorableItem};
 use crate::models::{Account, Algorithm, Method, Provider, ProvidersModel};
 
+#[derive(Serialize, Deserialize, Zeroize, ZeroizeOnDrop)]
+pub struct AndOTP(Vec<AndOTPItem>);
+
 #[allow(clippy::upper_case_acronyms)]
 #[derive(Serialize, Deserialize, Zeroize, ZeroizeOnDrop)]
-pub struct AndOTP {
+pub struct AndOTPItem {
     pub secret: String,
     #[zeroize(skip)]
     pub issuer: String,
@@ -36,7 +39,7 @@ pub struct AndOTP {
     pub period: Option<u32>,
 }
 
-impl RestorableItem for AndOTP {
+impl RestorableItem for AndOTPItem {
     fn account(&self) -> String {
         self.label.clone()
     }
@@ -93,7 +96,7 @@ impl Backupable for AndOTP {
             for j in 0..accounts.n_items() {
                 let account = accounts.item(j).and_downcast::<Account>().unwrap();
 
-                let otp_item = AndOTP {
+                let otp_item = AndOTPItem {
                     secret: account.otp().secret(),
                     issuer: provider.name(),
                     label: account.name(),
@@ -120,7 +123,7 @@ impl Restorable for AndOTP {
     const ENCRYPTABLE: bool = false;
     const SCANNABLE: bool = false;
     const IDENTIFIER: &'static str = "andotp";
-    type Item = Self;
+    type Item = AndOTPItem;
 
     fn title() -> String {
         // Translators: This is for restoring a backup from the andOTP Android app.
@@ -132,7 +135,7 @@ impl Restorable for AndOTP {
     }
 
     fn restore_from_data(from: &[u8], _key: Option<&str>) -> Result<Vec<Self::Item>> {
-        let items: Vec<AndOTP> = serde_json::de::from_slice(from)?;
+        let items: Vec<AndOTPItem> = serde_json::de::from_slice(from)?;
         Ok(items)
     }
 }
