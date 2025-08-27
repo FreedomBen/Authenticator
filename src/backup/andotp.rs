@@ -1,14 +1,41 @@
-use anyhow::Result;
+use anyhow::{Context, Result};
 use gettextrs::gettext;
 use gtk::prelude::*;
+use ring::{
+    aead::{Aad, LessSafeKey, Nonce, UnboundKey, AES_256_GCM},
+    digest,
+};
 use serde::{Deserialize, Serialize};
 use zeroize::{Zeroize, ZeroizeOnDrop};
 
 use super::{Backupable, Restorable, RestorableItem};
 use crate::models::{Account, Algorithm, Method, Provider, ProvidersModel};
 
+const HEADER_SIZE: usize = size_of::<EncryptedAndOTPHeader>();
+
 #[derive(Serialize, Deserialize, Zeroize, ZeroizeOnDrop)]
 pub struct AndOTP(Vec<AndOTPItem>);
+
+#[derive(bincode::Decode)]
+pub struct EncryptedAndOTPHeader {
+    iterations: u32,
+    salt: [u8; 12],
+    iv: [u8; 12],
+}
+
+impl EncryptedAndOTPHeader {
+    fn from_bytes(from: &[u8]) -> Result<Self> {
+        let config = bincode::config::standard()
+            .with_fixed_int_encoding()
+            .with_limit::<HEADER_SIZE>()
+            .with_big_endian();
+
+        let header: EncryptedAndOTPHeader =
+            bincode::decode_from_slice(&from[..HEADER_SIZE], config)?.0;
+
+        Ok(header)
+    }
+}
 
 #[allow(clippy::upper_case_acronyms)]
 #[derive(Serialize, Deserialize, Zeroize, ZeroizeOnDrop)]
@@ -120,7 +147,7 @@ impl Backupable for AndOTP {
 }
 
 impl Restorable for AndOTP {
-    const ENCRYPTABLE: bool = false;
+    const ENCRYPTABLE: bool = true;
     const SCANNABLE: bool = false;
     const IDENTIFIER: &'static str = "andotp";
     type Item = AndOTPItem;
@@ -134,8 +161,46 @@ impl Restorable for AndOTP {
         gettext("From a plain-text JSON file")
     }
 
-    fn restore_from_data(from: &[u8], _key: Option<&str>) -> Result<Vec<Self::Item>> {
-        let items: Vec<AndOTPItem> = serde_json::de::from_slice(from)?;
+    fn restore_from_data(from: &[u8], key: Option<&str>) -> Result<Vec<Self::Item>> {
+        if let Some(key) = key {
+            AndOTP::decrypt(from, key.as_bytes())
+        } else {
+            let items: Vec<AndOTPItem> = serde_json::de::from_slice(from)?;
+            Ok(items)
+        }
+    }
+}
+
+impl AndOTP {
+    fn decrypt(from: &[u8], secret: &[u8]) -> Result<Vec<AndOTPItem>> {
+        let header = EncryptedAndOTPHeader::from_bytes(&from[..HEADER_SIZE])?;
+        let mut blob = from[HEADER_SIZE..].to_vec();
+
+        let iv = header.iv;
+        let iterations = std::num::NonZeroU32::new(header.iterations)
+            .context("AndOTP header has iterations set to 0")?;
+
+        let mut pbkdf2_key = [0; digest::SHA256_OUTPUT_LEN];
+        ring::pbkdf2::derive(
+            ring::pbkdf2::PBKDF2_HMAC_SHA1,
+            iterations,
+            &header.salt,
+            secret,
+            &mut pbkdf2_key,
+        );
+
+        let pbkdf2_key = UnboundKey::new(&AES_256_GCM, &pbkdf2_key)
+            .ok()
+            .context("Failed to generate unbound key")?;
+        let pbkdf2_key = LessSafeKey::new(pbkdf2_key);
+
+        let decrypted = pbkdf2_key
+            .open_in_place(Nonce::assume_unique_for_key(iv), Aad::empty(), &mut blob)
+            .ok()
+            .context("Error while decrypting")?;
+
+        let items: Vec<AndOTPItem> = serde_json::de::from_slice(decrypted)?;
+
         Ok(items)
     }
 }
@@ -144,6 +209,31 @@ impl Restorable for AndOTP {
 mod tests {
     use super::{super::RestorableItem, *};
     use crate::models::{Algorithm, Method};
+
+    #[test]
+    fn test_deserialize_header() {
+        let binary_header = [
+            0, 2, 69, 247, 55, 242, 73, 138, 187, 197, 27, 200, 251, 155, 241, 15, 178, 203, 129,
+            8, 36, 143, 1, 75, 219, 36, 241, 215,
+        ];
+
+        let header = EncryptedAndOTPHeader::from_bytes(&binary_header).unwrap();
+
+        assert_eq!(binary_header.len(), size_of::<EncryptedAndOTPHeader>());
+        assert_eq!(header.iterations, 148983);
+        assert_eq!(header.salt, binary_header[4..16]);
+        assert_eq!(header.iv, binary_header[16..]);
+    }
+
+    #[test]
+    fn test_andotp_decrypt() {
+        // Taken from https://github.com/asmw/andOTP-decrypt
+        let data = std::fs::read("./src/backup/tests/andotp_enc.json.aes").unwrap();
+        let secret = b"123456";
+
+        let items = AndOTP::decrypt(&data, secret).unwrap();
+        assert_eq!(items.len(), 7);
+    }
 
     #[test]
     fn parse() {

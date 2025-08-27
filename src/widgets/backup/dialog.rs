@@ -143,7 +143,7 @@ impl BackupDialog {
         self.register_restore::<FreeOTP>(&["text/plain"]);
         self.register_restore::<FreeOTPJSON>(&["application/json"]);
         self.register_restore::<Aegis>(&["application/json"]);
-        self.register_restore::<AndOTP>(&["application/json"]);
+        self.register_restore::<AndOTP>(&[]);
         self.register_restore::<Bitwarden>(&["application/json"]);
         self.register_restore::<Google>(&[]);
         self.register_restore::<LegacyAuthenticator>(&["application/json"]);
