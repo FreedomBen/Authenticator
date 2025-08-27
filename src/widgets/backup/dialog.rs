@@ -11,7 +11,7 @@ use super::camera_page::CameraPage;
 use crate::{
     backup::{
         Aegis, AndOTP, Backupable, Bitwarden, FreeOTP, FreeOTPJSON, Google, LegacyAuthenticator,
-        Operation, RaivoOTP, Restorable, RestorableItem,
+        Operation, RaivoOTP, Restorable, RestorableItem, Yandex,
     },
     models::ProvidersModel,
     utils::spawn,
@@ -148,6 +148,7 @@ impl BackupDialog {
         self.register_restore::<Google>(&[]);
         self.register_restore::<LegacyAuthenticator>(&["application/json"]);
         self.register_restore::<RaivoOTP>(&["application/zip"]);
+        self.register_restore::<Yandex>(&["text/plain"]);
     }
 
     fn register_backup<T: Backupable>(&self, filters: &'static [&str]) {
