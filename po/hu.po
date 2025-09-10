@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: authenticator master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2025-02-10 11:13+0000\n"
-"PO-Revision-Date: 2025-02-28 17:11+0100\n"
+"POT-Creation-Date: 2025-09-10 11:13+0000\n"
+"PO-Revision-Date: 2025-09-10 22:59+0200\n"
 "Last-Translator: Balázs Úr <ur.balazs at fsf dot hu>\n"
 "Language-Team: Hungarian <openscope at fsf dot hu>\n"
 "Language: hu\n"
@@ -17,25 +17,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:2
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
 #: data/resources/ui/window.ui:40 src/application.rs:112 src/main.rs:40
 msgid "Authenticator"
 msgstr "Hitelesítő"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 msgid "Two-Factor Authentication"
 msgstr "Kétlépcsős hitelesítés"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:5
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
 #: src/application.rs:114
 msgid "Generate two-factor codes"
 msgstr "Kétlépcsős kódok előállítása"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:10
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:9
 msgid "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;"
 msgstr "GNOME;GTK;Ellenőrzés;2FA;Hitelesítés;OTP;TOTP;Kétlépcsős;"
 
@@ -151,20 +151,19 @@ msgstr "Fiók részletei"
 msgid "Backup/Restore formats support"
 msgstr "Biztonsági mentési/helyreállítási formátumok támogatása"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:274
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:276
 msgid "_Camera"
 msgstr "_Kamera"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:278
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:280
 msgid "_Screenshot"
 msgstr "Ké_pernyőkép"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:283
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:285
 msgid "_QR Code Image"
 msgstr "_QR-kód képe"
 
 #: data/resources/ui/account_add.ui:56
-#| msgid "Cancel"
 msgid "_Cancel"
 msgstr "_Mégse"
 
@@ -172,7 +171,7 @@ msgstr "_Mégse"
 msgid "_Add"
 msgstr "_Hozzáadás"
 
-#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:269
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:271
 msgid "Scan QR Code"
 msgstr "QR-kód beolvasása"
 
@@ -285,15 +284,14 @@ msgid "Account details"
 msgstr "Fiók részletei"
 
 #: data/resources/ui/backup_dialog.ui:4 data/resources/ui/backup_dialog.ui:8
-#| msgid "Backup/Restore"
 msgid "Backup & Restore"
 msgstr "Biztonsági mentés és helyreállítás"
 
-#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:506
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:508
 msgid "Backup"
 msgstr "Biztonsági mentés"
 
-#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:514
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:516
 msgid "Restore"
 msgstr "Helyreállítás"
 
@@ -449,7 +447,7 @@ msgstr "Súgó URL"
 msgid "Providers"
 msgstr "Szolgáltatók"
 
-#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:208
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:209
 msgid "New Provider"
 msgstr "Új szolgáltató"
 
@@ -484,47 +482,47 @@ msgstr "Válasszon egy szolgáltatót, vagy hozzon létre egy újat"
 msgid "No accounts or providers matching the query were found."
 msgstr "Nem található a lekérdezésnek megfelelő fiók vagy szolgáltató."
 
-#: data/resources/ui/shortcuts.ui:11
+#: data/resources/ui/shortcuts.ui:6
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Általános"
 
-#: data/resources/ui/shortcuts.ui:14
+#: data/resources/ui/shortcuts.ui:9
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "Gyorsbillentyűk"
 
-#: data/resources/ui/shortcuts.ui:20
+#: data/resources/ui/shortcuts.ui:15
 msgctxt "shortcut window"
 msgid "Lock"
 msgstr "Zárolás"
 
-#: data/resources/ui/shortcuts.ui:26
+#: data/resources/ui/shortcuts.ui:21
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Beállítások"
 
-#: data/resources/ui/shortcuts.ui:32
+#: data/resources/ui/shortcuts.ui:27
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Kilépés"
 
-#: data/resources/ui/shortcuts.ui:40
+#: data/resources/ui/shortcuts.ui:35
 msgctxt "shortcut window"
 msgid "Accounts"
 msgstr "Fiókok"
 
-#: data/resources/ui/shortcuts.ui:43
+#: data/resources/ui/shortcuts.ui:38
 msgctxt "shortcut window"
 msgid "New Account"
 msgstr "Új fiók"
 
-#: data/resources/ui/shortcuts.ui:49
+#: data/resources/ui/shortcuts.ui:44
 msgctxt "shortcut window"
 msgid "Search"
 msgstr "Keresés"
 
-#: data/resources/ui/shortcuts.ui:55
+#: data/resources/ui/shortcuts.ui:50
 msgctxt "shortcut window"
 msgid "Show Providers List"
 msgstr "Szolgáltatók listájának megjelenítése"
@@ -542,7 +540,6 @@ msgid "_Preferences"
 msgstr "_Beállítások"
 
 #: data/resources/ui/window.ui:20
-#| msgid "Backup/Restore"
 msgid "_Backup & Restore"
 msgstr "_Biztonsági mentés és helyreállítás"
 
@@ -592,11 +589,11 @@ msgstr ""
 "Meskó Balázs <mesko dot balazs at fsf dot hu>, 2021, 2022.\n"
 "Úr Balázs <ur dot balazs at fsf dot hu>, 2018, 2019, 2022."
 
-#: src/application.rs:434 src/widgets/accounts/row.rs:45
+#: src/application.rs:433 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Egyszer használatos jelszó lemásolva"
 
-#: src/application.rs:435
+#: src/application.rs:434
 msgid "Password was copied successfully"
 msgstr "A jelszó sikeresen le lett másolva"
 
@@ -615,20 +612,20 @@ msgid "From a JSON file containing plain-text or encrypted fields"
 msgstr "Egyszerű szöveges vagy titkosított mezőket tartalmazó JSON-fájlból"
 
 #. Translators: This is for making a backup for the andOTP Android app.
-#: src/backup/andotp.rs:79
+#: src/backup/andotp.rs:109
 msgid "a_ndOTP"
 msgstr "a_ndOTP"
 
-#: src/backup/andotp.rs:83
+#: src/backup/andotp.rs:113
 msgid "Into a plain-text JSON file"
 msgstr "Egyszerű szöveges JSON-fájlba"
 
 #. Translators: This is for restoring a backup from the andOTP Android app.
-#: src/backup/andotp.rs:127
+#: src/backup/andotp.rs:157
 msgid "an_dOTP"
 msgstr "an_dOTP"
 
-#: src/backup/andotp.rs:131 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
+#: src/backup/andotp.rs:161 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
 msgid "From a plain-text JSON file"
 msgstr "Egyszerű szöveges JSON-fájlból"
 
@@ -691,6 +688,15 @@ msgstr "Raivo OTP"
 msgid "From a ZIP export generated by Raivo OTP"
 msgstr "ZIP exportból a Raivo OTP által előállítva"
 
+#: src/backup/yandex.rs:18
+msgid "Yandex Key"
+msgstr "Yandex Key"
+
+#: src/backup/yandex.rs:22
+#| msgid "From a plain-text file, compatible with FreeOTP+"
+msgid "From a plain-text file generated by Yandex Key"
+msgstr "Yandex Key által előállított egyszerű szöveges fájlból"
+
 #: src/models/algorithm.rs:60
 msgid "Counter-based"
 msgstr "Számlálóalapú"
@@ -716,89 +722,88 @@ msgstr "SHA-256"
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:270 src/widgets/backup/dialog.rs:443
-#: src/widgets/providers/page.rs:291
+#: src/widgets/accounts/add.rs:277 src/widgets/backup/dialog.rs:445
+#: src/widgets/providers/page.rs:292
 msgid "Image"
 msgstr "Kép"
 
-#: src/widgets/accounts/add.rs:278 src/widgets/backup/dialog.rs:451
+#: src/widgets/accounts/add.rs:285 src/widgets/backup/dialog.rs:453
 msgid "Select QR Code"
 msgstr "QR-kód kiválasztása"
 
-#: src/widgets/accounts/add.rs:296
+#: src/widgets/accounts/add.rs:303
 msgid "Invalid Token"
 msgstr "Érvénytelen token"
 
-#: src/widgets/accounts/details.rs:123
+#: src/widgets/accounts/details.rs:124
 msgid "Are you sure you want to delete the account?"
 msgstr "Biztosan törölni szeretné a fiókot?"
 
-#: src/widgets/accounts/details.rs:124
+#: src/widgets/accounts/details.rs:125
 msgid "This action is irreversible"
 msgstr "Ez a művelet visszafordíthatatlan"
 
-#: src/widgets/accounts/details.rs:126
+#: src/widgets/accounts/details.rs:127
 msgid "No"
 msgstr "Nem"
 
-#: src/widgets/accounts/details.rs:126
+#: src/widgets/accounts/details.rs:127
 msgid "Yes"
 msgstr "Igen"
 
-#: src/widgets/backup/dialog.rs:163 src/widgets/backup/dialog.rs:245
+#: src/widgets/backup/dialog.rs:165 src/widgets/backup/dialog.rs:247
 msgid "Key / Passphrase"
 msgstr "Kulcs / jelmondat"
 
-#: src/widgets/backup/dialog.rs:174 src/widgets/backup/dialog.rs:257
+#: src/widgets/backup/dialog.rs:176 src/widgets/backup/dialog.rs:259
 msgid "Select File"
 msgstr "Válasszon fájlt"
 
-#: src/widgets/backup/dialog.rs:205
+#: src/widgets/backup/dialog.rs:207
 msgid "Failed to create a backup"
 msgstr "Nem sikerült létrehozni a biztonsági mentést"
 
-#: src/widgets/backup/dialog.rs:327
+#: src/widgets/backup/dialog.rs:329
 msgid "Failed to restore from camera"
 msgstr "Nem sikerült helyreállítani a kamerából"
 
-#: src/widgets/backup/dialog.rs:352
+#: src/widgets/backup/dialog.rs:354
 msgid "Failed to restore from a screenshot"
 msgstr "Nem sikerült helyreállítani a képernyőképből"
 
-#: src/widgets/backup/dialog.rs:372
+#: src/widgets/backup/dialog.rs:374
 msgid "Failed to restore from an image"
 msgstr "Nem sikerült helyreállítani a képből"
 
-#: src/widgets/backup/dialog.rs:396
+#: src/widgets/backup/dialog.rs:398
 msgid "Failed to restore from a file"
 msgstr "Nem sikerült helyreállítani a fájlból"
 
-#: src/widgets/preferences/password_page.rs:195
-#: src/widgets/preferences/password_page.rs:237
+#: src/widgets/preferences/password_page.rs:196
+#: src/widgets/preferences/password_page.rs:238
 msgid "Wrong Passphrase"
 msgstr "Hibás jelmondat"
 
-#: src/widgets/providers/dialog.rs:261
+#: src/widgets/providers/dialog.rs:262
 msgid "Provider created successfully"
 msgstr "A szolgáltató sikeresen létrehozva"
 
-#: src/widgets/providers/dialog.rs:271
+#: src/widgets/providers/dialog.rs:272
 msgid "Provider updated successfully"
 msgstr "A szolgáltató sikeresen frissítve"
 
-#: src/widgets/providers/dialog.rs:287
+#: src/widgets/providers/dialog.rs:288
 msgid "Provider removed successfully"
 msgstr "A szolgáltató sikeresen eltávolítva"
 
-#: src/widgets/providers/page.rs:185
+#: src/widgets/providers/page.rs:186
 msgid "Editing Provider: {}"
 msgstr "Szolgáltató szerkesztése: {}"
 
-#: src/widgets/providers/page.rs:324
+#: src/widgets/providers/page.rs:325
 msgid "The provider has accounts assigned to it, please remove them first"
 msgstr "A szolgáltatóhoz tartoznak fiókok, először távolítsa el azokat"
 
 #: src/widgets/window.rs:115
 msgid "Wrong Password"
 msgstr "Hibás jelszó"
-
