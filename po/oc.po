@@ -7,37 +7,37 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2025-02-15 12:29+0000\n"
-"PO-Revision-Date: 2025-03-27 13:35+1100\n"
+"POT-Creation-Date: 2025-09-10 11:13+0000\n"
+"PO-Revision-Date: 2025-09-13 12:41+0200\n"
 "Last-Translator: Quentin PAGÈS\n"
 "Language-Team: \n"
 "Language: oc\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.7\n"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:2
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
 #: data/resources/ui/window.ui:40 src/application.rs:112 src/main.rs:40
 msgid "Authenticator"
 msgstr "Autentificador"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 msgid "Two-Factor Authentication"
 msgstr "Autentificacion en dos temps"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:5
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
 #: src/application.rs:114
 msgid "Generate two-factor codes"
 msgstr "Generar de còdis a dos factors"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:10
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:9
 msgid "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;"
 msgstr ""
-"Gnome;GTK;Verificacion;2FA;Dos temps;Dos factors;autentificacion;"
-"identificacion;OTP;TOTP;Còdis;Getons;"
+"Gnome;GTK;Verificacion;2FA;Dos temps;Dos "
+"factors;autentificacion;identificacion;OTP;TOTP;Còdis;Getons;"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:6
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:7
@@ -153,15 +153,15 @@ msgstr "Detalhs del comptes"
 msgid "Backup/Restore formats support"
 msgstr "Formats preses en carga per Salvagardar/Restaurar"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:274
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:276
 msgid "_Camera"
 msgstr "_Camèra"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:278
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:280
 msgid "_Screenshot"
 msgstr "_Captura d'ecran"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:283
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:285
 msgid "_QR Code Image"
 msgstr "_Image còdi QR"
 
@@ -173,7 +173,7 @@ msgstr "_Anullar"
 msgid "_Add"
 msgstr "_Apondre"
 
-#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:269
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:271
 msgid "Scan QR Code"
 msgstr "Numerizar un còdis QR"
 
@@ -289,11 +289,11 @@ msgstr "Detalhs del compte"
 msgid "Backup & Restore"
 msgstr "Salvagardar e restaurar"
 
-#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:506
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:508
 msgid "Backup"
 msgstr "Salvagardar"
 
-#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:514
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:516
 msgid "Restore"
 msgstr "Restaurar"
 
@@ -448,7 +448,7 @@ msgstr "URL d'Ajuda"
 msgid "Providers"
 msgstr "Provesidors"
 
-#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:208
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:209
 msgid "New Provider"
 msgstr "Provesidor novèl"
 
@@ -483,47 +483,47 @@ msgstr "Seleccionatz un provesidor o creatz-ne un novèl"
 msgid "No accounts or providers matching the query were found."
 msgstr "Cap de compte o provesidor correspondent a la requèsta pas trobat."
 
-#: data/resources/ui/shortcuts.ui:11
+#: data/resources/ui/shortcuts.ui:6
 msgctxt "shortcut window"
 msgid "General"
 msgstr "General"
 
-#: data/resources/ui/shortcuts.ui:14
+#: data/resources/ui/shortcuts.ui:9
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "Acorchis clavièr"
 
-#: data/resources/ui/shortcuts.ui:20
+#: data/resources/ui/shortcuts.ui:15
 msgctxt "shortcut window"
 msgid "Lock"
 msgstr "Verrolhar"
 
-#: data/resources/ui/shortcuts.ui:26
+#: data/resources/ui/shortcuts.ui:21
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Preferéncias"
 
-#: data/resources/ui/shortcuts.ui:32
+#: data/resources/ui/shortcuts.ui:27
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Quitar"
 
-#: data/resources/ui/shortcuts.ui:40
+#: data/resources/ui/shortcuts.ui:35
 msgctxt "shortcut window"
 msgid "Accounts"
 msgstr "Comptes"
 
-#: data/resources/ui/shortcuts.ui:43
+#: data/resources/ui/shortcuts.ui:38
 msgctxt "shortcut window"
 msgid "New Account"
 msgstr "Compte novèl"
 
-#: data/resources/ui/shortcuts.ui:49
+#: data/resources/ui/shortcuts.ui:44
 msgctxt "shortcut window"
 msgid "Search"
 msgstr "Recercar"
 
-#: data/resources/ui/shortcuts.ui:55
+#: data/resources/ui/shortcuts.ui:50
 msgctxt "shortcut window"
 msgid "Show Providers List"
 msgstr "Afichar la lista dels provesidors"
@@ -588,11 +588,11 @@ msgstr "Compte restaurat amb succès"
 msgid "translator-credits"
 msgstr "Quentin PAGÈS"
 
-#: src/application.rs:434 src/widgets/accounts/row.rs:45
+#: src/application.rs:433 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Senhal One-Time copiat"
 
-#: src/application.rs:435
+#: src/application.rs:434
 msgid "Password was copied successfully"
 msgstr "Senhal copiat amb succès"
 
@@ -611,20 +611,20 @@ msgid "From a JSON file containing plain-text or encrypted fields"
 msgstr "A partir d’un fichièr JSON que conten de tèxt brut o de camps chifrats"
 
 #. Translators: This is for making a backup for the andOTP Android app.
-#: src/backup/andotp.rs:79
+#: src/backup/andotp.rs:109
 msgid "a_ndOTP"
 msgstr "a_ndOTP"
 
-#: src/backup/andotp.rs:83
+#: src/backup/andotp.rs:113
 msgid "Into a plain-text JSON file"
 msgstr "Cap a un fichièr JSON en tèxt brut"
 
 #. Translators: This is for restoring a backup from the andOTP Android app.
-#: src/backup/andotp.rs:127
+#: src/backup/andotp.rs:157
 msgid "an_dOTP"
 msgstr "an_dOTP"
 
-#: src/backup/andotp.rs:131 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
+#: src/backup/andotp.rs:161 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
 msgid "From a plain-text JSON file"
 msgstr "A partir d’un fichièr JSON en tèxt brut"
 
@@ -687,6 +687,14 @@ msgstr "Raivo OTP"
 msgid "From a ZIP export generated by Raivo OTP"
 msgstr "A partir d’un expòrt ZIP generat per Raivo OTP"
 
+#: src/backup/yandex.rs:18
+msgid "Yandex Key"
+msgstr "Clau Yandex"
+
+#: src/backup/yandex.rs:22
+msgid "From a plain-text file generated by Yandex Key"
+msgstr "A partir d’un fichièr en tèxt brut generat per una clau Yandex"
+
 #: src/models/algorithm.rs:60
 msgid "Counter-based"
 msgstr "Foncion d’un comptador"
@@ -712,85 +720,85 @@ msgstr "SHA-256"
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:270 src/widgets/backup/dialog.rs:443
-#: src/widgets/providers/page.rs:291
+#: src/widgets/accounts/add.rs:277 src/widgets/backup/dialog.rs:445
+#: src/widgets/providers/page.rs:292
 msgid "Image"
 msgstr "Imatge"
 
-#: src/widgets/accounts/add.rs:278 src/widgets/backup/dialog.rs:451
+#: src/widgets/accounts/add.rs:285 src/widgets/backup/dialog.rs:453
 msgid "Select QR Code"
 msgstr "Seleccionar un còdis QR"
 
-#: src/widgets/accounts/add.rs:296
+#: src/widgets/accounts/add.rs:303
 msgid "Invalid Token"
 msgstr "Geton invalid"
 
-#: src/widgets/accounts/details.rs:123
+#: src/widgets/accounts/details.rs:124
 msgid "Are you sure you want to delete the account?"
 msgstr "Sètz segur que volètz suprimir aqueste compte ?"
 
-#: src/widgets/accounts/details.rs:124
+#: src/widgets/accounts/details.rs:125
 msgid "This action is irreversible"
 msgstr "Aquesta accion se pòt pas anullar"
 
-#: src/widgets/accounts/details.rs:126
+#: src/widgets/accounts/details.rs:127
 msgid "No"
 msgstr "Non"
 
-#: src/widgets/accounts/details.rs:126
+#: src/widgets/accounts/details.rs:127
 msgid "Yes"
 msgstr "Òc"
 
-#: src/widgets/backup/dialog.rs:163 src/widgets/backup/dialog.rs:245
+#: src/widgets/backup/dialog.rs:165 src/widgets/backup/dialog.rs:247
 msgid "Key / Passphrase"
 msgstr "Clau / Frasa secrèta"
 
-#: src/widgets/backup/dialog.rs:174 src/widgets/backup/dialog.rs:257
+#: src/widgets/backup/dialog.rs:176 src/widgets/backup/dialog.rs:259
 msgid "Select File"
 msgstr "Seleccionar un fichièr"
 
-#: src/widgets/backup/dialog.rs:205
+#: src/widgets/backup/dialog.rs:207
 msgid "Failed to create a backup"
 msgstr "Fracàs de la creacion de la salvagarda"
 
-#: src/widgets/backup/dialog.rs:327
+#: src/widgets/backup/dialog.rs:329
 msgid "Failed to restore from camera"
 msgstr "Fracàs de la restauracion a partir de l’aparelh de fòto"
 
-#: src/widgets/backup/dialog.rs:352
+#: src/widgets/backup/dialog.rs:354
 msgid "Failed to restore from a screenshot"
 msgstr "Restauracion impossibla a partir d’una captura d’ecran"
 
-#: src/widgets/backup/dialog.rs:372
+#: src/widgets/backup/dialog.rs:374
 msgid "Failed to restore from an image"
 msgstr "Fracàs de la restauracion a partir d’un imatge"
 
-#: src/widgets/backup/dialog.rs:396
+#: src/widgets/backup/dialog.rs:398
 msgid "Failed to restore from a file"
 msgstr "Fracàs de la restauracion a partir d’un fichièr"
 
-#: src/widgets/preferences/password_page.rs:195
-#: src/widgets/preferences/password_page.rs:237
+#: src/widgets/preferences/password_page.rs:196
+#: src/widgets/preferences/password_page.rs:238
 msgid "Wrong Passphrase"
 msgstr "Frasa secrèta incorrècta"
 
-#: src/widgets/providers/dialog.rs:261
+#: src/widgets/providers/dialog.rs:262
 msgid "Provider created successfully"
 msgstr "Provesidor creat amb succès"
 
-#: src/widgets/providers/dialog.rs:271
+#: src/widgets/providers/dialog.rs:272
 msgid "Provider updated successfully"
 msgstr "Provesidor actualizat amb succès"
 
-#: src/widgets/providers/dialog.rs:287
+#: src/widgets/providers/dialog.rs:288
 msgid "Provider removed successfully"
 msgstr "Provesidor suprimit amb succès"
 
-#: src/widgets/providers/page.rs:185
+#: src/widgets/providers/page.rs:186
 msgid "Editing Provider: {}"
 msgstr "Modificacion provesidor : {}"
 
-#: src/widgets/providers/page.rs:324
+#: src/widgets/providers/page.rs:325
 msgid "The provider has accounts assigned to it, please remove them first"
 msgstr "Lo provesidor a de comptes atribuits, mercés de los suprimir abans"
 
