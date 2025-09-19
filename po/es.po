@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Authenticator\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2025-02-10 11:13+0000\n"
-"PO-Revision-Date: 2025-02-15 12:11+0100\n"
+"POT-Creation-Date: 2025-09-10 11:13+0000\n"
+"PO-Revision-Date: 2025-09-18 14:16+0200\n"
 "Last-Translator: Julián Villodre <jvillodrede@gmail.com>\n"
 "Language-Team: es_ES\n"
 "Language: es_ES\n"
@@ -20,25 +20,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 47.1\n"
+"X-Generator: Gtranslator 49.0\n"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:2
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
 #: data/resources/ui/window.ui:40 src/application.rs:112 src/main.rs:40
 msgid "Authenticator"
 msgstr "Authenticador"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 msgid "Two-Factor Authentication"
 msgstr "Autenticación de doble factor"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:5
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
 #: src/application.rs:114
 msgid "Generate two-factor codes"
 msgstr "Generar códigos de autenticación de doble factor"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:10
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:9
 msgid "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;"
 msgstr "Gnome;GTK;Verificación;2FA;Autenticación;Doble;Factor;OTP;TOPT;"
 
@@ -157,15 +157,15 @@ msgstr "Detalles de la cuenta"
 msgid "Backup/Restore formats support"
 msgstr "Soporte de formatos de Respaldar/Restaurar"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:274
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:276
 msgid "_Camera"
 msgstr "_Cámara"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:278
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:280
 msgid "_Screenshot"
 msgstr "_Captura de pantalla"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:283
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:285
 msgid "_QR Code Image"
 msgstr "Imagen de código _QR"
 
@@ -177,7 +177,7 @@ msgstr "_Cancelar"
 msgid "_Add"
 msgstr "_Añadir"
 
-#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:269
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:271
 msgid "Scan QR Code"
 msgstr "Escanear código QR"
 
@@ -293,11 +293,11 @@ msgstr "Detalles de la cuenta"
 msgid "Backup & Restore"
 msgstr "Respaldar y restaurar"
 
-#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:506
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:508
 msgid "Backup"
 msgstr "Respaldar"
 
-#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:514
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:516
 msgid "Restore"
 msgstr "Restaurar"
 
@@ -453,7 +453,7 @@ msgstr "URL de ayuda"
 msgid "Providers"
 msgstr "Proveedores"
 
-#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:208
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:209
 msgid "New Provider"
 msgstr "Nuevo proveedor"
 
@@ -489,47 +489,47 @@ msgid "No accounts or providers matching the query were found."
 msgstr ""
 "No se han encontrado cuentas o proveedores que coincidan con la consulta."
 
-#: data/resources/ui/shortcuts.ui:11
+#: data/resources/ui/shortcuts.ui:6
 msgctxt "shortcut window"
 msgid "General"
 msgstr "General"
 
-#: data/resources/ui/shortcuts.ui:14
+#: data/resources/ui/shortcuts.ui:9
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "Atajo del teclado"
 
-#: data/resources/ui/shortcuts.ui:20
+#: data/resources/ui/shortcuts.ui:15
 msgctxt "shortcut window"
 msgid "Lock"
 msgstr "Bloquear"
 
-#: data/resources/ui/shortcuts.ui:26
+#: data/resources/ui/shortcuts.ui:21
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Preferencias"
 
-#: data/resources/ui/shortcuts.ui:32
+#: data/resources/ui/shortcuts.ui:27
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Salir"
 
-#: data/resources/ui/shortcuts.ui:40
+#: data/resources/ui/shortcuts.ui:35
 msgctxt "shortcut window"
 msgid "Accounts"
 msgstr "Cuentas"
 
-#: data/resources/ui/shortcuts.ui:43
+#: data/resources/ui/shortcuts.ui:38
 msgctxt "shortcut window"
 msgid "New Account"
 msgstr "Nueva cuenta"
 
-#: data/resources/ui/shortcuts.ui:49
+#: data/resources/ui/shortcuts.ui:44
 msgctxt "shortcut window"
 msgid "Search"
 msgstr "Buscar"
 
-#: data/resources/ui/shortcuts.ui:55
+#: data/resources/ui/shortcuts.ui:50
 msgctxt "shortcut window"
 msgid "Show Providers List"
 msgstr "Mostrar la lista de proveedores"
@@ -599,11 +599,11 @@ msgstr ""
 "advocatux <advocatux@airpost.net>, 2018\n"
 "Adolfo Jayme Barrientos <fitojb@ubuntu.com>, 2018"
 
-#: src/application.rs:434 src/widgets/accounts/row.rs:45
+#: src/application.rs:433 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Contraseña de un sólo uso copiada"
 
-#: src/application.rs:435
+#: src/application.rs:434
 msgid "Password was copied successfully"
 msgstr "La contraseña se ha copiado correctamente"
 
@@ -624,20 +624,20 @@ msgstr ""
 "A partir de un archivo JSON que contiene texto en claro o campos cifrados"
 
 #. Translators: This is for making a backup for the andOTP Android app.
-#: src/backup/andotp.rs:79
+#: src/backup/andotp.rs:109
 msgid "a_ndOTP"
 msgstr "a_ndOTP"
 
-#: src/backup/andotp.rs:83
+#: src/backup/andotp.rs:113
 msgid "Into a plain-text JSON file"
 msgstr "En un archivo JSON de texto sencillo"
 
 #. Translators: This is for restoring a backup from the andOTP Android app.
-#: src/backup/andotp.rs:127
+#: src/backup/andotp.rs:157
 msgid "an_dOTP"
 msgstr "an_dOTP"
 
-#: src/backup/andotp.rs:131 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
+#: src/backup/andotp.rs:161 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
 msgid "From a plain-text JSON file"
 msgstr "Desde un archivo JSON de texto sencillo"
 
@@ -700,6 +700,14 @@ msgstr "Raivo OTP"
 msgid "From a ZIP export generated by Raivo OTP"
 msgstr "Desde un archivo ZIP generado por Raivo OTP"
 
+#: src/backup/yandex.rs:18
+msgid "Yandex Key"
+msgstr "Yandex Key"
+
+#: src/backup/yandex.rs:22
+msgid "From a plain-text file generated by Yandex Key"
+msgstr "Desde un archivo de texto sencillo generado por Yandex Key"
+
 #: src/models/algorithm.rs:60
 msgid "Counter-based"
 msgstr "Basado en contador"
@@ -725,85 +733,85 @@ msgstr "SHA-256"
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:270 src/widgets/backup/dialog.rs:443
-#: src/widgets/providers/page.rs:291
+#: src/widgets/accounts/add.rs:277 src/widgets/backup/dialog.rs:445
+#: src/widgets/providers/page.rs:292
 msgid "Image"
 msgstr "Imagen"
 
-#: src/widgets/accounts/add.rs:278 src/widgets/backup/dialog.rs:451
+#: src/widgets/accounts/add.rs:285 src/widgets/backup/dialog.rs:453
 msgid "Select QR Code"
 msgstr "Seleccionar código QR"
 
-#: src/widgets/accounts/add.rs:296
+#: src/widgets/accounts/add.rs:303
 msgid "Invalid Token"
 msgstr "Testigo no válido"
 
-#: src/widgets/accounts/details.rs:123
+#: src/widgets/accounts/details.rs:124
 msgid "Are you sure you want to delete the account?"
 msgstr "¿Está seguro de que quiere eliminar la cuenta?"
 
-#: src/widgets/accounts/details.rs:124
+#: src/widgets/accounts/details.rs:125
 msgid "This action is irreversible"
 msgstr "Esta acción es irreversible"
 
-#: src/widgets/accounts/details.rs:126
+#: src/widgets/accounts/details.rs:127
 msgid "No"
 msgstr "No"
 
-#: src/widgets/accounts/details.rs:126
+#: src/widgets/accounts/details.rs:127
 msgid "Yes"
 msgstr "Sí"
 
-#: src/widgets/backup/dialog.rs:163 src/widgets/backup/dialog.rs:245
+#: src/widgets/backup/dialog.rs:165 src/widgets/backup/dialog.rs:247
 msgid "Key / Passphrase"
 msgstr "Clave/ frase de paso nueva"
 
-#: src/widgets/backup/dialog.rs:174 src/widgets/backup/dialog.rs:257
+#: src/widgets/backup/dialog.rs:176 src/widgets/backup/dialog.rs:259
 msgid "Select File"
 msgstr "Seleccionar archivo"
 
-#: src/widgets/backup/dialog.rs:205
+#: src/widgets/backup/dialog.rs:207
 msgid "Failed to create a backup"
 msgstr "Falló al crear el respaldo"
 
-#: src/widgets/backup/dialog.rs:327
+#: src/widgets/backup/dialog.rs:329
 msgid "Failed to restore from camera"
 msgstr "Falló la restaurar desde la cámara"
 
-#: src/widgets/backup/dialog.rs:352
+#: src/widgets/backup/dialog.rs:354
 msgid "Failed to restore from a screenshot"
 msgstr "Falló al restaurar desde una captura de pantalla"
 
-#: src/widgets/backup/dialog.rs:372
+#: src/widgets/backup/dialog.rs:374
 msgid "Failed to restore from an image"
 msgstr "Falló al restaurar desde una imagen"
 
-#: src/widgets/backup/dialog.rs:396
+#: src/widgets/backup/dialog.rs:398
 msgid "Failed to restore from a file"
 msgstr "Falló al restaurar desde un archivo"
 
-#: src/widgets/preferences/password_page.rs:195
-#: src/widgets/preferences/password_page.rs:237
+#: src/widgets/preferences/password_page.rs:196
+#: src/widgets/preferences/password_page.rs:238
 msgid "Wrong Passphrase"
 msgstr "Frase de paso incorrecta"
 
-#: src/widgets/providers/dialog.rs:261
+#: src/widgets/providers/dialog.rs:262
 msgid "Provider created successfully"
 msgstr "Proveedor creado correctamente"
 
-#: src/widgets/providers/dialog.rs:271
+#: src/widgets/providers/dialog.rs:272
 msgid "Provider updated successfully"
 msgstr "Proveedor actualizado correctamente"
 
-#: src/widgets/providers/dialog.rs:287
+#: src/widgets/providers/dialog.rs:288
 msgid "Provider removed successfully"
 msgstr "Proveedor quitado correctamente"
 
-#: src/widgets/providers/page.rs:185
+#: src/widgets/providers/page.rs:186
 msgid "Editing Provider: {}"
 msgstr "Editando proveedor: {}"
 
-#: src/widgets/providers/page.rs:324
+#: src/widgets/providers/page.rs:325
 msgid "The provider has accounts assigned to it, please remove them first"
 msgstr "eL proveedor tiene cuentas asignadas, elimínelas primero"
 
