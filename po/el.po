@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: authenticator master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2023-10-01 12:30+0000\n"
+"POT-Creation-Date: 2024-07-29 20:35+0000\n"
 "PO-Revision-Date: 2021-03-03 19:58+0200\n"
-"Last-Translator: Efstathios Iosifidis <eiosifidis@gnome.org>\n"
+"Last-Translator: Giannis Antypas <gianni.antypas@gmail.com>\n"
 "Language-Team: Greek <gnome-el-list@gnome.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
-#: data/resources/ui/window.ui:36 src/application.rs:88 src/main.rs:40
+#: data/resources/ui/window.ui:36 src/application.rs:104 src/main.rs:40
 msgid "Authenticator"
 msgstr "Αυθεντικοποιητής"
 
@@ -30,8 +30,9 @@ msgstr "Αυθεντικοποίηση δυο παραγόντων"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:5
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:91
-msgid "Generate Two-Factor Codes"
+#: src/application.rs:106
+#| msgid "Generate Two-Factor Codes"
+msgid "Generate two-factor codes"
 msgstr "Δημιουργία κωδικών δυο παραγόντων"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:10
@@ -90,7 +91,8 @@ msgstr ""
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:10
 msgid "Simple application for generating Two-Factor Authentication Codes."
-msgstr "Απλή εφαρμογή για τη δημιουργία κωδικών αυθεντικοποίησης δύο παραγόντων."
+msgstr ""
+"Απλή εφαρμογή για τη δημιουργία κωδικών αυθεντικοποίησης δύο παραγόντων."
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:11
 msgid "Features:"
@@ -106,7 +108,8 @@ msgstr "Υποστήριξη αλγορίθμων SHA-1/SHA-256/SHA-512"
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:15
 msgid "QR code scanner using a camera or from a screenshot"
-msgstr "Αναγνώστης QR κώδικα χρησιμοποιώντας την κάμερα ή από ένα στιγμιότυπο οθόνης"
+msgstr ""
+"Αναγνώστης QR κώδικα χρησιμοποιώντας την κάμερα ή από ένα στιγμιότυπο οθόνης"
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:16
 msgid "Lock the application with a password"
@@ -133,7 +136,7 @@ msgid "Main Window"
 msgstr "Κυρίως παράθυρο"
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:29
-#: data/resources/ui/account_add.ui:32 data/resources/ui/account_add.ui:49
+#: data/resources/ui/account_add.ui:30 data/resources/ui/account_add.ui:47
 msgid "Add a New Account"
 msgstr "Προσθήκη νέου λογαριασμού"
 
@@ -149,110 +152,108 @@ msgstr "Λεπτομέρειες λογαριασμού"
 msgid "Backup/Restore formats support"
 msgstr "Υποστήριξη μορφών δημιουργίας αντιγράφων ασφαλείας/επαναφοράς"
 
-#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:296
-msgid "Bilal Elmoussaoui"
-msgstr "Bilal Elmoussaoui"
-
-#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:297
+#: data/resources/ui/account_add.ui:6 src/widgets/preferences/window.rs:308
 msgid "_Camera"
 msgstr "_Κάμερα"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:301
+#: data/resources/ui/account_add.ui:10 src/widgets/preferences/window.rs:312
 msgid "_Screenshot"
 msgstr "_Στιγμιότυπο οθόνης"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:306
+#: data/resources/ui/account_add.ui:14 src/widgets/preferences/window.rs:317
 msgid "_QR Code Image"
 msgstr "Εικόνα κώδικα _QR"
 
-#: data/resources/ui/account_add.ui:58
+#: data/resources/ui/account_add.ui:56
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: data/resources/ui/account_add.ui:64
+#: data/resources/ui/account_add.ui:62
 msgid "_Add"
 msgstr "_Προσθήκη"
 
-#: data/resources/ui/account_add.ui:76 src/widgets/preferences/window.rs:292
+#: data/resources/ui/account_add.ui:74 src/widgets/preferences/window.rs:303
 msgid "Scan QR Code"
 msgstr "Σάρωση κώδικα QR"
 
-#: data/resources/ui/account_add.ui:114
+#: data/resources/ui/account_add.ui:112
 #: data/resources/ui/account_details_page.ui:96
 #: data/resources/ui/provider_page.ui:22
-#: data/resources/ui/providers_dialog.ui:110
+#: data/resources/ui/providers_dialog.ui:108
 msgid "Provider"
 msgstr "Πάροχος"
 
-#: data/resources/ui/account_add.ui:115
+#: data/resources/ui/account_add.ui:113
 msgid "Token issuer"
 msgstr "Εκδότης διακριτικού"
 
-#: data/resources/ui/account_add.ui:129
+#: data/resources/ui/account_add.ui:127
 #: data/resources/ui/account_details_page.ui:91
 msgid "Account"
 msgstr "Λογαριασμός"
 
-#: data/resources/ui/account_add.ui:135
+#: data/resources/ui/account_add.ui:133
 msgid "Token"
 msgstr "Διακριτικό"
 
-#: data/resources/ui/account_add.ui:141
+#: data/resources/ui/account_add.ui:139
 #: data/resources/ui/account_details_page.ui:139
 #: data/resources/ui/provider_page.ui:158
 msgid "Counter"
 msgstr "Μετρητής"
 
-#: data/resources/ui/account_add.ui:159
+#: data/resources/ui/account_add.ui:157
 #: data/resources/ui/account_details_page.ui:119
 #: data/resources/ui/provider_page.ui:133
 msgid "Algorithm"
 msgstr "Αλγόριθμος"
 
-#: data/resources/ui/account_add.ui:171
+#: data/resources/ui/account_add.ui:169
 #: data/resources/ui/account_details_page.ui:129
 #: data/resources/ui/provider_page.ui:118
 msgid "Computing Method"
 msgstr "Μέθοδος υπολογισμού"
 
-#: data/resources/ui/account_add.ui:183
+#: data/resources/ui/account_add.ui:181
 #: data/resources/ui/account_details_page.ui:148
 #: data/resources/ui/provider_page.ui:149
 msgid "Period"
 msgstr "Περίοδος"
 
-#: data/resources/ui/account_add.ui:184 data/resources/ui/provider_page.ui:150
+#: data/resources/ui/account_add.ui:182
+#: data/resources/ui/account_details_page.ui:149
+#: data/resources/ui/provider_page.ui:150
 msgid "Duration in seconds until the next password update"
 msgstr "Διάρκεια σε δευτερόλεπτα μέχρι την επόμενη ενημέρωση κωδικού πρόσβασης"
 
-#: data/resources/ui/account_add.ui:196
-#: data/resources/ui/account_details_page.ui:158
+#: data/resources/ui/account_add.ui:194
+#: data/resources/ui/account_details_page.ui:159
 #: data/resources/ui/provider_page.ui:167
 msgid "Digits"
 msgstr "Ψηφία"
 
-#: data/resources/ui/account_add.ui:197 data/resources/ui/provider_page.ui:168
+#: data/resources/ui/account_add.ui:195
+#: data/resources/ui/account_details_page.ui:160
+#: data/resources/ui/provider_page.ui:168
 msgid "Length of the generated code"
 msgstr "Μήκος του παραγόμενου κωδικού"
 
-#: data/resources/ui/account_add.ui:209
-#: data/resources/ui/account_details_page.ui:168
+#: data/resources/ui/account_add.ui:207
+#: data/resources/ui/account_details_page.ui:170
 #: data/resources/ui/provider_page.ui:112
 msgid "Website"
 msgstr "Ιστότοπος"
 
-#: data/resources/ui/account_add.ui:214
+#: data/resources/ui/account_add.ui:212
 msgid "How to Set Up"
 msgstr "Πώς να ρυθμίσετε"
 
-#: data/resources/ui/account_add.ui:234
+#: data/resources/ui/account_add.ui:232
 #: data/resources/ui/preferences_camera_page.ui:4
-#| msgid "_Camera"
 msgid "Camera"
 msgstr "Κάμερα"
 
-#: data/resources/ui/account_add.ui:246
-#| msgid "New Provider"
+#: data/resources/ui/account_add.ui:244
 msgid "Create Provider"
 msgstr "Δημιουργία παρόχου"
 
@@ -267,7 +268,7 @@ msgstr "_Αποθήκευση"
 msgid "_Delete"
 msgstr "_Διαγραφή"
 
-#: data/resources/ui/account_details_page.ui:173
+#: data/resources/ui/account_details_page.ui:175
 msgid "Help"
 msgstr "Βοήθεια"
 
@@ -283,11 +284,11 @@ msgstr "Αντιγραφή PIN στο πρόχειρο"
 msgid "Account details"
 msgstr "Λεπτομέρειες λογαριασμού"
 
-#: data/resources/ui/camera.ui:36
+#: data/resources/ui/camera.ui:35
 msgid "No Camera Found"
 msgstr "Δεν βρέθηκε κάμερα"
 
-#: data/resources/ui/camera.ui:39
+#: data/resources/ui/camera.ui:38
 msgid "_From a Screenshot"
 msgstr "_Από στιγμιότυπο οθόνης"
 
@@ -295,35 +296,42 @@ msgstr "_Από στιγμιότυπο οθόνης"
 msgid "Secret Service Error"
 msgstr "Σφάλμα Υπηρεσίας Μυστικών"
 
-#: data/resources/ui/keyring_error_dialog.ui:32
+#: data/resources/ui/keyring_error_dialog.ui:35
 msgid ""
 "Authenticator relies on a Secret Service Provider to manage your sensitive "
 "session information and an error occurred while we were trying to store or "
 "get your session."
 msgstr ""
-"Ο Αυθεντικοποιητής βασίζεται σε έναν πάροχο Υπηρεσία Μυστικών για τη διαχείριση των ευαίσθητων πληροφοριών σας"
-" κατά τη διάρκεια της συνεδρίας σας και παρουσιάστηκε ένα σφάλμα κατά την προσπάθειά μας να αποθηκεύσουμε"
-" ή να ανακτήσουμε τη συνεδρία σας."
+"Ο Αυθεντικοποιητής βασίζεται σε έναν πάροχο Υπηρεσία Μυστικών για τη "
+"διαχείριση των ευαίσθητων πληροφοριών σας κατά τη διάρκεια της συνεδρίας σας "
+"και παρουσιάστηκε ένα σφάλμα κατά την προσπάθειά μας να αποθηκεύσουμε ή να "
+"ανακτήσουμε τη συνεδρία σας."
 
-#: data/resources/ui/keyring_error_dialog.ui:44
+#: data/resources/ui/keyring_error_dialog.ui:47
 msgid ""
 "Here are a few things that might help you fix issues with the Secret Service:"
-msgstr "Εδώ είναι μερικά πράγματα που μπορεί να σας βοηθήσουν να διορθώσετε προβλήματα με την Υπηρεσία Μυστικών:"
+msgstr ""
+"Εδώ είναι μερικά πράγματα που μπορεί να σας βοηθήσουν να διορθώσετε "
+"προβλήματα με την Υπηρεσία Μυστικών:"
 
-#: data/resources/ui/keyring_error_dialog.ui:61
+#: data/resources/ui/keyring_error_dialog.ui:64
 msgid ""
 "Make sure you have a Secret Service Provider installed, like gnome-keyring."
-msgstr "Βεβαιωθείτε ότι έχετε εγκαταστήσει έναν Πάροχο Υπηρεσίας Μυστικών, όπως το gnome-keyring."
+msgstr ""
+"Βεβαιωθείτε ότι έχετε εγκαταστήσει έναν Πάροχο Υπηρεσίας Μυστικών, όπως το "
+"gnome-keyring."
 
-#: data/resources/ui/keyring_error_dialog.ui:80
+#: data/resources/ui/keyring_error_dialog.ui:83
 msgid "Check that you have a default keyring and that it is unlocked."
 msgstr "Ελέγξτε αν έχετε ένα προεπιλεγμένο keyring και αν είναι ξεκλείδωτο."
 
-#: data/resources/ui/keyring_error_dialog.ui:92
+#: data/resources/ui/keyring_error_dialog.ui:95
 msgid ""
 "Check the application logs and your distribution’s documentation for more "
 "details."
-msgstr "Ελέγξτε τα αρχεία καταγραφής της εφαρμογής και την τεκμηρίωση της διανομής σας για περισσότερες λεπτομέρειες."
+msgstr ""
+"Ελέγξτε τα αρχεία καταγραφής της εφαρμογής και την τεκμηρίωση της διανομής "
+"σας για περισσότερες λεπτομέρειες."
 
 #: data/resources/ui/preferences.ui:16
 msgid "General"
@@ -381,16 +389,15 @@ msgstr "Λήψη εικονιδίου ιστοτόπου σε μετρημένη
 msgid "Backup/Restore"
 msgstr "Αντίγραφο ασφαλείας/Επαναφορά"
 
-#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:481
+#: data/resources/ui/preferences.ui:84 src/widgets/preferences/window.rs:540
 msgid "Backup"
 msgstr "Αντίγραφο ασφαλείας"
 
-#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:489
+#: data/resources/ui/preferences.ui:89 src/widgets/preferences/window.rs:548
 msgid "Restore"
 msgstr "Επαναφορά"
 
 #: data/resources/ui/preferences_password_page.ui:4
-#| msgid "Wrong Password"
 msgid "Create Password"
 msgstr "Δημιουργία συνθηματικού"
 
@@ -400,21 +407,23 @@ msgstr "Ορίστε μια φράση κλειδώματος"
 
 #: data/resources/ui/preferences_password_page.ui:29
 msgid "Authenticator will start locked after a passphrase is set."
-msgstr "Ο Αυθεντικοποιητής θα ξεκινήσει κλειδωμένος αφού οριστεί μια φράση κλειδώματος."
+msgstr ""
+"Ο Αυθεντικοποιητής θα ξεκινήσει κλειδωμένος αφού οριστεί μια φράση "
+"κλειδώματος."
 
-#: data/resources/ui/preferences_password_page.ui:50
+#: data/resources/ui/preferences_password_page.ui:53
 msgid "Current Passphrase"
 msgstr "Τρέχουσα φράση κλειδώματος"
 
-#: data/resources/ui/preferences_password_page.ui:56
+#: data/resources/ui/preferences_password_page.ui:59
 msgid "New Passphrase"
 msgstr "Νέα φράση κλειδώματος"
 
-#: data/resources/ui/preferences_password_page.ui:62
+#: data/resources/ui/preferences_password_page.ui:65
 msgid "Repeat Passphrase"
 msgstr "Επανάληψη φράσης κλειδώματος"
 
-#: data/resources/ui/preferences_password_page.ui:76
+#: data/resources/ui/preferences_password_page.ui:79
 #: data/resources/ui/provider_page.ui:73
 msgid "_Reset"
 msgstr "_Επαναφορά"
@@ -435,40 +444,39 @@ msgstr "Η προεπιλεγμένη τιμή για τη μέθοδο υπολ
 msgid "Help URL"
 msgstr "Διεύθυνση URL βοήθειας"
 
-#: data/resources/ui/providers_dialog.ui:10
-#: data/resources/ui/providers_dialog.ui:21
+#: data/resources/ui/providers_dialog.ui:8
+#: data/resources/ui/providers_dialog.ui:19
 msgid "Providers"
 msgstr "Πάροχοι"
 
-#: data/resources/ui/providers_dialog.ui:31 src/widgets/providers/page.rs:209
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:209
 msgid "New Provider"
 msgstr "Νέος πάροχος"
 
-#: data/resources/ui/providers_dialog.ui:38
-#: data/resources/ui/providers_dialog.ui:54 data/resources/ui/window.ui:201
-#: data/resources/ui/window.ui:222
+#: data/resources/ui/providers_dialog.ui:36
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:207
+#: data/resources/ui/window.ui:228
 msgid "Search"
 msgstr "Αναζήτηση"
 
-#: data/resources/ui/providers_dialog.ui:49 data/resources/ui/window.ui:196
-#| msgid "Search"
+#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:202
 msgid "Search…"
 msgstr "Αναζήτηση…"
 
-#: data/resources/ui/providers_dialog.ui:95
+#: data/resources/ui/providers_dialog.ui:93
 #: data/resources/ui/providers_list.ui:38
 msgid "No Results"
 msgstr "Κανένα αποτέλεσμα"
 
-#: data/resources/ui/providers_dialog.ui:96
+#: data/resources/ui/providers_dialog.ui:94
 msgid "No providers matching the query were found."
 msgstr "Δεν βρέθηκαν παρόχοι που ταιριάζουν με το ερώτημα."
 
-#: data/resources/ui/providers_dialog.ui:141
+#: data/resources/ui/providers_dialog.ui:139
 msgid "No Provider Selected"
 msgstr "Δεν έχει επιλεγεί πάροχος"
 
-#: data/resources/ui/providers_dialog.ui:142
+#: data/resources/ui/providers_dialog.ui:140
 msgid "Select a provider or create a new one"
 msgstr "Επιλέξτε έναν πάροχο ή δημιουργήστε έναν νέο"
 
@@ -545,38 +553,35 @@ msgstr "_Περί με το Αυθεντικοποιητή"
 msgid "Authenticator is Locked"
 msgstr "Ο Αυθεντικοποιητής είναι κλειδωμένος"
 
-#: data/resources/ui/window.ui:89
+#: data/resources/ui/window.ui:92
 msgid "_Unlock"
 msgstr "_Ξεκλείδωμα"
 
-#: data/resources/ui/window.ui:119
-#| msgctxt "shortcut window"
-#| msgid "Accounts"
+#: data/resources/ui/window.ui:122
 msgid "Accounts"
 msgstr "Λογαριασμοί"
 
-#: data/resources/ui/window.ui:134 data/resources/ui/window.ui:170
+#: data/resources/ui/window.ui:137 data/resources/ui/window.ui:176
 msgid "New Account"
 msgstr "Νέος λογαριασμός"
 
-#: data/resources/ui/window.ui:142 data/resources/ui/window.ui:216
-#| msgid "Menu"
+#: data/resources/ui/window.ui:145 data/resources/ui/window.ui:222
 msgid "Main Menu"
 msgstr "Κυρίως μενού"
 
-#: data/resources/ui/window.ui:150
+#: data/resources/ui/window.ui:153
 msgid "No Accounts"
 msgstr "Χωρίς λογαριασμούς"
 
-#: data/resources/ui/window.ui:151
+#: data/resources/ui/window.ui:154
 msgid "Add an account or scan a QR code first."
 msgstr "Προσθέστε έναν λογαριασμό ή σαρώστε έναν κώδικα QR πρώτα."
 
-#: src/application.rs:74
+#: src/application.rs:84
 msgid "Accounts restored successfully"
 msgstr "Επαναφορά λογαριασμών με επιτυχία"
 
-#: src/application.rs:100
+#: src/application.rs:115
 msgid "translator-credits"
 msgstr ""
 "Ελληνική μεταφραστική ομάδα GNOME\n"
@@ -585,11 +590,11 @@ msgstr ""
 "Για περισσότερες πληροφορίες, επισκεφθείτε τη σελίδα\n"
 "http://gnome.gr/"
 
-#: src/application.rs:381 src/widgets/accounts/row.rs:46
+#: src/application.rs:424 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Ο κωδικός μίας χρήσης αντιγράφτηκε"
 
-#: src/application.rs:382
+#: src/application.rs:425
 msgid "Password was copied successfully"
 msgstr "Ο κωδικός αντιγράφηκε με επιτυχία"
 
@@ -601,11 +606,13 @@ msgstr "Aegis"
 
 #: src/backup/aegis.rs:403
 msgid "Into a JSON file containing plain-text or encrypted fields"
-msgstr "Σε ένα αρχείο JSON που περιέχει πεδία απλού κειμένου ή κρυπτογραφημένα πεδία"
+msgstr ""
+"Σε ένα αρχείο JSON που περιέχει πεδία απλού κειμένου ή κρυπτογραφημένα πεδία"
 
 #: src/backup/aegis.rs:443
 msgid "From a JSON file containing plain-text or encrypted fields"
-msgstr "Από ένα αρχείο JSON που περιέχει πεδία απλού κειμένου ή κρυπτογραφημένα πεδία"
+msgstr ""
+"Από ένα αρχείο JSON που περιέχει πεδία απλού κειμένου ή κρυπτογραφημένα πεδία"
 
 #. Translators: This is for making a backup for the andOTP Android app.
 #: src/backup/andotp.rs:79
@@ -676,6 +683,14 @@ msgstr "Από έναν κώδικα QR που δημιουργήθηκε από
 msgid "Au_thenticator (Legacy)"
 msgstr "Αυ_θεντικοποιητής (Παλαιά έκδοση)"
 
+#: src/backup/raivootp.rs:102
+msgid "Raivo OTP"
+msgstr "Raivo OTP"
+
+#: src/backup/raivootp.rs:106
+msgid "From a ZIP export generated by Raivo OTP"
+msgstr "Από μια εξαγωγή ZIP που δημιουργήθηκε από το Raivo OTP"
+
 #: src/models/algorithm.rs:60
 msgid "Counter-based"
 msgstr "Βασισμένο σε μετρητή"
@@ -689,92 +704,89 @@ msgstr "Βασισμένο στο χρόνο"
 msgid "Steam"
 msgstr "Steam"
 
-#: src/models/algorithm.rs:126
+#: src/models/algorithm.rs:125
 msgid "SHA-1"
 msgstr "SHA-1"
 
-#: src/models/algorithm.rs:127
+#: src/models/algorithm.rs:126
 msgid "SHA-256"
 msgstr "SHA-256"
 
-#: src/models/algorithm.rs:128
+#: src/models/algorithm.rs:127
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:269 src/widgets/preferences/window.rs:419
+#: src/widgets/accounts/add.rs:270 src/widgets/preferences/window.rs:477
 #: src/widgets/providers/page.rs:292
 msgid "Image"
 msgstr "Εικόνα"
 
-#: src/widgets/accounts/add.rs:277 src/widgets/preferences/window.rs:427
-#| msgid "Select a _File"
+#: src/widgets/accounts/add.rs:278 src/widgets/preferences/window.rs:485
 msgid "Select QR Code"
 msgstr "Επιλογή κώδικα QR"
 
-#: src/widgets/accounts/add.rs:295
+#: src/widgets/accounts/add.rs:296
 msgid "Invalid Token"
 msgstr "Μη έγκυρο διακριτικό"
 
-#: src/widgets/accounts/details.rs:127
+#: src/widgets/accounts/details.rs:123
 msgid "Are you sure you want to delete the account?"
 msgstr "Είστε σίγουροι ότι θέλετε να διαγράψετε τον λογαριασμό;"
 
-#: src/widgets/accounts/details.rs:128
+#: src/widgets/accounts/details.rs:124
 msgid "This action is irreversible"
 msgstr "Αυτή η ενέργεια είναι μη αναστρέψιμη"
 
-#: src/widgets/accounts/details.rs:132
+#: src/widgets/accounts/details.rs:126
 msgid "No"
 msgstr "Όχι"
 
-#: src/widgets/accounts/details.rs:132
+#: src/widgets/accounts/details.rs:126
 msgid "Yes"
 msgstr "Ναι"
 
-#: src/widgets/preferences/password_page.rs:172
-#: src/widgets/preferences/password_page.rs:214
+#: src/widgets/preferences/password_page.rs:195
+#: src/widgets/preferences/password_page.rs:237
 msgid "Wrong Passphrase"
 msgstr "Λάθος φράση πρόσβασης"
 
-#: src/widgets/preferences/window.rs:196 src/widgets/preferences/window.rs:268
-#| msgid "_Passphrase"
+#: src/widgets/preferences/window.rs:197 src/widgets/preferences/window.rs:279
 msgid "Key / Passphrase"
 msgstr "Κλειδί / Φράση πρόσβασης"
 
-#: src/widgets/preferences/window.rs:207 src/widgets/preferences/window.rs:280
-#| msgid "Select a _File"
+#: src/widgets/preferences/window.rs:208 src/widgets/preferences/window.rs:291
 msgid "Select File"
 msgstr "Επιλογή αρχείου"
 
-#: src/widgets/preferences/window.rs:231
+#: src/widgets/preferences/window.rs:239
 msgid "Failed to create a backup"
 msgstr "Αποτυχία δημιουργίας αντιγράφου ασφαλείας"
 
-#: src/widgets/preferences/window.rs:343
+#: src/widgets/preferences/window.rs:361
 msgid "Failed to restore from camera"
 msgstr "Αποτυχία επαναφοράς από την κάμερα"
 
-#: src/widgets/preferences/window.rs:354
+#: src/widgets/preferences/window.rs:386
 msgid "Failed to restore from a screenshot"
 msgstr "Αποτυχία επαναφοράς από στιγμιότυπο οθόνης"
 
-#: src/widgets/preferences/window.rs:364
+#: src/widgets/preferences/window.rs:406
 msgid "Failed to restore from an image"
 msgstr "Αποτυχία επαναφοράς από εικόνα"
 
-#: src/widgets/preferences/window.rs:377
+#: src/widgets/preferences/window.rs:430
 msgid "Failed to restore from a file"
 msgstr "Αποτυχία επαναφοράς από αρχείο"
 
-#: src/widgets/providers/dialog.rs:235
+#: src/widgets/providers/dialog.rs:262
 msgid "Provider created successfully"
 msgstr "Ο πάροχος δημιουργήθηκε με επιτυχία"
 
-#: src/widgets/providers/dialog.rs:245
+#: src/widgets/providers/dialog.rs:272
 msgid "Provider updated successfully"
 msgstr "Ο πάροχος ενημερώθηκε με επιτυχία"
 
-#: src/widgets/providers/dialog.rs:261
+#: src/widgets/providers/dialog.rs:288
 msgid "Provider removed successfully"
 msgstr "Ο πάροχος αφαιρέθηκε με επιτυχία"
 
@@ -784,11 +796,15 @@ msgstr "Επεξεργασία παρόχου: {}"
 
 #: src/widgets/providers/page.rs:325
 msgid "The provider has accounts assigned to it, please remove them first"
-msgstr "Ο πάροχος έχει λογαριασμούς που του ανήκουν, παρακαλώ αφαιρέστε τους πρώτα"
+msgstr ""
+"Ο πάροχος έχει λογαριασμούς που του ανήκουν, παρακαλώ αφαιρέστε τους πρώτα"
 
 #: src/widgets/window.rs:115
 msgid "Wrong Password"
 msgstr "Εσφαλμένο συνθηματικό"
+
+#~ msgid "Bilal Elmoussaoui"
+#~ msgstr "Bilal Elmoussaoui"
 
 #~ msgid "Dark Theme"
 #~ msgstr "Σκούρο θέμα"
