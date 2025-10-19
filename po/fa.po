@@ -7,15 +7,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: authenticator master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2025-09-10 11:13+0000\n"
-"PO-Revision-Date: 2025-09-10 15:30+0330\n"
+"POT-Creation-Date: 2025-10-16 17:05+0000\n"
+"PO-Revision-Date: 2025-10-18 13:48+0330\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
-"Language-Team: Persian <fa@li.org>\n"
+"Language-Team: Persian\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Gtranslator 48.0\n"
+"X-DL-Lang: fa\n"
+"X-DL-Module: authenticator\n"
+"X-DL-Branch: master\n"
+"X-DL-Domain: po\n"
+"X-DL-State: Translating\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:2
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
@@ -28,7 +34,8 @@ msgid "Two-Factor Authentication"
 msgstr "هویت‌سنجی دو عامله"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:4
-#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8 src/application.rs:114
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
+#: src/application.rs:114
 msgid "Generate two-factor codes"
 msgstr "ایجاد کدهای عامل دوم"
 
@@ -71,7 +78,8 @@ msgid "Download Favicons"
 msgstr "بارگیری نقشک‌ها"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:35
-msgid "Whether the application should attempt to find an icon for the providers."
+msgid ""
+"Whether the application should attempt to find an icon for the providers."
 msgstr "این که برنامه باید برای یافتن نقشکی برای فراهم کننده تلاش کند یا نه."
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:39
@@ -79,8 +87,10 @@ msgid "Download Favicons over metered connections"
 msgstr "بارگیر نقشک‌ها روی اتّصال‌های اندازه گیری شده"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:40
-msgid "Whether the application should download favicons over a metered connection."
-msgstr "این که برنامه باید نقشک‌ها را روی اتّصال‌های اندازه گیری شده بار بگیرد یا نه."
+msgid ""
+"Whether the application should download favicons over a metered connection."
+msgstr ""
+"این که برنامه باید نقشک‌ها را روی اتّصال‌های اندازه گیری شده بار بگیرد یا نه."
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:10
 msgid "Simple application for generating Two-Factor Authentication Codes."
@@ -116,8 +126,8 @@ msgstr "فراهم کنندهٔ جست‌وجوی پوستهٔ گنوم"
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:19
 msgid ""
-"Backup/Restore from/into known applications like FreeOTP+, Aegis (encrypted / "
-"plain-text), andOTP, Google Authenticator"
+"Backup/Restore from/into known applications like FreeOTP+, Aegis "
+"(encrypted / plain-text), andOTP, Google Authenticator"
 msgstr ""
 "پشتیبان گرفتن در و بازگردانی از برنامه‌های شناخته شده‌ای چون ‪FreeOTP+‬، اجیس "
 "(رمزنگاشته و متن‌خام)، andOTP و هویت‌سنچ گوگل"
@@ -167,8 +177,10 @@ msgstr "_افزودن"
 msgid "Scan QR Code"
 msgstr "پویش کد پاس"
 
-#: data/resources/ui/account_add.ui:113 data/resources/ui/account_details_page.ui:96
-#: data/resources/ui/provider_page.ui:22 data/resources/ui/providers_dialog.ui:108
+#: data/resources/ui/account_add.ui:113
+#: data/resources/ui/account_details_page.ui:96
+#: data/resources/ui/provider_page.ui:22
+#: data/resources/ui/providers_dialog.ui:108
 msgid "Provider"
 msgstr "فراهم کننده"
 
@@ -176,7 +188,8 @@ msgstr "فراهم کننده"
 msgid "Token issuer"
 msgstr "صادرکنندهٔ ژتون"
 
-#: data/resources/ui/account_add.ui:128 data/resources/ui/account_details_page.ui:91
+#: data/resources/ui/account_add.ui:128
+#: data/resources/ui/account_details_page.ui:91
 msgid "Account"
 msgstr "حساب"
 
@@ -184,42 +197,50 @@ msgstr "حساب"
 msgid "Token"
 msgstr "ژتون"
 
-#: data/resources/ui/account_add.ui:140 data/resources/ui/account_details_page.ui:135
+#: data/resources/ui/account_add.ui:140
+#: data/resources/ui/account_details_page.ui:135
 #: data/resources/ui/provider_page.ui:158
 msgid "Counter"
 msgstr "شمارنده"
 
-#: data/resources/ui/account_add.ui:158 data/resources/ui/account_details_page.ui:119
+#: data/resources/ui/account_add.ui:158
+#: data/resources/ui/account_details_page.ui:119
 #: data/resources/ui/provider_page.ui:133
 msgid "Algorithm"
 msgstr "الگوریتم"
 
-#: data/resources/ui/account_add.ui:166 data/resources/ui/account_details_page.ui:127
+#: data/resources/ui/account_add.ui:166
+#: data/resources/ui/account_details_page.ui:127
 #: data/resources/ui/provider_page.ui:118
 msgid "Computing Method"
 msgstr "روش محاسبه"
 
-#: data/resources/ui/account_add.ui:174 data/resources/ui/account_details_page.ui:144
+#: data/resources/ui/account_add.ui:174
+#: data/resources/ui/account_details_page.ui:144
 #: data/resources/ui/provider_page.ui:149
 msgid "Period"
 msgstr "دوره"
 
-#: data/resources/ui/account_add.ui:175 data/resources/ui/account_details_page.ui:145
+#: data/resources/ui/account_add.ui:175
+#: data/resources/ui/account_details_page.ui:145
 #: data/resources/ui/provider_page.ui:150
 msgid "Duration in seconds until the next password update"
 msgstr "مدّت به ثانیه تا به‌روز رسانی بعدی گذرواژه"
 
-#: data/resources/ui/account_add.ui:183 data/resources/ui/account_details_page.ui:153
+#: data/resources/ui/account_add.ui:183
+#: data/resources/ui/account_details_page.ui:153
 #: data/resources/ui/provider_page.ui:167
 msgid "Digits"
 msgstr "ارقام"
 
-#: data/resources/ui/account_add.ui:184 data/resources/ui/account_details_page.ui:154
+#: data/resources/ui/account_add.ui:184
+#: data/resources/ui/account_details_page.ui:154
 #: data/resources/ui/provider_page.ui:168
 msgid "Length of the generated code"
 msgstr "طول کد ایجاد شده"
 
-#: data/resources/ui/account_add.ui:192 data/resources/ui/account_details_page.ui:162
+#: data/resources/ui/account_add.ui:192
+#: data/resources/ui/account_details_page.ui:162
 #: data/resources/ui/provider_page.ui:112
 msgid "Website"
 msgstr "پایگاه وب"
@@ -290,19 +311,21 @@ msgstr "خطای خدمت رمزی"
 
 #: data/resources/ui/keyring_error_dialog.ui:35
 msgid ""
-"Authenticator relies on a Secret Service Provider to manage your sensitive session "
-"information and an error occurred while we were trying to store or get your "
-"session."
+"Authenticator relies on a Secret Service Provider to manage your sensitive "
+"session information and an error occurred while we were trying to store or "
+"get your session."
 msgstr ""
-"هویت‌سنج برای مدیریت اطّلاعات نشست حسّاستان متّکی به فراهم‌کنندهٔ خدمت رمزیست و خطایی "
-"هنگام تلاش برای ذخیره یا گرفتن نشستتان رخ داد."
+"هویت‌سنج برای مدیریت اطّلاعات نشست حسّاستان متّکی به فراهم‌کنندهٔ خدمت رمزیست و "
+"خطایی هنگام تلاش برای ذخیره یا گرفتن نشستتان رخ داد."
 
 #: data/resources/ui/keyring_error_dialog.ui:47
-msgid "Here are a few things that might help you fix issues with the Secret Service:"
+msgid ""
+"Here are a few things that might help you fix issues with the Secret Service:"
 msgstr "این‌جا چیزهایی برای کمک به رفع مشکل با خدمت رمزی هست:"
 
 #: data/resources/ui/keyring_error_dialog.ui:64
-msgid "Make sure you have a Secret Service Provider installed, like gnome-keyring."
+msgid ""
+"Make sure you have a Secret Service Provider installed, like gnome-keyring."
 msgstr "مطمئن شوید که فراهم‌کنندهٔ خدمت رمزی‌ای چون gnome-keyring را نصب دارید."
 
 #: data/resources/ui/keyring_error_dialog.ui:83
@@ -311,7 +334,8 @@ msgstr "بررسی کنید که دسته‌کلید پیش‌گزیده را د
 
 #: data/resources/ui/keyring_error_dialog.ui:95
 msgid ""
-"Check the application logs and your distribution’s documentation for more details."
+"Check the application logs and your distribution’s documentation for more "
+"details."
 msgstr "برای جزییات بیش‌تر گزارش‌های برنامه و مستندات توزیعتان را بررسی کنید."
 
 #: data/resources/ui/preferences.ui:14
@@ -411,7 +435,8 @@ msgstr "مقدار پیش‌گزیده برای روش محاسبهٔ مبتنی
 msgid "Help URL"
 msgstr "نشانی راهنما"
 
-#: data/resources/ui/providers_dialog.ui:8 data/resources/ui/providers_dialog.ui:19
+#: data/resources/ui/providers_dialog.ui:8
+#: data/resources/ui/providers_dialog.ui:19
 msgid "Providers"
 msgstr "فراهم کنندگان"
 
@@ -419,8 +444,9 @@ msgstr "فراهم کنندگان"
 msgid "New Provider"
 msgstr "فراهم کنندهٔ جدید"
 
-#: data/resources/ui/providers_dialog.ui:36 data/resources/ui/providers_dialog.ui:52
-#: data/resources/ui/window.ui:198 data/resources/ui/window.ui:218
+#: data/resources/ui/providers_dialog.ui:36
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:198
+#: data/resources/ui/window.ui:218
 msgid "Search"
 msgstr "جست‌وجو"
 
@@ -428,7 +454,8 @@ msgstr "جست‌وجو"
 msgid "Search…"
 msgstr "جست‌وجو…"
 
-#: data/resources/ui/providers_dialog.ui:93 data/resources/ui/providers_list.ui:38
+#: data/resources/ui/providers_dialog.ui:93
+#: data/resources/ui/providers_list.ui:38
 msgid "No Results"
 msgstr "بدون نتیجه"
 
@@ -507,7 +534,7 @@ msgstr "_ترجیحات"
 
 #: data/resources/ui/window.ui:20
 msgid "_Backup & Restore"
-msgstr "-پشتیبان گیری و بازگردانی"
+msgstr "_پشتیبان گیری و بازگردانی"
 
 #: data/resources/ui/window.ui:26
 msgid "_Keyboard Shortcuts"
@@ -776,6 +803,3 @@ msgstr "فراهم کننده حساب‌های مرتبطی دارد. لطفا
 #: src/widgets/window.rs:115
 msgid "Wrong Password"
 msgstr "گذرواژهٔ اشتباه"
-
-#~ msgid "Bilal Elmoussaoui"
-#~ msgstr "بلال الموسایی"
