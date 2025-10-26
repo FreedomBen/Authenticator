@@ -1,16 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
+# Norwegian bokmål translation of authenticator.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2025-02-10 11:13+0000\n"
-"PO-Revision-Date: 2025-03-02 17:42+0100\n"
-"Last-Translator: Brage <bragefuglseth@gnome.org>\n"
+"POT-Creation-Date: 2025-10-16 17:05+0000\n"
+"PO-Revision-Date: 2025-10-17 00:00+0200\n"
+"Last-Translator: Kjartan Maraas <kjartan.maraas@gmail.com>\n"
 "Language-Team: \n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
@@ -18,23 +17,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:2
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
 #: data/resources/ui/window.ui:40 src/application.rs:112 src/main.rs:40
 msgid "Authenticator"
 msgstr "Authenticator"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 msgid "Two-Factor Authentication"
 msgstr "Tofaktorautentisering"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:5
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
 #: src/application.rs:114
 msgid "Generate two-factor codes"
 msgstr "Beskytt nettkontoene dine"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:10
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:9
 msgid "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;"
 msgstr ""
 "Authenticator;Autentisering;Tofaktorautentisering;Tofaktor-autentisering;2-"
@@ -156,15 +155,15 @@ msgstr "Kontoinformasjon"
 msgid "Backup/Restore formats support"
 msgstr "Sikkerhetskopiering"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:274
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:276
 msgid "_Camera"
 msgstr "_Kamera"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:278
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:280
 msgid "_Screenshot"
 msgstr "_Skjermbilde"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:283
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:285
 msgid "_QR Code Image"
 msgstr "_Bilde med QR-kode"
 
@@ -176,7 +175,7 @@ msgstr "_Avbryt"
 msgid "_Add"
 msgstr "_Legg til"
 
-#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:269
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:271
 msgid "Scan QR Code"
 msgstr "Skann QR-kode"
 
@@ -292,11 +291,11 @@ msgstr "Kontoinformasjon"
 msgid "Backup & Restore"
 msgstr "Sikkerhetskopi"
 
-#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:506
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:508
 msgid "Backup"
 msgstr "Sikkerhetskopiering"
 
-#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:514
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:516
 msgid "Restore"
 msgstr "Gjenoppretting"
 
@@ -447,7 +446,7 @@ msgstr "Hjelpelenke"
 msgid "Providers"
 msgstr "Tjenester"
 
-#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:208
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:209
 msgid "New Provider"
 msgstr "Ny tjeneste"
 
@@ -482,47 +481,47 @@ msgstr "Velg en tjeneste eller opprett en ny"
 msgid "No accounts or providers matching the query were found."
 msgstr "Fant ingen kontoer eller tjenester som samsvarer med søket."
 
-#: data/resources/ui/shortcuts.ui:11
+#: data/resources/ui/shortcuts.ui:6
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Generelt"
 
-#: data/resources/ui/shortcuts.ui:14
+#: data/resources/ui/shortcuts.ui:9
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "Vis tastatursnarveier"
 
-#: data/resources/ui/shortcuts.ui:20
+#: data/resources/ui/shortcuts.ui:15
 msgctxt "shortcut window"
 msgid "Lock"
 msgstr "Lås"
 
-#: data/resources/ui/shortcuts.ui:26
+#: data/resources/ui/shortcuts.ui:21
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Vis innstillinger"
 
-#: data/resources/ui/shortcuts.ui:32
+#: data/resources/ui/shortcuts.ui:27
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Avslutt"
 
-#: data/resources/ui/shortcuts.ui:40
+#: data/resources/ui/shortcuts.ui:35
 msgctxt "shortcut window"
 msgid "Accounts"
 msgstr "Kontoer"
 
-#: data/resources/ui/shortcuts.ui:43
+#: data/resources/ui/shortcuts.ui:38
 msgctxt "shortcut window"
 msgid "New Account"
 msgstr "Ny konto"
 
-#: data/resources/ui/shortcuts.ui:49
+#: data/resources/ui/shortcuts.ui:44
 msgctxt "shortcut window"
 msgid "Search"
 msgstr "Søk"
 
-#: data/resources/ui/shortcuts.ui:55
+#: data/resources/ui/shortcuts.ui:50
 msgctxt "shortcut window"
 msgid "Show Providers List"
 msgstr "Vis tjenester"
@@ -587,11 +586,11 @@ msgstr "Kontoer gjenopprettet"
 msgid "translator-credits"
 msgstr "Brage Fuglseth https://bragefuglseth.dev"
 
-#: src/application.rs:434 src/widgets/accounts/row.rs:45
+#: src/application.rs:433 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Engangspassord kopiert til utklippstavlen"
 
-#: src/application.rs:435
+#: src/application.rs:434
 msgid "Password was copied successfully"
 msgstr "Passord kopiert til utklippstavlen"
 
@@ -610,20 +609,20 @@ msgid "From a JSON file containing plain-text or encrypted fields"
 msgstr "Fra en JSON-fil med normale eller krypterte felter"
 
 #. Translators: This is for making a backup for the andOTP Android app.
-#: src/backup/andotp.rs:79
+#: src/backup/andotp.rs:109
 msgid "a_ndOTP"
 msgstr "a_ndOTP"
 
-#: src/backup/andotp.rs:83
+#: src/backup/andotp.rs:113
 msgid "Into a plain-text JSON file"
 msgstr "Til en JSON-fil"
 
 #. Translators: This is for restoring a backup from the andOTP Android app.
-#: src/backup/andotp.rs:127
+#: src/backup/andotp.rs:157
 msgid "an_dOTP"
 msgstr "an_dOTP"
 
-#: src/backup/andotp.rs:131 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
+#: src/backup/andotp.rs:161 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
 msgid "From a plain-text JSON file"
 msgstr "Til en JSON-fil"
 
@@ -686,6 +685,14 @@ msgstr "Raivo OTP"
 msgid "From a ZIP export generated by Raivo OTP"
 msgstr "Fra en zip-fil generert av Raivo OTP"
 
+#: src/backup/yandex.rs:18
+msgid "Yandex Key"
+msgstr "Yandex Key"
+
+#: src/backup/yandex.rs:22
+msgid "From a plain-text file generated by Yandex Key"
+msgstr "Fra en tekstfil generert av Yandex Key"
+
 #: src/models/algorithm.rs:60
 msgid "Counter-based"
 msgstr "Tellerbasert"
@@ -711,85 +718,85 @@ msgstr "SHA-256"
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:270 src/widgets/backup/dialog.rs:443
-#: src/widgets/providers/page.rs:291
+#: src/widgets/accounts/add.rs:277 src/widgets/backup/dialog.rs:445
+#: src/widgets/providers/page.rs:292
 msgid "Image"
 msgstr "Bilde"
 
-#: src/widgets/accounts/add.rs:278 src/widgets/backup/dialog.rs:451
+#: src/widgets/accounts/add.rs:285 src/widgets/backup/dialog.rs:453
 msgid "Select QR Code"
 msgstr "Velg QR-kode"
 
-#: src/widgets/accounts/add.rs:296
+#: src/widgets/accounts/add.rs:303
 msgid "Invalid Token"
 msgstr "Ugyldig kode"
 
-#: src/widgets/accounts/details.rs:123
+#: src/widgets/accounts/details.rs:124
 msgid "Are you sure you want to delete the account?"
 msgstr "Slette konto?"
 
-#: src/widgets/accounts/details.rs:124
+#: src/widgets/accounts/details.rs:125
 msgid "This action is irreversible"
 msgstr "Dette kan ikke angres"
 
-#: src/widgets/accounts/details.rs:126
+#: src/widgets/accounts/details.rs:127
 msgid "No"
 msgstr "Avbryt"
 
-#: src/widgets/accounts/details.rs:126
+#: src/widgets/accounts/details.rs:127
 msgid "Yes"
 msgstr "Slett"
 
-#: src/widgets/backup/dialog.rs:163 src/widgets/backup/dialog.rs:245
+#: src/widgets/backup/dialog.rs:165 src/widgets/backup/dialog.rs:247
 msgid "Key / Passphrase"
 msgstr "Passord"
 
-#: src/widgets/backup/dialog.rs:174 src/widgets/backup/dialog.rs:257
+#: src/widgets/backup/dialog.rs:176 src/widgets/backup/dialog.rs:259
 msgid "Select File"
 msgstr "Velg fil"
 
-#: src/widgets/backup/dialog.rs:205
+#: src/widgets/backup/dialog.rs:207
 msgid "Failed to create a backup"
 msgstr "Sikkerhetskopiering mislyktes"
 
-#: src/widgets/backup/dialog.rs:327
+#: src/widgets/backup/dialog.rs:329
 msgid "Failed to restore from camera"
 msgstr "Gjenoppretting fra kamera mislyktes"
 
-#: src/widgets/backup/dialog.rs:352
+#: src/widgets/backup/dialog.rs:354
 msgid "Failed to restore from a screenshot"
 msgstr "Gjenoppretting fra skjermbilde mislyktes"
 
-#: src/widgets/backup/dialog.rs:372
+#: src/widgets/backup/dialog.rs:374
 msgid "Failed to restore from an image"
 msgstr "Gjenoppretting fra bilde mislyktes"
 
-#: src/widgets/backup/dialog.rs:396
+#: src/widgets/backup/dialog.rs:398
 msgid "Failed to restore from a file"
 msgstr "Gjenoppretting fra fil mislyktes"
 
-#: src/widgets/preferences/password_page.rs:195
-#: src/widgets/preferences/password_page.rs:237
+#: src/widgets/preferences/password_page.rs:196
+#: src/widgets/preferences/password_page.rs:238
 msgid "Wrong Passphrase"
 msgstr "Feil passord"
 
-#: src/widgets/providers/dialog.rs:261
+#: src/widgets/providers/dialog.rs:262
 msgid "Provider created successfully"
 msgstr "Tjeneste opprettet"
 
-#: src/widgets/providers/dialog.rs:271
+#: src/widgets/providers/dialog.rs:272
 msgid "Provider updated successfully"
 msgstr "Tjeneste oppdatert"
 
-#: src/widgets/providers/dialog.rs:287
+#: src/widgets/providers/dialog.rs:288
 msgid "Provider removed successfully"
 msgstr "Tjeneste fjernet"
 
-#: src/widgets/providers/page.rs:185
+#: src/widgets/providers/page.rs:186
 msgid "Editing Provider: {}"
 msgstr "Redigering av tjeneste: {}"
 
-#: src/widgets/providers/page.rs:324
+#: src/widgets/providers/page.rs:325
 msgid "The provider has accounts assigned to it, please remove them first"
 msgstr "Tjenesten har tilknyttede kontoer, fjern dem først"
 
