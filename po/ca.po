@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Authenticator\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2025-11-10 11:11+0000\n"
-"PO-Revision-Date: 2025-11-15 14:22+0100\n"
+"POT-Creation-Date: 2025-12-10 11:12+0000\n"
+"PO-Revision-Date: 2025-12-12 00:05+0100\n"
 "Last-Translator: maite guix <maite.guix@me.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/authenticator/"
 "translation/ca/>\n"
@@ -70,10 +70,18 @@ msgstr "Temps per a l'autobloqueig"
 msgid "Lock the application on idle after X minutes"
 msgstr "Bloca l'aplicació després de X minuts d'inactivitat"
 
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:34
+msgid "Download Favicons"
+msgstr "Baixa els favicons"
+
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:35
 msgid ""
 "Whether the application should attempt to find an icon for the providers."
 msgstr "Si l'aplicació ha d'intentar trobar una icona per als proveïdors."
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:39
+msgid "Download Favicons over metered connections"
+msgstr "Baixa els favicons a través d'una connexió limitada"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:40
 msgid ""
