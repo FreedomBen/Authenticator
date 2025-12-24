@@ -23,6 +23,7 @@ data-encoding = "2.9"
 diesel = {version = "2.0", features = ["sqlite", "r2d2"]}
 diesel_migrations = {version = "2.0", features = ["sqlite"]}
 favicon-scrapper = {path = "./favicon-scrapper"}
+formatx = "0.2.4"
 futures-channel = "0.3"
 futures-executor = "0.3"
 futures-util = "0.3"

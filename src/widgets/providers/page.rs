@@ -2,6 +2,7 @@ use adw::{
     prelude::*,
     subclass::{navigation_page::*, prelude::*},
 };
+use formatx::formatx;
 use gettextrs::gettext;
 use gtk::{
     gdk_pixbuf, gio,
@@ -9,7 +10,7 @@ use gtk::{
 };
 
 use crate::{
-    models::{i18n, Algorithm, Method, Provider, ProviderPatch, FAVICONS_PATH, OTP},
+    models::{Algorithm, Method, Provider, ProviderPatch, FAVICONS_PATH, OTP},
     widgets::{ErrorRevealer, ProviderImage},
 };
 
@@ -183,7 +184,10 @@ impl ProviderPage {
                     .find_position(provider.method().into_glib()),
             );
             imp.image.set_provider(Some(&provider));
-            self.set_title(&i18n::i18n_f("Editing Provider: {}", &[&provider.name()]));
+            self.set_title(
+                &formatx!(gettext("Editing Provider: {}"), provider.name())
+                    .expect("Wrong format in translatable string"),
+            );
             imp.selected_provider.replace(Some(provider));
         } else {
             imp.name_entry.set_text("");
