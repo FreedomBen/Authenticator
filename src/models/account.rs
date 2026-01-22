@@ -7,7 +7,7 @@ use gtk::{
 };
 
 use crate::{
-    models::{database, keyring, DieselProvider, Method, OTPUri, Provider, OTP, RUNTIME},
+    models::{DieselProvider, Method, OTP, OTPUri, Provider, RUNTIME, database, keyring},
     schema::accounts,
     utils::spawn_tokio_blocking,
 };

@@ -2,7 +2,7 @@ use std::{fs, fs::File, path::PathBuf, sync::LazyLock};
 
 use anyhow::Result;
 use diesel::{prelude::*, r2d2, r2d2::ConnectionManager};
-use diesel_migrations::{embed_migrations, EmbeddedMigrations, MigrationHarness};
+use diesel_migrations::{EmbeddedMigrations, MigrationHarness, embed_migrations};
 
 type Pool = r2d2::Pool<ConnectionManager<SqliteConnection>>;
 

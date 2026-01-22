@@ -6,7 +6,7 @@ use gtk::{
 };
 
 use crate::{
-    models::{Provider, FAVICONS_PATH, RUNTIME, SETTINGS},
+    models::{FAVICONS_PATH, Provider, RUNTIME, SETTINGS},
     utils::spawn,
 };
 

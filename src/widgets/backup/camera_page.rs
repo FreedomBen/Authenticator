@@ -10,7 +10,7 @@ use gtk::{
 use tokio::{
     select,
     sync::oneshot,
-    time::{sleep, Duration},
+    time::{Duration, sleep},
 };
 
 use crate::{utils::spawn_tokio, widgets::Camera};

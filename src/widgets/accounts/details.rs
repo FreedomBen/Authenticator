@@ -2,7 +2,7 @@ use adw::{prelude::*, subclass::navigation_page::*};
 use gettextrs::gettext;
 use gtk::{
     gdk,
-    glib::{self, clone, ControlFlow},
+    glib::{self, ControlFlow, clone},
     subclass::prelude::*,
 };
 

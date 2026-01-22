@@ -3,7 +3,7 @@ use std::{str::FromStr, string::ToString};
 use gettextrs::gettext;
 use gtk::glib;
 use ring::hmac;
-use serde::{de::Deserializer, ser::Serializer, Deserialize, Serialize};
+use serde::{Deserialize, Serialize, de::Deserializer, ser::Serializer};
 
 #[allow(clippy::upper_case_acronyms)]
 #[derive(Debug, Default, Eq, PartialEq, Clone, Copy, glib::Enum)]

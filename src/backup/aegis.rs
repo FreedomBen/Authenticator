@@ -11,7 +11,7 @@
 //! provided in the aegis repository (<https://github.com/beemdevelopment/Aegis/blob/master/docs/decrypt.py>). However,
 //! aegis android app is able to read the files! See line 173 for a discussion.
 
-use aes_gcm::{aead::Aead, KeyInit};
+use aes_gcm::{KeyInit, aead::Aead};
 use anyhow::{Context, Result};
 use gettextrs::gettext;
 use gtk::prelude::*;

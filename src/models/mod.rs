@@ -30,6 +30,6 @@ pub use self::{
     otp_uri::OTPUri,
     provider::{DieselProvider, Provider, ProviderPatch},
     providers::ProvidersModel,
-    search_provider::{start, SearchProviderAction},
+    search_provider::{SearchProviderAction, start},
     settings::Settings,
 };

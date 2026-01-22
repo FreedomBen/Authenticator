@@ -13,7 +13,7 @@ mod window;
 pub use self::{
     accounts::AccountAddDialog,
     backup::BackupDialog,
-    camera::{screenshot, Camera},
+    camera::{Camera, screenshot},
     camera_row::CameraRow,
     error_revealer::ErrorRevealer,
     keyring_error_dialog::KeyringErrorDialog,

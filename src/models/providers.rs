@@ -1,7 +1,7 @@
 use anyhow::Result;
 use gtk::{gio, glib, prelude::*, subclass::prelude::*};
 
-use super::{Account, Algorithm, Method, Provider, ProviderPatch, OTP};
+use super::{Account, Algorithm, Method, OTP, Provider, ProviderPatch};
 
 mod imp {
     use std::cell::{Cell, RefCell};

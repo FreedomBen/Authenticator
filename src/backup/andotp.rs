@@ -2,7 +2,7 @@ use anyhow::{Context, Result};
 use gettextrs::gettext;
 use gtk::prelude::*;
 use ring::{
-    aead::{Aad, LessSafeKey, Nonce, UnboundKey, AES_256_GCM},
+    aead::{AES_256_GCM, Aad, LessSafeKey, Nonce, UnboundKey},
     digest,
 };
 use serde::{Deserialize, Serialize};

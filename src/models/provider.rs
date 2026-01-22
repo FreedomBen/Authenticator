@@ -14,7 +14,7 @@ use gtk::{
 use url::Url;
 
 use crate::{
-    models::{database, Account, AccountsModel, Algorithm, Method, FAVICONS_PATH, OTP},
+    models::{Account, AccountsModel, Algorithm, FAVICONS_PATH, Method, OTP, database},
     schema::providers,
 };
 

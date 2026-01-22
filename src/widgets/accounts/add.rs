@@ -3,13 +3,13 @@ use anyhow::Result;
 use gettextrs::gettext;
 use gtk::{
     gio,
-    glib::{self, clone, ControlFlow},
+    glib::{self, ControlFlow, clone},
 };
 
 use crate::{
     backup::RestorableItem,
-    models::{Account, OTPUri, Provider, ProvidersModel, OTP},
-    widgets::{providers::ProviderPage, screenshot, Camera, ErrorRevealer, ProviderImage, UrlRow},
+    models::{Account, OTP, OTPUri, Provider, ProvidersModel},
+    widgets::{Camera, ErrorRevealer, ProviderImage, UrlRow, providers::ProviderPage, screenshot},
 };
 
 mod imp {

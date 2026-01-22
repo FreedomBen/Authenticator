@@ -55,10 +55,12 @@ mod imp {
 
         fn signals() -> &'static [Signal] {
             static SIGNALS: LazyLock<Vec<Signal>> = LazyLock::new(|| {
-                vec![Signal::builder("shared")
-                    .param_types([Account::static_type()])
-                    .action()
-                    .build()]
+                vec![
+                    Signal::builder("shared")
+                        .param_types([Account::static_type()])
+                        .action()
+                        .build(),
+                ]
             });
             SIGNALS.as_ref()
         }

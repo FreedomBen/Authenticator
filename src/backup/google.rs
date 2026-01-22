@@ -28,7 +28,10 @@ impl Restorable for Google {
         let uri = Url::parse(&string)?;
 
         if uri.scheme() != "otpauth-migration" {
-            anyhow::bail!("Invalid OTP migration uri format, expected uri protocol to be otpauth-migration, got {}", uri.scheme());
+            anyhow::bail!(
+                "Invalid OTP migration uri format, expected uri protocol to be otpauth-migration, got {}",
+                uri.scheme()
+            );
         }
 
         if let Some(host) = uri.host_str() {

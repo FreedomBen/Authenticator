@@ -1,7 +1,8 @@
+use std::str::FromStr;
+
 use anyhow::Result;
 use gettextrs::gettext;
 use serde::Deserialize;
-use std::str::FromStr;
 
 use super::Restorable;
 use crate::models::{Method, OTPUri};
@@ -67,8 +68,10 @@ impl Restorable for Yandex {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::backup::RestorableItem;
-    use crate::models::{Algorithm, Method};
+    use crate::{
+        backup::RestorableItem,
+        models::{Algorithm, Method},
+    };
 
     #[test]
     fn parse_yandex_json_anonymous() {

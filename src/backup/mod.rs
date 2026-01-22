@@ -1,7 +1,7 @@
 use anyhow::Result;
 
 use crate::{
-    models::{keyring, Account, Algorithm, Method, ProvidersModel},
+    models::{Account, Algorithm, Method, ProvidersModel, keyring},
     utils::spawn_tokio_blocking,
 };
 

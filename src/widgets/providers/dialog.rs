@@ -2,7 +2,7 @@ use adw::{prelude::*, subclass::prelude::*};
 use gettextrs::gettext;
 use gtk::glib::{self, clone};
 
-use super::{dialog_row::ProviderActionRow, ProviderPage};
+use super::{ProviderPage, dialog_row::ProviderActionRow};
 use crate::models::{Provider, ProvidersModel};
 
 enum View {

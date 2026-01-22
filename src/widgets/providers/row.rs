@@ -8,7 +8,7 @@ use gtk::{
 
 use crate::{
     models::{Account, Provider},
-    widgets::{accounts::AccountRow, ProgressIcon, ProviderImage},
+    widgets::{ProgressIcon, ProviderImage, accounts::AccountRow},
 };
 
 mod imp {

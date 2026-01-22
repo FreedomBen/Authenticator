@@ -11,12 +11,12 @@ use gtk::{
 use crate::{
     application::Application,
     config,
-    models::{keyring, Account, OTPUri, ProvidersModel, SETTINGS},
+    models::{Account, OTPUri, ProvidersModel, SETTINGS, keyring},
     utils::spawn_tokio_blocking,
     widgets::{
+        AccountAddDialog, ErrorRevealer,
         accounts::AccountDetailsPage,
         providers::{ProvidersList, ProvidersListView},
-        AccountAddDialog, ErrorRevealer,
     },
 };
 

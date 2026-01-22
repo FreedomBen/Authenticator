@@ -3,7 +3,7 @@ use std::{
     time::{SystemTime, UNIX_EPOCH},
 };
 
-use anyhow::{anyhow, Result};
+use anyhow::{Result, anyhow};
 use data_encoding::BASE32_NOPAD;
 use ring::hmac;
 use zeroize::{Zeroize, ZeroizeOnDrop};
@@ -164,7 +164,7 @@ fn encode_digest(digest: impl AsRef<[u8]>) -> Result<u32> {
 // Some of the tests are heavily inspired(copy-paste) of the andOTP application
 #[cfg(test)]
 mod tests {
-    use super::{format, Algorithm, OTP};
+    use super::{Algorithm, OTP, format};
 
     #[test]
     fn totp() {

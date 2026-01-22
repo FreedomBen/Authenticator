@@ -16,8 +16,8 @@ use search_provider::ResultMeta;
 use crate::{
     config,
     models::{
-        keyring, start as start_search_provider, Account, OTPUri, Provider, ProvidersModel,
-        SearchProviderAction, FAVICONS_PATH, RUNTIME, SECRET_SERVICE, SETTINGS,
+        Account, FAVICONS_PATH, OTPUri, Provider, ProvidersModel, RUNTIME, SECRET_SERVICE,
+        SETTINGS, SearchProviderAction, keyring, start as start_search_provider,
     },
     utils::{spawn, spawn_tokio_blocking},
     widgets::{BackupDialog, KeyringErrorDialog, PreferencesWindow, ProvidersDialog, Window},

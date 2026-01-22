@@ -4,7 +4,7 @@ use serde::Deserialize;
 use zeroize::{Zeroize, ZeroizeOnDrop};
 
 use super::{Restorable, RestorableItem};
-use crate::models::{Algorithm, Method, OTPUri, OTP};
+use crate::models::{Algorithm, Method, OTP, OTPUri};
 
 #[derive(Deserialize)]
 pub struct Bitwarden {

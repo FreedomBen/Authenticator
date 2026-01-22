@@ -10,7 +10,7 @@ use gtk::{
 };
 
 use crate::{
-    models::{Algorithm, Method, Provider, ProviderPatch, FAVICONS_PATH, OTP},
+    models::{Algorithm, FAVICONS_PATH, Method, OTP, Provider, ProviderPatch},
     widgets::{ErrorRevealer, ProviderImage},
 };
 

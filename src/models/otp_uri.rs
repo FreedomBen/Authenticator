@@ -1,6 +1,6 @@
 use std::{fmt::Write, str::FromStr};
 
-use percent_encoding::{percent_decode_str, utf8_percent_encode, NON_ALPHANUMERIC};
+use percent_encoding::{NON_ALPHANUMERIC, percent_decode_str, utf8_percent_encode};
 use url::Url;
 use zeroize::{Zeroize, ZeroizeOnDrop};
 
@@ -249,7 +249,10 @@ mod tests {
             period: Some(30),
             counter: None,
         };
-        assert_eq!(String::from(uri), "otpauth://totp/account%20test?secret=dznF36H0IIg17rK&issuer=Test&algorithm=SHA1&digits=6&period=30");
+        assert_eq!(
+            String::from(uri),
+            "otpauth://totp/account%20test?secret=dznF36H0IIg17rK&issuer=Test&algorithm=SHA1&digits=6&period=30"
+        );
     }
 
     #[test]
