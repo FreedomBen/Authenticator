@@ -1,7 +1,7 @@
 [package]
 edition = "2021"
 name = "authenticator"
-rust-version = "1.80"
+rust-version = "1.92"
 
 [profile.release]
 debug = true
@@ -13,11 +13,11 @@ opt-level = 1
 opt-level = 3
 
 [dependencies]
-adw = {package = "libadwaita", version = "0.8", features = ["v1_6"]}
+adw = {package = "libadwaita", version = "0.9.0-alpha", features = ["v1_6"]}
 aes-gcm = "0.10"
 anyhow = "1.0"
-aperture = "0.11"
-ashpd = {version = "0.12", default-features = false, features = ["gtk4", "tokio", "tracing"]}
+aperture = "0.12.0-alpha"
+ashpd = {version = "0.13.0-alpha", default-features = false, features = ["gtk4", "tokio", "tracing", "screenshot", "camera"]}
 bincode = "2"
 data-encoding = "2.9"
 diesel = {version = "2.0", features = ["sqlite", "r2d2"]}
@@ -28,10 +28,10 @@ futures-channel = "0.3"
 futures-executor = "0.3"
 futures-util = "0.3"
 gettext-rs = {version = "0.7", features = ["gettext-system"]}
-gtk = {package = "gtk4", version = "0.10", features = ["v4_10"]}
+gtk = {package = "gtk4", version = "0.11.0-alpha", features = ["v4_10"]}
 hex = {version = "0.4.3", features = ["serde"]}
 image = {version = "0.25", default-features = false, features = ["png"]}
-oo7 = {version = "0.5", default-features = false, features = ["tokio", "native_crypto", "tracing"]}
+oo7 = {version = "0.6.0-alpha", default-features = false, features = ["tokio", "native_crypto", "tracing"]}
 percent-encoding = "2.3"
 prost = "0.14"
 qrencode = {version = "0.14", features = ["image"]}
@@ -40,7 +40,7 @@ ring = "0.17"
 rqrr = { version = "0.10", default-features = false, features = ["img"] }
 rust-argon2 = {version = "3.0", default-features = false}
 scrypt = {version = "0.11", default-features = false}
-search-provider = {version = "0.12", default-features = false, features = ["tokio"]}
+search-provider = {version = "0.13.0-alpha", default-features = false, features = ["tokio"]}
 serde = "1.0"
 serde_json = "1.0"
 tokio = {version = "1.0", default-features = false, features = ["rt-multi-thread", "fs", "io-util"]}
