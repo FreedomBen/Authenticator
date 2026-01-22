@@ -130,19 +130,19 @@ impl Restorable for Bitwarden {
         let mut items = Vec::new();
 
         for mut item in bitwarden_root.items {
-            if let Some(ref mut login) = item.login {
-                if let Some(ref totp) = login.totp {
-                    if totp.starts_with("steam://") {
-                        login.totp = Some(totp.trim_start_matches("steam://").to_owned());
-                        item.algorithm = Algorithm::SHA1;
-                        item.method = Method::Steam;
-                        item.period = Some(OTP::STEAM_DEFAULT_PERIOD);
-                        item.digits = Some(OTP::STEAM_DEFAULT_DIGITS);
-                        items.push(item);
-                    } else if let Ok(uri) = totp.parse::<OTPUri>() {
-                        item.overwrite_with(uri);
-                        items.push(item);
-                    }
+            if let Some(ref mut login) = item.login
+                && let Some(ref totp) = login.totp
+            {
+                if totp.starts_with("steam://") {
+                    login.totp = Some(totp.trim_start_matches("steam://").to_owned());
+                    item.algorithm = Algorithm::SHA1;
+                    item.method = Method::Steam;
+                    item.period = Some(OTP::STEAM_DEFAULT_PERIOD);
+                    item.digits = Some(OTP::STEAM_DEFAULT_DIGITS);
+                    items.push(item);
+                } else if let Ok(uri) = totp.parse::<OTPUri>() {
+                    item.overwrite_with(uri);
+                    items.push(item);
                 }
             }
         }

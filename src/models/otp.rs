@@ -132,7 +132,7 @@ fn format(code: u32, digits: usize) -> String {
     let padded_code = format!("{code:0digits$}");
     let mut formated_code = String::new();
     for (idx, ch) in padded_code.chars().enumerate() {
-        if (digits - idx) % 3 == 0 && (digits - idx) != 0 && idx != 0 {
+        if (digits - idx).is_multiple_of(3) && (digits - idx) != 0 && idx != 0 {
             formated_code.push(' ');
         }
         formated_code.push(ch);
