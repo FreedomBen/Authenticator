@@ -1,0 +1,806 @@
+# Kazakh translation for authenticator.
+# Copyright (C) 2026 authenticator's COPYRIGHT HOLDER
+# This file is distributed under the same license as the authenticator package.
+# Baurzhan Muftakhidinov <baurthefirst@gmail.com>,  2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: authenticator master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
+"POT-Creation-Date: 2025-12-24 17:58+0000\n"
+"PO-Revision-Date: 2026-01-25 20:18+0500\n"
+"Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
+"Language-Team: Kazakh <Kazakh>\n"
+"Language: kk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.8\n"
+
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:2
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
+#: data/resources/ui/window.ui:40 src/application.rs:112 src/main.rs:40
+msgid "Authenticator"
+msgstr "Аутентификатор"
+
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
+msgid "Two-Factor Authentication"
+msgstr "Екі факторлы аутентификация"
+
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
+#: src/application.rs:114
+msgid "Generate two-factor codes"
+msgstr "Екі факторлы кодтарды генерациялау"
+
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:9
+msgid "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;"
+msgstr "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;Верификация;Аутентификация;"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:6
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:7
+msgid "Default window width"
+msgstr "Терезенің әдепкі ені"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:11
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:12
+msgid "Default window height"
+msgstr "Терезенің әдепкі биіктігі"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:16
+msgid "Default window maximized behaviour"
+msgstr "Терезенің әдепкі жазық күйіндегі мінез-құлқы"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:21
+msgid "Auto lock"
+msgstr "Автоматты құлыптау"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:22
+msgid "Whether to auto lock the application or not"
+msgstr "Бағдарламаны автоматты түрде құлыптау керек пе, жоқ па"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:26
+msgid "Auto lock timeout"
+msgstr "Автоматты құлыптаудың күту уақыты"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:27
+msgid "Lock the application on idle after X minutes"
+msgstr "Бағдарламаны X минут әрекетсіздіктен кейін құлыптау"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:34
+msgid "Download Favicons"
+msgstr "Favicon-дарды жүктеп алу"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:35
+msgid ""
+"Whether the application should attempt to find an icon for the providers."
+msgstr "Бағдарлама провайдерлер үшін таңбашаны табуға тырысуы керек пе."
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:39
+msgid "Download Favicons over metered connections"
+msgstr "Шектелген қосылымдар арқылы Favicon-дарды жүктеп алу"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:40
+msgid ""
+"Whether the application should download favicons over a metered connection."
+msgstr ""
+"Бағдарлама шектелген қосылым арқылы favicon-дарды жүктеп алуы керек пе."
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:10
+msgid "Simple application for generating Two-Factor Authentication Codes."
+msgstr ""
+"Екі факторлы аутентификация кодтарын генерациялауға арналған қарапайым "
+"бағдарлама."
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:11
+msgid "Features:"
+msgstr "Мүмкіндіктері:"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:13
+msgid "Time-based/Counter-based/Steam methods support"
+msgstr "Уақытқа негізделген/Есептегішке негізделген/Steam әдістерін қолдау"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:14
+msgid "SHA-1/SHA-256/SHA-512 algorithms support"
+msgstr "SHA-1/SHA-256/SHA-512 алгоритмдерін қолдау"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:15
+msgid "QR code scanner using a camera or from a screenshot"
+msgstr "Камераны немесе скриншотты пайдаланып QR кодын сканерлеу"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:16
+msgid "Lock the application with a password"
+msgstr "Бағдарламаны парольмен құлыптау"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:17
+msgid "Beautiful UI"
+msgstr "Әдемі интерфейс"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:18
+msgid "GNOME Shell search provider"
+msgstr "GNOME Shell іздеу провайдері"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:19
+msgid ""
+"Backup/Restore from/into known applications like FreeOTP+, Aegis "
+"(encrypted / plain-text), andOTP, Google Authenticator"
+msgstr ""
+"FreeOTP+, Aegis (шифрленген / ашық мәтін), andOTP, Google Authenticator "
+"сияқты белгілі бағдарламалардан/бағдарламаларға резервтік көшіру/қалпына "
+"келтіру"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:25
+msgid "Main Window"
+msgstr "Басты терезе"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:29
+#: data/resources/ui/account_add.ui:30 data/resources/ui/account_add.ui:47
+msgid "Add a New Account"
+msgstr "Жаңа тіркелгіні қосу"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:33
+msgid "Add a New Provider"
+msgstr "Жаңа провайдерді қосу"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:37
+msgid "Account Details"
+msgstr "Тіркелгі мәліметтері"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:41
+msgid "Backup/Restore formats support"
+msgstr "Резервтік көшіру/қалпына келтіру пішімдерін қолдау"
+
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:276
+msgid "_Camera"
+msgstr "_Камера"
+
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:280
+msgid "_Screenshot"
+msgstr "_Скриншот"
+
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:285
+msgid "_QR Code Image"
+msgstr "QR код с_уреті"
+
+#: data/resources/ui/account_add.ui:56
+msgid "_Cancel"
+msgstr "Бас _тарту"
+
+#: data/resources/ui/account_add.ui:63
+msgid "_Add"
+msgstr "Қ_осу"
+
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:271
+msgid "Scan QR Code"
+msgstr "QR кодын сканерлеу"
+
+#: data/resources/ui/account_add.ui:113
+#: data/resources/ui/account_details_page.ui:96
+#: data/resources/ui/provider_page.ui:22
+#: data/resources/ui/providers_dialog.ui:108
+msgid "Provider"
+msgstr "Провайдер"
+
+#: data/resources/ui/account_add.ui:114
+msgid "Token issuer"
+msgstr "Токенді шығарушы"
+
+#: data/resources/ui/account_add.ui:128
+#: data/resources/ui/account_details_page.ui:91
+msgid "Account"
+msgstr "Тіркелгі"
+
+#: data/resources/ui/account_add.ui:134
+msgid "Token"
+msgstr "Токен"
+
+#: data/resources/ui/account_add.ui:140
+#: data/resources/ui/account_details_page.ui:135
+#: data/resources/ui/provider_page.ui:158
+msgid "Counter"
+msgstr "Есептегіш"
+
+#: data/resources/ui/account_add.ui:158
+#: data/resources/ui/account_details_page.ui:119
+#: data/resources/ui/provider_page.ui:133
+msgid "Algorithm"
+msgstr "Алгоритм"
+
+#: data/resources/ui/account_add.ui:166
+#: data/resources/ui/account_details_page.ui:127
+#: data/resources/ui/provider_page.ui:118
+msgid "Computing Method"
+msgstr "Есептеу әдісі"
+
+#: data/resources/ui/account_add.ui:174
+#: data/resources/ui/account_details_page.ui:144
+#: data/resources/ui/provider_page.ui:149
+msgid "Period"
+msgstr "Кезең"
+
+#: data/resources/ui/account_add.ui:175
+#: data/resources/ui/account_details_page.ui:145
+#: data/resources/ui/provider_page.ui:150
+msgid "Duration in seconds until the next password update"
+msgstr "Пароль келесі жаңартылғанға дейінгі уақыт (секундпен)"
+
+#: data/resources/ui/account_add.ui:183
+#: data/resources/ui/account_details_page.ui:153
+#: data/resources/ui/provider_page.ui:167
+msgid "Digits"
+msgstr "Цифрлар"
+
+#: data/resources/ui/account_add.ui:184
+#: data/resources/ui/account_details_page.ui:154
+#: data/resources/ui/provider_page.ui:168
+msgid "Length of the generated code"
+msgstr "Генерацияланған кодтың ұзындығы"
+
+#: data/resources/ui/account_add.ui:192
+#: data/resources/ui/account_details_page.ui:162
+#: data/resources/ui/provider_page.ui:112
+msgid "Website"
+msgstr "Веб-сайт"
+
+#: data/resources/ui/account_add.ui:197
+msgid "How to Set Up"
+msgstr "Қалай баптау керек"
+
+#: data/resources/ui/account_add.ui:217
+#: data/resources/ui/preferences_camera_page.ui:4
+msgid "Camera"
+msgstr "Камера"
+
+#: data/resources/ui/account_add.ui:229
+msgid "Create Provider"
+msgstr "Провайдерді жасау"
+
+#: data/resources/ui/account_details_page.ui:56
+#: data/resources/ui/preferences_password_page.ui:17
+#: data/resources/ui/provider_page.ui:29
+msgid "_Save"
+msgstr "_Сақтау"
+
+#: data/resources/ui/account_details_page.ui:67
+#: data/resources/ui/provider_page.ui:185
+msgid "_Delete"
+msgstr "Өші_ру"
+
+#: data/resources/ui/account_details_page.ui:167
+msgid "Help"
+msgstr "Көмек"
+
+#: data/resources/ui/account_row.ui:23
+msgid "Increment the counter"
+msgstr "Есептегішті арттыру"
+
+#: data/resources/ui/account_row.ui:34
+msgid "Copy PIN to clipboard"
+msgstr "PIN кодын алмасу буферіне көшіру"
+
+#: data/resources/ui/account_row.ui:43
+msgid "Account details"
+msgstr "Тіркелгі мәліметтері"
+
+#: data/resources/ui/backup_dialog.ui:4 data/resources/ui/backup_dialog.ui:8
+msgid "Backup & Restore"
+msgstr "Резервтік көшірме жасау және қалпына келтіру"
+
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:508
+msgid "Backup"
+msgstr "Резервтік көшірме"
+
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:516
+msgid "Restore"
+msgstr "Қалпына келтіру"
+
+#: data/resources/ui/camera.ui:35
+msgid "No Camera Found"
+msgstr "Камера табылмады"
+
+#: data/resources/ui/camera.ui:38
+msgid "_From a Screenshot"
+msgstr "Скрин_шоттан"
+
+#: data/resources/ui/keyring_error_dialog.ui:8
+msgid "Secret Service Error"
+msgstr "Secret Service қатесі"
+
+#: data/resources/ui/keyring_error_dialog.ui:35
+msgid ""
+"Authenticator relies on a Secret Service Provider to manage your sensitive "
+"session information and an error occurred while we were trying to store or "
+"get your session."
+msgstr ""
+"Аутентификатор қолданбасы сезімтал сессия ақпаратын басқару үшін Secret "
+"Service провайдеріне сүйенеді және сессияны сақтау немесе алу кезінде қате "
+"орын алды."
+
+#: data/resources/ui/keyring_error_dialog.ui:47
+msgid ""
+"Here are a few things that might help you fix issues with the Secret "
+"Service:"
+msgstr "Secret Service мәселелерін шешуге көмектесетін бірнеше қадамдар:"
+
+#: data/resources/ui/keyring_error_dialog.ui:64
+msgid ""
+"Make sure you have a Secret Service Provider installed, like gnome-keyring."
+msgstr ""
+"Gnome-keyring сияқты Secret Service провайдері орнатылғанына көз жеткізіңіз."
+
+#: data/resources/ui/keyring_error_dialog.ui:83
+msgid "Check that you have a default keyring and that it is unlocked."
+msgstr ""
+"Әдепкі кілттер бумасы бар екеніне және оның құлпы ашылғанына көз жеткізіңіз."
+
+#: data/resources/ui/keyring_error_dialog.ui:95
+msgid ""
+"Check the application logs and your distribution’s documentation for more "
+"details."
+msgstr ""
+"Толығырақ ақпарат алу үшін бағдарлама журналдарын және дистрибутив "
+"құжаттамасын тексеріңіз."
+
+#: data/resources/ui/preferences.ui:14
+msgid "General"
+msgstr "Жалпы"
+
+#: data/resources/ui/preferences.ui:17
+msgid "Privacy"
+msgstr "Жекелік"
+
+#: data/resources/ui/preferences.ui:20
+msgid "_Passphrase"
+msgstr "Кілттік _фраза"
+
+#: data/resources/ui/preferences.ui:22
+msgid "Set up a passphrase to lock the application with"
+msgstr "Бағдарламаны құлыптау үшін кілттік фразаны орнатыңыз"
+
+#: data/resources/ui/preferences.ui:35
+msgid "_Auto Lock the Application"
+msgstr "Бағдарламаны _автоматты түрде құлыптау"
+
+#: data/resources/ui/preferences.ui:37
+msgid "Whether to automatically lock the application"
+msgstr "Бағдарламаны автоматты түрде құлыптау керек пе"
+
+#: data/resources/ui/preferences.ui:43
+msgid "Auto Lock _Timeout"
+msgstr "Автоматты құлыптаудың _күту уақыты"
+
+#: data/resources/ui/preferences.ui:44
+msgid "The time in minutes"
+msgstr "Уақыт (минутпен)"
+
+#: data/resources/ui/preferences.ui:57
+msgid "Network"
+msgstr "Желі"
+
+#: data/resources/ui/preferences.ui:60
+msgid "_Download Favicons"
+msgstr "Favicon-дарды жүктеп _алу"
+
+#: data/resources/ui/preferences.ui:62
+msgid "Automatically attempt fetching a website icon"
+msgstr "Веб-сайт таңбашасын алуға автоматты түрде тырысу"
+
+#: data/resources/ui/preferences.ui:67
+msgid "_Metered Connection"
+msgstr "Ше_ктелген қосылым"
+
+#: data/resources/ui/preferences.ui:69
+msgid "Fetch a website icon on a metered connection"
+msgstr "Шектелген қосылымда веб-сайт таңбашасын алу"
+
+#: data/resources/ui/preferences_password_page.ui:4
+msgid "Create Password"
+msgstr "Парольді жасау"
+
+#: data/resources/ui/preferences_password_page.ui:28
+msgid "Set up a Passphrase"
+msgstr "Кілттік фразаны орнату"
+
+#: data/resources/ui/preferences_password_page.ui:29
+msgid "Authenticator will start locked after a passphrase is set."
+msgstr ""
+"Кілттік фраза орнатылғаннан кейін аутентификатор қолданбасы құлыпталған "
+"күйде іске қосылады."
+
+#: data/resources/ui/preferences_password_page.ui:53
+msgid "Current Passphrase"
+msgstr "Ағымдағы кілттік фраза"
+
+#: data/resources/ui/preferences_password_page.ui:59
+msgid "New Passphrase"
+msgstr "Жаңа кілттік фраза"
+
+#: data/resources/ui/preferences_password_page.ui:65
+msgid "Repeat Passphrase"
+msgstr "Кілттік фразаны қайталаңыз"
+
+#: data/resources/ui/preferences_password_page.ui:79
+#: data/resources/ui/provider_page.ui:73
+msgid "_Reset"
+msgstr "Та_стау"
+
+#: data/resources/ui/provider_page.ui:83
+msgid "Select a _File"
+msgstr "_Файлды таңдау"
+
+#: data/resources/ui/provider_page.ui:106
+msgid "Name"
+msgstr "Атауы"
+
+#: data/resources/ui/provider_page.ui:159
+msgid "The by default value for counter-based computing method"
+msgstr "Есептегішке негізделген есептеу әдісі үшін әдепкі мән"
+
+#: data/resources/ui/provider_page.ui:177
+msgid "Help URL"
+msgstr "Көмек URL-і"
+
+#: data/resources/ui/providers_dialog.ui:8
+#: data/resources/ui/providers_dialog.ui:19
+msgid "Providers"
+msgstr "Провайдерлер"
+
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:213
+msgid "New Provider"
+msgstr "Жаңа провайдер"
+
+#: data/resources/ui/providers_dialog.ui:36
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:198
+#: data/resources/ui/window.ui:218
+msgid "Search"
+msgstr "Іздеу"
+
+#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:213
+msgid "Search…"
+msgstr "Іздеу…"
+
+#: data/resources/ui/providers_dialog.ui:93
+#: data/resources/ui/providers_list.ui:38
+msgid "No Results"
+msgstr "Нәтижелер жоқ"
+
+#: data/resources/ui/providers_dialog.ui:94
+msgid "No providers matching the query were found."
+msgstr "Сұранысқа сәйкес келетін провайдерлер табылмады."
+
+#: data/resources/ui/providers_dialog.ui:139
+msgid "No Provider Selected"
+msgstr "Провайдер таңдалмады"
+
+#: data/resources/ui/providers_dialog.ui:140
+msgid "Select a provider or create a new one"
+msgstr "Провайдерді таңдаңыз немесе жаңасын жасаңыз"
+
+#: data/resources/ui/providers_list.ui:39
+msgid "No accounts or providers matching the query were found."
+msgstr "Сұранысқа сәйкес келетін тіркелгілер немесе провайдерлер табылмады."
+
+#: data/resources/ui/shortcuts.ui:6
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Жалпы"
+
+#: data/resources/ui/shortcuts.ui:9
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr "Пернетақта жарлықтары"
+
+#: data/resources/ui/shortcuts.ui:15
+msgctxt "shortcut window"
+msgid "Lock"
+msgstr "Құлыптау"
+
+#: data/resources/ui/shortcuts.ui:21
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "Қалаулар"
+
+#: data/resources/ui/shortcuts.ui:27
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Шығу"
+
+#: data/resources/ui/shortcuts.ui:35
+msgctxt "shortcut window"
+msgid "Accounts"
+msgstr "Тіркелгілер"
+
+#: data/resources/ui/shortcuts.ui:38
+msgctxt "shortcut window"
+msgid "New Account"
+msgstr "Жаңа тіркелгі"
+
+#: data/resources/ui/shortcuts.ui:44
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Іздеу"
+
+#: data/resources/ui/shortcuts.ui:50
+msgctxt "shortcut window"
+msgid "Show Providers List"
+msgstr "Провайдерлер тізімін көрсету"
+
+#: data/resources/ui/window.ui:6
+msgid "_Lock the Application"
+msgstr "Қолданбаны құ_лыптау"
+
+#: data/resources/ui/window.ui:12
+msgid "P_roviders"
+msgstr "П_ровайдерлер"
+
+#: data/resources/ui/window.ui:16
+msgid "_Preferences"
+msgstr "Қ_алаулар"
+
+#: data/resources/ui/window.ui:20
+msgid "_Backup & Restore"
+msgstr "_Резервтік көшіру және қалпына келтіру"
+
+#: data/resources/ui/window.ui:26
+msgid "_Keyboard Shortcuts"
+msgstr "_Пернетақта жарлықтары"
+
+#: data/resources/ui/window.ui:30
+msgid "_About Authenticator"
+msgstr "Аутентификатор қолданбасы _туралы"
+
+#: data/resources/ui/window.ui:70
+msgid "Authenticator is Locked"
+msgstr "Аутентификатор қолданбасы құлыпталған"
+
+#: data/resources/ui/window.ui:96
+msgid "_Unlock"
+msgstr "Құлпын _ашу"
+
+#: data/resources/ui/window.ui:126
+msgid "Accounts"
+msgstr "Тіркелгілер"
+
+#: data/resources/ui/window.ui:141 data/resources/ui/window.ui:179
+msgid "New Account"
+msgstr "Жаңа тіркелгі"
+
+#: data/resources/ui/window.ui:149 data/resources/ui/window.ui:192
+msgid "Main Menu"
+msgstr "Негізгі мәзір"
+
+#: data/resources/ui/window.ui:157
+msgid "No Accounts"
+msgstr "Тіркелгілер жоқ"
+
+#: data/resources/ui/window.ui:158
+msgid "Add an account or scan a QR code first."
+msgstr "Алдымен тіркелгі қосыңыз немесе QR кодын сканерлеңіз."
+
+#: src/application.rs:83
+msgid "Accounts restored successfully"
+msgstr "Тіркелгілер сәтті қалпына келтірілді"
+
+#: src/application.rs:123
+msgid "translator-credits"
+msgstr "Baurzhan Muftakhidinov <baurthefirst@gmail.com>"
+
+#: src/application.rs:433 src/widgets/accounts/row.rs:45
+msgid "One-Time password copied"
+msgstr "Бір реттік пароль көшірілді"
+
+#: src/application.rs:434
+msgid "Password was copied successfully"
+msgstr "Пароль сәтті көшірілді"
+
+#. Translators: This is for making a backup for the aegis Android app.
+#. Translators: This is for restoring a backup from the aegis Android app.
+#: src/backup/aegis.rs:399 src/backup/aegis.rs:439
+msgid "Aegis"
+msgstr "Aegis"
+
+#: src/backup/aegis.rs:403
+msgid "Into a JSON file containing plain-text or encrypted fields"
+msgstr "Ашық мәтінді немесе шифрленген өрістері бар JSON файлына"
+
+#: src/backup/aegis.rs:443
+msgid "From a JSON file containing plain-text or encrypted fields"
+msgstr "Ашық мәтінді немесе шифрленген өрістері бар JSON файлынан"
+
+#. Translators: This is for making a backup for the andOTP Android app.
+#: src/backup/andotp.rs:109
+msgid "a_ndOTP"
+msgstr "a_ndOTP"
+
+#: src/backup/andotp.rs:113
+msgid "Into a plain-text JSON file"
+msgstr "Ашық мәтінді JSON файлына"
+
+#. Translators: This is for restoring a backup from the andOTP Android app.
+#: src/backup/andotp.rs:157
+msgid "an_dOTP"
+msgstr "an_dOTP"
+
+#: src/backup/andotp.rs:161 src/backup/bitwarden.rs:124
+#: src/backup/legacy.rs:45
+msgid "From a plain-text JSON file"
+msgstr "Ашық мәтінді JSON файлынан"
+
+#: src/backup/bitwarden.rs:47
+msgid "Unknown account"
+msgstr "Белгісіз тіркелгі"
+
+#: src/backup/bitwarden.rs:55
+msgid "Unknown issuer"
+msgstr "Белгісіз шығарушы"
+
+#. Translators: This is for restoring a backup from Bitwarden.
+#: src/backup/bitwarden.rs:120
+msgid "_Bitwarden"
+msgstr "_Bitwarden"
+
+#: src/backup/freeotp.rs:18
+msgid "_Authenticator"
+msgstr "_Аутентификатор қолданбасы"
+
+#: src/backup/freeotp.rs:22
+msgid "Into a plain-text file, compatible with FreeOTP+"
+msgstr "FreeOTP+ үйлесімді ашық мәтінді файлға"
+
+#: src/backup/freeotp.rs:51
+msgid "A_uthenticator"
+msgstr "А_утентификатор қолданбасы "
+
+#: src/backup/freeotp.rs:55
+msgid "From a plain-text file, compatible with FreeOTP+"
+msgstr "FreeOTP+ үйлесімді ашық мәтінді файлнан"
+
+#: src/backup/freeotp_json.rs:87
+msgid "FreeOTP+"
+msgstr "FreeOTP+"
+
+#: src/backup/freeotp_json.rs:91
+msgid "From a plain-text JSON file, compatible with FreeOTP+"
+msgstr "FreeOTP+ үйлесімді ашық мәтінді JSON файлынан"
+
+#: src/backup/google.rs:19
+msgid "Google Authenticator"
+msgstr "Google Authenticator"
+
+#: src/backup/google.rs:23
+msgid "From a QR code generated by Google Authenticator"
+msgstr "Google Authenticator жасаған QR кодынан"
+
+#. Translators: this is for restoring a backup from the old Authenticator
+#. release
+#: src/backup/legacy.rs:41
+msgid "Au_thenticator (Legacy)"
+msgstr "Ау_тентификатор қолданбасы  (ескірген)"
+
+#: src/backup/raivootp.rs:102
+msgid "Raivo OTP"
+msgstr "Raivo OTP"
+
+#: src/backup/raivootp.rs:106
+msgid "From a ZIP export generated by Raivo OTP"
+msgstr "Raivo OTP жасаған ZIP экспортынан"
+
+#: src/backup/yandex.rs:18
+msgid "Yandex Key"
+msgstr "Yandex Key"
+
+#: src/backup/yandex.rs:22
+msgid "From a plain-text file generated by Yandex Key"
+msgstr "Yandex Key жасаған ашық мәтінді файлдан"
+
+#: src/models/algorithm.rs:60
+msgid "Counter-based"
+msgstr "Есептегішке негізделген"
+
+#: src/models/algorithm.rs:61
+msgid "Time-based"
+msgstr "Уақытқа негізделген"
+
+#. Translators: Steam refers to the gaming application by Valve.
+#: src/models/algorithm.rs:63
+msgid "Steam"
+msgstr "Steam"
+
+#: src/models/algorithm.rs:125
+msgid "SHA-1"
+msgstr "SHA-1"
+
+#: src/models/algorithm.rs:126
+msgid "SHA-256"
+msgstr "SHA-256"
+
+#: src/models/algorithm.rs:127
+msgid "SHA-512"
+msgstr "SHA-512"
+
+#: src/widgets/accounts/add.rs:277 src/widgets/backup/dialog.rs:445
+#: src/widgets/providers/page.rs:296
+msgid "Image"
+msgstr "Сурет"
+
+#: src/widgets/accounts/add.rs:285 src/widgets/backup/dialog.rs:453
+msgid "Select QR Code"
+msgstr "QR кодын таңдау"
+
+#: src/widgets/accounts/add.rs:303
+msgid "Invalid Token"
+msgstr "Жарамсыз токен"
+
+#: src/widgets/accounts/details.rs:124
+msgid "Are you sure you want to delete the account?"
+msgstr "Тіркелгіні өшіруді шынымен қалайсыз ба?"
+
+#: src/widgets/accounts/details.rs:125
+msgid "This action is irreversible"
+msgstr "Бұл әрекетті қайтару мүмкін емес"
+
+#: src/widgets/accounts/details.rs:127
+msgid "No"
+msgstr "Жоқ"
+
+#: src/widgets/accounts/details.rs:127
+msgid "Yes"
+msgstr "Иә"
+
+#: src/widgets/backup/dialog.rs:165 src/widgets/backup/dialog.rs:247
+msgid "Key / Passphrase"
+msgstr "Кілт / Кілттік фраза"
+
+#: src/widgets/backup/dialog.rs:176 src/widgets/backup/dialog.rs:259
+msgid "Select File"
+msgstr "Файлды таңдау"
+
+#: src/widgets/backup/dialog.rs:207
+msgid "Failed to create a backup"
+msgstr "Резервтік көшірмені жасау сәтсіз аяқталды"
+
+#: src/widgets/backup/dialog.rs:329
+msgid "Failed to restore from camera"
+msgstr "Камерадан қалпына келтіру сәтсіз аяқталды"
+
+#: src/widgets/backup/dialog.rs:354
+msgid "Failed to restore from a screenshot"
+msgstr "Скриншоттан қалпына келтіру сәтсіз аяқталды"
+
+#: src/widgets/backup/dialog.rs:374
+msgid "Failed to restore from an image"
+msgstr "Суреттен қалпына келтіру сәтсіз аяқталды"
+
+#: src/widgets/backup/dialog.rs:398
+msgid "Failed to restore from a file"
+msgstr "Файлдан қалпына келтіру сәтсіз аяқталды"
+
+#: src/widgets/preferences/password_page.rs:196
+#: src/widgets/preferences/password_page.rs:238
+msgid "Wrong Passphrase"
+msgstr "Кілттік фраза қате"
+
+#: src/widgets/providers/dialog.rs:262
+msgid "Provider created successfully"
+msgstr "Провайдер сәтті жасалды"
+
+#: src/widgets/providers/dialog.rs:272
+msgid "Provider updated successfully"
+msgstr "Провайдер сәтті жаңартылды"
+
+#: src/widgets/providers/dialog.rs:288
+msgid "Provider removed successfully"
+msgstr "Провайдер сәтті өшірілді"
+
+#: src/widgets/providers/page.rs:188
+#, rust-format
+msgid "Editing Provider: {}"
+msgstr "Провайдерді түзету: {}"
+
+#: src/widgets/providers/page.rs:329
+msgid "The provider has accounts assigned to it, please remove them first"
+msgstr "Провайдерге тағайындалған тіркелгілер бар, алдымен оларды өшіріңіз"
+
+#: src/widgets/window.rs:115
+msgid "Wrong Password"
+msgstr "Пароль қате"
