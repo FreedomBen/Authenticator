@@ -14,7 +14,7 @@ use gtk::{
 };
 
 use super::CameraRow;
-use crate::utils::spawn_tokio;
+use crate::{config, utils::spawn_tokio};
 
 pub mod screenshot {
     use super::*;
@@ -336,6 +336,9 @@ impl Default for Camera {
 }
 
 async fn stream() -> ashpd::Result<OwnedFd> {
+    if let Err(err) = ashpd::register_host_app(config::APP_ID.try_into().unwrap()).await {
+        tracing::error!("Failed to run org.freedesktop.host.portal.Registry.Register: {err}");
+    }
     let proxy = ashpd::desktop::camera::Camera::new().await?;
     proxy.request_access().await?;
 
