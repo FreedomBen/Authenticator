@@ -1,7 +1,7 @@
 # Swedish translation of authenticator.
-# Copyright 2016-2025 authenticator's COPYRIGHT HOLDER
+# Copyright 2016-2026 authenticator's COPYRIGHT HOLDER
 # This file is distributed under the same license as the authenticator package.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 # Sebastian Rasmussen <sebras@gmail.com>, 2019.
 # Luna Jernberg <droidbittin@gmail.com>, 2021, 2022.
 #
@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: authenticator\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2025-02-10 11:13+0000\n"
-"PO-Revision-Date: 2025-03-10 20:52+0100\n"
+"POT-Creation-Date: 2026-02-03 00:24+0000\n"
+"PO-Revision-Date: 2026-02-04 18:32+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -18,25 +18,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:2
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
 #: data/resources/ui/window.ui:40 src/application.rs:112 src/main.rs:40
 msgid "Authenticator"
 msgstr "Authenticator"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
 msgid "Two-Factor Authentication"
 msgstr "Tvåfaktorsautentisering"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:5
-#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:114
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8 src/application.rs:114
 msgid "Generate two-factor codes"
 msgstr "Generera tvåfaktorskoder"
 
-#: data/com.belmoussaoui.Authenticator.desktop.in.in:10
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:9
 msgid "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;"
 msgstr "GNOME;GTK;Verifiering;2FA;Autentisering;Tvåfaktorsautentisering;OTP;TOTP;"
 
@@ -75,8 +74,7 @@ msgid "Download Favicons"
 msgstr "Hämta adressikoner"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:35
-msgid ""
-"Whether the application should attempt to find an icon for the providers."
+msgid "Whether the application should attempt to find an icon for the providers."
 msgstr "Huruvida programmet ska försöka hitta en ikon för leverantörerna."
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:39
@@ -86,8 +84,7 @@ msgstr "Hämta adressikoner över anslutningar med datakvot"
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:40
 msgid ""
 "Whether the application should download favicons over a metered connection."
-msgstr ""
-"Huruvida programmet ska hämta adressikoner över anslutning med datakvot."
+msgstr "Huruvida programmet ska hämta adressikoner över anslutning med datakvot."
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:10
 msgid "Simple application for generating Two-Factor Authentication Codes."
@@ -123,8 +120,8 @@ msgstr "GNOME Shell-söktjänsteleverantör"
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:19
 msgid ""
-"Backup/Restore from/into known applications like FreeOTP+, Aegis "
-"(encrypted / plain-text), andOTP, Google Authenticator"
+"Backup/Restore from/into known applications like FreeOTP+, Aegis (encrypted / "
+"plain-text), andOTP, Google Authenticator"
 msgstr ""
 "Säkerhetskopiering/återställning från/till kända program som FreeOTP+, Aegis "
 "(krypterat/klartext), andOTP, Google Authenticator"
@@ -150,15 +147,15 @@ msgstr "Kontodetaljer"
 msgid "Backup/Restore formats support"
 msgstr "Formatstöd för säkerhetskopiering/återställning"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:274
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:276
 msgid "_Camera"
 msgstr "_Kamera"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:278
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:280
 msgid "_Screenshot"
 msgstr "_Skärmbild"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:283
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:285
 msgid "_QR Code Image"
 msgstr "_QR-kodsbild"
 
@@ -170,14 +167,13 @@ msgstr "A_vbryt"
 msgid "_Add"
 msgstr "_Lägg till"
 
-#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:269
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:271
 msgid "Scan QR Code"
 msgstr "Läs av QR-kod"
 
 #: data/resources/ui/account_add.ui:113
 #: data/resources/ui/account_details_page.ui:96
-#: data/resources/ui/provider_page.ui:22
-#: data/resources/ui/providers_dialog.ui:108
+#: data/resources/ui/provider_page.ui:22 data/resources/ui/providers_dialog.ui:108
 msgid "Provider"
 msgstr "Leverantör"
 
@@ -286,11 +282,11 @@ msgstr "Kontodetaljer"
 msgid "Backup & Restore"
 msgstr "Säkerhetskopiering och återställning"
 
-#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:506
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:508
 msgid "Backup"
 msgstr "Säkerhetskopiera"
 
-#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:514
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:516
 msgid "Restore"
 msgstr "Återställ"
 
@@ -309,12 +305,12 @@ msgstr "Secret Service-fel"
 #: data/resources/ui/keyring_error_dialog.ui:35
 msgid ""
 "Authenticator relies on a Secret Service Provider to manage your sensitive "
-"session information and an error occurred while we were trying to store or "
-"get your session."
+"session information and an error occurred while we were trying to store or get "
+"your session."
 msgstr ""
-"Authenticator förlitar sig på en Secret Service-leverantör för att hantera "
-"din känsliga sessionsinformation och ett fel inträffade när vi försökte "
-"lagra eller erhålla din session."
+"Authenticator förlitar sig på en Secret Service-leverantör för att hantera din "
+"känsliga sessionsinformation och ett fel inträffade när vi försökte lagra eller "
+"erhålla din session."
 
 #: data/resources/ui/keyring_error_dialog.ui:47
 msgid ""
@@ -442,7 +438,7 @@ msgstr "Hjälp-URL"
 msgid "Providers"
 msgstr "Leverantörer"
 
-#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:208
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:213
 msgid "New Provider"
 msgstr "Ny leverantör"
 
@@ -456,8 +452,7 @@ msgstr "Sök"
 msgid "Search…"
 msgstr "Sök…"
 
-#: data/resources/ui/providers_dialog.ui:93
-#: data/resources/ui/providers_list.ui:38
+#: data/resources/ui/providers_dialog.ui:93 data/resources/ui/providers_list.ui:38
 msgid "No Results"
 msgstr "Inga resultat"
 
@@ -477,47 +472,47 @@ msgstr "Välj en leverantör eller skapa en ny"
 msgid "No accounts or providers matching the query were found."
 msgstr "Inga konton eller leverantörer som matchar sökningen hittades."
 
-#: data/resources/ui/shortcuts.ui:11
+#: data/resources/ui/shortcuts.ui:6
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Allmänt"
 
-#: data/resources/ui/shortcuts.ui:14
+#: data/resources/ui/shortcuts.ui:9
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "Tangentbordsgenvägar"
 
-#: data/resources/ui/shortcuts.ui:20
+#: data/resources/ui/shortcuts.ui:15
 msgctxt "shortcut window"
 msgid "Lock"
 msgstr "Lås"
 
-#: data/resources/ui/shortcuts.ui:26
+#: data/resources/ui/shortcuts.ui:21
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Inställningar"
 
-#: data/resources/ui/shortcuts.ui:32
+#: data/resources/ui/shortcuts.ui:27
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Avsluta"
 
-#: data/resources/ui/shortcuts.ui:40
+#: data/resources/ui/shortcuts.ui:35
 msgctxt "shortcut window"
 msgid "Accounts"
 msgstr "Konton"
 
-#: data/resources/ui/shortcuts.ui:43
+#: data/resources/ui/shortcuts.ui:38
 msgctxt "shortcut window"
 msgid "New Account"
 msgstr "Nytt konto"
 
-#: data/resources/ui/shortcuts.ui:49
+#: data/resources/ui/shortcuts.ui:44
 msgctxt "shortcut window"
 msgid "Search"
 msgstr "Sök"
 
-#: data/resources/ui/shortcuts.ui:55
+#: data/resources/ui/shortcuts.ui:50
 msgctxt "shortcut window"
 msgid "Show Providers List"
 msgstr "Visa leverantörslista"
@@ -584,11 +579,11 @@ msgstr ""
 "Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Luna Jernberg <droidbittin@gmail.com>"
 
-#: src/application.rs:434 src/widgets/accounts/row.rs:45
+#: src/application.rs:433 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Engångslösenord kopierat"
 
-#: src/application.rs:435
+#: src/application.rs:434
 msgid "Password was copied successfully"
 msgstr "Lösenordet kopierades"
 
@@ -607,20 +602,20 @@ msgid "From a JSON file containing plain-text or encrypted fields"
 msgstr "Från en JSON-fil som innehåller klartextfält eller krypterade fält"
 
 #. Translators: This is for making a backup for the andOTP Android app.
-#: src/backup/andotp.rs:79
+#: src/backup/andotp.rs:109
 msgid "a_ndOTP"
 msgstr "a_ndOTP"
 
-#: src/backup/andotp.rs:83
+#: src/backup/andotp.rs:113
 msgid "Into a plain-text JSON file"
 msgstr "Till en JSON-fil i klartext"
 
 #. Translators: This is for restoring a backup from the andOTP Android app.
-#: src/backup/andotp.rs:127
+#: src/backup/andotp.rs:157
 msgid "an_dOTP"
 msgstr "an_dOTP"
 
-#: src/backup/andotp.rs:131 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
+#: src/backup/andotp.rs:161 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
 msgid "From a plain-text JSON file"
 msgstr "Från en JSON-fil i klartext"
 
@@ -683,6 +678,14 @@ msgstr "Raivo OTP"
 msgid "From a ZIP export generated by Raivo OTP"
 msgstr "Från en ZIP-export genererad av Raivo OTP"
 
+#: src/backup/yandex.rs:19
+msgid "Yandex ID"
+msgstr "Yandex ID"
+
+#: src/backup/yandex.rs:23
+msgid "From a plain-text file generated by Yandex ID"
+msgstr "Från en textfil genererad av Yandex ID"
+
 #: src/models/algorithm.rs:60
 msgid "Counter-based"
 msgstr "Räknarbaserad"
@@ -708,85 +711,85 @@ msgstr "SHA-256"
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:270 src/widgets/backup/dialog.rs:443
-#: src/widgets/providers/page.rs:291
+#: src/widgets/accounts/add.rs:277 src/widgets/backup/dialog.rs:445
+#: src/widgets/providers/page.rs:296
 msgid "Image"
 msgstr "Bild"
 
-#: src/widgets/accounts/add.rs:278 src/widgets/backup/dialog.rs:451
+#: src/widgets/accounts/add.rs:285 src/widgets/backup/dialog.rs:453
 msgid "Select QR Code"
 msgstr "Välj QR-kod"
 
-#: src/widgets/accounts/add.rs:296
+#: src/widgets/accounts/add.rs:303
 msgid "Invalid Token"
 msgstr "Ogiltig token"
 
-#: src/widgets/accounts/details.rs:123
+#: src/widgets/accounts/details.rs:124
 msgid "Are you sure you want to delete the account?"
 msgstr "Är du säker på att du vill ta bort kontot?"
 
-#: src/widgets/accounts/details.rs:124
+#: src/widgets/accounts/details.rs:125
 msgid "This action is irreversible"
 msgstr "Denna åtgärd är oåterkallelig"
 
-#: src/widgets/accounts/details.rs:126
+#: src/widgets/accounts/details.rs:127
 msgid "No"
 msgstr "Nej"
 
-#: src/widgets/accounts/details.rs:126
+#: src/widgets/accounts/details.rs:127
 msgid "Yes"
 msgstr "Ja"
 
-#: src/widgets/backup/dialog.rs:163 src/widgets/backup/dialog.rs:245
+#: src/widgets/backup/dialog.rs:165 src/widgets/backup/dialog.rs:247
 msgid "Key / Passphrase"
 msgstr "Nyckel/lösenfras"
 
-#: src/widgets/backup/dialog.rs:174 src/widgets/backup/dialog.rs:257
+#: src/widgets/backup/dialog.rs:176 src/widgets/backup/dialog.rs:259
 msgid "Select File"
 msgstr "Välj fil"
 
-#: src/widgets/backup/dialog.rs:205
+#: src/widgets/backup/dialog.rs:207
 msgid "Failed to create a backup"
 msgstr "Misslyckades med att skapa en säkerhetskopia"
 
-#: src/widgets/backup/dialog.rs:327
+#: src/widgets/backup/dialog.rs:329
 msgid "Failed to restore from camera"
 msgstr "Misslyckades med att återställa från kamera"
 
-#: src/widgets/backup/dialog.rs:352
+#: src/widgets/backup/dialog.rs:354
 msgid "Failed to restore from a screenshot"
 msgstr "Misslyckades med att återställa från en skärmbild"
 
-#: src/widgets/backup/dialog.rs:372
+#: src/widgets/backup/dialog.rs:374
 msgid "Failed to restore from an image"
 msgstr "Misslyckades med att återställa från en bild"
 
-#: src/widgets/backup/dialog.rs:396
+#: src/widgets/backup/dialog.rs:398
 msgid "Failed to restore from a file"
 msgstr "Misslyckades med att återställa från en fil"
 
-#: src/widgets/preferences/password_page.rs:195
-#: src/widgets/preferences/password_page.rs:237
+#: src/widgets/preferences/password_page.rs:196
+#: src/widgets/preferences/password_page.rs:238
 msgid "Wrong Passphrase"
 msgstr "Fel lösenfras"
 
-#: src/widgets/providers/dialog.rs:261
+#: src/widgets/providers/dialog.rs:262
 msgid "Provider created successfully"
 msgstr "Leverantören har skapats"
 
-#: src/widgets/providers/dialog.rs:271
+#: src/widgets/providers/dialog.rs:272
 msgid "Provider updated successfully"
 msgstr "Leverantören har uppdaterats"
 
-#: src/widgets/providers/dialog.rs:287
+#: src/widgets/providers/dialog.rs:288
 msgid "Provider removed successfully"
 msgstr "Leverantören har tagits bort"
 
-#: src/widgets/providers/page.rs:185
+#: src/widgets/providers/page.rs:188
 msgid "Editing Provider: {}"
 msgstr "Redigerar leverantör: {}"
 
-#: src/widgets/providers/page.rs:324
+#: src/widgets/providers/page.rs:329
 msgid "The provider has accounts assigned to it, please remove them first"
 msgstr "Leverantören har konton tilldelade. Ta bort dem först"
 
@@ -863,10 +866,8 @@ msgstr "Fel lösenord"
 #~ msgid "Huge database of more than 560 supported services"
 #~ msgstr "Stor databas om mer än 560 tjänster som stöds"
 
-#~ msgid ""
-#~ "Keep your PIN tokens secure by locking the application with a password"
-#~ msgstr ""
-#~ "Håll dina PIN-token säkra genom att låsa programmet med ett lösenord"
+#~ msgid "Keep your PIN tokens secure by locking the application with a password"
+#~ msgstr "Håll dina PIN-token säkra genom att låsa programmet med ett lösenord"
 
 #~ msgid "The possibility to add new services"
 #~ msgstr "Möjligheten att lägga till nya tjänster"
@@ -879,8 +880,8 @@ msgstr "Fel lösenord"
 
 #~ msgid "By setting a password, Authenticator will from now on start locked."
 #~ msgstr ""
-#~ "Genom att ställa in ett lösenord kommer Authenticator från och med nu "
-#~ "start låst."
+#~ "Genom att ställa in ett lösenord kommer Authenticator från och med nu start "
+#~ "låst."
 
 #~ msgid "The duration in seconds. The recommended value is 30"
 #~ msgstr "Varaktigheten i sekunder. Det rekommenderade värdet är 30"
@@ -1116,12 +1117,12 @@ msgstr "Fel lösenord"
 
 #~ msgid ""
 #~ "This program comes with absolutely no warranty. See the <a href=\"http://"
-#~ "www.gnu.org/licenses/gpl-3.0.html\">GNU General Public License, version 3 "
-#~ "or later</a> for details."
+#~ "www.gnu.org/licenses/gpl-3.0.html\">GNU General Public License, version 3 or "
+#~ "later</a> for details."
 #~ msgstr ""
 #~ "Detta program kommer helt utan garanti. Se <a href=\"http://www.gnu.org/"
-#~ "licenses/gpl-3.0.html\">GNU General Public License, version 3 eller "
-#~ "senare</a> för detaljer."
+#~ "licenses/gpl-3.0.html\">GNU General Public License, version 3 eller senare</"
+#~ "a> för detaljer."
 
 #~ msgid "Github"
 #~ msgstr "Github"
