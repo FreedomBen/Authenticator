@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: authenticator master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2025-12-24 17:58+0000\n"
-"PO-Revision-Date: 2026-01-25 20:18+0500\n"
+"POT-Creation-Date: 2026-02-03 00:24+0000\n"
+"PO-Revision-Date: 2026-02-05 07:08+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh <Kazakh>\n"
 "Language: kk\n"
@@ -28,8 +28,7 @@ msgid "Two-Factor Authentication"
 msgstr "Екі факторлы аутентификация"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:4
-#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
-#: src/application.rs:114
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8 src/application.rs:114
 msgid "Generate two-factor codes"
 msgstr "Екі факторлы кодтарды генерациялау"
 
@@ -72,8 +71,7 @@ msgid "Download Favicons"
 msgstr "Favicon-дарды жүктеп алу"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:35
-msgid ""
-"Whether the application should attempt to find an icon for the providers."
+msgid "Whether the application should attempt to find an icon for the providers."
 msgstr "Бағдарлама провайдерлер үшін таңбашаны табуға тырысуы керек пе."
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:39
@@ -81,16 +79,13 @@ msgid "Download Favicons over metered connections"
 msgstr "Шектелген қосылымдар арқылы Favicon-дарды жүктеп алу"
 
 #: data/com.belmoussaoui.Authenticator.gschema.xml.in:40
-msgid ""
-"Whether the application should download favicons over a metered connection."
-msgstr ""
-"Бағдарлама шектелген қосылым арқылы favicon-дарды жүктеп алуы керек пе."
+msgid "Whether the application should download favicons over a metered connection."
+msgstr "Бағдарлама шектелген қосылым арқылы favicon-дарды жүктеп алуы керек пе."
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:10
 msgid "Simple application for generating Two-Factor Authentication Codes."
 msgstr ""
-"Екі факторлы аутентификация кодтарын генерациялауға арналған қарапайым "
-"бағдарлама."
+"Екі факторлы аутентификация кодтарын генерациялауға арналған қарапайым бағдарлама."
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:11
 msgid "Features:"
@@ -122,12 +117,11 @@ msgstr "GNOME Shell іздеу провайдері"
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:19
 msgid ""
-"Backup/Restore from/into known applications like FreeOTP+, Aegis "
-"(encrypted / plain-text), andOTP, Google Authenticator"
+"Backup/Restore from/into known applications like FreeOTP+, Aegis (encrypted / plain-"
+"text), andOTP, Google Authenticator"
 msgstr ""
-"FreeOTP+, Aegis (шифрленген / ашық мәтін), andOTP, Google Authenticator "
-"сияқты белгілі бағдарламалардан/бағдарламаларға резервтік көшіру/қалпына "
-"келтіру"
+"FreeOTP+, Aegis (шифрленген / ашық мәтін), andOTP, Google Authenticator сияқты "
+"белгілі бағдарламалардан/бағдарламаларға резервтік көшіру/қалпына келтіру"
 
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:25
 msgid "Main Window"
@@ -174,10 +168,8 @@ msgstr "Қ_осу"
 msgid "Scan QR Code"
 msgstr "QR кодын сканерлеу"
 
-#: data/resources/ui/account_add.ui:113
-#: data/resources/ui/account_details_page.ui:96
-#: data/resources/ui/provider_page.ui:22
-#: data/resources/ui/providers_dialog.ui:108
+#: data/resources/ui/account_add.ui:113 data/resources/ui/account_details_page.ui:96
+#: data/resources/ui/provider_page.ui:22 data/resources/ui/providers_dialog.ui:108
 msgid "Provider"
 msgstr "Провайдер"
 
@@ -185,8 +177,7 @@ msgstr "Провайдер"
 msgid "Token issuer"
 msgstr "Токенді шығарушы"
 
-#: data/resources/ui/account_add.ui:128
-#: data/resources/ui/account_details_page.ui:91
+#: data/resources/ui/account_add.ui:128 data/resources/ui/account_details_page.ui:91
 msgid "Account"
 msgstr "Тіркелгі"
 
@@ -194,50 +185,42 @@ msgstr "Тіркелгі"
 msgid "Token"
 msgstr "Токен"
 
-#: data/resources/ui/account_add.ui:140
-#: data/resources/ui/account_details_page.ui:135
+#: data/resources/ui/account_add.ui:140 data/resources/ui/account_details_page.ui:135
 #: data/resources/ui/provider_page.ui:158
 msgid "Counter"
 msgstr "Есептегіш"
 
-#: data/resources/ui/account_add.ui:158
-#: data/resources/ui/account_details_page.ui:119
+#: data/resources/ui/account_add.ui:158 data/resources/ui/account_details_page.ui:119
 #: data/resources/ui/provider_page.ui:133
 msgid "Algorithm"
 msgstr "Алгоритм"
 
-#: data/resources/ui/account_add.ui:166
-#: data/resources/ui/account_details_page.ui:127
+#: data/resources/ui/account_add.ui:166 data/resources/ui/account_details_page.ui:127
 #: data/resources/ui/provider_page.ui:118
 msgid "Computing Method"
 msgstr "Есептеу әдісі"
 
-#: data/resources/ui/account_add.ui:174
-#: data/resources/ui/account_details_page.ui:144
+#: data/resources/ui/account_add.ui:174 data/resources/ui/account_details_page.ui:144
 #: data/resources/ui/provider_page.ui:149
 msgid "Period"
 msgstr "Кезең"
 
-#: data/resources/ui/account_add.ui:175
-#: data/resources/ui/account_details_page.ui:145
+#: data/resources/ui/account_add.ui:175 data/resources/ui/account_details_page.ui:145
 #: data/resources/ui/provider_page.ui:150
 msgid "Duration in seconds until the next password update"
 msgstr "Пароль келесі жаңартылғанға дейінгі уақыт (секундпен)"
 
-#: data/resources/ui/account_add.ui:183
-#: data/resources/ui/account_details_page.ui:153
+#: data/resources/ui/account_add.ui:183 data/resources/ui/account_details_page.ui:153
 #: data/resources/ui/provider_page.ui:167
 msgid "Digits"
 msgstr "Цифрлар"
 
-#: data/resources/ui/account_add.ui:184
-#: data/resources/ui/account_details_page.ui:154
+#: data/resources/ui/account_add.ui:184 data/resources/ui/account_details_page.ui:154
 #: data/resources/ui/provider_page.ui:168
 msgid "Length of the generated code"
 msgstr "Генерацияланған кодтың ұзындығы"
 
-#: data/resources/ui/account_add.ui:192
-#: data/resources/ui/account_details_page.ui:162
+#: data/resources/ui/account_add.ui:192 data/resources/ui/account_details_page.ui:162
 #: data/resources/ui/provider_page.ui:112
 msgid "Website"
 msgstr "Веб-сайт"
@@ -246,8 +229,7 @@ msgstr "Веб-сайт"
 msgid "How to Set Up"
 msgstr "Қалай баптау керек"
 
-#: data/resources/ui/account_add.ui:217
-#: data/resources/ui/preferences_camera_page.ui:4
+#: data/resources/ui/account_add.ui:217 data/resources/ui/preferences_camera_page.ui:4
 msgid "Camera"
 msgstr "Камера"
 
@@ -261,8 +243,7 @@ msgstr "Провайдерді жасау"
 msgid "_Save"
 msgstr "_Сақтау"
 
-#: data/resources/ui/account_details_page.ui:67
-#: data/resources/ui/provider_page.ui:185
+#: data/resources/ui/account_details_page.ui:67 data/resources/ui/provider_page.ui:185
 msgid "_Delete"
 msgstr "Өші_ру"
 
@@ -308,38 +289,30 @@ msgstr "Secret Service қатесі"
 
 #: data/resources/ui/keyring_error_dialog.ui:35
 msgid ""
-"Authenticator relies on a Secret Service Provider to manage your sensitive "
-"session information and an error occurred while we were trying to store or "
-"get your session."
+"Authenticator relies on a Secret Service Provider to manage your sensitive session "
+"information and an error occurred while we were trying to store or get your session."
 msgstr ""
-"Аутентификатор қолданбасы сезімтал сессия ақпаратын басқару үшін Secret "
-"Service провайдеріне сүйенеді және сессияны сақтау немесе алу кезінде қате "
-"орын алды."
+"Аутентификатор қолданбасы сезімтал сессия ақпаратын басқару үшін Secret Service "
+"провайдеріне сүйенеді және сессияны сақтау немесе алу кезінде қате орын алды."
 
 #: data/resources/ui/keyring_error_dialog.ui:47
-msgid ""
-"Here are a few things that might help you fix issues with the Secret "
-"Service:"
+msgid "Here are a few things that might help you fix issues with the Secret Service:"
 msgstr "Secret Service мәселелерін шешуге көмектесетін бірнеше қадамдар:"
 
 #: data/resources/ui/keyring_error_dialog.ui:64
-msgid ""
-"Make sure you have a Secret Service Provider installed, like gnome-keyring."
-msgstr ""
-"Gnome-keyring сияқты Secret Service провайдері орнатылғанына көз жеткізіңіз."
+msgid "Make sure you have a Secret Service Provider installed, like gnome-keyring."
+msgstr "Gnome-keyring сияқты Secret Service провайдері орнатылғанына көз жеткізіңіз."
 
 #: data/resources/ui/keyring_error_dialog.ui:83
 msgid "Check that you have a default keyring and that it is unlocked."
-msgstr ""
-"Әдепкі кілттер бумасы бар екеніне және оның құлпы ашылғанына көз жеткізіңіз."
+msgstr "Әдепкі кілттер бумасы бар екеніне және оның құлпы ашылғанына көз жеткізіңіз."
 
 #: data/resources/ui/keyring_error_dialog.ui:95
 msgid ""
-"Check the application logs and your distribution’s documentation for more "
-"details."
+"Check the application logs and your distribution’s documentation for more details."
 msgstr ""
-"Толығырақ ақпарат алу үшін бағдарлама журналдарын және дистрибутив "
-"құжаттамасын тексеріңіз."
+"Толығырақ ақпарат алу үшін бағдарлама журналдарын және дистрибутив құжаттамасын "
+"тексеріңіз."
 
 #: data/resources/ui/preferences.ui:14
 msgid "General"
@@ -404,8 +377,8 @@ msgstr "Кілттік фразаны орнату"
 #: data/resources/ui/preferences_password_page.ui:29
 msgid "Authenticator will start locked after a passphrase is set."
 msgstr ""
-"Кілттік фраза орнатылғаннан кейін аутентификатор қолданбасы құлыпталған "
-"күйде іске қосылады."
+"Кілттік фраза орнатылғаннан кейін аутентификатор қолданбасы құлыпталған күйде іске "
+"қосылады."
 
 #: data/resources/ui/preferences_password_page.ui:53
 msgid "Current Passphrase"
@@ -440,8 +413,7 @@ msgstr "Есептегішке негізделген есептеу әдісі 
 msgid "Help URL"
 msgstr "Көмек URL-і"
 
-#: data/resources/ui/providers_dialog.ui:8
-#: data/resources/ui/providers_dialog.ui:19
+#: data/resources/ui/providers_dialog.ui:8 data/resources/ui/providers_dialog.ui:19
 msgid "Providers"
 msgstr "Провайдерлер"
 
@@ -449,9 +421,8 @@ msgstr "Провайдерлер"
 msgid "New Provider"
 msgstr "Жаңа провайдер"
 
-#: data/resources/ui/providers_dialog.ui:36
-#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:198
-#: data/resources/ui/window.ui:218
+#: data/resources/ui/providers_dialog.ui:36 data/resources/ui/providers_dialog.ui:52
+#: data/resources/ui/window.ui:198 data/resources/ui/window.ui:218
 msgid "Search"
 msgstr "Іздеу"
 
@@ -459,8 +430,7 @@ msgstr "Іздеу"
 msgid "Search…"
 msgstr "Іздеу…"
 
-#: data/resources/ui/providers_dialog.ui:93
-#: data/resources/ui/providers_list.ui:38
+#: data/resources/ui/providers_dialog.ui:93 data/resources/ui/providers_list.ui:38
 msgid "No Results"
 msgstr "Нәтижелер жоқ"
 
@@ -621,8 +591,7 @@ msgstr "Ашық мәтінді JSON файлына"
 msgid "an_dOTP"
 msgstr "an_dOTP"
 
-#: src/backup/andotp.rs:161 src/backup/bitwarden.rs:124
-#: src/backup/legacy.rs:45
+#: src/backup/andotp.rs:161 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
 msgid "From a plain-text JSON file"
 msgstr "Ашық мәтінді JSON файлынан"
 
@@ -649,7 +618,7 @@ msgstr "FreeOTP+ үйлесімді ашық мәтінді файлға"
 
 #: src/backup/freeotp.rs:51
 msgid "A_uthenticator"
-msgstr "А_утентификатор қолданбасы "
+msgstr "А_утентификатор"
 
 #: src/backup/freeotp.rs:55
 msgid "From a plain-text file, compatible with FreeOTP+"
@@ -685,13 +654,13 @@ msgstr "Raivo OTP"
 msgid "From a ZIP export generated by Raivo OTP"
 msgstr "Raivo OTP жасаған ZIP экспортынан"
 
-#: src/backup/yandex.rs:18
-msgid "Yandex Key"
-msgstr "Yandex Key"
+#: src/backup/yandex.rs:19
+msgid "Yandex ID"
+msgstr "Yandex ID"
 
-#: src/backup/yandex.rs:22
-msgid "From a plain-text file generated by Yandex Key"
-msgstr "Yandex Key жасаған ашық мәтінді файлдан"
+#: src/backup/yandex.rs:23
+msgid "From a plain-text file generated by Yandex ID"
+msgstr "Yandex ID жасаған ашық мәтінді файлдан"
 
 #: src/models/algorithm.rs:60
 msgid "Counter-based"
