@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: authenticator master\n"
 "Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
-"POT-Creation-Date: 2025-08-10 11:12+0000\n"
-"PO-Revision-Date: 2025-08-19 22:20+0200\n"
+"POT-Creation-Date: 2026-02-03 00:24+0000\n"
+"PO-Revision-Date: 2026-02-23 15:44+0100\n"
 "Last-Translator: Daniel Rusek <mail@asciiwolf.com>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: data/com.belmoussaoui.Authenticator.desktop.in.in:2
 #: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
@@ -151,15 +151,15 @@ msgstr "Podrobnosti účtu"
 msgid "Backup/Restore formats support"
 msgstr "Podpora formátů zálohy/obnovy"
 
-#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:274
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:276
 msgid "_Camera"
 msgstr "_Kamera"
 
-#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:278
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:280
 msgid "_Screenshot"
 msgstr "_Snímek obrazovky"
 
-#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:283
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:285
 msgid "_QR Code Image"
 msgstr "Obrázek s _QR kódem"
 
@@ -171,7 +171,7 @@ msgstr "_Zrušit"
 msgid "_Add"
 msgstr "_Přidat"
 
-#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:269
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:271
 msgid "Scan QR Code"
 msgstr "Skenovat QR kód"
 
@@ -287,11 +287,11 @@ msgstr "Podrobnosti účtu"
 msgid "Backup & Restore"
 msgstr "Zálohovat a obnovit"
 
-#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:506
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:508
 msgid "Backup"
 msgstr "Zálohovat"
 
-#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:514
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:516
 msgid "Restore"
 msgstr "Obnovit"
 
@@ -445,7 +445,7 @@ msgstr "URL nápovědy"
 msgid "Providers"
 msgstr "Poskytovatelé"
 
-#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:208
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:213
 msgid "New Provider"
 msgstr "Nový poskytovatel"
 
@@ -480,47 +480,47 @@ msgstr "Vyberte poskytovatele nebo udělejte nového"
 msgid "No accounts or providers matching the query were found."
 msgstr "Nebyli nalezeny žádné účty nebo poskytovatelé odpovídající dotazu."
 
-#: data/resources/ui/shortcuts.ui:11
+#: data/resources/ui/shortcuts.ui:6
 msgctxt "shortcut window"
 msgid "General"
 msgstr "Obecné"
 
-#: data/resources/ui/shortcuts.ui:14
+#: data/resources/ui/shortcuts.ui:9
 msgctxt "shortcut window"
 msgid "Keyboard Shortcuts"
 msgstr "Klávesové zkratky"
 
-#: data/resources/ui/shortcuts.ui:20
+#: data/resources/ui/shortcuts.ui:15
 msgctxt "shortcut window"
 msgid "Lock"
 msgstr "Uzamknout"
 
-#: data/resources/ui/shortcuts.ui:26
+#: data/resources/ui/shortcuts.ui:21
 msgctxt "shortcut window"
 msgid "Preferences"
 msgstr "Předvolby"
 
-#: data/resources/ui/shortcuts.ui:32
+#: data/resources/ui/shortcuts.ui:27
 msgctxt "shortcut window"
 msgid "Quit"
 msgstr "Ukončit"
 
-#: data/resources/ui/shortcuts.ui:40
+#: data/resources/ui/shortcuts.ui:35
 msgctxt "shortcut window"
 msgid "Accounts"
 msgstr "Účty"
 
-#: data/resources/ui/shortcuts.ui:43
+#: data/resources/ui/shortcuts.ui:38
 msgctxt "shortcut window"
 msgid "New Account"
 msgstr "Nový účet"
 
-#: data/resources/ui/shortcuts.ui:49
+#: data/resources/ui/shortcuts.ui:44
 msgctxt "shortcut window"
 msgid "Search"
 msgstr "Vyhledat"
 
-#: data/resources/ui/shortcuts.ui:55
+#: data/resources/ui/shortcuts.ui:50
 msgctxt "shortcut window"
 msgid "Show Providers List"
 msgstr "Zobrazit seznam poskytovatelů"
@@ -588,11 +588,11 @@ msgstr ""
 "Marek Černocký <marek@manet.cz>\n"
 "Vojtěch Perník <translations@pervoj.cz>"
 
-#: src/application.rs:434 src/widgets/accounts/row.rs:45
+#: src/application.rs:433 src/widgets/accounts/row.rs:45
 msgid "One-Time password copied"
 msgstr "Jednorázové heslo bylo zkopírováno"
 
-#: src/application.rs:435
+#: src/application.rs:434
 msgid "Password was copied successfully"
 msgstr "Heslo bylo úspěšně zkopírováno"
 
@@ -611,20 +611,20 @@ msgid "From a JSON file containing plain-text or encrypted fields"
 msgstr "Ze souboru JSON obsahujícího prostý text nebo šifrovaná pole"
 
 #. Translators: This is for making a backup for the andOTP Android app.
-#: src/backup/andotp.rs:79
+#: src/backup/andotp.rs:109
 msgid "a_ndOTP"
 msgstr "a_ndOTP"
 
-#: src/backup/andotp.rs:83
+#: src/backup/andotp.rs:113
 msgid "Into a plain-text JSON file"
 msgstr "Do textového souboru JSON"
 
 #. Translators: This is for restoring a backup from the andOTP Android app.
-#: src/backup/andotp.rs:127
+#: src/backup/andotp.rs:157
 msgid "an_dOTP"
 msgstr "an_dOTP"
 
-#: src/backup/andotp.rs:131 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
+#: src/backup/andotp.rs:161 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
 msgid "From a plain-text JSON file"
 msgstr "Z textového souboru JSON"
 
@@ -687,6 +687,14 @@ msgstr "Raivo OTP"
 msgid "From a ZIP export generated by Raivo OTP"
 msgstr "Z exportu ZIP generovaného Raivo OTP"
 
+#: src/backup/yandex.rs:19
+msgid "Yandex ID"
+msgstr "Yandex ID"
+
+#: src/backup/yandex.rs:23
+msgid "From a plain-text file generated by Yandex ID"
+msgstr "Z textového souboru kompatibilního s Yandex ID"
+
 #: src/models/algorithm.rs:60
 msgid "Counter-based"
 msgstr "Založené na čítači"
@@ -712,85 +720,86 @@ msgstr "SHA-256"
 msgid "SHA-512"
 msgstr "SHA-512"
 
-#: src/widgets/accounts/add.rs:270 src/widgets/backup/dialog.rs:443
-#: src/widgets/providers/page.rs:291
+#: src/widgets/accounts/add.rs:277 src/widgets/backup/dialog.rs:445
+#: src/widgets/providers/page.rs:296
 msgid "Image"
 msgstr "Obrázek"
 
-#: src/widgets/accounts/add.rs:278 src/widgets/backup/dialog.rs:451
+#: src/widgets/accounts/add.rs:285 src/widgets/backup/dialog.rs:453
 msgid "Select QR Code"
 msgstr "Vybrat QR kód"
 
-#: src/widgets/accounts/add.rs:296
+#: src/widgets/accounts/add.rs:303
 msgid "Invalid Token"
 msgstr "Neplatný tiket"
 
-#: src/widgets/accounts/details.rs:123
+#: src/widgets/accounts/details.rs:124
 msgid "Are you sure you want to delete the account?"
 msgstr "Jste si jisti, že chcete účet smazat?"
 
-#: src/widgets/accounts/details.rs:124
+#: src/widgets/accounts/details.rs:125
 msgid "This action is irreversible"
 msgstr "Tato akce je nevratná"
 
-#: src/widgets/accounts/details.rs:126
+#: src/widgets/accounts/details.rs:127
 msgid "No"
 msgstr "Ne"
 
-#: src/widgets/accounts/details.rs:126
+#: src/widgets/accounts/details.rs:127
 msgid "Yes"
 msgstr "Ano"
 
-#: src/widgets/backup/dialog.rs:163 src/widgets/backup/dialog.rs:245
+#: src/widgets/backup/dialog.rs:165 src/widgets/backup/dialog.rs:247
 msgid "Key / Passphrase"
 msgstr "Klíč / heslová fráze"
 
-#: src/widgets/backup/dialog.rs:174 src/widgets/backup/dialog.rs:257
+#: src/widgets/backup/dialog.rs:176 src/widgets/backup/dialog.rs:259
 msgid "Select File"
 msgstr "Výběr souboru"
 
-#: src/widgets/backup/dialog.rs:205
+#: src/widgets/backup/dialog.rs:207
 msgid "Failed to create a backup"
 msgstr "Nepodařilo se vytvořit zálohu"
 
-#: src/widgets/backup/dialog.rs:327
+#: src/widgets/backup/dialog.rs:329
 msgid "Failed to restore from camera"
 msgstr "Nepodařilo se obnovit z kamery"
 
-#: src/widgets/backup/dialog.rs:352
+#: src/widgets/backup/dialog.rs:354
 msgid "Failed to restore from a screenshot"
 msgstr "Nepodařilo se obnovit ze snímku obrazovky"
 
-#: src/widgets/backup/dialog.rs:372
+#: src/widgets/backup/dialog.rs:374
 msgid "Failed to restore from an image"
 msgstr "Nepodařilo se obnovit z obrázku"
 
-#: src/widgets/backup/dialog.rs:396
+#: src/widgets/backup/dialog.rs:398
 msgid "Failed to restore from a file"
 msgstr "Nepodařilo se obnovit ze souboru"
 
-#: src/widgets/preferences/password_page.rs:195
-#: src/widgets/preferences/password_page.rs:237
+#: src/widgets/preferences/password_page.rs:196
+#: src/widgets/preferences/password_page.rs:238
 msgid "Wrong Passphrase"
 msgstr "Nesprávná heslová fráze"
 
-#: src/widgets/providers/dialog.rs:261
+#: src/widgets/providers/dialog.rs:262
 msgid "Provider created successfully"
 msgstr "Poskytovatel byl úspěšně vytvořen"
 
-#: src/widgets/providers/dialog.rs:271
+#: src/widgets/providers/dialog.rs:272
 msgid "Provider updated successfully"
 msgstr "Poskytovatel byl úspěšně aktualizován"
 
-#: src/widgets/providers/dialog.rs:287
+#: src/widgets/providers/dialog.rs:288
 msgid "Provider removed successfully"
 msgstr "Poskytovatel byl úspěšně odebrán"
 
-#: src/widgets/providers/page.rs:185
+#: src/widgets/providers/page.rs:188
+#, rust-format
 msgid "Editing Provider: {}"
 msgstr "Upravuje se  poskytovatel: {}"
 
-#: src/widgets/providers/page.rs:324
+#: src/widgets/providers/page.rs:329
 msgid "The provider has accounts assigned to it, please remove them first"
 msgstr "Poskytovatel má přiřazené účty. Nejprve je prosím odstraňte."
 
