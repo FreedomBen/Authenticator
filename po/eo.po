@@ -1,0 +1,800 @@
+# Esperanto translation for authenticator.
+# Copyright (C) 2026 authenticator's COPYRIGHT HOLDER
+# This file is distributed under the same license as the authenticator package.
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2026.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: authenticator master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/World/Authenticator/issues\n"
+"POT-Creation-Date: 2026-02-03 00:24+0000\n"
+"PO-Revision-Date: 2026-02-27 09:53+0100\n"
+"Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
+"Language-Team: Esperanto <gnome-eo-list@gnome.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 49.0\n"
+
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:2
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:7
+#: data/resources/ui/window.ui:40 src/application.rs:112 src/main.rs:40
+msgid "Authenticator"
+msgstr "Aŭtentikigilo"
+
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:3
+msgid "Two-Factor Authentication"
+msgstr "Dufaktora aŭtentikigo"
+
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:4
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:8
+#: src/application.rs:114
+msgid "Generate two-factor codes"
+msgstr "Generi dufaktorajn kodojn"
+
+#: data/com.belmoussaoui.Authenticator.desktop.in.in:9
+msgid "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;"
+msgstr "Gnome;GTK;Verification;2FA;Authentication;OTP;TOTP;"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:6
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:7
+msgid "Default window width"
+msgstr "Defaŭlta fenestrolateco"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:11
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:12
+msgid "Default window height"
+msgstr "Defaŭlta fenestralteco"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:16
+msgid "Default window maximized behaviour"
+msgstr "Defaŭlta konduto de maksimumigita fenestro"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:21
+msgid "Auto lock"
+msgstr "Aŭtomata ŝlosado"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:22
+msgid "Whether to auto lock the application or not"
+msgstr "Ĉu aŭtomate ŝlosi la programon aŭ ne"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:26
+msgid "Auto lock timeout"
+msgstr "Aŭtomata ŝlosada paŭzo"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:27
+msgid "Lock the application on idle after X minutes"
+msgstr "Ŝlosi la programon dum neaktiveco post X minutoj"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:34
+msgid "Download Favicons"
+msgstr "Elŝuti retejajn ikonojn"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:35
+msgid ""
+"Whether the application should attempt to find an icon for the providers."
+msgstr "Ĉu la programo devus provi trovi ikonon por la provizantoj."
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:39
+msgid "Download Favicons over metered connections"
+msgstr "Elŝuti retejajn ikonojn per mezuritaj konektoj"
+
+#: data/com.belmoussaoui.Authenticator.gschema.xml.in:40
+msgid ""
+"Whether the application should download favicons over a metered connection."
+msgstr "Ĉu la programo devus elŝuti retejajn ikonojn per mezurita konekto."
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:10
+msgid "Simple application for generating Two-Factor Authentication Codes."
+msgstr "Simpla programo por generi dufaktorajn aŭtentikig-kodojn."
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:11
+msgid "Features:"
+msgstr "Funkcioj:"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:13
+msgid "Time-based/Counter-based/Steam methods support"
+msgstr "Subteno de tempobasitaj/kalkulilbasitaj/Steam metodoj"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:14
+msgid "SHA-1/SHA-256/SHA-512 algorithms support"
+msgstr "Subteno de SHA-1/SHA-256/SHA-512 algoritmoj"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:15
+msgid "QR code scanner using a camera or from a screenshot"
+msgstr "QR-koda skanilo per fotilo aŭ el ekrankopio"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:16
+msgid "Lock the application with a password"
+msgstr "Ŝlosi la programon per pasvorto"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:17
+msgid "Beautiful UI"
+msgstr "Bela uzantinterfaco"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:18
+msgid "GNOME Shell search provider"
+msgstr "GNOME Shell-serĉ-provizanto"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:19
+msgid ""
+"Backup/Restore from/into known applications like FreeOTP+, Aegis "
+"(encrypted / plain-text), andOTP, Google Authenticator"
+msgstr ""
+"Savkopii/Restarigi el/al konataj programoj kiel FreeOTP+, Aegis (ĉifrita/"
+"neĉifrita), andOTP, Google Authenticator"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:25
+msgid "Main Window"
+msgstr "Ĉefenestro"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:29
+#: data/resources/ui/account_add.ui:30 data/resources/ui/account_add.ui:47
+msgid "Add a New Account"
+msgstr "Aldoni novan konton"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:33
+msgid "Add a New Provider"
+msgstr "Aldoni novan provizanton"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:37
+msgid "Account Details"
+msgstr "Detaloj de konto"
+
+#: data/com.belmoussaoui.Authenticator.metainfo.xml.in.in:41
+msgid "Backup/Restore formats support"
+msgstr "Subteno de savkopiaj/restarigaj formatoj"
+
+#: data/resources/ui/account_add.ui:6 src/widgets/backup/dialog.rs:276
+msgid "_Camera"
+msgstr "_Fotilo"
+
+#: data/resources/ui/account_add.ui:10 src/widgets/backup/dialog.rs:280
+msgid "_Screenshot"
+msgstr "_Ekrankopio"
+
+#: data/resources/ui/account_add.ui:14 src/widgets/backup/dialog.rs:285
+msgid "_QR Code Image"
+msgstr "_QR-koda bildo"
+
+#: data/resources/ui/account_add.ui:56
+msgid "_Cancel"
+msgstr "_Nuligi"
+
+#: data/resources/ui/account_add.ui:63
+msgid "_Add"
+msgstr "_Aldoni"
+
+#: data/resources/ui/account_add.ui:75 src/widgets/backup/dialog.rs:271
+msgid "Scan QR Code"
+msgstr "Skani QR-kodon"
+
+#: data/resources/ui/account_add.ui:113
+#: data/resources/ui/account_details_page.ui:96
+#: data/resources/ui/provider_page.ui:22
+#: data/resources/ui/providers_dialog.ui:108
+msgid "Provider"
+msgstr "Provizanto"
+
+#: data/resources/ui/account_add.ui:114
+msgid "Token issuer"
+msgstr "Ĵetona eldonanto"
+
+#: data/resources/ui/account_add.ui:128
+#: data/resources/ui/account_details_page.ui:91
+msgid "Account"
+msgstr "Konto"
+
+#: data/resources/ui/account_add.ui:134
+msgid "Token"
+msgstr "Ĵetono"
+
+#: data/resources/ui/account_add.ui:140
+#: data/resources/ui/account_details_page.ui:135
+#: data/resources/ui/provider_page.ui:158
+msgid "Counter"
+msgstr "Kalkulilo"
+
+#: data/resources/ui/account_add.ui:158
+#: data/resources/ui/account_details_page.ui:119
+#: data/resources/ui/provider_page.ui:133
+msgid "Algorithm"
+msgstr "Algoritmo"
+
+#: data/resources/ui/account_add.ui:166
+#: data/resources/ui/account_details_page.ui:127
+#: data/resources/ui/provider_page.ui:118
+msgid "Computing Method"
+msgstr "Komputada metodo"
+
+#: data/resources/ui/account_add.ui:174
+#: data/resources/ui/account_details_page.ui:144
+#: data/resources/ui/provider_page.ui:149
+msgid "Period"
+msgstr "Periodo"
+
+#: data/resources/ui/account_add.ui:175
+#: data/resources/ui/account_details_page.ui:145
+#: data/resources/ui/provider_page.ui:150
+msgid "Duration in seconds until the next password update"
+msgstr "Daŭro en sekundoj ĝis la sekva pasvortaktualiĝo"
+
+#: data/resources/ui/account_add.ui:183
+#: data/resources/ui/account_details_page.ui:153
+#: data/resources/ui/provider_page.ui:167
+msgid "Digits"
+msgstr "Ciferoj"
+
+#: data/resources/ui/account_add.ui:184
+#: data/resources/ui/account_details_page.ui:154
+#: data/resources/ui/provider_page.ui:168
+msgid "Length of the generated code"
+msgstr "Longo de la generita kodo"
+
+#: data/resources/ui/account_add.ui:192
+#: data/resources/ui/account_details_page.ui:162
+#: data/resources/ui/provider_page.ui:112
+msgid "Website"
+msgstr "Retejo"
+
+#: data/resources/ui/account_add.ui:197
+msgid "How to Set Up"
+msgstr "Kiel agordi"
+
+#: data/resources/ui/account_add.ui:217
+#: data/resources/ui/preferences_camera_page.ui:4
+msgid "Camera"
+msgstr "Fotilo"
+
+#: data/resources/ui/account_add.ui:229
+msgid "Create Provider"
+msgstr "Krei provizanton"
+
+#: data/resources/ui/account_details_page.ui:56
+#: data/resources/ui/preferences_password_page.ui:17
+#: data/resources/ui/provider_page.ui:29
+msgid "_Save"
+msgstr "_Konservi"
+
+#: data/resources/ui/account_details_page.ui:67
+#: data/resources/ui/provider_page.ui:185
+msgid "_Delete"
+msgstr "_Forigi"
+
+#: data/resources/ui/account_details_page.ui:167
+msgid "Help"
+msgstr "Helpo"
+
+#: data/resources/ui/account_row.ui:23
+msgid "Increment the counter"
+msgstr "Pliigi la kalkulilon"
+
+#: data/resources/ui/account_row.ui:34
+msgid "Copy PIN to clipboard"
+msgstr "Kopii PIN-kodon al tondujo"
+
+#: data/resources/ui/account_row.ui:43
+msgid "Account details"
+msgstr "Detaloj de konto"
+
+#: data/resources/ui/backup_dialog.ui:4 data/resources/ui/backup_dialog.ui:8
+msgid "Backup & Restore"
+msgstr "Savkopii & Restarigi"
+
+#: data/resources/ui/backup_dialog.ui:11 src/widgets/backup/dialog.rs:508
+msgid "Backup"
+msgstr "Savkopii"
+
+#: data/resources/ui/backup_dialog.ui:16 src/widgets/backup/dialog.rs:516
+msgid "Restore"
+msgstr "Restarigi"
+
+#: data/resources/ui/camera.ui:35
+msgid "No Camera Found"
+msgstr "Neniu fotilo trovita"
+
+#: data/resources/ui/camera.ui:38
+msgid "_From a Screenshot"
+msgstr "_El ekrankopio"
+
+#: data/resources/ui/keyring_error_dialog.ui:8
+msgid "Secret Service Error"
+msgstr "Eraro de sekreta servo"
+
+#: data/resources/ui/keyring_error_dialog.ui:35
+msgid ""
+"Authenticator relies on a Secret Service Provider to manage your sensitive "
+"session information and an error occurred while we were trying to store or "
+"get your session."
+msgstr ""
+"Aŭtentikigilo fidas Secret Service-provizanton por administri viajn "
+"sentemajn sesiinformojn kaj eraro okazis dum ni provis konservi aŭ ricevi "
+"vian sesion."
+
+#: data/resources/ui/keyring_error_dialog.ui:47
+msgid ""
+"Here are a few things that might help you fix issues with the Secret Service:"
+msgstr ""
+"Jen kelkaj aferoj kiuj eble helpos al vi solvi problemojn kun la sekreta "
+"servo:"
+
+#: data/resources/ui/keyring_error_dialog.ui:64
+msgid ""
+"Make sure you have a Secret Service Provider installed, like gnome-keyring."
+msgstr ""
+"Certiĝu ke vi havas instalitan Secret Service-provizanton, kiel gnome-"
+"keyring."
+
+#: data/resources/ui/keyring_error_dialog.ui:83
+msgid "Check that you have a default keyring and that it is unlocked."
+msgstr "Kontrolu ke vi havas defaŭltan ŝlosilaron kaj ke ĝi estas malŝlosita."
+
+#: data/resources/ui/keyring_error_dialog.ui:95
+msgid ""
+"Check the application logs and your distribution’s documentation for more "
+"details."
+msgstr ""
+"Kontrolu la programajn protokolojn kaj la dokumentaron de via distribuo por "
+"pliaj detaloj."
+
+#: data/resources/ui/preferences.ui:14
+msgid "General"
+msgstr "Ĝenerala"
+
+#: data/resources/ui/preferences.ui:17
+msgid "Privacy"
+msgstr "Privateco"
+
+#: data/resources/ui/preferences.ui:20
+msgid "_Passphrase"
+msgstr "_Pasfrazo"
+
+#: data/resources/ui/preferences.ui:22
+msgid "Set up a passphrase to lock the application with"
+msgstr "Agordi pasfrazon por ŝlosi la programon"
+
+#: data/resources/ui/preferences.ui:35
+msgid "_Auto Lock the Application"
+msgstr "_Aŭtomate ŝlosi la programon"
+
+#: data/resources/ui/preferences.ui:37
+msgid "Whether to automatically lock the application"
+msgstr "Ĉu aŭtomate ŝlosi la programon"
+
+#: data/resources/ui/preferences.ui:43
+msgid "Auto Lock _Timeout"
+msgstr "Aŭtomata ŝlosada _templimdaŭro"
+
+#: data/resources/ui/preferences.ui:44
+msgid "The time in minutes"
+msgstr "La tempo en minutoj"
+
+#: data/resources/ui/preferences.ui:57
+msgid "Network"
+msgstr "Reto"
+
+#: data/resources/ui/preferences.ui:60
+msgid "_Download Favicons"
+msgstr "_Elŝuti retejajn ikonojn"
+
+#: data/resources/ui/preferences.ui:62
+msgid "Automatically attempt fetching a website icon"
+msgstr "Aŭtomate provi preni reteja ikonon"
+
+#: data/resources/ui/preferences.ui:67
+msgid "_Metered Connection"
+msgstr "_Mezurita konekto"
+
+#: data/resources/ui/preferences.ui:69
+msgid "Fetch a website icon on a metered connection"
+msgstr "Preni reteja ikonon per mezurita konekto"
+
+#: data/resources/ui/preferences_password_page.ui:4
+msgid "Create Password"
+msgstr "Krei pasvorton"
+
+#: data/resources/ui/preferences_password_page.ui:28
+msgid "Set up a Passphrase"
+msgstr "Agordi pasfrazon"
+
+#: data/resources/ui/preferences_password_page.ui:29
+msgid "Authenticator will start locked after a passphrase is set."
+msgstr "Aŭtentikigilo startos ŝlosita post kiam pasfrazo estos agordita."
+
+#: data/resources/ui/preferences_password_page.ui:53
+msgid "Current Passphrase"
+msgstr "Aktuala pasfrazo"
+
+#: data/resources/ui/preferences_password_page.ui:59
+msgid "New Passphrase"
+msgstr "Nova pasfrazo"
+
+#: data/resources/ui/preferences_password_page.ui:65
+msgid "Repeat Passphrase"
+msgstr "Ripeti pasfrazon"
+
+#: data/resources/ui/preferences_password_page.ui:79
+#: data/resources/ui/provider_page.ui:73
+msgid "_Reset"
+msgstr "_Restarigi"
+
+#: data/resources/ui/provider_page.ui:83
+msgid "Select a _File"
+msgstr "Elekti _dosieron"
+
+#: data/resources/ui/provider_page.ui:106
+msgid "Name"
+msgstr "Nomo"
+
+#: data/resources/ui/provider_page.ui:159
+msgid "The by default value for counter-based computing method"
+msgstr "La defaŭlta valoro por kalkulilbasita komputada metodo"
+
+#: data/resources/ui/provider_page.ui:177
+msgid "Help URL"
+msgstr "Helpa URL"
+
+#: data/resources/ui/providers_dialog.ui:8
+#: data/resources/ui/providers_dialog.ui:19
+msgid "Providers"
+msgstr "Provizantoj"
+
+#: data/resources/ui/providers_dialog.ui:29 src/widgets/providers/page.rs:213
+msgid "New Provider"
+msgstr "Nova provizanto"
+
+#: data/resources/ui/providers_dialog.ui:36
+#: data/resources/ui/providers_dialog.ui:52 data/resources/ui/window.ui:198
+#: data/resources/ui/window.ui:218
+msgid "Search"
+msgstr "Serĉi"
+
+#: data/resources/ui/providers_dialog.ui:47 data/resources/ui/window.ui:213
+msgid "Search…"
+msgstr "Serĉi…"
+
+#: data/resources/ui/providers_dialog.ui:93
+#: data/resources/ui/providers_list.ui:38
+msgid "No Results"
+msgstr "Neniuj rezultoj"
+
+#: data/resources/ui/providers_dialog.ui:94
+msgid "No providers matching the query were found."
+msgstr "Neniuj provizantoj kongruaj kun la serĉvorto estis trovitaj."
+
+#: data/resources/ui/providers_dialog.ui:139
+msgid "No Provider Selected"
+msgstr "Neniu provizanto elektita"
+
+#: data/resources/ui/providers_dialog.ui:140
+msgid "Select a provider or create a new one"
+msgstr "Elektu provizanton aŭ kreu novan"
+
+#: data/resources/ui/providers_list.ui:39
+msgid "No accounts or providers matching the query were found."
+msgstr "Neniuj kontoj aŭ provizantoj kongruaj kun la serĉvorto estis trovitaj."
+
+#: data/resources/ui/shortcuts.ui:6
+msgctxt "shortcut window"
+msgid "General"
+msgstr "Ĝenerala"
+
+#: data/resources/ui/shortcuts.ui:9
+msgctxt "shortcut window"
+msgid "Keyboard Shortcuts"
+msgstr "Klavarfuŝklavoj"
+
+#: data/resources/ui/shortcuts.ui:15
+msgctxt "shortcut window"
+msgid "Lock"
+msgstr "Ŝlosi"
+
+#: data/resources/ui/shortcuts.ui:21
+msgctxt "shortcut window"
+msgid "Preferences"
+msgstr "Preferoj"
+
+#: data/resources/ui/shortcuts.ui:27
+msgctxt "shortcut window"
+msgid "Quit"
+msgstr "Eliri"
+
+#: data/resources/ui/shortcuts.ui:35
+msgctxt "shortcut window"
+msgid "Accounts"
+msgstr "Kontoj"
+
+#: data/resources/ui/shortcuts.ui:38
+msgctxt "shortcut window"
+msgid "New Account"
+msgstr "Nova konto"
+
+#: data/resources/ui/shortcuts.ui:44
+msgctxt "shortcut window"
+msgid "Search"
+msgstr "Serĉi"
+
+#: data/resources/ui/shortcuts.ui:50
+msgctxt "shortcut window"
+msgid "Show Providers List"
+msgstr "Montri liston de provizantoj"
+
+#: data/resources/ui/window.ui:6
+msgid "_Lock the Application"
+msgstr "_Ŝlosi la programon"
+
+#: data/resources/ui/window.ui:12
+msgid "P_roviders"
+msgstr "P_rovizantoj"
+
+#: data/resources/ui/window.ui:16
+msgid "_Preferences"
+msgstr "_Preferoj"
+
+#: data/resources/ui/window.ui:20
+msgid "_Backup & Restore"
+msgstr "_Savkopii & Restarigi"
+
+#: data/resources/ui/window.ui:26
+msgid "_Keyboard Shortcuts"
+msgstr "_Klavarfuŝklavoj"
+
+#: data/resources/ui/window.ui:30
+msgid "_About Authenticator"
+msgstr "_Pri Aŭtentikigilo"
+
+#: data/resources/ui/window.ui:70
+msgid "Authenticator is Locked"
+msgstr "Aŭtentikigilo estas ŝlosita"
+
+#: data/resources/ui/window.ui:96
+msgid "_Unlock"
+msgstr "_Malŝlosi"
+
+#: data/resources/ui/window.ui:126
+msgid "Accounts"
+msgstr "Kontoj"
+
+#: data/resources/ui/window.ui:141 data/resources/ui/window.ui:179
+msgid "New Account"
+msgstr "Nova konto"
+
+#: data/resources/ui/window.ui:149 data/resources/ui/window.ui:192
+msgid "Main Menu"
+msgstr "Ĉefmenuo"
+
+#: data/resources/ui/window.ui:157
+msgid "No Accounts"
+msgstr "Neniuj kontoj"
+
+#: data/resources/ui/window.ui:158
+msgid "Add an account or scan a QR code first."
+msgstr "Unue aldonu konton aŭ skanu QR-kodon."
+
+#: src/application.rs:83
+msgid "Accounts restored successfully"
+msgstr "Kontoj restarigitaj sukcese"
+
+#: src/application.rs:123
+msgid "translator-credits"
+msgstr "Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>"
+
+#: src/application.rs:433 src/widgets/accounts/row.rs:45
+msgid "One-Time password copied"
+msgstr "Unufojaĵa pasvorto kopiita"
+
+#: src/application.rs:434
+msgid "Password was copied successfully"
+msgstr "Pasvorto kopiita sukcese"
+
+#. Translators: This is for making a backup for the aegis Android app.
+#. Translators: This is for restoring a backup from the aegis Android app.
+#: src/backup/aegis.rs:399 src/backup/aegis.rs:439
+msgid "Aegis"
+msgstr "Aegis"
+
+#: src/backup/aegis.rs:403
+msgid "Into a JSON file containing plain-text or encrypted fields"
+msgstr "En JSON-dosieron enhavante neĉifritajn aŭ ĉifritajn kampojn"
+
+#: src/backup/aegis.rs:443
+msgid "From a JSON file containing plain-text or encrypted fields"
+msgstr "El JSON-dosiero enhavante neĉifritajn aŭ ĉifritajn kampojn"
+
+#. Translators: This is for making a backup for the andOTP Android app.
+#: src/backup/andotp.rs:109
+msgid "a_ndOTP"
+msgstr "a_ndOTP"
+
+#: src/backup/andotp.rs:113
+msgid "Into a plain-text JSON file"
+msgstr "En neĉifritan JSON-dosieron"
+
+#. Translators: This is for restoring a backup from the andOTP Android app.
+#: src/backup/andotp.rs:157
+msgid "an_dOTP"
+msgstr "an_dOTP"
+
+#: src/backup/andotp.rs:161 src/backup/bitwarden.rs:124 src/backup/legacy.rs:45
+msgid "From a plain-text JSON file"
+msgstr "El neĉifrita JSON-dosiero"
+
+#: src/backup/bitwarden.rs:47
+msgid "Unknown account"
+msgstr "Nekonata konto"
+
+#: src/backup/bitwarden.rs:55
+msgid "Unknown issuer"
+msgstr "Nekonata eldonanto"
+
+#. Translators: This is for restoring a backup from Bitwarden.
+#: src/backup/bitwarden.rs:120
+msgid "_Bitwarden"
+msgstr "_Bitwarden"
+
+#: src/backup/freeotp.rs:18
+msgid "_Authenticator"
+msgstr "_Aŭtentikigilo"
+
+#: src/backup/freeotp.rs:22
+msgid "Into a plain-text file, compatible with FreeOTP+"
+msgstr "En neĉifritan dosieron, kongruan kun FreeOTP+"
+
+#: src/backup/freeotp.rs:51
+msgid "A_uthenticator"
+msgstr "A_ŭtentikigilo"
+
+#: src/backup/freeotp.rs:55
+msgid "From a plain-text file, compatible with FreeOTP+"
+msgstr "El neĉifrita dosiero, kongrua kun FreeOTP+"
+
+#: src/backup/freeotp_json.rs:87
+msgid "FreeOTP+"
+msgstr "FreeOTP+"
+
+#: src/backup/freeotp_json.rs:91
+msgid "From a plain-text JSON file, compatible with FreeOTP+"
+msgstr "El neĉifrita JSON-dosiero, kongrua kun FreeOTP+"
+
+#: src/backup/google.rs:19
+msgid "Google Authenticator"
+msgstr "Google Authenticator"
+
+#: src/backup/google.rs:23
+msgid "From a QR code generated by Google Authenticator"
+msgstr "El QR-kodo generita de Google Authenticator"
+
+#. Translators: this is for restoring a backup from the old Authenticator
+#. release
+#: src/backup/legacy.rs:41
+msgid "Au_thenticator (Legacy)"
+msgstr "Au_tentikigilo (heredaĵo)"
+
+#: src/backup/raivootp.rs:102
+msgid "Raivo OTP"
+msgstr "Raivo OTP"
+
+#: src/backup/raivootp.rs:106
+msgid "From a ZIP export generated by Raivo OTP"
+msgstr "El ZIP-eksporto generita de Raivo OTP"
+
+#: src/backup/yandex.rs:19
+msgid "Yandex ID"
+msgstr "Yandex ID"
+
+#: src/backup/yandex.rs:23
+msgid "From a plain-text file generated by Yandex ID"
+msgstr "El neĉifrita dosiero generita de Yandex ID"
+
+#: src/models/algorithm.rs:60
+msgid "Counter-based"
+msgstr "Kalkulilbasita"
+
+#: src/models/algorithm.rs:61
+msgid "Time-based"
+msgstr "Tempobasita"
+
+#. Translators: Steam refers to the gaming application by Valve.
+#: src/models/algorithm.rs:63
+msgid "Steam"
+msgstr "Steam"
+
+#: src/models/algorithm.rs:125
+msgid "SHA-1"
+msgstr "SHA-1"
+
+#: src/models/algorithm.rs:126
+msgid "SHA-256"
+msgstr "SHA-256"
+
+#: src/models/algorithm.rs:127
+msgid "SHA-512"
+msgstr "SHA-512"
+
+#: src/widgets/accounts/add.rs:277 src/widgets/backup/dialog.rs:445
+#: src/widgets/providers/page.rs:296
+msgid "Image"
+msgstr "Bildo"
+
+#: src/widgets/accounts/add.rs:285 src/widgets/backup/dialog.rs:453
+msgid "Select QR Code"
+msgstr "Elekti QR-kodon"
+
+#: src/widgets/accounts/add.rs:303
+msgid "Invalid Token"
+msgstr "Nevalida ĵetono"
+
+#: src/widgets/accounts/details.rs:124
+msgid "Are you sure you want to delete the account?"
+msgstr "Ĉu vi certe volas forigi la konton?"
+
+#: src/widgets/accounts/details.rs:125
+msgid "This action is irreversible"
+msgstr "Ĉi tiu ago estas neriparebla"
+
+#: src/widgets/accounts/details.rs:127
+msgid "No"
+msgstr "Ne"
+
+#: src/widgets/accounts/details.rs:127
+msgid "Yes"
+msgstr "Jes"
+
+#: src/widgets/backup/dialog.rs:165 src/widgets/backup/dialog.rs:247
+msgid "Key / Passphrase"
+msgstr "Ŝlosilo / Pasfrazo"
+
+#: src/widgets/backup/dialog.rs:176 src/widgets/backup/dialog.rs:259
+msgid "Select File"
+msgstr "Elekti dosieron"
+
+#: src/widgets/backup/dialog.rs:207
+msgid "Failed to create a backup"
+msgstr "Malsukcesis krei savkopion"
+
+#: src/widgets/backup/dialog.rs:329
+msgid "Failed to restore from camera"
+msgstr "Malsukcesis restarigi el fotilo"
+
+#: src/widgets/backup/dialog.rs:354
+msgid "Failed to restore from a screenshot"
+msgstr "Malsukcesis restarigi el ekrankopio"
+
+#: src/widgets/backup/dialog.rs:374
+msgid "Failed to restore from an image"
+msgstr "Malsukcesis restarigi el bildo"
+
+#: src/widgets/backup/dialog.rs:398
+msgid "Failed to restore from a file"
+msgstr "Malsukcesis restarigi el dosiero"
+
+#: src/widgets/preferences/password_page.rs:196
+#: src/widgets/preferences/password_page.rs:238
+msgid "Wrong Passphrase"
+msgstr "Malĝusta pasfrazo"
+
+#: src/widgets/providers/dialog.rs:262
+msgid "Provider created successfully"
+msgstr "Provizanto kreita sukcese"
+
+#: src/widgets/providers/dialog.rs:272
+msgid "Provider updated successfully"
+msgstr "Provizanto ĝisdatigita sukcese"
+
+#: src/widgets/providers/dialog.rs:288
+msgid "Provider removed successfully"
+msgstr "Provizanto forigita sukcese"
+
+#: src/widgets/providers/page.rs:188
+msgid "Editing Provider: {}"
+msgstr "Redaktado de provizanto: {}"
+
+#: src/widgets/providers/page.rs:329
+msgid "The provider has accounts assigned to it, please remove them first"
+msgstr "La provizanto havas kontojn asignitajn al ĝi, bonvolu unue forigi ilin"
+
+#: src/widgets/window.rs:115
+msgid "Wrong Password"
+msgstr "Malĝusta pasvorto"
