@@ -1,6 +1,6 @@
 use std::{collections::HashMap, sync::OnceLock};
 
-use rand::RngCore;
+use rand::Rng;
 
 use crate::config;
 

@@ -15,7 +15,7 @@ use aes_gcm::{KeyInit, aead::Aead};
 use anyhow::{Context, Result};
 use gettextrs::gettext;
 use gtk::prelude::*;
-use rand::RngCore;
+use rand::Rng;
 use serde::{Deserialize, Serialize};
 use zeroize::{Zeroize, ZeroizeOnDrop};
 

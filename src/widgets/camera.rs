@@ -340,7 +340,7 @@ async fn stream() -> ashpd::Result<OwnedFd> {
         tracing::error!("Failed to run org.freedesktop.host.portal.Registry.Register: {err}");
     }
     let proxy = ashpd::desktop::camera::Camera::new().await?;
-    proxy.request_access().await?;
+    proxy.request_access(Default::default()).await?;
 
-    proxy.open_pipe_wire_remote().await
+    proxy.open_pipe_wire_remote(Default::default()).await
 }
