@@ -1,10 +1,10 @@
-.PHONY: build setup compile test install clean distclean fmt clippy help
+.PHONY: build setup compile test install uninstall clean distclean fmt clippy help
 
 MESON ?= meson
 CARGO ?= cargo
 
 BUILD_DIR ?= _build
-PREFIX ?= /usr
+PREFIX ?= /usr/local
 
 # Default target
 build: compile
@@ -22,6 +22,9 @@ test: setup
 
 install: compile
 	$(MESON) install -C $(BUILD_DIR)
+
+uninstall:
+	ninja -C $(BUILD_DIR) uninstall
 
 clean:
 	@if [ -f "$(BUILD_DIR)/build.ninja" ]; then \
@@ -43,6 +46,7 @@ help:
 		"  build (default)  Configure (if needed) and build via Meson" \
 		"  test             Run Meson tests" \
 		"  install          Install from $(BUILD_DIR) (respects PREFIX)" \
+		"  uninstall        Uninstall previously installed files" \
 		"  clean            Clean build artifacts (keeps $(BUILD_DIR))" \
 		"  distclean        Remove $(BUILD_DIR) entirely" \
 		"  fmt              Run cargo fmt" \
