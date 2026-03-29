@@ -379,7 +379,10 @@ impl Provider {
                 .unwrap()
                 .as_secs()
                 % period;
-        if period == remaining_time {
+        // Detect period rollover: remaining time jumping up means a new period started.
+        // This is more robust than checking `period == remaining_time` which can miss
+        // a boundary if the timer doesn't fire at the exact rollover second.
+        if remaining_time > self.remaining_time() {
             self.regenerate_otp();
         }
         self.set_remaining_time(remaining_time);
@@ -389,7 +392,14 @@ impl Provider {
         if self.imp().tick_callback.borrow().is_some() || self.method().is_event_based() {
             return;
         }
-        self.set_remaining_time(self.period() as u64);
+        let period = self.period() as u64;
+        let remaining: u64 = period
+            - SystemTime::now()
+                .duration_since(UNIX_EPOCH)
+                .unwrap()
+                .as_secs()
+                % period;
+        self.set_remaining_time(remaining);
 
         match self.method() {
             Method::TOTP | Method::Steam => {
@@ -413,9 +423,9 @@ impl Provider {
     }
 
     fn regenerate_otp(&self) {
-        let accounts = self.accounts();
-        for i in 0..accounts.n_items() {
-            let item = accounts.item(i).unwrap();
+        let model = self.accounts_model();
+        for i in 0..model.n_items() {
+            let item = model.item(i).unwrap();
             let account = item.downcast_ref::<Account>().unwrap();
             account.generate_otp();
         }
