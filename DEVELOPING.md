@@ -9,7 +9,7 @@ First install build dependencies:
 If you want to build with flatpak:
 
 ```bash
-sudo dnf install -y flatpak flatpak-builder ninja-build meson
+sudo dnf install -y flatpak flatpak-builder ninja-build meson rpm-build
 
 sudo dnf install -y gtk4-devel libadwaita-devel gstreamer1-devel gstreamer1-plugins-base-devel
 

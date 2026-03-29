@@ -1,10 +1,13 @@
-.PHONY: build setup compile test install uninstall clean distclean fmt clippy help
+.PHONY: build setup compile test install uninstall clean distclean fmt clippy rpm install-rpm help
 
 MESON ?= meson
 CARGO ?= cargo
 
 BUILD_DIR ?= _build
 PREFIX ?= /usr/local
+RPM_DIR ?= $(BUILD_DIR)/rpm
+SPEC_FILE ?= build-aux/authenticator.spec
+VERSION = $(shell grep "^Version:" $(SPEC_FILE) | awk '{print $$2}')
 
 # Default target
 build: compile
@@ -25,6 +28,21 @@ install: compile
 
 uninstall:
 	ninja -C $(BUILD_DIR) uninstall
+
+rpm:
+	rm -rf $(RPM_DIR)
+	mkdir -p $(RPM_DIR)/{BUILD,RPMS,SOURCES,SPECS,SRPMS}
+	git archive --format=tar.gz --prefix=Authenticator-$(VERSION)/ HEAD > $(RPM_DIR)/SOURCES/Authenticator-$(VERSION).tar.gz
+	cd $$(mktemp -d) && \
+		tar xf $(CURDIR)/$(RPM_DIR)/SOURCES/Authenticator-$(VERSION).tar.gz && \
+		cd Authenticator-$(VERSION) && \
+		cargo vendor && \
+		tar cJf $(CURDIR)/$(RPM_DIR)/SOURCES/vendor.tar.xz vendor/
+	cp $(SPEC_FILE) $(RPM_DIR)/SPECS/
+	rpmbuild --define "_topdir $(CURDIR)/$(RPM_DIR)" --nodeps -ba $(RPM_DIR)/SPECS/authenticator.spec
+
+install-rpm: rpm
+	sudo dnf install -y $(RPM_DIR)/RPMS/*/*.rpm
 
 clean:
 	@if [ -f "$(BUILD_DIR)/build.ninja" ]; then \
@@ -50,4 +68,6 @@ help:
 		"  clean            Clean build artifacts (keeps $(BUILD_DIR))" \
 		"  distclean        Remove $(BUILD_DIR) entirely" \
 		"  fmt              Run cargo fmt" \
-		"  clippy           Run cargo clippy --all-targets --all-features -D warnings"
+		"  clippy           Run cargo clippy --all-targets --all-features -D warnings" \
+		"  rpm              Build RPM package (requires rpmbuild, cargo-vendor-filterer)" \
+		"  install-rpm      Build and install RPM via dnf"
