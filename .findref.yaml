@@ -1,0 +1,67 @@
+# Base findref configuration
+# Each key mirrors its long-form CLI flag. Command-line arguments still take precedence.
+
+# Required match expression if not provided via CLI.
+match_regex: ""
+
+# Starting directory. Set to "." to search the current working directory.
+start_dir: "."
+
+# Optional filename filter (regex). Leave blank to search all files.
+filename_regex: ""
+
+# Search behavior flags
+all: false                # implies --ignore-case and --hidden, disables default excludes
+debug: false              # print verbose debug output
+stats: false              # track and print basic statistics on exit
+hidden: false             # include hidden files and directories
+version: false            # print version and exit
+no_color: false           # disable colorized output
+match_case: false         # force case-sensitive matching (otherwise smart-case)
+ignore_case: false        # force case-insensitive matching
+filename_only: false      # print only filenames with matches
+max_line_length: 2000     # maximum line length before clipping
+no_max_line_length: false # disable line length limit entirely
+
+# Additional paths or files to exclude. Defaults mirror the built-in list; remove or add as needed.
+exclude:
+  - .git
+  - .svn
+  - .hg
+  - .bzr
+  - CVS
+  - vendor
+  - node_modules
+  - build
+  - dist
+  - out
+  - coverage
+  - package-lock.json
+  - yarn.lock
+  - pnpm-lock.yaml
+  - bun.lockb
+  - composer.lock
+  - Gemfile.lock
+  - mix.lock
+  - Cargo.lock
+  - Pipfile.lock
+  - poetry.lock
+  - Podfile.lock
+  - go.sum
+  - gradle.lockfile
+  - _build
+
+# RE2 regex patterns to exclude. Paths matching any pattern are skipped.
+# exclude_pattern:
+#   - '_test\.go$'
+#   - '(^|/)generated($|/)'
+
+# Include only files whose names match (whitelist approach). If set, only matching files are searched.
+# include:
+#   - main.go
+#   - README.md
+
+# RE2 regex patterns to include. Only files whose path matches a pattern are searched.
+# include_pattern:
+#   - '\.go$'
+#   - '\.py$'
