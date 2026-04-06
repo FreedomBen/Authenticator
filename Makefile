@@ -16,7 +16,9 @@ compile: setup
 	$(MESON) compile -C $(BUILD_DIR)
 
 setup:
-	@if [ ! -f "$(BUILD_DIR)/build.ninja" ]; then \
+	@if [ -f "$(BUILD_DIR)/build.ninja" ]; then \
+		$(MESON) setup "$(BUILD_DIR)" --prefix="$(PREFIX)" --reconfigure; \
+	else \
 		$(MESON) setup "$(BUILD_DIR)" --prefix="$(PREFIX)"; \
 	fi
 
@@ -61,6 +63,7 @@ clippy:
 help:
 	@printf "%s\n" \
 		"Targets:" \
+		"  setup            Run meson setup (reconfigures if already configured)" \
 		"  build (default)  Configure (if needed) and build via Meson" \
 		"  test             Run Meson tests" \
 		"  install          Install from $(BUILD_DIR) (respects PREFIX)" \
