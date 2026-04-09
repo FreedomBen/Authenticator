@@ -1,4 +1,4 @@
-.PHONY: build setup compile test install uninstall clean distclean fmt clippy rpm install-rpm help
+.PHONY: build setup compile test install uninstall clean distclean fmt clippy rpm install-rpm run help
 
 MESON ?= meson
 CARGO ?= cargo
@@ -46,6 +46,9 @@ rpm:
 install-rpm: rpm
 	sudo dnf install -y $(RPM_DIR)/RPMS/*/*.rpm
 
+run: compile
+	$(MESON) devenv -C $(BUILD_DIR) src/authenticator
+
 clean:
 	@if [ -f "$(BUILD_DIR)/build.ninja" ]; then \
 		$(MESON) compile -C $(BUILD_DIR) --clean; \
@@ -66,6 +69,7 @@ help:
 		"  setup            Run meson setup (reconfigures if already configured)" \
 		"  build (default)  Configure (if needed) and build via Meson" \
 		"  test             Run Meson tests" \
+		"  run              Build and run the application via meson devenv" \
 		"  install          Install from $(BUILD_DIR) (respects PREFIX)" \
 		"  uninstall        Uninstall previously installed files" \
 		"  clean            Clean build artifacts (keeps $(BUILD_DIR))" \
