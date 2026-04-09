@@ -84,6 +84,13 @@ mod imp {
                 search_btn.set_active(!search_btn.is_active());
             });
 
+            klass.install_action("win.focus_search", None, |win, _, _| {
+                let imp = win.imp();
+                imp.search_btn.set_active(true);
+                imp.search_entry.select_region(0, -1);
+                imp.search_entry.grab_focus();
+            });
+
             klass.install_action("win.add_account", None, |win, _, _| {
                 win.open_add_account(None);
             });
@@ -357,7 +364,8 @@ impl Window {
     }
 
     #[template_callback]
-    fn on_search_stopped(&self, _entry: &gtk::SearchEntry) {
+    fn on_search_stopped(&self, entry: &gtk::SearchEntry) {
+        entry.set_text("");
         self.imp().search_btn.set_active(false);
     }
 }

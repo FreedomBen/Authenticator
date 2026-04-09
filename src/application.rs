@@ -228,6 +228,7 @@ mod imp {
             app.set_accels_for_action("app.providers", &["<primary>p"]);
             app.set_accels_for_action("app.preferences", &["<primary>comma"]);
             app.set_accels_for_action("win.search", &["<primary>f"]);
+            app.set_accels_for_action("win.focus_search", &["<primary>k"]);
             app.set_accels_for_action("win.add_account", &["<primary>n"]);
             app.set_accels_for_action("window.close", &["<primary>w"]);
             // Start the timeout to lock the app if the auto-lock
