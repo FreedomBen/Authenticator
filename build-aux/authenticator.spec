@@ -38,21 +38,22 @@ andOTP, Bitwarden), and integrates with GNOME Shell search.
 
 %prep
 %autosetup -n Authenticator-%{version}
-# Set up vendored Cargo dependencies
-%if 0%{?Source1:1}
+# Extract vendored Cargo dependencies (vendor/ at source root)
 tar xf %{SOURCE1}
-mkdir -p .cargo
-cat > .cargo/config.toml << 'EOF'
+
+%build
+%meson -Dprofile=default
+# Meson sets CARGO_HOME=<build_root>/cargo-home for cargo invocations.
+# Write the vendored-sources config there so cargo uses vendor/ instead of crates.io.
+# Use an absolute path since cargo resolves `directory` relative to cwd/config dir.
+mkdir -p %{_vpath_builddir}/cargo-home
+cat > %{_vpath_builddir}/cargo-home/config.toml << EOF
 [source.crates-io]
 replace-with = "vendored-sources"
 
 [source.vendored-sources]
-directory = "vendor"
+directory = "$(pwd)/vendor"
 EOF
-%endif
-
-%build
-%meson -Dprofile=default
 %meson_build
 
 %install
