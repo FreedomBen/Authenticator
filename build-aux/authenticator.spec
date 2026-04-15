@@ -2,7 +2,7 @@
 
 Name:           authenticator
 Version:        4.6.2
-Release:        1%{?dist}
+Release:        %(date +%Y%m%d%H%M)%{?dist}
 Summary:        Two-factor authentication code generator for GNOME
 
 License:        GPL-3.0-or-later
