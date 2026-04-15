@@ -6,7 +6,7 @@ use gtk::{
 
 use crate::{
     models::{Account, Provider, ProvidersModel},
-    widgets::providers::ProviderRow,
+    widgets::{accounts::AccountRow, providers::ProviderRow},
 };
 
 pub enum ProvidersListView {
@@ -114,6 +114,19 @@ impl ProvidersList {
     /// Returns an instance of the filtered initial model
     pub fn model(&self) -> gtk::FilterListModel {
         self.imp().filter_model.clone()
+    }
+
+    pub fn first_account_row(&self) -> Option<AccountRow> {
+        let mut child = self.imp().providers_list.first_child();
+        while let Some(widget) = child {
+            if let Some(provider_row) = widget.downcast_ref::<ProviderRow>()
+                && let Some(first) = provider_row.first_account_row()
+            {
+                return Some(first);
+            }
+            child = widget.next_sibling();
+        }
+        None
     }
 
     pub fn search(&self, text: String) {

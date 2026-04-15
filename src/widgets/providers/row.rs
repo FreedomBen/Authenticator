@@ -86,6 +86,14 @@ impl ProviderRow {
             .build()
     }
 
+    pub fn first_account_row(&self) -> Option<AccountRow> {
+        self.imp().accounts_list.first_child().and_downcast()
+    }
+
+    pub fn last_account_row(&self) -> Option<AccountRow> {
+        self.imp().accounts_list.last_child().and_downcast()
+    }
+
     pub fn connect_changed<F>(&self, callback: F) -> glib::SignalHandlerId
     where
         F: Fn(&Self) + 'static,

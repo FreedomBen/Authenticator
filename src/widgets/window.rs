@@ -3,7 +3,7 @@ use std::cell::OnceCell;
 use adw::prelude::*;
 use gettextrs::gettext;
 use gtk::{
-    gio,
+    gdk, gio,
     glib::{self, clone},
     subclass::prelude::*,
 };
@@ -171,6 +171,24 @@ mod imp {
             win.set_view(View::Accounts);
 
             self.search_bar.connect_entry(&*self.search_entry);
+
+            let search_key_controller = gtk::EventControllerKey::new();
+            search_key_controller.connect_key_pressed(clone!(
+                #[weak]
+                win,
+                #[upgrade_or]
+                glib::Propagation::Proceed,
+                move |_, key, _, _| {
+                    if key == gdk::Key::Down
+                        && let Some(first) = win.imp().providers.first_account_row()
+                    {
+                        first.focus_copy_btn();
+                        return glib::Propagation::Stop;
+                    }
+                    glib::Propagation::Proceed
+                }
+            ));
+            self.search_entry.add_controller(search_key_controller);
         }
     }
     impl WidgetImpl for Window {}

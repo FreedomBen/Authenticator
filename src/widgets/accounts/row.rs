@@ -1,13 +1,13 @@
-use gtk::{gdk, glib, prelude::*};
+use gtk::{gdk, glib, prelude::*, subclass::prelude::*};
 
-use crate::models::Account;
+use crate::{models::Account, widgets::providers::ProviderRow};
 
 mod imp {
     use std::cell::OnceCell;
 
     use adw::subclass::prelude::*;
     use gettextrs::gettext;
-    use glib::subclass;
+    use glib::{clone, subclass};
 
     use super::*;
     use crate::widgets::Window;
@@ -20,6 +20,8 @@ mod imp {
         pub account: OnceCell<Account>,
         #[template_child]
         pub increment_btn: TemplateChild<gtk::Button>,
+        #[template_child]
+        pub copy_btn: TemplateChild<gtk::Button>,
         #[template_child]
         pub otp_label: TemplateChild<gtk::Label>,
     }
@@ -84,6 +86,16 @@ mod imp {
             // Only display the increment button if it is a HOTP account
             self.increment_btn
                 .set_visible(account.provider().method().is_event_based());
+
+            let key_controller = gtk::EventControllerKey::new();
+            key_controller.connect_key_pressed(clone!(
+                #[weak]
+                obj,
+                #[upgrade_or]
+                glib::Propagation::Proceed,
+                move |_, key, _, _| super::handle_arrow_key(&obj, key)
+            ));
+            self.copy_btn.add_controller(key_controller);
         }
     }
     impl WidgetImpl for AccountRow {}
@@ -102,4 +114,74 @@ impl AccountRow {
     pub fn new(account: &Account) -> Self {
         glib::Object::builder().property("account", account).build()
     }
+
+    pub fn focus_copy_btn(&self) {
+        self.imp().copy_btn.grab_focus();
+    }
+}
+
+fn handle_arrow_key(row: &AccountRow, key: gdk::Key) -> glib::Propagation {
+    match key {
+        gdk::Key::Down => {
+            if let Some(next) = next_account_row(row) {
+                next.focus_copy_btn();
+                glib::Propagation::Stop
+            } else {
+                glib::Propagation::Proceed
+            }
+        }
+        gdk::Key::Up => {
+            if let Some(prev) = prev_account_row(row) {
+                prev.focus_copy_btn();
+                return glib::Propagation::Stop;
+            }
+            if let Some(window) = row.root().and_downcast::<crate::widgets::Window>() {
+                let imp = window.imp();
+                if imp.search_bar.is_search_mode() {
+                    imp.search_entry.grab_focus();
+                    return glib::Propagation::Stop;
+                }
+            }
+            glib::Propagation::Proceed
+        }
+        _ => glib::Propagation::Proceed,
+    }
+}
+
+fn next_account_row(current: &AccountRow) -> Option<AccountRow> {
+    if let Some(next) = current.next_sibling().and_downcast::<AccountRow>() {
+        return Some(next);
+    }
+    let provider_row = current
+        .ancestor(ProviderRow::static_type())
+        .and_downcast::<ProviderRow>()?;
+    let mut sibling = provider_row.next_sibling();
+    while let Some(widget) = sibling {
+        if let Some(pr) = widget.downcast_ref::<ProviderRow>()
+            && let Some(first) = pr.first_account_row()
+        {
+            return Some(first);
+        }
+        sibling = widget.next_sibling();
+    }
+    None
+}
+
+fn prev_account_row(current: &AccountRow) -> Option<AccountRow> {
+    if let Some(prev) = current.prev_sibling().and_downcast::<AccountRow>() {
+        return Some(prev);
+    }
+    let provider_row = current
+        .ancestor(ProviderRow::static_type())
+        .and_downcast::<ProviderRow>()?;
+    let mut sibling = provider_row.prev_sibling();
+    while let Some(widget) = sibling {
+        if let Some(pr) = widget.downcast_ref::<ProviderRow>()
+            && let Some(last) = pr.last_account_row()
+        {
+            return Some(last);
+        }
+        sibling = widget.prev_sibling();
+    }
+    None
 }
