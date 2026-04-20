@@ -4,7 +4,7 @@ MESON ?= meson
 CARGO ?= cargo
 
 BUILD_DIR ?= _build
-PREFIX ?= /usr/local
+PREFIX ?= $(HOME)/.local
 RPM_DIR ?= $(BUILD_DIR)/rpm
 SPEC_FILE ?= build-aux/authenticator.spec
 VERSION = $(shell grep "^Version:" $(SPEC_FILE) | awk '{print $$2}')
@@ -87,7 +87,7 @@ help:
 		"  build (default)  Configure (if needed) and build via Meson" \
 		"  test             Run Meson tests" \
 		"  run              Build and run the application via meson devenv" \
-		"  install          Install from $(BUILD_DIR) (respects PREFIX; run 'make build' first)" \
+		"  install          Install from $(BUILD_DIR) (PREFIX=$(PREFIX); run 'make build' first)" \
 		"  uninstall        Uninstall previously installed files" \
 		"  clean            Clean build artifacts (keeps $(BUILD_DIR))" \
 		"  distclean        Remove $(BUILD_DIR) entirely" \
