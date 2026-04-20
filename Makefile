@@ -1,4 +1,4 @@
-.PHONY: build setup compile test install uninstall clean distclean fmt clippy rpm install-rpm run help
+.PHONY: build setup compile test install check-prefix-writable uninstall clean distclean fmt clippy rpm install-rpm run help
 
 MESON ?= meson
 CARGO ?= cargo
@@ -25,8 +25,25 @@ setup:
 test: setup
 	$(MESON) test -C $(BUILD_DIR)
 
-install: compile
-	$(MESON) install -C $(BUILD_DIR)
+check-prefix-writable:
+	@prefix="$(PREFIX)"; \
+	while [ ! -e "$${prefix}" ]; do prefix="$$(dirname "$${prefix}")"; done; \
+	if [ ! -w "$${prefix}" ]; then \
+		echo "error: PREFIX '$(PREFIX)' is not writable by $$(id -un)." >&2; \
+		echo "       Re-run with sudo, or install to a user-writable location, e.g.:" >&2; \
+		echo "         sudo make install" >&2; \
+		echo "         make install PREFIX=\$$HOME/.local" >&2; \
+		exit 1; \
+	fi
+
+install: check-prefix-writable
+	@if [ ! -x "$(BUILD_DIR)/src/authenticator" ]; then \
+		echo "error: no built binary at $(BUILD_DIR)/src/authenticator." >&2; \
+		echo "       Run 'make build' first as a non-root user, then re-run 'sudo make install'." >&2; \
+		echo "       (Compile is decoupled from install so rustup/cargo can resolve the user's toolchain.)" >&2; \
+		exit 1; \
+	fi
+	$(MESON) install --no-rebuild -C $(BUILD_DIR)
 
 uninstall:
 	ninja -C $(BUILD_DIR) uninstall
@@ -70,7 +87,7 @@ help:
 		"  build (default)  Configure (if needed) and build via Meson" \
 		"  test             Run Meson tests" \
 		"  run              Build and run the application via meson devenv" \
-		"  install          Install from $(BUILD_DIR) (respects PREFIX)" \
+		"  install          Install from $(BUILD_DIR) (respects PREFIX; run 'make build' first)" \
 		"  uninstall        Uninstall previously installed files" \
 		"  clean            Clean build artifacts (keeps $(BUILD_DIR))" \
 		"  distclean        Remove $(BUILD_DIR) entirely" \
