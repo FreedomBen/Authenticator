@@ -1,4 +1,4 @@
-.PHONY: build setup compile test install check-prefix-writable uninstall clean distclean fmt clippy rpm install-rpm run help
+.PHONY: build setup compile test install check-prefix-writable reload-user-dbus uninstall clean distclean fmt clippy rpm install-rpm run help
 
 MESON ?= meson
 CARGO ?= cargo
@@ -44,6 +44,23 @@ install: check-prefix-writable
 		exit 1; \
 	fi
 	$(MESON) install --no-rebuild -C $(BUILD_DIR)
+	@$(MAKE) --no-print-directory reload-user-dbus
+
+# Post-install: reload systemd user units so dbus-broker picks up newly
+# installed user D-Bus service files. Without this, GNOME's icon click
+# silently no-ops ("ServiceUnknown") until next login. Skipped when running
+# as root / under sudo (targets the wrong session) and for non-user prefixes.
+reload-user-dbus:
+	@if [ "$$(id -u)" = 0 ] || [ -n "$${SUDO_USER}" ]; then \
+		exit 0; \
+	fi; \
+	case "$(PREFIX)" in \
+		"$${HOME}"/*|"$${HOME}") ;; \
+		*) exit 0 ;; \
+	esac; \
+	command -v systemctl >/dev/null 2>&1 || exit 0; \
+	echo "Reloading systemd user units (D-Bus activation)..."; \
+	systemctl --user daemon-reload || true
 
 uninstall:
 	ninja -C $(BUILD_DIR) uninstall
@@ -88,6 +105,7 @@ help:
 		"  test             Run Meson tests" \
 		"  run              Build and run the application via meson devenv" \
 		"  install          Install from $(BUILD_DIR) (PREFIX=$(PREFIX); run 'make build' first)" \
+		"  reload-user-dbus Reload systemd user units (auto-run after user-prefix install)" \
 		"  uninstall        Uninstall previously installed files" \
 		"  clean            Clean build artifacts (keeps $(BUILD_DIR))" \
 		"  distclean        Remove $(BUILD_DIR) entirely" \
